@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="4766096129aa43107f441ac0369c7fad" label="Risk Assessment" max_length="40" name="x_snc_sentinel_hse_risk_assessment" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Permit to Work" max_length="32" name="permit_to_work" reference="x_snc_sentinel_hse_permit_to_work" type="reference"/>
+        <element label="Recommended Action" max_length="1000" name="recommended_action" type="string"/>
+        <element label="Assigned To" max_length="32" name="assigned_to_3" reference="sys_user" type="reference"/>
+        <element label="Measured Value" mandatory="true" max_length="20" name="measured_value" type="decimal"/>
+        <element label="Risk Score" mandatory="true" max_length="40" name="risk_score" type="integer"/>
+        <element label=" Asset" mandatory="true" max_length="32" name="oilfield_asset_3" reference="x_snc_sentinel_hse_oilfield_asset_1" type="reference"/>
+        <element label="Comments" max_length="1000" name="comments" type="string"/>
+        <element label="Gas " mandatory="true" max_length="32" name="gas_master_1" reference="x_snc_sentinel_hse_gas_master" type="reference"/>
+        <element label="Assessment Time" mandatory="true" max_length="40" name="assessment_time" type="glide_date_time"/>
+        <element choice="1" default="Open" label="Status" max_length="40" name="status_4" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="In Progress" value="in_progress"/>
+                <element inactive_on_update="false" label="Closed" value="closed"/>
+                <element inactive_on_update="false" label="Open" value="open"/>
+                <element inactive_on_update="false" label="Resolved" value="resolved"/>
+            </choice>
+        </element>
+        <element label="Threshold Value" max_length="20" name="threshold_value" type="decimal"/>
+        <element choice="1" label="Threshold Status" mandatory="true" max_length="40" name="threshold_status_3" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Critical" value="critical_4"/>
+                <element inactive_on_update="false" label="Warning" value="warning_4"/>
+                <element inactive_on_update="false" label="Safe" value="safe_4"/>
+            </choice>
+        </element>
+        <element label="Sensor Reading" mandatory="true" max_length="32" name="sensor_reading_1" reference="x_snc_sentinel_hse_sensor_reading" type="reference"/>
+        <element choice="1" label="Risk Level" mandatory="true" max_length="40" name="risk_level" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Low" value="low_3"/>
+                <element inactive_on_update="false" label="Medium" value="medium_3"/>
+                <element inactive_on_update="false" label="High" value="high_3"/>
+                <element inactive_on_update="false" label="Critical" value="critical_3"/>
+            </choice>
+        </element>
+        <element choice="1" label="AI Decision" mandatory="true" max_length="40" name="ai_decision" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Increase Monitoring" value="increase_monitoring"/>
+                <element inactive_on_update="false" label="Emergency Shutdown" value="emergency_shutdown"/>
+                <element inactive_on_update="false" label="Create Work Order" value="create_work_order"/>
+                <element inactive_on_update="false" label="Schedule Inspection" value="schedule_inspection"/>
+                <element inactive_on_update="false" label="Continue Monitoring" value="continue_monitoring"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="gas_master_1"/>
+        </index>
+        <index name="index2">
+            <element name="assigned_to_3"/>
+        </index>
+        <index name="index3">
+            <element name="sensor_reading_1"/>
+        </index>
+        <index name="index4">
+            <element name="permit_to_work"/>
+        </index>
+        <index name="index5">
+            <element name="oilfield_asset_3"/>
+        </index>
+    </element>
+</database>

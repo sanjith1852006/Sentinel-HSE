@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_suggestion_reader_group">
+    <sys_suggestion_reader_group action="DELETE">
+        <click_in_mode>true</click_in_mode>
+        <context_config_id display_value="Sentinel HSE Assistant">e32ea9bae46a43107f44b37c6b75887a</context_config_id>
+        <limit>5</limit>
+        <order>100</order>
+        <section_header>Recent searches</section_header>
+        <suggestion_type>Recent Search Reader Group for Sentinel HSE Assistant</suggestion_type>
+        <sys_class_name>sys_suggestion_reader_group</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:53:56</sys_created_on>
+        <sys_id>672ea9bae46a43107f44b37c6b75887d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Recent Search Reader Group for Sentinel HSE Assistant</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_suggestion_reader_group_672ea9bae46a43107f44b37c6b75887d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:55:08</sys_updated_on>
+    </sys_suggestion_reader_group>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</application>
+        <file_path/>
+        <instance_id>17b1043093560750fb38f8284dba101a</instance_id>
+        <instance_name>dlt-hck-8017-0027</instance_name>
+        <name>sys_suggestion_reader_group_672ea9bae46a43107f44b37c6b75887d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_suggestion_reader_group"><sys_suggestion_reader_group action="INSERT_OR_UPDATE"><click_in_mode>true</click_in_mode><context_config_id display_value="Sentinel HSE Assistant">e32ea9bae46a43107f44b37c6b75887a</context_config_id><limit>5</limit><order>100</order><section_header>Recent searches</section_header><suggestion_type>Recent Search Reader Group for Sentinel HSE Assistant</suggestion_type><sys_class_name>sys_suggestion_reader_group</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-10 16:53:56</sys_created_on><sys_id>672ea9bae46a43107f44b37c6b75887d</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Recent Search Reader Group for Sentinel HSE Assistant</sys_name><sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package><sys_policy/><sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope><sys_update_name>sys_suggestion_reader_group_672ea9bae46a43107f44b37c6b75887d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-10 16:55:08</sys_updated_on></sys_suggestion_reader_group></record_update>]]></payload>
+        <payload_hash>1685861798</payload_hash>
+        <record_name>Recent Search Reader Group for Sentinel HSE Assistant</record_name>
+        <reverted_from/>
+        <source>6124114d456203107f442c7fe0ab7389</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:55:08</sys_created_on>
+        <sys_id>097ee5fae46a43107f44b37c6b75884b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19fec9976520000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:55:08</sys_updated_on>
+        <type>Suggestion Reader Group</type>
+        <update_guid>0d7ee5fa536a43103475219c3b54424a</update_guid>
+        <update_guid_history>0d7ee5fa536a43103475219c3b54424a:1685861798,a72ea9ba526a431099b4d419f9a9df7f:234879728</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 17:08:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_suggestion_reader_group">sys_suggestion_reader_group</sys_db_object>
+        <sys_id>39d798b8574140f0a29c5ef146303100</sys_id>
+        <sys_metadata>672ea9bae46a43107f44b37c6b75887d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Recent Search Reader Group for Sentinel HSE Assistant</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_scope_delete display_value="">00a898291b4446e4800f9c59a3050f44</sys_scope_delete>
+        <sys_update_name>sys_suggestion_reader_group_672ea9bae46a43107f44b37c6b75887d</sys_update_name>
+        <sys_update_version display_value="sys_suggestion_reader_group_672ea9bae46a43107f44b37c6b75887d">097ee5fae46a43107f44b37c6b75884b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 17:08:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

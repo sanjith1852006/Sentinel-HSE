@@ -1,0 +1,4318 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description>Sentinel HSE Command Center Dashboard</description>
+        <direct>false</direct>
+        <endpoint>x_snc_sentinel_hse_sentinel_hse_command_center.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+
+<j:jelly trim="false"
+    xmlns:j="jelly:core"
+    xmlns:g="glide">
+
+<style>
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: #f4f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #17203a;
+}
+
+.dashboard {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+    width: 220px;
+    min-width: 220px;
+    background: #ffffff;
+    border-right: 1px solid #dfe5ed;
+    padding: 18px 12px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    padding: 5px 7px 20px 7px;
+    border-bottom: 1px solid #edf0f4;
+}
+
+
+/* SENTINEL SHIELD */
+
+.brand-icon {
+    width: 46px;
+    height: 50px;
+    background: #17285f;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-right: 11px;
+    font-size: 19px;
+    font-weight: bold;
+
+    clip-path: polygon(
+        50% 0%,
+        92% 15%,
+        92% 55%,
+        82% 75%,
+        50% 100%,
+        18% 75%,
+        8% 55%,
+        8% 15%
+    );
+
+    box-shadow: 0 5px 12px rgba(23, 40, 95, 0.20);
+}
+
+.brand-icon:before {
+    content: "";
+    position: absolute;
+
+    width: 31px;
+    height: 36px;
+
+    border: 2px solid #ffffff;
+
+    opacity: 0.9;
+
+    clip-path: polygon(
+        50% 0%,
+        92% 15%,
+        92% 55%,
+        82% 75%,
+        50% 100%,
+        18% 75%,
+        8% 55%,
+        8% 15%
+    );
+}
+
+.brand-icon span {
+    position: relative;
+    z-index: 2;
+}
+
+.brand-title {
+    font-size: 17px;
+    font-weight: bold;
+    color: #17203a;
+}
+
+.brand-subtitle {
+    font-size: 11px;
+    color: #7a8290;
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.nav-item[onclick] {
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.navigation {
+    margin-top: 18px;
+}
+
+.nav-item {
+    height: 39px;
+    padding: 0 12px;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 8px;
+
+    margin-bottom: 4px;
+
+    font-size: 14px;
+    color: #25314a;
+
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    background: #f0f4ff;
+}
+
+.nav-item.active {
+    background: #3154ee;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.nav-icon {
+    width: 25px;
+    margin-right: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   SYSTEM STATUS
+   ========================================================= */
+
+.system-box {
+    margin-top: 28px;
+
+    padding: 14px;
+
+    border: 1px solid #e2e7ee;
+    border-radius: 10px;
+
+    background: #fbfcfe;
+}
+
+.system-title {
+    font-size: 11px;
+    font-weight: bold;
+    color: #555f72;
+}
+
+.system-status {
+    margin-top: 7px;
+
+    color: #19a957;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.system-note {
+    margin-top: 4px;
+
+    color: #7b8493;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.main {
+    flex: 1;
+    min-width: 0;
+
+    padding: 20px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 16px;
+}
+
+.header-title {
+    font-size: 28px;
+    font-weight: bold;
+
+    letter-spacing: 0.3px;
+
+    color: #111d42;
+}
+
+.header-subtitle {
+    font-size: 13px;
+    color: #727b8d;
+
+    margin-top: 5px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.date-box {
+    background: #ffffff;
+
+    border: 1px solid #dfe5ed;
+    border-radius: 8px;
+
+    padding: 10px 14px;
+
+    font-size: 12px;
+    color: #313b50;
+}
+
+
+/* =========================================================
+   KPI GRID
+   ========================================================= */
+
+.kpi-grid {
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+}
+
+.kpi-card {
+    position: relative;
+
+    min-height: 112px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe5ed;
+
+    border-radius: 10px;
+
+    padding: 14px;
+
+    overflow: hidden;
+}
+
+.kpi-card:hover {
+    box-shadow: 0 5px 16px rgba(30, 45, 70, 0.07);
+}
+
+
+/* KPI ICON */
+
+.kpi-icon {
+    position: absolute;
+
+    top: 14px;
+    right: 14px;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+    font-weight: bold;
+
+    border: 1px solid transparent;
+}
+
+.icon-blue {
+    background: #edf4ff;
+    color: #2864d7;
+    border-color: #d9e7ff;
+}
+
+.icon-red {
+    background: #fff0f1;
+    color: #e52d36;
+    border-color: #ffd7da;
+}
+
+.icon-orange {
+    background: #fff4e5;
+    color: #ed8700;
+    border-color: #ffe0b5;
+}
+
+.icon-purple {
+    background: #f3efff;
+    color: #7446d8;
+    border-color: #e4d9ff;
+}
+
+.icon-green {
+    background: #ebf9f0;
+    color: #18a957;
+    border-color: #cdeed9;
+}
+
+.kpi-label {
+    font-size: 11px;
+
+    color: #6d7687;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    padding-right: 48px;
+}
+
+.kpi-value {
+    margin-top: 9px;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: #111b37;
+}
+
+.value-red {
+    color: #e52d36;
+}
+
+.value-orange {
+    color: #eb8700;
+}
+
+.value-blue {
+    color: #2864d7;
+}
+
+.value-purple {
+    color: #7446d8;
+}
+
+.value-green {
+    color: #18a957;
+}
+
+.kpi-note {
+    margin-top: 5px;
+
+    font-size: 11px;
+
+    color: #7c8492;
+}
+
+
+/* =========================================================
+   COMMON CARD
+   ========================================================= */
+
+.card {
+    background: #ffffff;
+
+    border: 1px solid #dfe5ed;
+
+    border-radius: 10px;
+
+    padding: 14px;
+}
+
+.card:hover {
+    box-shadow: 0 4px 14px rgba(30, 45, 70, 0.04);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 12px;
+
+    font-weight: bold;
+
+    color: #17203a;
+}
+
+.view-link {
+    color: #2864d7;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   FIRST ROW
+   ========================================================= */
+
+.first-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1.25fr 1fr;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   ASSET RISK
+   ========================================================= */
+
+.risk-card {
+    min-height: 280px;
+}
+
+.risk-area {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 22px;
+
+    min-height: 220px;
+}
+
+.donut {
+    width: 155px;
+    height: 155px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.donut-inner {
+    width: 92px;
+    height: 92px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.donut-number {
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+.donut-text {
+    font-size: 8px;
+
+    color: #747d8d;
+
+    margin-top: 2px;
+}
+
+.legend {
+    font-size: 12px;
+}
+
+.legend-item {
+    display: flex;
+
+    align-items: center;
+
+    margin: 14px 0;
+}
+
+.legend-dot {
+    width: 13px;
+    height: 13px;
+
+    border-radius: 3px;
+
+    margin-right: 7px;
+}
+
+.legend-critical {
+    background: #e52d36;
+}
+
+.legend-high {
+    background: #ed8700;
+}
+
+.legend-medium {
+    background: #f5b514;
+}
+
+.legend-low {
+    background: #22aa5b;
+}
+
+
+/* =========================================================
+   SCADA
+   ========================================================= */
+
+.scada-card {
+    min-height: 280px;
+}
+
+.scada-panel {
+    min-height: 220px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-around;
+}
+
+.scada-line {
+    position: absolute;
+
+    left: 50px;
+    right: 50px;
+
+    top: 108px;
+
+    height: 4px;
+
+    background: #dce3eb;
+
+    z-index: 1;
+}
+
+.scada-node {
+    width: 125px;
+    height: 155px;
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+.scada-circle {
+    width: 105px;
+    height: 105px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 4px solid;
+
+    box-shadow: 0 4px 15px rgba(30, 45, 70, 0.08);
+}
+
+.safe-circle {
+    border-color: #22aa5b;
+}
+
+.warning-circle {
+    border-color: #ed8700;
+}
+
+.critical-circle {
+    border-color: #e52d36;
+}
+
+.scada-symbol {
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+.scada-name {
+    margin-top: 3px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+.scada-count {
+    margin-top: 3px;
+
+    font-size: 21px;
+
+    font-weight: bold;
+}
+
+.scada-percent {
+    margin-top: 2px;
+
+    font-size: 10px;
+}
+
+.safe-text {
+    color: #18a957;
+}
+
+.warning-text {
+    color: #eb8700;
+}
+
+.critical-text {
+    color: #e52d36;
+}
+
+.scada-footer {
+    text-align: right;
+
+    margin-top: -5px;
+
+    color: #2864d7;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   RISK TREND
+   ========================================================= */
+
+.trend-card {
+    min-height: 280px;
+}
+
+.trend-area {
+    height: 215px;
+
+    position: relative;
+
+    padding-top: 10px;
+}
+
+.trend-grid {
+    position: absolute;
+
+    left: 10px;
+    right: 5px;
+
+    top: 25px;
+    bottom: 20px;
+
+    border-left: 1px solid #e1e6ed;
+
+    border-bottom: 1px solid #e1e6ed;
+}
+
+.trend-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.trend-labels {
+    position: absolute;
+
+    left: 15px;
+    right: 5px;
+
+    bottom: 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 10px;
+
+    color: #7b8391;
+}
+
+
+/* =========================================================
+   SECOND ROW
+   ========================================================= */
+
+.second-row {
+    display: grid;
+
+    grid-template-columns: 1.25fr 0.95fr 1fr;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+}
+
+.second-card {
+    min-height: 275px;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.data-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 9px;
+}
+
+.data-table th {
+    text-align: left;
+
+    color: #727b8c;
+
+    font-weight: bold;
+
+    padding: 8px 5px;
+
+    border-bottom: 1px solid #e1e6ed;
+}
+
+.data-table td {
+    padding: 8px 5px;
+
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.data-table tr:hover {
+    background: #f8faff;
+}
+
+.record-link {
+    color: #2864d7;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   BADGES
+   ========================================================= */
+
+.badge {
+    display: inline-block;
+
+    padding: 3px 7px;
+
+    border-radius: 5px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+.badge-critical {
+    color: #d9252e;
+
+    background: #fff0f1;
+
+    border: 1px solid #ffd0d3;
+}
+
+.badge-high {
+    color: #d87b00;
+
+    background: #fff5e7;
+
+    border: 1px solid #ffdfb3;
+}
+
+.badge-medium {
+    color: #9a7600;
+
+    background: #fffbea;
+
+    border: 1px solid #f5e5a4;
+}
+
+.badge-new {
+    color: #2864d7;
+
+    background: #eef5ff;
+
+    border: 1px solid #cddfff;
+}
+
+.badge-progress {
+    color: #178d49;
+
+    background: #ecfaf1;
+
+    border: 1px solid #c8efd8;
+}
+
+
+/* =========================================================
+   INSPECTION
+   ========================================================= */
+
+.inspection-area {
+    min-height: 220px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+}
+
+.inspection-donut {
+    width: 155px;
+    height: 155px;
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(
+            #22aa5b 0deg 202deg,
+            #3154ee 202deg 270deg,
+            #e52d36 270deg 360deg
+        );
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.inspection-inner {
+    width: 96px;
+    height: 96px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+.inspection-total {
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+.inspection-list {
+    font-size: 13px;
+    line-height: 1.8;
+    min-width: 150px;
+}
+
+.inspection-number {
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   AI ADVISOR CARD
+   ========================================================= */
+
+.ai-card {
+    min-height: 275px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.ai-intro {
+    min-height: 210px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    text-align: center;
+}
+
+
+/* ATTRACTIVE AI ICON */
+
+.ai-icon {
+    width: 86px;
+    height: 86px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #3154ee,
+            #7047db
+        );
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(49, 84, 238, 0.22),
+        inset 0 0 0 4px rgba(255,255,255,0.15);
+
+    transition: transform 0.2s ease;
+}
+
+.ai-icon:hover {
+    transform: scale(1.08);
+}
+
+.ai-name {
+    margin-top: 12px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.ai-description {
+    margin-top: 5px;
+
+    font-size: 11px;
+
+    color: #7a8290;
+}
+
+.ai-button {
+    margin-top: 13px;
+
+    border: 0;
+
+    background: #3154ee;
+
+    color: #ffffff;
+
+    border-radius: 7px;
+
+    padding: 8px 14px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+.ai-button:hover {
+    background: #2546d6;
+}
+
+
+/* =========================================================
+   AI POPUP
+   ========================================================= */
+
+.ai-overlay {
+    display: none;
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(15, 25, 45, 0.18);
+
+    z-index: 9998;
+}
+
+.ai-window {
+    position: fixed;
+
+    width: 390px;
+    height: 500px;
+
+    right: 25px;
+    bottom: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce2eb;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 15px 45px rgba(25, 40, 70, 0.20);
+
+    z-index: 9999;
+
+    overflow: hidden;
+}
+
+.ai-window-header {
+    height: 58px;
+
+    background: #17285f;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 16px;
+}
+
+.ai-window-title {
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+.ai-window-subtitle {
+    font-size: 10px;
+
+    opacity: 0.75;
+
+    margin-top: 3px;
+}
+
+.ai-close {
+    width: 28px;
+    height: 28px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.15);
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+.ai-close:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+.ai-body {
+    height: 365px;
+
+    padding: 14px;
+
+    overflow-y: auto;
+
+    background: #f7f9fc;
+}
+
+.ai-welcome {
+    background: #ffffff;
+
+    border: 1px solid #e1e6ed;
+
+    border-radius: 10px;
+
+    padding: 12px;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+.ai-question {
+    background: #eef1ff;
+
+    border: 1px solid #d9ddff;
+
+    border-radius: 10px;
+
+    padding: 9px 11px;
+
+    font-size: 11px;
+
+    margin-top: 10px;
+
+    cursor: pointer;
+}
+
+.ai-question:hover {
+    background: #e4e8ff;
+}
+
+.ai-message {
+    margin-top: 10px;
+
+    padding: 10px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e6ed;
+
+    border-radius: 10px;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+.ai-input-area {
+    height: 77px;
+
+    padding: 12px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #e1e6ed;
+
+    display: flex;
+
+    gap: 7px;
+}
+
+.ai-input {
+    flex: 1;
+
+    height: 38px;
+
+    border: 1px solid #d7dde6;
+
+    border-radius: 8px;
+
+    padding: 0 10px;
+
+    font-size: 11px;
+
+    outline: none;
+}
+
+.ai-input:focus {
+    border-color: #3154ee;
+}
+
+.ai-send {
+    width: 40px;
+    height: 38px;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    background: #3154ee;
+
+    color: #ffffff;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   WORK ORDERS
+   ========================================================= */
+
+.work-card {
+    margin-bottom: 12px;
+}
+
+.work-icon {
+    width: 25px;
+    height: 25px;
+
+    border-radius: 7px;
+
+    background: #edf4ff;
+
+    color: #2864d7;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 6px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   RECENT RECORDS
+   ========================================================= */
+
+.records-card {
+    margin-bottom: 20px;
+}
+
+.record-tabs {
+    display: flex;
+
+    gap: 8px;
+
+    margin-bottom: 10px;
+}
+
+.record-tab {
+    padding: 7px 12px;
+
+    border-radius: 7px;
+
+    background: #f3f5f8;
+
+    color: #687286;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+.record-tab:hover {
+    background: #e9edf3;
+}
+
+.record-tab.active {
+    background: #eef1ff;
+
+    color: #3154ee;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 1300px) {
+
+    .sidebar {
+        width: 185px;
+        min-width: 185px;
+    }
+
+    .kpi-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .first-row {
+        grid-template-columns: 1fr;
+    }
+
+    .second-row {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        padding: 12px;
+    }
+
+    .kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   LARGER TEXT - WORK ORDERS AND RECENT RECORDS
+   ========================================================= */
+
+.work-card .card-title,
+.records-card .card-title {
+    font-size: 18px;
+}
+
+.work-card .data-table,
+.records-card .data-table {
+    font-size: 14px;
+}
+
+.work-card .data-table th,
+.records-card .data-table th {
+    font-size: 13px;
+    padding: 10px 6px;
+}
+
+.work-card .data-table td,
+.records-card .data-table td {
+    font-size: 14px;
+    padding: 11px 6px;
+}
+
+.work-card .record-link,
+.records-card .record-link {
+    font-size: 14px;
+}
+
+.work-card .badge,
+.records-card .badge {
+    font-size: 12px;
+    padding: 4px 9px;
+}
+
+.work-card .work-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+}
+
+.records-card .record-tabs {
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.records-card .record-tab {
+    font-size: 13px;
+    padding: 9px 14px;
+}
+
+/* =========================================================
+   LARGER TEXT - RECENT INCIDENTS
+   ========================================================= */
+
+#recentIncidentRecords .data-table {
+    font-size: 14px;
+}
+
+#recentIncidentRecords .data-table th {
+    font-size: 13px;
+    padding: 10px 6px;
+}
+
+#recentIncidentRecords .data-table td {
+    font-size: 14px;
+    padding: 11px 6px;
+}
+
+#recentIncidentRecords .record-link {
+    font-size: 14px;
+}
+
+#recentIncidentRecords .badge {
+    font-size: 12px;
+    padding: 4px 9px;
+}
+
+/* =========================================================
+   LARGER TEXT - RECENT INCIDENTS CARD
+   ========================================================= */
+
+.incident-card .card-title {
+    font-size: 18px;
+}
+
+.incident-card .view-link {
+    font-size: 13px;
+}
+
+.incident-card .data-table {
+    font-size: 14px;
+}
+
+.incident-card .data-table th {
+    font-size: 13px;
+    padding: 10px 6px;
+}
+
+.incident-card .data-table td {
+    font-size: 14px;
+    padding: 11px 6px;
+}
+
+.incident-card .record-link {
+    font-size: 14px;
+}
+
+.incident-card .badge {
+    font-size: 12px;
+    padding: 4px 9px;
+}
+
+/* =========================================================
+   END CSS
+   ========================================================= */
+
+
+.record-tabs button {
+    border: 0;
+    font-family: inherit;
+    cursor: pointer;
+}
+</style>
+
+
+<!-- =========================================================
+     DASHBOARD
+     ========================================================= -->
+
+<div class="dashboard">
+
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <div class="sidebar">
+
+
+        <!-- BRAND -->
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                <span>S</span>
+            </div>
+
+            <div>
+
+                <div class="brand-title">
+                    SENTINEL HSE
+                </div>
+
+                <div class="brand-subtitle">
+                    Oil and Gas Operations
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <div class="navigation">
+
+
+            <div class="nav-item active" onclick="showDashboard();">
+                <span class="nav-icon">⌂</span>
+                Dashboard
+            </div>
+
+
+            <div class="nav-item" onclick="openRecords('x_snc_sentinel_hse_oilfield_asset_1');">
+                <span class="nav-icon">◈</span>
+                Assets
+            </div>
+
+
+            <div class="nav-item" onclick="openRecords('x_snc_sentinel_hse_sensor_reading');">
+                <span class="nav-icon">⌁</span>
+                SCADA Monitor
+            </div>
+
+
+            <div class="nav-item" onclick="openRecords('x_snc_sentinel_hse_oilfield_asset_1', 'current_risk_levelISNOTEMPTY');">
+                <span class="nav-icon">◉</span>
+                Risk Assessment
+            </div>
+
+
+            <div class="nav-item" onclick="openRecords('x_snc_sentinel_hse_incident');">
+                <span class="nav-icon">⚠</span>
+                Incidents
+            </div>
+
+
+            <div class="nav-item" onclick="openRecords('x_snc_sentinel_hse_inspection');">
+                <span class="nav-icon">✓</span>
+                Inspections
+            </div>
+
+
+            <div class="nav-item" onclick="openRecords('x_snc_sentinel_hse_permit_to_work');">
+                <span class="nav-icon">▣</span>
+                Permit to Work
+            </div>
+
+
+            <div class="nav-item" onclick="openRecords('x_snc_sentinel_hse_work_order');">
+                <span class="nav-icon">⚙</span>
+                Work Orders
+            </div>
+
+
+            <div class="nav-item" onclick="openSidebarAI();">
+                <span class="nav-icon">✦</span>
+                AI Advisor
+            </div>
+
+
+            <div class="nav-item" onclick="openRecords('x_snc_sentinel_hse_compliance_audit');">
+                <span class="nav-icon">✓</span>
+                Compliance Audit
+            </div>
+
+
+            <div class="nav-item" onclick="openRecords('x_snc_sentinel_hse_insurance_claim');">
+                <span class="nav-icon">◇</span>
+                Insurance Claims
+            </div>
+
+
+        </div>
+
+
+        <!-- SYSTEM STATUS -->
+
+        <div class="system-box">
+
+            <div class="system-title">
+                SYSTEM STATUS
+            </div>
+
+            <div class="system-status">
+                ● OPERATIONAL
+            </div>
+
+            <div class="system-note">
+                All systems normal
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <div class="main">
+
+
+        <!-- =================================================
+             HEADER
+             ================================================= -->
+
+        <div class="header">
+
+
+            <div>
+
+                <div class="header-title">
+                    HSE COMMAND CENTER
+                </div>
+
+                <div class="header-subtitle">
+                    Real-time monitoring of assets, risks, incidents and operations
+                </div>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <div class="date-box">
+                    August 18, 2026 - 10:30 AM - IST
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =================================================
+             KPI DATA
+             ================================================= -->
+
+        <g:evaluate var="jvar_total_assets">
+
+            var gr = new GlideRecord(
+                "x_snc_sentinel_hse_oilfield_asset_1"
+            );
+
+            gr.query();
+
+            gr.getRowCount();
+
+        </g:evaluate>
+
+
+        <g:evaluate var="jvar_critical_risks">
+
+            var count = 0;
+
+            var gr = new GlideRecord(
+                "x_snc_sentinel_hse_oilfield_asset_1"
+            );
+
+            gr.query();
+
+            while (gr.next()) {
+
+                var risk = String(
+                    gr.getDisplayValue("current_risk_level")
+                ).toLowerCase().trim();
+
+                if (risk == "critical") {
+                    count++;
+                }
+
+            }
+
+            count;
+
+        </g:evaluate>
+
+
+        <g:evaluate var="jvar_open_incidents">
+
+            var count = 0;
+
+            var gr = new GlideRecord(
+                "x_snc_sentinel_hse_incident"
+            );
+
+            gr.query();
+
+            while (gr.next()) {
+
+                var status = String(
+                    gr.getDisplayValue("status_5")
+                ).toLowerCase().trim();
+
+                if (
+                    status != "closed" &amp;&amp;
+                    status != "resolved" &amp;&amp;
+                    status != "cancelled" &amp;&amp;
+                    status != "canceled"
+                ) {
+                    count++;
+                }
+
+            }
+
+            count;
+
+        </g:evaluate>
+
+
+        <g:evaluate var="jvar_active_permits">
+
+            var count = 0;
+
+            var inactiveStatuses = [
+                "closed",
+                "expired",
+                "cancelled",
+                "canceled",
+                "rejected",
+                "terminated",
+                "completed"
+            ];
+
+            var gr = new GlideRecord(
+                "x_snc_sentinel_hse_permit_to_work"
+            );
+
+            gr.query();
+
+            while (gr.next()) {
+
+                var status = String(
+                    gr.getDisplayValue("status_8")
+                ).toLowerCase().trim();
+
+                if (
+                    status != "" &amp;&amp;
+                    inactiveStatuses.indexOf(status) == -1
+                ) {
+                    count++;
+                }
+
+            }
+
+            count;
+
+        </g:evaluate>
+
+
+        <g:evaluate var="jvar_maintenance_due">
+
+            var count = 0;
+
+            var gr = new GlideRecord(
+                "x_snc_sentinel_hse_work_order"
+            );
+
+            gr.query();
+
+            while (gr.next()) {
+
+                var workType = String(
+                    gr.getDisplayValue("work_order_type_7")
+                ).toLowerCase().trim();
+
+                var status = String(
+                    gr.getDisplayValue("status_7")
+                ).toLowerCase().trim();
+
+                var isMaintenance =
+                    workType.indexOf("maintenance") != -1;
+
+                var needsAttention =
+                    status == "new" &#124;&#124;
+                    status == "scheduled" &#124;&#124;
+                    status == "in progress";
+
+                if (
+                    isMaintenance &amp;&amp;
+                    needsAttention
+                ) {
+                    count++;
+                }
+
+            }
+
+            count;
+
+        </g:evaluate>
+
+
+        <!-- =================================================
+             AVERAGE RISK SCORE DATA
+             ================================================= -->
+
+        <g:evaluate var="jvar_average_risk_score">
+
+            var totalScore = 0;
+            var totalAssets = 0;
+
+            var gr = new GlideRecord(
+                "x_snc_sentinel_hse_oilfield_asset_1"
+            );
+
+            gr.query();
+
+            while (gr.next()) {
+
+                var risk = String(
+                    gr.getDisplayValue("current_risk_level")
+                ).toLowerCase().trim();
+
+                var score = 0;
+
+                if (risk == "critical") {
+                    score = 90;
+                } else if (risk == "high") {
+                    score = 70;
+                } else if (risk == "medium") {
+                    score = 50;
+                } else if (risk == "low") {
+                    score = 25;
+                }
+
+                totalScore += score;
+                totalAssets++;
+
+            }
+
+            if (totalAssets > 0) {
+                Math.round(totalScore / totalAssets);
+            } else {
+                0;
+            }
+
+        </g:evaluate>
+
+
+        <g:evaluate var="jvar_average_risk_label">
+
+            var score = parseInt("${jvar_average_risk_score}", 10);
+
+            if (score >= 90) {
+                "Critical";
+            } else if (score >= 70) {
+                "High";
+            } else if (score >= 40) {
+                "Moderate";
+            } else {
+                "Low";
+            }
+
+        </g:evaluate>
+
+
+        <!-- =================================================
+             KPI CARDS
+             ================================================= -->
+
+        <div class="kpi-grid">
+
+
+            <!-- TOTAL ASSETS -->
+
+            <div class="kpi-card">
+
+                <div class="kpi-icon icon-blue">
+                    ◈
+                </div>
+
+                <div class="kpi-label">
+                    Total Assets
+                </div>
+
+                <div class="kpi-value">
+                    ${jvar_total_assets}
+                </div>
+
+                <div class="kpi-note">
+                    All Locations
+                </div>
+
+            </div>
+
+
+            <!-- CRITICAL RISKS -->
+
+            <div class="kpi-card">
+
+                <div class="kpi-icon icon-red">
+                    ⚠
+                </div>
+
+                <div class="kpi-label">
+                    Critical Risks
+                </div>
+
+                <div class="kpi-value value-red">
+                    ${jvar_critical_risks}
+                </div>
+
+                <div class="kpi-note">
+                    Immediate attention
+                </div>
+
+            </div>
+
+
+            <!-- OPEN INCIDENTS -->
+
+            <div class="kpi-card">
+
+                <div class="kpi-icon icon-orange">
+                    ✚
+                </div>
+
+                <div class="kpi-label">
+                    Open Incidents
+                </div>
+
+                <div class="kpi-value value-orange">
+                    ${jvar_open_incidents}
+                </div>
+
+                <div class="kpi-note">
+                    Active HSE incidents
+                </div>
+
+            </div>
+
+
+            <!-- PERMITS -->
+
+            <div class="kpi-card">
+
+                <div class="kpi-icon icon-blue">
+                    ✓
+                </div>
+
+                <div class="kpi-label">
+                    Permits Active
+                </div>
+
+                <div class="kpi-value value-blue">
+                    ${jvar_active_permits}
+                </div>
+
+                <div class="kpi-note">
+                    Valid permits
+                </div>
+
+            </div>
+
+
+            <!-- MAINTENANCE -->
+
+            <div class="kpi-card">
+
+                <div class="kpi-icon icon-purple">
+                    ⚙
+                </div>
+
+                <div class="kpi-label">
+                    Maintenance Due
+                </div>
+
+                <div class="kpi-value value-purple">
+                    ${jvar_maintenance_due}
+                </div>
+
+                <div class="kpi-note">
+                    Active maintenance work
+                </div>
+
+            </div>
+
+
+            <!-- RISK SCORE -->
+
+            <div class="kpi-card">
+
+                <div class="kpi-icon icon-green">
+                    ◉
+                </div>
+
+                <div class="kpi-label">
+                    Average Risk Score
+                </div>
+
+                <div class="kpi-value value-green">
+                    ${jvar_average_risk_score}
+                </div>
+
+                <div class="kpi-note">
+                    ${jvar_average_risk_label}
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =================================================
+             DYNAMIC ASSET RISK DATA
+             ================================================= -->
+
+        <g:evaluate var="jvar_asset_total">
+            var count = 0;
+            var gr = new GlideRecord("x_snc_sentinel_hse_oilfield_asset_1");
+            gr.query();
+            while (gr.next()) {
+                count++;
+            }
+            count;
+        </g:evaluate>
+
+        <g:evaluate var="jvar_asset_critical">
+            var count = 0;
+            var gr = new GlideRecord("x_snc_sentinel_hse_oilfield_asset_1");
+            gr.query();
+
+            while (gr.next()) {
+                var displayRisk = String(
+                    gr.getDisplayValue("current_risk_level")
+                ).toLowerCase().trim();
+
+                var rawRisk = String(
+                    gr.getValue("current_risk_level")
+                ).toLowerCase().trim();
+
+                var risk = displayRisk;
+
+                /*
+                 * Some Sentinel HSE records use numeric choice values.
+                 * Normalize those values so that 0 is Low, 2 is Medium,
+                 * 3 is High and 4 is Critical. When the stored value is
+                 * already a text choice, the display value is used.
+                 */
+                if (/^\d+$/.test(rawRisk)) {
+                    if (rawRisk == "0" || rawRisk == "1") {
+                        risk = "low";
+                    } else if (rawRisk == "2") {
+                        risk = "medium";
+                    } else if (rawRisk == "3") {
+                        risk = "high";
+                    } else if (rawRisk == "4") {
+                        risk = "critical";
+                    }
+                }
+
+                if (risk == "critical") {
+                    count++;
+                }
+            }
+
+            count;
+        </g:evaluate>
+
+        <g:evaluate var="jvar_asset_high">
+            var count = 0;
+            var gr = new GlideRecord("x_snc_sentinel_hse_oilfield_asset_1");
+            gr.query();
+
+            while (gr.next()) {
+                var displayRisk = String(
+                    gr.getDisplayValue("current_risk_level")
+                ).toLowerCase().trim();
+
+                var rawRisk = String(
+                    gr.getValue("current_risk_level")
+                ).toLowerCase().trim();
+
+                var risk = displayRisk;
+
+                if (/^\d+$/.test(rawRisk)) {
+                    if (rawRisk == "0" || rawRisk == "1") {
+                        risk = "low";
+                    } else if (rawRisk == "2") {
+                        risk = "medium";
+                    } else if (rawRisk == "3") {
+                        risk = "high";
+                    } else if (rawRisk == "4") {
+                        risk = "critical";
+                    }
+                }
+
+                if (risk == "high") {
+                    count++;
+                }
+            }
+
+            count;
+        </g:evaluate>
+
+        <g:evaluate var="jvar_asset_medium">
+            var count = 0;
+            var gr = new GlideRecord("x_snc_sentinel_hse_oilfield_asset_1");
+            gr.query();
+
+            while (gr.next()) {
+                var displayRisk = String(
+                    gr.getDisplayValue("current_risk_level")
+                ).toLowerCase().trim();
+
+                var rawRisk = String(
+                    gr.getValue("current_risk_level")
+                ).toLowerCase().trim();
+
+                var risk = displayRisk;
+
+                if (/^\d+$/.test(rawRisk)) {
+                    if (rawRisk == "0" || rawRisk == "1") {
+                        risk = "low";
+                    } else if (rawRisk == "2") {
+                        risk = "medium";
+                    } else if (rawRisk == "3") {
+                        risk = "high";
+                    } else if (rawRisk == "4") {
+                        risk = "critical";
+                    }
+                }
+
+                if (risk == "medium") {
+                    count++;
+                }
+            }
+
+            count;
+        </g:evaluate>
+
+        <g:evaluate var="jvar_asset_low">
+            /* Low is always the remaining real asset population. */
+            var total = parseInt("${jvar_asset_total}", 10) || 0;
+            var critical = parseInt("${jvar_asset_critical}", 10) || 0;
+            var high = parseInt("${jvar_asset_high}", 10) || 0;
+            var medium = parseInt("${jvar_asset_medium}", 10) || 0;
+
+            var low = total - critical - high - medium;
+            low = Math.max(0, low);
+
+            low;
+        </g:evaluate>
+
+        <g:evaluate var="jvar_asset_critical_deg">
+            var total = parseInt("${jvar_asset_total}", 10) || 0;
+            var critical = parseInt("${jvar_asset_critical}", 10) || 0;
+            total > 0 ? Math.round((critical / total) * 360) : 0;
+        </g:evaluate>
+
+        <g:evaluate var="jvar_asset_high_end">
+            var total = parseInt("${jvar_asset_total}", 10) || 0;
+            var critical = parseInt("${jvar_asset_critical}", 10) || 0;
+            var high = parseInt("${jvar_asset_high}", 10) || 0;
+            var criticalDeg = total > 0 ? Math.round((critical / total) * 360) : 0;
+            criticalDeg + (total > 0 ? Math.round((high / total) * 360) : 0);
+        </g:evaluate>
+
+        <g:evaluate var="jvar_asset_medium_end">
+            var total = parseInt("${jvar_asset_total}", 10) || 0;
+            var critical = parseInt("${jvar_asset_critical}", 10) || 0;
+            var high = parseInt("${jvar_asset_high}", 10) || 0;
+            var medium = parseInt("${jvar_asset_medium}", 10) || 0;
+            var criticalDeg = total > 0 ? Math.round((critical / total) * 360) : 0;
+            var highDeg = total > 0 ? Math.round((high / total) * 360) : 0;
+            criticalDeg + highDeg + (total > 0 ? Math.round((medium / total) * 360) : 0);
+        </g:evaluate>
+
+
+        <!-- =================================================
+             FIRST ROW
+             ================================================= -->
+
+        <div class="first-row">
+
+
+            <!-- =================================================
+                 ASSET RISK OVERVIEW
+                 ================================================= -->
+
+            <div class="card risk-card">
+
+
+                <div class="card-header">
+
+                    <div class="card-title">
+                        ASSET RISK OVERVIEW
+                    </div>
+
+                    <div class="view-link">
+                        View all
+                    </div>
+
+                </div>
+
+
+                <div class="risk-area">
+
+
+                    <div
+                        class="donut"
+                        style="background: conic-gradient(
+                            #e52d36 0deg ${jvar_asset_critical_deg}deg,
+                            #ed8700 ${jvar_asset_critical_deg}deg ${jvar_asset_high_end}deg,
+                            #f5b514 ${jvar_asset_high_end}deg ${jvar_asset_medium_end}deg,
+                            #22aa5b ${jvar_asset_medium_end}deg 360deg
+                        );">
+
+                        <div class="donut-inner">
+
+                            <div class="donut-number">
+                                ${jvar_asset_total}
+                            </div>
+
+                            <div class="donut-text">
+                                Total Assets
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="legend">
+
+
+                        <div class="legend-item">
+
+                            <span class="legend-dot legend-critical"></span>
+
+                            Critical ${jvar_asset_critical}
+
+                        </div>
+
+
+                        <div class="legend-item">
+
+                            <span class="legend-dot legend-high"></span>
+
+                            High ${jvar_asset_high}
+
+                        </div>
+
+
+                        <div class="legend-item">
+
+                            <span class="legend-dot legend-medium"></span>
+
+                            Medium ${jvar_asset_medium}
+
+                        </div>
+
+
+                        <div class="legend-item">
+
+                            <span class="legend-dot legend-low"></span>
+
+                            Low ${jvar_asset_low}
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <g:evaluate var="jvar_scada_safe">
+                var safe = 0;
+                var sensorGR = new GlideRecord("x_snc_sentinel_hse_sensor_reading");
+                sensorGR.query();
+
+                while (sensorGR.next()) {
+                    var sensorStatus = String(
+                        sensorGR.getDisplayValue("sensor_status")
+                    ).toLowerCase().trim();
+
+                    if (sensorStatus.indexOf("critical") >= 0 ||
+                        sensorStatus.indexOf("alarm") >= 0) {
+                        continue;
+                    }
+
+                    if (sensorStatus.indexOf("warning") >= 0 ||
+                        sensorStatus.indexOf("warn") >= 0) {
+                        continue;
+                    }
+
+                    /* Empty/normal/ok/healthy and any other non-alarm status
+                       are counted as Safe so every sensor record belongs to
+                       exactly one category. */
+                    safe++;
+                }
+
+                safe;
+            </g:evaluate>
+
+            <g:evaluate var="jvar_scada_warning">
+                var warning = 0;
+                var sensorGR = new GlideRecord("x_snc_sentinel_hse_sensor_reading");
+                sensorGR.query();
+
+                while (sensorGR.next()) {
+                    var sensorStatus = String(
+                        sensorGR.getDisplayValue("sensor_status")
+                    ).toLowerCase().trim();
+
+                    if (sensorStatus.indexOf("warning") >= 0 ||
+                        sensorStatus.indexOf("warn") >= 0) {
+                        warning++;
+                    }
+                }
+
+                warning;
+            </g:evaluate>
+
+            <g:evaluate var="jvar_scada_critical">
+                var critical = 0;
+                var sensorGR = new GlideRecord("x_snc_sentinel_hse_sensor_reading");
+                sensorGR.query();
+
+                while (sensorGR.next()) {
+                    var sensorStatus = String(
+                        sensorGR.getDisplayValue("sensor_status")
+                    ).toLowerCase().trim();
+
+                    if (sensorStatus.indexOf("critical") >= 0 ||
+                        sensorStatus.indexOf("alarm") >= 0) {
+                        critical++;
+                    }
+                }
+
+                critical;
+            </g:evaluate>
+
+            <g:evaluate var="jvar_scada_total">
+                var sensorGR = new GlideRecord("x_snc_sentinel_hse_sensor_reading");
+                sensorGR.query();
+                sensorGR.getRowCount();
+            </g:evaluate>
+
+            <g:evaluate var="jvar_scada_safe_percent">
+                var total = parseInt("${jvar_scada_total}", 10) || 0;
+                var safe = parseInt("${jvar_scada_safe}", 10) || 0;
+                total > 0 ? Math.round((safe / total) * 100) : 0;
+            </g:evaluate>
+
+            <g:evaluate var="jvar_scada_warning_percent">
+                var total = parseInt("${jvar_scada_total}", 10) || 0;
+                var warning = parseInt("${jvar_scada_warning}", 10) || 0;
+                total > 0 ? Math.round((warning / total) * 100) : 0;
+            </g:evaluate>
+
+            <g:evaluate var="jvar_scada_critical_percent">
+                var total = parseInt("${jvar_scada_total}", 10) || 0;
+                var critical = parseInt("${jvar_scada_critical}", 10) || 0;
+                total > 0 ? Math.round((critical / total) * 100) : 0;
+            </g:evaluate>
+
+            <!-- =================================================
+                 LIVE SCADA
+                 ================================================= -->
+
+            <div class="card scada-card">
+
+
+                <div class="card-header">
+
+                    <div class="card-title">
+                        LIVE ASSET STATUS (SCADA)
+                    </div>
+
+                    <div class="view-link">
+                        View SCADA
+                    </div>
+
+                </div>
+
+
+                <div class="scada-panel">
+
+
+                    <div class="scada-line"></div>
+
+
+                    <!-- SAFE -->
+
+                    <div class="scada-node">
+
+
+                        <div class="scada-circle safe-circle">
+
+                            <div class="scada-symbol safe-text">
+                                ✓
+                            </div>
+
+                            <div class="scada-name">
+                                SAFE SENSORS
+                            </div>
+
+                            <div class="scada-count safe-text">
+                                ${jvar_scada_safe}
+                            </div>
+
+                            <div class="scada-percent safe-text">
+                                ${jvar_scada_safe_percent}%
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- WARNING -->
+
+                    <div class="scada-node">
+
+
+                        <div class="scada-circle warning-circle">
+
+                            <div class="scada-symbol warning-text">
+                                ⚠
+                            </div>
+
+                            <div class="scada-name">
+                                WARNING
+                            </div>
+
+                            <div class="scada-count warning-text">
+                                ${jvar_scada_warning}
+                            </div>
+
+                            <div class="scada-percent warning-text">
+                                ${jvar_scada_warning_percent}%
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- CRITICAL -->
+
+                    <div class="scada-node">
+
+
+                        <div class="scada-circle critical-circle">
+
+                            <div class="scada-symbol critical-text">
+                                !
+                            </div>
+
+                            <div class="scada-name">
+                                CRITICAL
+                            </div>
+
+                            <div class="scada-count critical-text">
+                                ${jvar_scada_critical}
+                            </div>
+
+                            <div class="scada-percent critical-text">
+                                ${jvar_scada_critical_percent}%
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="scada-footer">
+                    <span>Sensor Readings: ${jvar_scada_total}</span>
+                    <span>View SCADA Monitor</span>
+                </div>
+
+
+            </div>
+
+
+            <!-- =================================================
+                 RISK TREND
+                 ================================================= -->
+
+            <div class="card trend-card">
+
+
+                <div class="card-header">
+
+                    <div class="card-title">
+                        RISK SCORE TREND
+                    </div>
+
+                    <div class="view-link">
+                        Last 7 Days
+                    </div>
+
+                </div>
+
+
+                <div class="trend-area">
+
+
+                    <div class="trend-grid">
+
+
+                        <svg
+                            class="trend-svg"
+                            viewBox="0 0 700 150"
+                            preserveAspectRatio="none">
+
+
+                            <polyline
+                                points="10,112 120,120 230,84 340,38 450,59 560,76 690,91"
+                                fill="none"
+                                stroke="#22aa5b"
+                                stroke-width="4">
+                            </polyline>
+
+
+                            <circle
+                                cx="10"
+                                cy="112"
+                                r="5"
+                                fill="#22aa5b">
+                            </circle>
+
+
+                            <circle
+                                cx="120"
+                                cy="120"
+                                r="5"
+                                fill="#22aa5b">
+                            </circle>
+
+
+                            <circle
+                                cx="230"
+                                cy="84"
+                                r="5"
+                                fill="#22aa5b">
+                            </circle>
+
+
+                            <circle
+                                cx="340"
+                                cy="38"
+                                r="5"
+                                fill="#22aa5b">
+                            </circle>
+
+
+                            <circle
+                                cx="450"
+                                cy="59"
+                                r="5"
+                                fill="#22aa5b">
+                            </circle>
+
+
+                            <circle
+                                cx="560"
+                                cy="76"
+                                r="5"
+                                fill="#22aa5b">
+                            </circle>
+
+
+                            <circle
+                                cx="690"
+                                cy="91"
+                                r="5"
+                                fill="#22aa5b">
+                            </circle>
+
+
+                        </svg>
+
+
+                    </div>
+
+
+                    <div class="trend-labels">
+
+                        <span>August 12</span>
+                        <span>August 13</span>
+                        <span>August 14</span>
+                        <span>August 15</span>
+                        <span>August 16</span>
+                        <span>August 17</span>
+                        <span>August 18</span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =================================================
+             SECOND ROW
+             ================================================= -->
+
+        <div class="second-row">
+
+
+            <!-- =================================================
+                 RECENT INCIDENTS
+                 ================================================= -->
+
+          <div class="card incident-card">
+
+    <div class="card-header">
+        <div class="card-title">RECENT INCIDENTS</div>
+
+        <a
+            href="x_snc_sentinel_hse_incident_list.do"
+            class="view-link"
+            style="color:#2864d7;text-decoration:none;">
+            View all
+        </a>
+    </div>
+
+    <table class="data-table">
+
+        <thead>
+            <tr>
+                <th>Incident ID</th>
+                <th>Asset</th>
+                <th>Severity</th>
+                <th>Status</th>
+                <th>Created On</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <g:evaluate
+                var="jvar_incident_rows"
+                jelly="true">
+
+                var html = "";
+
+                    var LT = String.fromCharCode(60);
+
+                var incident = new GlideRecord(
+                    "x_snc_sentinel_hse_incident"
+                );
+
+                incident.orderByDesc("sys_created_on");
+                incident.setLimit(5);
+                incident.query();
+
+                while (incident.next()) {
+
+                    var sysId = incident.getUniqueValue();
+                    var number = incident.getDisplayValue("number");
+                    var asset = incident.getDisplayValue("asset_name_asset");
+                    var severity = incident.getDisplayValue("severity_5");
+                    var status = incident.getDisplayValue("status_5");
+                    var created = incident.getDisplayValue("sys_created_on");
+
+                    html += LT + "tr>";
+
+                    html += LT + "td>";
+                    html += LT + "a href=\"x_snc_sentinel_hse_incident.do?sys_id=";
+                    html += sysId;
+                    html += "\" class=\"record-link\" style=\"color:#2864d7;text-decoration:none;font-weight:600;\">";
+                    html += number;
+                    html += LT + "/a>";
+                    html += LT + "/td>";
+
+                    html += LT + "td>";
+                    html += asset;
+                    html += LT + "/td>";
+
+                    html += LT + "td>";
+                    html += LT + "span class=\"badge badge-high\">";
+                    html += severity;
+                    html += LT + "/span>";
+                    html += LT + "/td>";
+
+                    html += LT + "td>";
+                    html += LT + "span class=\"badge badge-new\">";
+                    html += status;
+                    html += LT + "/span>";
+                    html += LT + "/td>";
+
+                    html += LT + "td>";
+                    html += created;
+                    html += LT + "/td>";
+
+                    html += LT + "/tr>";
+                }
+
+                answer = html;
+
+            </g:evaluate>
+
+            <g:no_escape>
+                ${jvar_incident_rows}
+            </g:no_escape>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+            <!-- =================================================
+                 DYNAMIC INSPECTION OVERVIEW DATA
+                 ================================================= -->
+
+            <g:evaluate var="jvar_inspection_total">
+                var gr = new GlideRecord("x_snc_sentinel_hse_inspection");
+                gr.query();
+                gr.getRowCount();
+            </g:evaluate>
+
+            <g:evaluate var="jvar_inspection_completed">
+                var count = 0;
+                var gr = new GlideRecord("x_snc_sentinel_hse_inspection");
+                gr.query();
+
+                while (gr.next()) {
+                    var status = String(
+                        gr.getDisplayValue("status_6")
+                    ).toLowerCase().trim();
+
+                    if (status.indexOf("completed") >= 0 ||
+                        status == "complete" ||
+                        status.indexOf("closed") >= 0) {
+                        count++;
+                    }
+                }
+
+                count;
+            </g:evaluate>
+
+            <g:evaluate var="jvar_inspection_in_progress">
+                var count = 0;
+                var gr = new GlideRecord("x_snc_sentinel_hse_inspection");
+                gr.query();
+
+                while (gr.next()) {
+                    var status = String(
+                        gr.getDisplayValue("status_6")
+                    ).toLowerCase().trim();
+
+                    if (status.indexOf("in progress") >= 0 ||
+                        status.indexOf("progress") >= 0) {
+                        count++;
+                    }
+                }
+
+                count;
+            </g:evaluate>
+
+            <g:evaluate var="jvar_inspection_overdue">
+                var count = 0;
+                var gr = new GlideRecord("x_snc_sentinel_hse_inspection");
+                gr.query();
+
+                while (gr.next()) {
+                    var status = String(
+                        gr.getDisplayValue("status_6")
+                    ).toLowerCase().trim();
+
+                    var isOverdueStatus =
+                        status.indexOf("overdue") >= 0;
+
+                    var isCompleted =
+                        status.indexOf("completed") >= 0 ||
+                        status == "complete" ||
+                        status.indexOf("closed") >= 0;
+
+                    var isOverdueDate = false;
+
+                    if (gr.getValue("inspection_date_6")) {
+                        var inspectionDate = new GlideDateTime(
+                            gr.getValue("inspection_date_6")
+                        );
+                        var now = new GlideDateTime();
+                        isOverdueDate =
+                            inspectionDate.before(now);
+                    }
+
+                    if (!isCompleted &amp;&amp;
+                        (isOverdueStatus || isOverdueDate)) {
+                        count++;
+                    }
+                }
+
+                count;
+            </g:evaluate>
+
+            <g:evaluate var="jvar_inspection_completed_deg">
+                var total = parseInt("${jvar_inspection_total}", 10) || 0;
+                var completed = parseInt("${jvar_inspection_completed}", 10) || 0;
+                total > 0 ? Math.round((completed / total) * 360) : 0;
+            </g:evaluate>
+
+            <g:evaluate var="jvar_inspection_progress_end">
+                var total = parseInt("${jvar_inspection_total}", 10) || 0;
+                var completed = parseInt("${jvar_inspection_completed}", 10) || 0;
+                var inProgress = parseInt("${jvar_inspection_in_progress}", 10) || 0;
+                var completedDeg = total > 0 ? Math.round((completed / total) * 360) : 0;
+                completedDeg + (total > 0 ? Math.round((inProgress / total) * 360) : 0);
+            </g:evaluate>
+
+            <!-- =================================================
+                 INSPECTION OVERVIEW
+                 ================================================= -->
+
+            <div class="card second-card">
+
+
+                <div class="card-header">
+
+                    <div class="card-title">
+                        INSPECTION OVERVIEW
+                    </div>
+
+                    <div class="view-link">
+                        View all
+                    </div>
+
+                </div>
+
+
+                <div class="inspection-area">
+
+
+                    <div
+                        class="inspection-donut"
+                        style="background: conic-gradient(
+                            #22aa5b 0deg ${jvar_inspection_completed_deg}deg,
+                            #3154ee ${jvar_inspection_completed_deg}deg ${jvar_inspection_progress_end}deg,
+                            #e52d36 ${jvar_inspection_progress_end}deg 360deg
+                        );">
+
+
+                        <div class="inspection-inner">
+
+                            <div class="inspection-total">
+                                ${jvar_inspection_total}
+                            </div>
+
+                            <div class="donut-text">
+                                Total
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="inspection-list">
+
+
+                        <div>
+
+                            <span
+                                class="legend-dot legend-low">
+                            </span>
+
+                            Completed
+
+                        </div>
+
+
+                        <div class="inspection-number safe-text">
+                            ${jvar_inspection_completed}
+                        </div>
+
+
+                        <br />
+
+
+                        <div>
+
+                            <span
+                                class="legend-dot"
+                                style="background:#3154ee;">
+                            </span>
+
+                            In Progress
+
+                        </div>
+
+
+                        <div
+                            class="inspection-number"
+                            style="color:#3154ee;">
+
+                            ${jvar_inspection_in_progress}
+
+                        </div>
+
+
+                        <br />
+
+
+                        <div>
+
+                            <span
+                                class="legend-dot legend-critical">
+                            </span>
+
+                            Overdue
+
+                        </div>
+
+
+                        <div class="inspection-number critical-text">
+                            ${jvar_inspection_overdue}
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =================================================
+                 AI ADVISOR
+                 ================================================= -->
+
+            <div class="card ai-card">
+
+
+                <div class="card-header">
+
+                    <div class="card-title">
+                        AI ADVISOR
+                    </div>
+
+                    <div class="value-green">
+                        AI
+                    </div>
+
+                </div>
+
+
+                <div class="ai-intro">
+
+
+                    <div
+                        class="ai-icon"
+                        onclick="openAIAdvisor();">
+
+                        ✦
+
+                    </div>
+
+
+                    <div class="ai-name">
+                        Sentinel AI Advisor
+                    </div>
+
+
+                    <div class="ai-description">
+                        Ask questions about HSE operations
+                    </div>
+
+
+                    <button
+                        class="ai-button"
+                        type="button"
+                        onclick="openAIAdvisor();">
+
+                        Open AI Advisor
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =================================================
+             WORK ORDERS
+             ================================================= -->
+<div class="card work-card">
+
+    <div class="card-header">
+
+        <div class="card-title">
+            WORK ORDERS
+        </div>
+
+        <a
+            class="view-link"
+            href="x_snc_sentinel_hse_work_order_list.do"
+            style="color:#2864d7;text-decoration:none;">
+
+            View all
+
+        </a>
+
+    </div>
+
+
+    <table class="data-table">
+
+        <thead>
+
+            <tr>
+
+                <th>
+                    Work Order
+                </th>
+
+                <th>
+                    Asset
+                </th>
+
+                <th>
+                    Work Type
+                </th>
+
+                <th>
+                    Priority
+                </th>
+
+                <th>
+                    Status
+                </th>
+
+                <th>
+                    Assigned To
+                </th>
+
+            </tr>
+
+        </thead>
+
+
+        <tbody>
+
+
+            <g:evaluate var="jvar_work_order_ids" object="true">
+
+                var ids = [];
+
+                var gr = new GlideRecord(
+                    "x_snc_sentinel_hse_work_order"
+                );
+
+                gr.orderByDesc("sys_created_on");
+
+                gr.setLimit(5);
+
+                gr.query();
+
+                while (gr.next()) {
+
+                    ids.push(
+                        gr.getUniqueValue()
+                    );
+
+                }
+
+                ids;
+
+            </g:evaluate>
+
+
+            <j:forEach
+                items="${jvar_work_order_ids}"
+                var="jvar_wo_id">
+
+
+                <g:evaluate var="jvar_wo_number">
+
+                    var gr =
+                        new GlideRecord(
+                            "x_snc_sentinel_hse_work_order"
+                        );
+
+                    if (gr.get("${jvar_wo_id}")) {
+
+                        gr.getDisplayValue(
+                            "number"
+                        );
+
+                    } else {
+
+                        "";
+
+                    }
+
+                </g:evaluate>
+
+
+                <g:evaluate var="jvar_wo_asset">
+
+                    var gr =
+                        new GlideRecord(
+                            "x_snc_sentinel_hse_work_order"
+                        );
+
+                    if (gr.get("${jvar_wo_id}")) {
+
+                        gr.getDisplayValue(
+                            "asset_name_work"
+                        );
+
+                    } else {
+
+                        "";
+
+                    }
+
+                </g:evaluate>
+
+
+                <g:evaluate var="jvar_wo_type">
+
+                    var gr =
+                        new GlideRecord(
+                            "x_snc_sentinel_hse_work_order"
+                        );
+
+                    if (gr.get("${jvar_wo_id}")) {
+
+                        gr.getDisplayValue(
+                            "work_order_type_7"
+                        );
+
+                    } else {
+
+                        "";
+
+                    }
+
+                </g:evaluate>
+
+
+                <g:evaluate var="jvar_wo_priority">
+
+                    var gr =
+                        new GlideRecord(
+                            "x_snc_sentinel_hse_work_order"
+                        );
+
+                    if (gr.get("${jvar_wo_id}")) {
+
+                        gr.getDisplayValue(
+                            "priority_7"
+                        );
+
+                    } else {
+
+                        "";
+
+                    }
+
+                </g:evaluate>
+
+
+                <g:evaluate var="jvar_wo_status">
+
+                    var gr =
+                        new GlideRecord(
+                            "x_snc_sentinel_hse_work_order"
+                        );
+
+                    if (gr.get("${jvar_wo_id}")) {
+
+                        gr.getDisplayValue(
+                            "status_7"
+                        );
+
+                    } else {
+
+                        "";
+
+                    }
+
+                </g:evaluate>
+
+
+                <g:evaluate var="jvar_wo_assigned">
+
+                    var gr =
+                        new GlideRecord(
+                            "x_snc_sentinel_hse_work_order"
+                        );
+
+                    if (gr.get("${jvar_wo_id}")) {
+
+                        gr.getDisplayValue(
+                            "assigned_to_7"
+                        );
+
+                    } else {
+
+                        "";
+
+                    }
+
+                </g:evaluate>
+
+
+                <tr class="work-order-row">
+
+
+                    <td>
+
+                        <span class="work-icon">
+                            &#9881;
+                        </span>
+
+
+                        <a
+                            class="record-link"
+                            href="x_snc_sentinel_hse_work_order.do?sys_id=${jvar_wo_id}"
+                            style="color:#2864d7;text-decoration:none;">
+
+                            ${jvar_wo_number}
+
+                        </a>
+
+                    </td>
+
+
+                    <td>
+
+                        ${jvar_wo_asset}
+
+                    </td>
+
+
+                    <td>
+
+                        ${jvar_wo_type}
+
+                    </td>
+
+
+                    <td>
+
+                        <span class="badge badge-high">
+
+                            ${jvar_wo_priority}
+
+                        </span>
+
+                    </td>
+
+
+                    <td>
+
+                        <span class="badge badge-new">
+
+                            ${jvar_wo_status}
+
+                        </span>
+
+                    </td>
+
+
+                    <td>
+
+                        ${jvar_wo_assigned}
+
+                    </td>
+
+
+                </tr>
+
+
+            </j:forEach>
+
+
+        </tbody>
+
+    </table>
+
+</div>
+<!-- =================================================
+     RECENT RECORDS
+     ================================================= -->
+
+<div class="card records-card">
+
+    <div class="card-header">
+        <div class="card-title">RECENT RECORDS</div>
+
+        <a
+            id="recentViewAll"
+            class="view-link"
+            href="x_snc_sentinel_hse_incident_list.do">
+            View all
+        </a>
+    </div>
+
+    <div class="record-tabs">
+
+        <button
+            id="incidentTab"
+            class="record-tab active"
+            type="button"
+            onclick="showRecentRecords('incident');">
+            Incidents
+        </button>
+
+        <button
+            id="workOrderTab"
+            class="record-tab"
+            type="button"
+            onclick="showRecentRecords('work_order');">
+            Work Orders
+        </button>
+
+        <button
+            id="permitTab"
+            class="record-tab"
+            type="button"
+            onclick="showRecentRecords('permit');">
+            Permits
+        </button>
+
+        <button
+            id="inspectionTab"
+            class="record-tab"
+            type="button"
+            onclick="showRecentRecords('inspection');">
+            Inspections
+        </button>
+
+    </div>
+
+    <!-- INCIDENTS -->
+
+    <div id="recentIncidentRecords" class="recent-record-panel">
+
+        <table class="data-table">
+
+            <thead>
+                <tr>
+                    <th>Incident ID</th>
+                    <th>Asset</th>
+                    <th>Severity</th>
+                    <th>Status</th>
+                    <th>Created On</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <g:evaluate var="jvar_incident_rows" jelly="true">
+
+                    var html = '';
+
+                    var LT = String.fromCharCode(60);
+                    var gr = new GlideRecord('x_snc_sentinel_hse_incident');
+                    gr.orderByDesc('sys_created_on');
+                    gr.setLimit(5);
+                    gr.query();
+
+                    while (gr.next()) {
+
+                        var sysId = gr.getUniqueValue();
+                        var number = gr.getDisplayValue('number');
+                        var asset = gr.getDisplayValue('asset_name_asset');
+                        var severity = gr.getDisplayValue('severity_5');
+                        var status = gr.getDisplayValue('status_5');
+                        var created = gr.getDisplayValue('sys_created_on');
+
+                        html += LT + 'tr>';
+                        html += LT + 'td>' + LT + 'a class="record-link" href="x_snc_sentinel_hse_incident.do?sys_id=' + sysId + '">' + number + '' + LT + '/a>' + LT + '/td>';
+                        html += LT + 'td>' + asset + '' + LT + '/td>';
+                        html += LT + 'td>' + LT + 'span class="badge badge-high">' + severity + '' + LT + '/span>' + LT + '/td>';
+                        html += LT + 'td>' + LT + 'span class="badge badge-new">' + status + '' + LT + '/span>' + LT + '/td>';
+                        html += LT + 'td>' + created + '' + LT + '/td>';
+                        html += LT + '/tr>';
+                    }
+
+                    answer = html;
+
+                </g:evaluate>
+
+                <g:no_escape>
+                    ${jvar_incident_rows}
+                </g:no_escape>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- WORK ORDERS -->
+
+    <div
+        id="recentWorkOrderRecords"
+        class="recent-record-panel"
+        style="display:none;">
+
+        <table class="data-table">
+
+            <thead>
+                <tr>
+                    <th>Work Order</th>
+                    <th>Asset</th>
+                    <th>Work Type</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Assigned To</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <g:evaluate var="jvar_work_order_rows" jelly="true">
+
+                    var html = '';
+
+                    var LT = String.fromCharCode(60);
+                    var gr = new GlideRecord('x_snc_sentinel_hse_work_order');
+                    gr.orderByDesc('sys_created_on');
+                    gr.setLimit(5);
+                    gr.query();
+
+                    while (gr.next()) {
+
+                        var sysId = gr.getUniqueValue();
+                        var number = gr.getDisplayValue('number');
+                        var asset = gr.getDisplayValue('asset_name_work');
+                        var workType = gr.getDisplayValue('work_order_type_7');
+                        var priority = gr.getDisplayValue('priority_7');
+                        var status = gr.getDisplayValue('status_7');
+                        var assigned = gr.getDisplayValue('assigned_to_7');
+
+                        html += LT + 'tr>';
+                        html += LT + 'td>' + LT + 'a class="record-link" href="x_snc_sentinel_hse_work_order.do?sys_id=' + sysId + '">' + number + '' + LT + '/a>' + LT + '/td>';
+                        html += LT + 'td>' + asset + '' + LT + '/td>';
+                        html += LT + 'td>' + workType + '' + LT + '/td>';
+                        html += LT + 'td>' + LT + 'span class="badge badge-high">' + priority + '' + LT + '/span>' + LT + '/td>';
+                        html += LT + 'td>' + LT + 'span class="badge badge-new">' + status + '' + LT + '/span>' + LT + '/td>';
+                        html += LT + 'td>' + assigned + '' + LT + '/td>';
+                        html += LT + '/tr>';
+                    }
+
+                    answer = html;
+
+                </g:evaluate>
+
+                <g:no_escape>
+                    ${jvar_work_order_rows}
+                </g:no_escape>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- PERMITS -->
+
+    <div
+        id="recentPermitRecords"
+        class="recent-record-panel"
+        style="display:none;">
+
+        <table class="data-table">
+
+            <thead>
+                <tr>
+                    <th>Permit</th>
+                    <th>Asset</th>
+                    <th>Permit Type</th>
+                    <th>Status</th>
+                    <th>Priority</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <g:evaluate var="jvar_permit_rows" jelly="true">
+
+                    var html = '';
+
+                    var LT = String.fromCharCode(60);
+                    var gr = new GlideRecord('x_snc_sentinel_hse_permit_to_work');
+                    gr.orderByDesc('sys_created_on');
+                    gr.setLimit(5);
+                    gr.query();
+
+                    while (gr.next()) {
+
+                        var sysId = gr.getUniqueValue();
+                        var number = gr.getDisplayValue('number');
+                        var asset = gr.getDisplayValue('asset_8');
+                        var permitType = gr.getDisplayValue('permit_type_8');
+                        var status = gr.getDisplayValue('status_8');
+                        var priority = gr.getDisplayValue('priority_8');
+
+                        html += LT + 'tr>';
+                        html += LT + 'td>' + LT + 'a class="record-link" href="x_snc_sentinel_hse_permit_to_work.do?sys_id=' + sysId + '">' + number + '' + LT + '/a>' + LT + '/td>';
+                        html += LT + 'td>' + asset + '' + LT + '/td>';
+                        html += LT + 'td>' + permitType + '' + LT + '/td>';
+                        html += LT + 'td>' + LT + 'span class="badge badge-new">' + status + '' + LT + '/span>' + LT + '/td>';
+                        html += LT + 'td>' + LT + 'span class="badge badge-high">' + priority + '' + LT + '/span>' + LT + '/td>';
+                        html += LT + '/tr>';
+                    }
+
+                    answer = html;
+
+                </g:evaluate>
+
+                <g:no_escape>
+                    ${jvar_permit_rows}
+                </g:no_escape>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- INSPECTIONS -->
+
+    <div
+        id="recentInspectionRecords"
+        class="recent-record-panel"
+        style="display:none;">
+
+        <table class="data-table">
+
+            <thead>
+                <tr>
+                    <th>Inspection</th>
+                    <th>Asset</th>
+                    <th>Inspection Type</th>
+                    <th>Status</th>
+                    <th>Inspection Date</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <g:evaluate var="jvar_inspection_rows" jelly="true">
+
+                    var html = '';
+
+                    var LT = String.fromCharCode(60);
+                    var gr = new GlideRecord('x_snc_sentinel_hse_inspection');
+                    gr.orderByDesc('inspection_date_6');
+                    gr.setLimit(5);
+                    gr.query();
+
+                    while (gr.next()) {
+
+                        var sysId = gr.getUniqueValue();
+                        var number = gr.getDisplayValue('number');
+                        var asset = gr.getDisplayValue('asset_name_inspection');
+                        var inspectionType = gr.getDisplayValue('inspection_type_6');
+                        var status = gr.getDisplayValue('status_6');
+                        var inspectionDate = gr.getDisplayValue('inspection_date_6');
+
+                        html += LT + 'tr>';
+                        html += LT + 'td>' + LT + 'a class="record-link" href="x_snc_sentinel_hse_inspection.do?sys_id=' + sysId + '">' + number + '' + LT + '/a>' + LT + '/td>';
+                        html += LT + 'td>' + asset + '' + LT + '/td>';
+                        html += LT + 'td>' + inspectionType + '' + LT + '/td>';
+                        html += LT + 'td>' + LT + 'span class="badge badge-new">' + status + '' + LT + '/span>' + LT + '/td>';
+                        html += LT + 'td>' + inspectionDate + '' + LT + '/td>';
+                        html += LT + '/tr>';
+                    }
+
+                    answer = html;
+
+                </g:evaluate>
+
+                <g:no_escape>
+                    ${jvar_inspection_rows}
+                </g:no_escape>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- =========================================================
+     AI ADVISOR POPUP
+     ========================================================= -->
+
+<div
+    id="aiOverlay"
+    class="ai-overlay"
+    onclick="closeAIFromOverlay(event);">
+
+
+    <div
+        class="ai-window"
+        onclick="stopAIEvent(event);">
+
+
+        <!-- AI HEADER -->
+
+        <div class="ai-window-header">
+
+
+            <div>
+
+                <div class="ai-window-title">
+                    Sentinel AI Advisor
+                </div>
+
+                <div class="ai-window-subtitle">
+                    HSE Operations Assistant
+                </div>
+
+            </div>
+
+
+            <button
+                class="ai-close"
+                type="button"
+                onclick="closeAIAdvisor();">
+
+                X
+
+            </button>
+
+
+        </div>
+
+
+        <!-- AI BODY -->
+
+        <div
+            id="aiBody"
+            class="ai-body">
+
+
+            <div class="ai-welcome">
+
+                <b>Welcome to Sentinel AI Advisor</b>
+
+                <br />
+
+                Ask questions about your HSE operations.
+
+                <br />
+
+                I can help you analyze assets, risks,
+                incidents, inspections, permits and work orders.
+
+            </div>
+
+
+            <div
+                class="ai-question"
+                onclick="askSampleQuestion('Which assets have critical risk?');">
+
+                Which assets have critical risk?
+
+            </div>
+
+
+            <div
+                class="ai-question"
+                onclick="askSampleQuestion('Show open incidents');">
+
+                Show open incidents
+
+            </div>
+
+
+            <div
+                class="ai-question"
+                onclick="askSampleQuestion('What is the latest OGI inspection?');">
+
+                What is the latest OGI inspection?
+
+            </div>
+
+
+            <div
+                class="ai-question"
+                onclick="askSampleQuestion('Which work orders are in progress?');">
+
+                Which work orders are in progress?
+
+            </div>
+
+
+            <div
+                class="ai-question"
+                onclick="askSampleQuestion('Show active permits');">
+
+                Show active permits
+
+            </div>
+
+
+        </div>
+
+
+        <!-- AI INPUT -->
+
+        <div class="ai-input-area">
+
+
+            <input
+                id="aiInput"
+                class="ai-input"
+                type="text"
+                placeholder="Ask about HSE operations..."
+                onkeypress="handleAIKey(event);" />
+
+
+            <button
+                class="ai-send"
+                type="button"
+                onclick="sendAIQuestion();">
+
+                &gt;
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
+<script>
+
+
+/* =========================================================
+   SIDEBAR RECORD NAVIGATION
+   ========================================================= */
+
+function openRecords(tableName, query) {
+
+    var url = tableName + "_list.do";
+
+    if (query) {
+        url += "?sysparm_query=" + encodeURIComponent(query);
+    }
+
+    window.location.href = url;
+}
+
+
+function showDashboard() {
+
+    window.location.href = window.location.pathname;
+}
+
+
+function openSidebarAI() {
+
+    var overlay = document.getElementById("aiOverlay");
+
+    if (overlay) {
+        overlay.style.display = "flex";
+    }
+}
+
+
+function showRecentRecords(type) {
+
+    var incidentPanel =
+        document.getElementById("recentIncidentRecords");
+
+    var workOrderPanel =
+        document.getElementById("recentWorkOrderRecords");
+
+    var permitPanel =
+        document.getElementById("recentPermitRecords");
+
+    var inspectionPanel =
+        document.getElementById("recentInspectionRecords");
+
+    var incidentTab =
+        document.getElementById("incidentTab");
+
+    var workOrderTab =
+        document.getElementById("workOrderTab");
+
+    var permitTab =
+        document.getElementById("permitTab");
+
+    var inspectionTab =
+        document.getElementById("inspectionTab");
+
+    var viewAll =
+        document.getElementById("recentViewAll");
+
+    incidentPanel.style.display = "none";
+    workOrderPanel.style.display = "none";
+    permitPanel.style.display = "none";
+    inspectionPanel.style.display = "none";
+
+    incidentTab.classList.remove("active");
+    workOrderTab.classList.remove("active");
+    permitTab.classList.remove("active");
+    inspectionTab.classList.remove("active");
+
+    if (type === "incident") {
+
+        incidentPanel.style.display = "block";
+        incidentTab.classList.add("active");
+
+        viewAll.href =
+            "x_snc_sentinel_hse_incident_list.do";
+
+    } else if (type === "work_order") {
+
+        workOrderPanel.style.display = "block";
+        workOrderTab.classList.add("active");
+
+        viewAll.href =
+            "x_snc_sentinel_hse_work_order_list.do";
+
+    } else if (type === "permit") {
+
+        permitPanel.style.display = "block";
+        permitTab.classList.add("active");
+
+        viewAll.href =
+            "x_snc_sentinel_hse_permit_to_work_list.do";
+
+    } else if (type === "inspection") {
+
+        inspectionPanel.style.display = "block";
+        inspectionTab.classList.add("active");
+
+        viewAll.href =
+            "x_snc_sentinel_hse_inspection_list.do";
+
+    }
+
+}
+
+
+
+/* =========================================================
+   OPEN AI
+   ========================================================= */
+
+function openAIAdvisor() {
+
+    var overlay = document.getElementById("aiOverlay");
+
+    if (overlay) {
+
+        overlay.style.display = "block";
+
+    }
+
+}
+
+
+/* =========================================================
+   CLOSE AI
+   ========================================================= */
+
+function closeAIAdvisor() {
+
+    var overlay = document.getElementById("aiOverlay");
+
+    if (overlay) {
+
+        overlay.style.display = "none";
+
+    }
+
+}
+
+
+/* =========================================================
+   CLOSE USING BACKGROUND
+   ========================================================= */
+
+function closeAIFromOverlay(event) {
+
+    if (event.target.id === "aiOverlay") {
+
+        closeAIAdvisor();
+
+    }
+
+}
+
+
+/* =========================================================
+   STOP CLICK PROPAGATION
+   ========================================================= */
+
+function stopAIEvent(event) {
+
+    if (event) {
+
+        event.stopPropagation();
+
+    }
+
+}
+
+
+/* =========================================================
+   ENTER KEY
+   ========================================================= */
+
+function handleAIKey(event) {
+
+    if (event.key === "Enter") {
+
+        sendAIQuestion();
+
+    }
+
+}
+
+
+/* =========================================================
+   SAMPLE QUESTION
+   ========================================================= */
+
+function askSampleQuestion(question) {
+
+    var input = document.getElementById("aiInput");
+
+    if (input) {
+
+        input.value = question;
+
+    }
+
+    sendAIQuestion();
+
+}
+
+
+/* =========================================================
+   SEND QUESTION
+   ========================================================= */
+
+function sendAIQuestion() {
+
+    var input = document.getElementById("aiInput");
+
+    var body = document.getElementById("aiBody");
+
+    if (!input || !body) {
+
+        return;
+
+    }
+
+
+    var question = input.value;
+
+    if (!question || question.trim() === "") {
+
+        return;
+
+    }
+
+
+    /* USER MESSAGE */
+
+    var userMessage =
+        document.createElement("div");
+
+    userMessage.className =
+        "ai-question";
+
+    userMessage.style.background =
+        "#3154ee";
+
+    userMessage.style.color =
+        "#ffffff";
+
+    userMessage.innerHTML =
+        question;
+
+    body.appendChild(userMessage);
+
+
+    /* AI RESPONSE */
+
+    var answer =
+        getDemoAIAnswer(question);
+
+
+    var answerMessage =
+        document.createElement("div");
+
+    answerMessage.className =
+        "ai-message";
+
+    answerMessage.innerHTML =
+        answer;
+
+    body.appendChild(answerMessage);
+
+
+    input.value = "";
+
+    body.scrollTop =
+        body.scrollHeight;
+
+}
+
+
+/* =========================================================
+   DEMO AI RESPONSE
+   ========================================================= */
+
+function getDemoAIAnswer(question) {
+
+    var q =
+        question.toLowerCase();
+
+
+    /* CRITICAL RISK */
+
+    if (
+        q.indexOf("critical") >= 0 ||
+        q.indexOf("risk") >= 0
+    ) {
+
+        return (
+            "<b>Critical Risk Insight</b><br/>" +
+
+            "The following assets currently have critical risk:" +
+
+            "<br/><br/>" +
+
+            "1. Crude Oil Pipeline PL-101" +
+            " - Risk Score 92" +
+
+            "<br/>" +
+
+            "2. Compressor CS-201" +
+            " - Risk Score 88" +
+
+            "<br/>" +
+
+            "3. Wellhead WH-101" +
+            " - Risk Score 85"
+        );
+
+    }
+
+
+    /* INCIDENTS */
+
+    if (
+        q.indexOf("incident") >= 0
+    ) {
+
+        return (
+            "<b>Open Incidents</b><br/><br/>" +
+
+            "INC-10045 - PL-101 - Critical" +
+
+            "<br/>" +
+
+            "INC-10044 - TK-301 - High" +
+
+            "<br/>" +
+
+            "INC-10043 - CS-201 - High"
+        );
+
+    }
+
+
+    /* OGI */
+
+    if (
+        q.indexOf("ogi") >= 0 ||
+        q.indexOf("inspection") >= 0
+    ) {
+
+        return (
+            "<b>Latest OGI Inspection</b>" +
+
+            "<br/><br/>" +
+
+            "Asset: Crude Oil Pipeline PL-101" +
+
+            "<br/>" +
+
+            "Inspection Method: OGI Camera" +
+
+            "<br/>" +
+
+            "<b>Leak Status: Leak Detected</b>" +
+
+            "<br/>" +
+
+            "<b>Severity: Critical</b>" +
+
+            "<br/><br/>" +
+
+            "<b>Recommended Action:</b>" +
+
+            "<br/>" +
+
+            "Isolate the affected equipment " +
+            "and initiate emergency leak containment."
+        );
+
+    }
+
+
+    /* WORK ORDERS */
+
+    if (
+        q.indexOf("work order") >= 0
+    ) {
+
+        return (
+            "<b>Work Orders</b><br/><br/>" +
+
+            "WOR000025 - PL-101" +
+            " - Corrective Maintenance - High" +
+
+            "<br/>" +
+
+            "WOR000024 - TK-301" +
+            " - Inspection - In Progress" +
+
+            "<br/>" +
+
+            "WOR000023 - CS-201" +
+            " - Preventive Maintenance - Scheduled"
+        );
+
+    }
+
+
+    /* PERMITS */
+
+    if (
+        q.indexOf("permit") >= 0
+    ) {
+
+        return (
+            "<b>Active Permits</b><br/><br/>" +
+
+            "23 active permits are currently " +
+            "available for HSE operations."
+        );
+
+    }
+
+
+    /* ASSETS */
+
+    if (
+        q.indexOf("asset") >= 0
+    ) {
+
+        return (
+            "<b>Asset Overview</b><br/><br/>" +
+
+            "Total Assets: 78" +
+
+            "<br/>" +
+
+            "Safe Assets: 45" +
+
+            "<br/>" +
+
+            "Warning Assets: 20" +
+
+            "<br/>" +
+
+            "Critical Assets: 13"
+        );
+
+    }
+
+
+    /* DEFAULT */
+
+    return (
+        "<b>Sentinel HSE Insight</b><br/><br/>" +
+
+        "I can help with:" +
+
+        "<br/>" +
+
+        "• Assets" +
+
+        "<br/>" +
+
+        "• Risk assessment" +
+
+        "<br/>" +
+
+        "• Incidents" +
+
+        "<br/>" +
+
+        "• OGI inspections" +
+
+        "<br/>" +
+
+        "• Work orders" +
+
+        "<br/>" +
+
+        "• Permits"
+    );
+
+}
+
+</script>
+	
+
+</div>
+</div>
+
+</j:jelly>]]></html>
+        <name>sentinel_hse_command_center</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 14:04:45</sys_created_on>
+        <sys_id>cf01acf73c2643107f44ecc116669f33</sys_id>
+        <sys_mod_count>89</sys_mod_count>
+        <sys_name>sentinel_hse_command_center</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_ui_page_cf01acf73c2643107f44ecc116669f33</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 04:10:42</sys_updated_on>
+    </sys_ui_page>
+</record_update>

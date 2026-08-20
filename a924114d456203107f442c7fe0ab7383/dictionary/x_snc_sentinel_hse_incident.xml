@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="de4e41a529ea43107f441ac0369c7f63" label="HSE Incident" max_length="40" name="x_snc_sentinel_hse_incident" type="collection">
+        <element label="Root Cause" max_length="1000" name="root_cause_5" type="string"/>
+        <element label="Reported Time" mandatory="true" max_length="40" name="reported_time_5" type="glide_date_time"/>
+        <element choice="1" label="Root Cause Category" mandatory="true" max_length="40" name="root_cause_category_5" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Sensor Failure" value="sensor_failure_5"/>
+                <element inactive_on_update="false" label="Corrosion" value="corrosion_5"/>
+                <element inactive_on_update="false" label="Process Failure" value="process_failure_5"/>
+                <element inactive_on_update="false" label="Equipment Failure" value="equipment_failure_5"/>
+                <element inactive_on_update="false" label="Mechanical Failure" value="mechanical_failure_5"/>
+                <element inactive_on_update="false" label="Electrical Failure" value="electrical_failure_5"/>
+                <element inactive_on_update="false" label="External Cause" value="external_cause_5"/>
+                <element inactive_on_update="false" label="Human Error" value="human_error_5"/>
+            </choice>
+        </element>
+        <element label="Risk Assessment" mandatory="true" max_length="32" name="risk_assessment" reference="x_snc_sentinel_hse_risk_assessment" type="reference"/>
+        <element label="Immediate Action" max_length="1000" name="immediate_action_5" type="string"/>
+        <element label="Estimated Damage" max_length="20" name="estimated_damage_5" type="currency"/>
+        <element label="Assigned To" max_length="32" name="assigned_to_5" reference="sys_user" type="reference"/>
+        <element label="AI Recommendation" max_length="2000" name="ai_recommendation_5" type="string"/>
+        <element choice="1" label="Severity" mandatory="true" max_length="40" name="severity_5" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Low" value="low_5"/>
+                <element inactive_on_update="false" label="Medium" value="medium_5"/>
+                <element inactive_on_update="false" label="Critical" value="critical_5"/>
+                <element inactive_on_update="false" label="High" value="high_5"/>
+            </choice>
+        </element>
+        <element label="Asset" mandatory="true" max_length="32" name="field_name_5" reference="x_snc_sentinel_hse_oilfield_asset_1" type="reference"/>
+        <element choice="1" label="Incident Type" mandatory="true" max_length="40" name="incident_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pipeline Leak" value="pipeline_leak_5"/>
+                <element inactive_on_update="false" label="Corrosion Failure" value="corrosion_failure_5"/>
+                <element inactive_on_update="false" label="Near Miss" value="near_miss_5"/>
+                <element inactive_on_update="false" label="Fire" value="fire_5"/>
+                <element inactive_on_update="false" label="Explosion" value="explosion_5"/>
+                <element inactive_on_update="false" label="Equipment Failure" value="equipment_failure_5"/>
+                <element inactive_on_update="false" label="Pressure Failure" value="pressure_failure_5"/>
+                <element inactive_on_update="false" label="Toxic Gas Exposure" value="toxic_gas_exposure_5"/>
+                <element inactive_on_update="false" label="Environmental Spill" value="environmental_spill_5"/>
+                <element inactive_on_update="false" label="Gas Leak" value="gas_leak_5"/>
+            </choice>
+        </element>
+        <element label="Preventive Action" max_length="1000" name="preventive_action_5" type="string"/>
+        <element choice="1" default="Pending" label="Investigation Status" max_length="40" name="investigation_status_5" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pending" value="pending_5"/>
+                <element inactive_on_update="false" label="Under Investigation" value="under_investigation_5"/>
+                <element inactive_on_update="false" label="Completed" value="completed_5"/>
+            </choice>
+        </element>
+        <element label="Incident Description" max_length="1000" name="incident_description" type="string"/>
+        <element label="Asset Name" mandatory="true" max_length="255" name="asset_name_asset" type="string"/>
+        <element label="Corrective Action" max_length="1000" name="corrective_action_5" type="string"/>
+        <element choice="1" label="Worker Injury" max_length="40" name="worker_injury_5" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" value="no_5"/>
+                <element inactive_on_update="false" label="Yes" value="yes_5"/>
+            </choice>
+        </element>
+        <element label="Production Loss" max_length="20" name="production_loss_5" type="currency"/>
+        <element choice="1" default="Open" label="Status" mandatory="true" max_length="40" name="status_5" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Open" value="open_5"/>
+                <element inactive_on_update="false" label="Closed" value="closed_5"/>
+                <element inactive_on_update="false" label="Resolved" value="resolved_5"/>
+                <element inactive_on_update="false" label="Assigned" value="assigned_5"/>
+                <element inactive_on_update="false" label="In Progress" value="in_progress_5"/>
+            </choice>
+        </element>
+        <element label="AI Incident Summary" max_length="2000" name="ai_incident_summary_5" type="string"/>
+        <element choice="1" label="Environmental Impact" max_length="40" name="environmental_impact_5" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Severe" value="severe_5"/>
+                <element inactive_on_update="false" label="Minor" value="minor_5"/>
+                <element inactive_on_update="false" label="Moderate" value="moderate_5"/>
+                <element inactive_on_update="false" label="None" value="none_5"/>
+            </choice>
+        </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="assigned_to_5"/>
+        </index>
+        <index name="index2">
+            <element name="risk_assessment"/>
+        </index>
+        <index name="index3">
+            <element name="field_name_5"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="b0bec14ff86a03107f44172b6f3e129f" extends="sys_import_set_row" label="Real Sensor TimeSeries Import" max_length="40" name="x_snc_sentinel_hse_real_sensor_timeseries_import" type="collection">
+        <element attributes="import_attribute_name=Downhole Pressure PDG psi" label="Downhole Pressure PDG psi" max_length="15" name="u_downhole_pressure_pdg_psi" type="decimal"/>
+        <element attributes="import_attribute_name=Well State Code" label="Well State Code" max_length="40" name="u_well_state_code" type="integer"/>
+        <element attributes="import_attribute_name=Event Class Code" label="Event Class Code" max_length="40" name="u_event_class_code" type="integer"/>
+        <element attributes="import_attribute_name=Gas Lift FlowRate m3s" label="Gas Lift FlowRate m3s" max_length="40" name="u_gas_lift_flowrate_m3s" type="float"/>
+        <element attributes="import_attribute_name=Xmas Tree Temp C" label="Xmas Tree Temp C" max_length="40" name="u_xmas_tree_temp_c" type="float"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Event Class Label" label="Event Class Label" max_length="40" name="u_event_class_label" type="string"/>
+        <element attributes="import_attribute_name=Annulus Pressure psi" label="Annulus Pressure psi" max_length="15" name="u_annulus_pressure_psi" type="decimal"/>
+        <element attributes="import_attribute_name=Xmas Tree Pressure TPT psi" label="Xmas Tree Pressure TPT psi" max_length="15" name="u_xmas_tree_pressure_tpt_psi" type="decimal"/>
+        <element attributes="import_attribute_name=Downhole Temp C" label="Downhole Temp C" max_length="40" name="u_downhole_temp_c" type="float"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Timestamp" label="Timestamp" max_length="314" name="u_timestamp" type="string"/>
+    </element>
+</database>

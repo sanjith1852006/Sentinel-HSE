@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Configuration Management (CMDB)" source="com.snc.cmdb">435b178a997003107f4454352b402e78</dependency>
+        <min_version>1.1</min_version>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-05 05:41:09</sys_created_on>
+        <sys_id>1b34254d45e203107f442c7fe0ab7384</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-05 05:41:09</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

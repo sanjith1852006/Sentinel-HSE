@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="20fac947f86a03107f44172b6f3e12a3" extends="sys_import_set_row" label="Sensor Readings Import" max_length="40" name="x_snc_sentinel_hse_sensor_readings_import" type="collection">
+        <element attributes="&lt;=10% IDLH),edge_encryption_enabled=true,import_attribute_name=Safe Zone (ppm" label="Safe Zone (ppm, &lt;=10% IDLH)" max_length="40" name="u_safe_zone__ppm____10__idlh_" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Current Pressure Basis" label="Current Pressure Basis" max_length="108" name="u_current_pressure_basis" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Flammability (LEL / UEL)" label="Flammability (LEL / UEL)" max_length="40" name="u_flammability__lel___uel_" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=IDLH (NIOSH)" label="IDLH (NIOSH)" max_length="40" name="u_idlh__niosh_" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Current Pressure (psi) - Sample Reading" label="Current Pressure (psi) - Sample Reading" max_length="40" name="u_current_pres_sample_reading" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=CAS Number" label="CAS Number" max_length="40" name="u_cas_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Asset" label="Asset" max_length="490" name="u_asset" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=ANSI Pressure Class" label="ANSI Pressure Class" max_length="40" name="u_ansi_pressure_class" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Typical Operating Pressure (Reference Only)" label="Typical Operating Pressure (Reference Only)" max_length="40" name="u_typical_oper_eference_only_" type="string"/>
+        <element attributes="&gt;50% IDLH)=true,edge_encryption_enabled=true,import_attribute_name=Risk Zone (ppm" label="Risk Zone (ppm, &gt;50% IDLH)" max_length="40" name="u_risk_zone__ppm___50__idlh_" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Gas Name" label="Gas Name" max_length="51" name="u_gas_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Gas's Typical Segment (source)" label="Gas's Typical Segment (source)" max_length="40" name="u_gas_s_typica_gment__source_" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Oilfield Segment" label="Oilfield Segment" max_length="40" name="u_oilfield_segment" type="string"/>
+        <element attributes="10-50% IDLH)=true,edge_encryption_enabled=true,import_attribute_name=Medium Zone (ppm" label="Medium Zone (ppm, 10-50% IDLH)" max_length="40" name="u_medium_zone____10_50__idlh_" type="string"/>
+        <element attributes="ASME B16.5)=true,edge_encryption_enabled=true,import_attribute_name=Verified Class Rating (psi" label="Verified Class Rating (psi, ASME B16.5)" max_length="40" name="u_verified_cla_i__asme_b16_5_" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Hazard Category" label="Hazard Category" max_length="40" name="u_hazard_category" type="string"/>
+    </element>
+</database>

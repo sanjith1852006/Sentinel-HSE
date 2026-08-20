@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Risk Information" section_id="1dea05ad29aa43107f441ac0369c7fba" sys_domain="global" table="x_snc_sentinel_hse_risk_assessment" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 17:13:05</sys_created_on>
+            <sys_id>513ccd6129ea43107f441ac0369c7f7e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Risk Information" display_value="Risk Information" name="x_snc_sentinel_hse_risk_assessment" sys_domain="global" view="Default view">1dea05ad29aa43107f441ac0369c7fba</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 17:13:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>oilfield_asset_3</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 17:13:06</sys_created_on>
+            <sys_id>593ccd6129ea43107f441ac0369c7f7e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Risk Information" display_value="Risk Information" name="x_snc_sentinel_hse_risk_assessment" sys_domain="global" view="Default view">1dea05ad29aa43107f441ac0369c7fba</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 17:13:06</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assessment_time</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 17:13:06</sys_created_on>
+            <sys_id>513ccd6129ea43107f441ac0369c7f7f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Risk Information" display_value="Risk Information" name="x_snc_sentinel_hse_risk_assessment" sys_domain="global" view="Default view">1dea05ad29aa43107f441ac0369c7fba</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 17:13:06</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 17:13:06</sys_created_on>
+            <sys_id>593ccd6129ea43107f441ac0369c7f7f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Risk Information" display_value="Risk Information" name="x_snc_sentinel_hse_risk_assessment" sys_domain="global" view="Default view">1dea05ad29aa43107f441ac0369c7fba</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 17:13:06</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sensor_reading_1</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 17:13:06</sys_created_on>
+            <sys_id>513ccd6129ea43107f441ac0369c7f80</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Risk Information" display_value="Risk Information" name="x_snc_sentinel_hse_risk_assessment" sys_domain="global" view="Default view">1dea05ad29aa43107f441ac0369c7fba</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 17:13:06</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>gas_master_1</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 17:13:06</sys_created_on>
+            <sys_id>593ccd6129ea43107f441ac0369c7f80</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Risk Information" display_value="Risk Information" name="x_snc_sentinel_hse_risk_assessment" sys_domain="global" view="Default view">1dea05ad29aa43107f441ac0369c7fba</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 17:13:06</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>status_4</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 17:13:06</sys_created_on>
+            <sys_id>513ccd6129ea43107f441ac0369c7f81</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Risk Information" display_value="Risk Information" name="x_snc_sentinel_hse_risk_assessment" sys_domain="global" view="Default view">1dea05ad29aa43107f441ac0369c7fba</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 17:13:06</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>permit_to_work</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-12 04:29:16</sys_created_on>
+            <sys_id>b2e6995355a203107f448ed3c97cb30d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Risk Information" display_value="Risk Information" name="x_snc_sentinel_hse_risk_assessment" sys_domain="global" view="Default view">1dea05ad29aa43107f441ac0369c7fba</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-12 04:29:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Risk Information</caption>
+            <header>false</header>
+            <name>x_snc_sentinel_hse_risk_assessment</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 17:07:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1dea05ad29aa43107f441ac0369c7fba</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>x_snc_sentinel_hse_risk_assessment</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+            <sys_update_name>sys_ui_section_1dea05ad29aa43107f441ac0369c7fba</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 17:13:05</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

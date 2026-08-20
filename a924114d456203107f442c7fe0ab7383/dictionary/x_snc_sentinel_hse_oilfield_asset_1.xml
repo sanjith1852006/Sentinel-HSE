@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="02f03c2129e643107f441ac0369c7f91" label="Oilfield Asset" max_length="40" name="x_snc_sentinel_hse_oilfield_asset_1" type="collection">
+        <element choice="1" label="Current Risk Level" max_length="40" name="current_risk_level" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="High" value="high"/>
+                <element inactive_on_update="false" label="Medium" value="medium"/>
+                <element inactive_on_update="false" label="Low" value="low"/>
+                <element inactive_on_update="false" label="Critical" value="critical"/>
+            </choice>
+        </element>
+        <element default="30" label="Sensor Refresh Interval (sec)" max_length="40" name="sensor_refresh_interval_sec" type="integer"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element default="True" label="Sensor Installed" max_length="40" name="sensor_installed" type="boolean"/>
+        <element label="Latitude" max_length="20" name="latitude" type="decimal"/>
+        <element label="Field Name" mandatory="true" max_length="100" name="field_name" type="string"/>
+        <element display="true" label="Asset Name" mandatory="true" max_length="100" name="asset_name" type="string"/>
+        <element choice="1" label="Data Source" max_length="40" name="data_source" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Simulated Sensor" value="simulated_sensor"/>
+                <element inactive_on_update="false" label="Live Sensor" value="live_sensor"/>
+                <element inactive_on_update="false" label="Manual Entry" value="manual_entry"/>
+                <element inactive_on_update="false" label="Real Dataset" value="real_dataset"/>
+            </choice>
+        </element>
+        <element label="Plant Name" mandatory="true" max_length="100" name="plant_name" type="string"/>
+        <element label="Location" mandatory="true" max_length="100" name="location" type="string"/>
+        <element choice="1" label="Asset Type" mandatory="true" max_length="40" name="asset_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Crude Oil Trunk Pipeline" sequence="800" value="crude_oil_trunk_pipeline"/>
+                <element inactive_on_update="false" label="Wellhead Compressor (Upstream)" sequence="500" value="wellhead_compressor"/>
+                <element inactive_on_update="false" label="Compressor Station (Midstream)" sequence="1200" value="compressor_station"/>
+                <element inactive_on_update="false" label="Fluid Catalytic Cracker (FCC) Reactor" sequence="2000" value="fluid_catalytic_cracker"/>
+                <element inactive_on_update="false" label="Alkylation Unit" sequence="2400" value="alkylation_unit"/>
+                <element inactive_on_update="false" label="Metering Station" sequence="1400" value="metering_station"/>
+                <element inactive_on_update="false" label="Reformer (Catalytic)" sequence="2500" value="reformer_catalytic"/>
+                <element inactive_on_update="false" label="Rail/Truck Loading Terminal" sequence="1600" value="rail_truck_loading_terminal"/>
+                <element inactive_on_update="false" label="Pressure Vessel (General, Midstream)" sequence="1700" value="pressure_vessel"/>
+                <element inactive_on_update="false" label="Pressure Relief Valve (PRV) Header" sequence="2900" value="pressure_relief_valve_header"/>
+                <element inactive_on_update="false" label="Atmospheric Storage Tank (Crude)" sequence="1000" value="atmospheric_storage_tank"/>
+                <element inactive_on_update="false" label="Boiler / Steam System" sequence="2600" value="boiler_steam_system"/>
+                <element inactive_on_update="false" label="LPG Bottling Plant Vessel" sequence="2700" value="lpg_bottling_plant_vessel"/>
+                <element inactive_on_update="false" label="EOR CO₂ Injection Line" sequence="600" value="eor_co2_injection_line"/>
+                <element inactive_on_update="false" label="Separator Vessel (2-phase/3-phase)" sequence="300" value="separator_vessel"/>
+                <element inactive_on_update="false" label="Wellhead (Christmas Tree)" sequence="100" value="wellhead_christmas_tree"/>
+                <element inactive_on_update="false" label="Gas Dehydration Unit (Glycol)" sequence="1500" value="gas_dehydration_unit"/>
+                <element inactive_on_update="false" label="Flare Stack System" sequence="2800" value="flare_stack_system"/>
+                <element inactive_on_update="false" label="Cross-Country Transmission Pipeline" sequence="700" value="cross_country_transmission_pipeline"/>
+                <element inactive_on_update="false" label="Hydrotreater Unit" sequence="2200" value="hydrotreater_unit"/>
+                <element inactive_on_update="false" label="NGL Pipeline (Propane/Butane)" sequence="900" value="ngl_pipeline"/>
+                <element inactive_on_update="false" label="Atmospheric Distillation Column" sequence="1800" value="atmospheric_distillation_column"/>
+                <element inactive_on_update="false" label="Gas/Oil Manifold" sequence="400" value="gas_oil_manifold"/>
+                <element inactive_on_update="false" label="Pressurized Storage Tank / Sphere (LPG)" sequence="1100" value="pressurized_storage_tank"/>
+                <element inactive_on_update="false" label="Hydrocracker Reactor" sequence="2100" value="hydrocracker_reactor"/>
+                <element inactive_on_update="false" label="Sulfur Recovery Unit (Claus)" sequence="2300" value="sulfur_recovery_unit"/>
+                <element inactive_on_update="false" label="Downhole Casing/Tubing" sequence="200" value="downhole_casing_tubing"/>
+                <element inactive_on_update="false" label="Vacuum Distillation Column" sequence="1900" value="vacuum_distillation_column"/>
+                <element inactive_on_update="false" label="Pig Launcher/Receiver" sequence="1300" value="pig_launcher_receiver"/>
+            </choice>
+        </element>
+        <element choice="1" label="Segment" mandatory="true" max_length="40" name="segment" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Downstream" sequence="1" value="downstream"/>
+                <element inactive_on_update="false" label="Upstream" sequence="3" value="upstream"/>
+                <element inactive_on_update="false" label="Cross Segment" sequence="0" value="cross_segment"/>
+                <element inactive_on_update="false" label="Midstream" sequence="2" value="midstream"/>
+            </choice>
+        </element>
+        <element default="0" function_definition="0" label="Open Incident Count" max_length="255" name="open_incident_count" read_only="true" read_only_option="display_read_only" type="integer"/>
+        <element label="Longitude" max_length="20" name="longitude" type="decimal"/>
+        <element default="True" label="Monitoring Enabled" max_length="40" name="monitoring_enabled" type="boolean"/>
+        <element choice="1" label="Asset Status" mandatory="true" max_length="40" name="asset_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Shutdown" sequence="4" value="shutdown"/>
+                <element inactive_on_update="false" label="Inspection Due" sequence="1" value="inspection_due"/>
+                <element inactive_on_update="false" label="Maintenance" sequence="2" value="maintenance"/>
+                <element inactive_on_update="false" label="Operational" sequence="3" value="operational"/>
+                <element inactive_on_update="false" label="Emergency Shutdown" sequence="0" value="emergency_shutdown"/>
+            </choice>
+        </element>
+        <element label="Last Inspection Date" max_length="40" name="last_inspection_date" type="glide_date"/>
+        <element label="Description" max_length="1000" name="description" type="string"/>
+        <element label="Next Inspection Date" max_length="40" name="next_inspection_date" type="glide_date"/>
+    </element>
+</database>

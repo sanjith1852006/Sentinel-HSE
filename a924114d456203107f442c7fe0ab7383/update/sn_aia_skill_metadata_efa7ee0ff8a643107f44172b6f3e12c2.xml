@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_skill_metadata">
+    <sn_aia_skill_metadata action="INSERT_OR_UPDATE">
+        <description>Analyze incoming sensor readings such as pressure, temperature, and flow rate, identify the risk level, and recommend/trigger the appropriate HSE response.</description>
+        <document_id>4459928ff82643107f44172b6f3e1235</document_id>
+        <document_table>sn_aia_agent</document_table>
+        <internal_name>global.x_snc_sentinel_hse.Sentinel HSE Sensor Risk Analyst</internal_name>
+        <name>Sentinel HSE Sensor Risk Analyst</name>
+        <sys_class_name>sn_aia_skill_metadata</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-11 15:43:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>efa7ee0ff8a643107f44172b6f3e12c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Sentinel HSE Sensor Risk Analyst</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sn_aia_skill_metadata_efa7ee0ff8a643107f44172b6f3e12c2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-11 15:43:38</sys_updated_on>
+    </sn_aia_skill_metadata>
+</record_update>

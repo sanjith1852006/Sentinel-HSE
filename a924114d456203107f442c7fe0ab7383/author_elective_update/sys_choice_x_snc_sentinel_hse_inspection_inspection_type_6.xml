@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="inspection_type_6" table="x_snc_sentinel_hse_inspection" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>inspection_type_6</element>
+            <name>x_snc_sentinel_hse_inspection</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 05:05:33</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>inspection_type_6</sys_name>
+            <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+            <sys_update_name>sys_choice_x_snc_sentinel_hse_inspection_inspection_type_6</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 05:05:33</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>inspection_type_6</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Corrosion Inspection</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_inspection</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 05:05:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 05:37:05</sys_updated_on>
+            <value>corrosion_inspection_6</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>inspection_type_6</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Emergency Inspection</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_inspection</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 05:08:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 05:37:05</sys_updated_on>
+            <value>emergency_inspection_6</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>inspection_type_6</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pipeline Integrity Assessment</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_inspection</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 05:06:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 05:37:05</sys_updated_on>
+            <value>pipeline_integrity_assessment_6</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>inspection_type_6</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pressure Vessel Certification</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_inspection</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 05:05:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 05:37:05</sys_updated_on>
+            <value>pressure_vessel_certification_6</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>inspection_type_6</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Routine Inspection</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_inspection</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 05:07:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 05:37:05</sys_updated_on>
+            <value>routine_inspection_6</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>inspection_type_6</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Safety Inspection</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_inspection</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 05:07:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 05:37:05</sys_updated_on>
+            <value>safety_inspection_6</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

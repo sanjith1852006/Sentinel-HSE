@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="data_source" table="x_snc_sentinel_hse_sensor_reading" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>data_source</element>
+            <name>x_snc_sentinel_hse_sensor_reading</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 06:40:17</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>data_source</sys_name>
+            <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+            <sys_update_name>sys_choice_x_snc_sentinel_hse_sensor_reading_data_source</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 06:40:17</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>data_source</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Manual Entry</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_sensor_reading</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 06:41:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 14:52:22</sys_updated_on>
+            <value>manual_entry_1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>data_source</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Real Dataset</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_sensor_reading</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 06:40:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 14:52:16</sys_updated_on>
+            <value>real_dataset_1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>data_source</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Simulated</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_sensor_reading</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 06:40:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 14:52:27</sys_updated_on>
+            <value>simulated_1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>data_source</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Simulated (added per user asset list, Aug 2026)</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_sensor_reading</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-12 15:36:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-12 15:36:29</sys_updated_on>
+            <value>Simulated (added per user asset list, Aug 2026)</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

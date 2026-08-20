@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_button_instance">
+    <sys_sg_button_instance action="DELETE">
+        <active>true</active>
+        <button display_value="Complete Work ">6a3eb3a2e4aa03107f44b37c6b758835</button>
+        <color_theme/>
+        <description>Complete the HSE work order</description>
+        <disable_offline>false</disable_offline>
+        <field_name/>
+        <icon display_value="Complete Work Icon">016b0cbee4ea03107f44b37c6b758842</icon>
+        <label>Complete Work</label>
+        <location>footer</location>
+        <name>Complete Work Instance</name>
+        <order/>
+        <parent>c53d53a6e46603107f44b37c6b758828</parent>
+        <parent_table>sys_sg_form_screen</parent_table>
+        <sys_class_name>sys_sg_button_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 09:46:51</sys_created_on>
+        <sys_id>576cc436e42e03107f44b37c6b758881</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Complete Work Instance</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_sg_button_instance_576cc436e42e03107f44b37c6b758881</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:14:05</sys_updated_on>
+        <table/>
+    </sys_sg_button_instance>
+    <sys_translated_text action="DELETE" query="documentkey=576cc436e42e03107f44b37c6b758881"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</application>
+        <file_path/>
+        <instance_id>17b1043093560750fb38f8284dba101a</instance_id>
+        <instance_name>dlt-hck-8017-0027</instance_name>
+        <name>sys_sg_button_instance_576cc436e42e03107f44b37c6b758881</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_button_instance"><sys_sg_button_instance action="INSERT_OR_UPDATE"><active>true</active><button display_value="Complete Work ">6a3eb3a2e4aa03107f44b37c6b758835</button><color_theme/><description>Complete the HSE work order</description><disable_offline>false</disable_offline><field_name/><icon display_value="Complete Work Icon">016b0cbee4ea03107f44b37c6b758842</icon><label>Complete Work</label><location>footer</location><name>Complete Work Instance</name><order/><parent>c53d53a6e46603107f44b37c6b758828</parent><parent_table>sys_sg_form_screen</parent_table><sys_class_name>sys_sg_button_instance</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-10 09:46:51</sys_created_on><sys_id>576cc436e42e03107f44b37c6b758881</sys_id><sys_mod_count>3</sys_mod_count><sys_name>Complete Work Instance</sys_name><sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package><sys_policy/><sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope><sys_update_name>sys_sg_button_instance_576cc436e42e03107f44b37c6b758881</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-10 10:14:05</sys_updated_on><table/></sys_sg_button_instance><sys_translated_text action="delete_multiple" query="documentkey=576cc436e42e03107f44b37c6b758881"/></record_update>]]></payload>
+        <payload_hash>-429962732</payload_hash>
+        <record_name>Complete Work Instance</record_name>
+        <reverted_from/>
+        <source>6124114d456203107f442c7fe0ab7389</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:14:05</sys_created_on>
+        <sys_id>12a2d0bae46e03107f44b37c6b75889b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19feb2a4c500000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:14:05</sys_updated_on>
+        <type>Function instance</type>
+        <update_guid>52a2d0ba8b6e0310b2518e907adc509a</update_guid>
+        <update_guid_history>52a2d0ba8b6e0310b2518e907adc509a:-429962732,4dd1d4f6616e0310a56306d332b93192:1556915969,f17f40fadb2e0310929102ebac9316e5:376002504,1f6cc436022e031094014ba3ed269783:397779849</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 13:47:09</sys_created_on>
+        <sys_db_object display_value="" name="sys_sg_button_instance">sys_sg_button_instance</sys_db_object>
+        <sys_id>002705bc40364be28134e4fa48cd9651</sys_id>
+        <sys_metadata>576cc436e42e03107f44b37c6b758881</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Complete Work Instance</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_scope_delete display_value="">00a898291b4446e4800f9c59a3050f44</sys_scope_delete>
+        <sys_update_name>sys_sg_button_instance_576cc436e42e03107f44b37c6b758881</sys_update_name>
+        <sys_update_version display_value="sys_sg_button_instance_576cc436e42e03107f44b37c6b758881">12a2d0bae46e03107f44b37c6b75889b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 13:47:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="461b9879886a03107f4468412c6146f7" sys_domain="global" table="x_snc_sentinel_hse_ai_recommendation" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 08:17:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8a1b9879886a03107f4468412c6146fa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_sentinel_hse_ai_recommendation" name="x_snc_sentinel_hse_ai_recommendation" sys_domain="global" view="Default view">461b9879886a03107f4468412c6146f7</sys_ui_form>
+            <sys_ui_section caption="Recommendation Information" display_value="Recommendation Information" name="x_snc_sentinel_hse_ai_recommendation" sys_domain="global" view="Default view">923a5039886a03107f4468412c614664</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 08:17:01</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 08:17:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4e1bd879886a03107f4468412c614607</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_sentinel_hse_ai_recommendation" name="x_snc_sentinel_hse_ai_recommendation" sys_domain="global" view="Default view">461b9879886a03107f4468412c6146f7</sys_ui_form>
+            <sys_ui_section caption="AI Analysis" display_value="AI Analysis" name="x_snc_sentinel_hse_ai_recommendation" sys_domain="global" view="Default view">421b9879886a03107f4468412c6146f3</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 08:17:01</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 08:17:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ca1bd879886a03107f4468412c61460b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_sentinel_hse_ai_recommendation" name="x_snc_sentinel_hse_ai_recommendation" sys_domain="global" view="Default view">461b9879886a03107f4468412c6146f7</sys_ui_form>
+            <sys_ui_section caption="Priority &amp; Status" display_value="Priority &amp; Status" name="x_snc_sentinel_hse_ai_recommendation" sys_domain="global" view="Default view">0a1b9879886a03107f4468412c6146f4</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 08:17:01</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 08:17:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0e1bd879886a03107f4468412c61460f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_sentinel_hse_ai_recommendation" name="x_snc_sentinel_hse_ai_recommendation" sys_domain="global" view="Default view">461b9879886a03107f4468412c6146f7</sys_ui_form>
+            <sys_ui_section caption="Additional Notes" display_value="Additional Notes" name="x_snc_sentinel_hse_ai_recommendation" sys_domain="global" view="Default view">021b9879886a03107f4468412c6146f6</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 08:17:01</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_snc_sentinel_hse_ai_recommendation</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 08:17:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>461b9879886a03107f4468412c6146f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_sentinel_hse_ai_recommendation</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+            <sys_update_name>sys_ui_form_sections_461b9879886a03107f4468412c6146f7</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 08:17:01</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

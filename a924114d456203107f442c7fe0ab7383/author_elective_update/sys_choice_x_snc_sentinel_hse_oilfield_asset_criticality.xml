@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="criticality" table="x_snc_sentinel_hse_oilfield_asset" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>criticality</element>
+            <name>x_snc_sentinel_hse_oilfield_asset</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 06:13:21</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>criticality</sys_name>
+            <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+            <sys_update_name>sys_choice_x_snc_sentinel_hse_oilfield_asset_criticality</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 06:13:21</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

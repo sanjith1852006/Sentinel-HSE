@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="root_cause_category_5" table="x_snc_sentinel_hse_incident" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>root_cause_category_5</element>
+            <name>x_snc_sentinel_hse_incident</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:39:03</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>root_cause_category_5</sys_name>
+            <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+            <sys_update_name>sys_choice_x_snc_sentinel_hse_incident_root_cause_category_5</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:39:03</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>root_cause_category_5</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Corrosion</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:39:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:39:59</sys_updated_on>
+            <value>corrosion_5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>root_cause_category_5</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Electrical Failure</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:40:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:40:48</sys_updated_on>
+            <value>electrical_failure_5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>root_cause_category_5</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Equipment Failure</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:39:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:39:41</sys_updated_on>
+            <value>equipment_failure_5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>root_cause_category_5</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>External Cause</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:41:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:41:55</sys_updated_on>
+            <value>external_cause_5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>root_cause_category_5</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Human Error</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:39:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:39:17</sys_updated_on>
+            <value>human_error_5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>root_cause_category_5</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mechanical Failure</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:40:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:40:24</sys_updated_on>
+            <value>mechanical_failure_5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>root_cause_category_5</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Process Failure</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:41:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:41:33</sys_updated_on>
+            <value>process_failure_5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>root_cause_category_5</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Sensor Failure</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:40:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:41:10</sys_updated_on>
+            <value>sensor_failure_5</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

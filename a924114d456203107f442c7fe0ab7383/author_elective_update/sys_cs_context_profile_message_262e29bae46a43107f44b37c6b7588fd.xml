@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_context_profile_message">
+    <sys_cs_context_profile_message action="DELETE">
+        <context_profile display_value="Now Assist in Virtual Agent - 1">162e29bae46a43107f44b37c6b758892</context_profile>
+        <message>Now Assist detected some content that might be harmful, sensitive, or offensive. You can try rephrasing, or you can ask about something else.</message>
+        <sys_class_name>sys_cs_context_profile_message</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:53:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>262e29bae46a43107f44b37c6b7588fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Now Assist detected some content that might be harmful, sensitive, or offensive. You can try rephrasing, or you can ask about something else.</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_cs_context_profile_message_262e29bae46a43107f44b37c6b7588fd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:53:52</sys_updated_on>
+        <type>guardian_generic_message</type>
+    </sys_cs_context_profile_message>
+    <sys_translated_text action="DELETE" query="documentkey=262e29bae46a43107f44b37c6b7588fd"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</application>
+        <file_path/>
+        <instance_id>17b1043093560750fb38f8284dba101a</instance_id>
+        <instance_name>dlt-hck-8017-0027</instance_name>
+        <name>sys_cs_context_profile_message_262e29bae46a43107f44b37c6b7588fd</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_context_profile_message"><sys_cs_context_profile_message action="INSERT_OR_UPDATE"><context_profile display_value="Now Assist in Virtual Agent - 1">162e29bae46a43107f44b37c6b758892</context_profile><message>Now Assist detected some content that might be harmful, sensitive, or offensive. You can try rephrasing, or you can ask about something else.</message><sys_class_name>sys_cs_context_profile_message</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-10 16:53:52</sys_created_on><sys_domain>global</sys_domain><sys_id>262e29bae46a43107f44b37c6b7588fd</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Now Assist detected some content that might be harmful, sensitive, or offensive. You can try rephrasing, or you can ask about something else.</sys_name><sys_overrides/><sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package><sys_policy/><sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope><sys_update_name>sys_cs_context_profile_message_262e29bae46a43107f44b37c6b7588fd</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-10 16:53:52</sys_updated_on><type>guardian_generic_message</type></sys_cs_context_profile_message><sys_translated_text action="delete_multiple" query="documentkey=262e29bae46a43107f44b37c6b7588fd"/></record_update>]]></payload>
+        <payload_hash>1696094036</payload_hash>
+        <record_name>Now Assist detected some content that might be harmful, sensitive, or offensive. You can try rephras</record_name>
+        <reverted_from/>
+        <source>6124114d456203107f442c7fe0ab7389</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:53:52</sys_created_on>
+        <sys_id>2e2e29bae46a43107f44b37c6b7588ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19fec984e370000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:53:52</sys_updated_on>
+        <type>Custom Greetings and Setup Messages</type>
+        <update_guid>ee2e29bac56a43109d17257a77d87dfe</update_guid>
+        <update_guid_history>ee2e29bac56a43109d17257a77d87dfe:1696094036</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 17:08:26</sys_created_on>
+        <sys_db_object display_value="" name="sys_cs_context_profile_message">sys_cs_context_profile_message</sys_db_object>
+        <sys_id>f0885cb03fd04c60a6bcd2a0f12b2759</sys_id>
+        <sys_metadata>262e29bae46a43107f44b37c6b7588fd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Now Assist detected some content that might be harmful, sensitive, or offensive. You can try rephrasing, or you can ask about something else.</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_scope_delete display_value="">00a898291b4446e4800f9c59a3050f44</sys_scope_delete>
+        <sys_update_name>sys_cs_context_profile_message_262e29bae46a43107f44b37c6b7588fd</sys_update_name>
+        <sys_update_version display_value="sys_cs_context_profile_message_262e29bae46a43107f44b37c6b7588fd">2e2e29bae46a43107f44b37c6b7588ff</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 17:08:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="unit" table="x_snc_sentinel_hse_gas_master" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>unit</element>
+            <name>x_snc_sentinel_hse_gas_master</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 16:37:53</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>unit</sys_name>
+            <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+            <sys_update_name>sys_choice_x_snc_sentinel_hse_gas_master_unit</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 16:37:53</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>unit</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>%</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_gas_master</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 16:38:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 16:45:18</sys_updated_on>
+            <value>percentage</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>unit</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>mg/m³</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_gas_master</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 16:38:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 16:45:18</sys_updated_on>
+            <value>mg</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>unit</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>ppm</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_gas_master</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 16:37:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 16:45:18</sys_updated_on>
+            <value>ppm</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>unit</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>ppmv</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_gas_master</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 16:38:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 16:45:18</sys_updated_on>
+            <value>ppmv</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

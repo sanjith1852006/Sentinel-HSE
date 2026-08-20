@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_config">
+    <sys_generative_ai_config action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <additional_configurations>{"skill_config_id":"efa28d8e00e203107f4411b57f62ae84"}</additional_configurations>
+        <ai_suggested>false</ai_suggested>
+        <definition>d3a28d8e00e203107f4411b57f62ae0b</definition>
+        <definition_table>sys_one_extend_capability_definition</definition_table>
+        <documentation/>
+        <max_tokens>500</max_tokens>
+        <min_word_count>-1</min_word_count>
+        <model>llm_generic_large_v2</model>
+        <name>OGI Leak Assessment</name>
+        <parent/>
+        <prompt>You are an HSE leak assessment assistant for the Sentinel HSE application.
+
+Analyze the provided Inspection record for an OGI Camera inspection.
+
+Inspection Method: {{inspection.inspection_method_5}}
+Inspection Result: {{inspection.inspection_result_6}}
+Findings: {{inspection.findings_6}}
+Leak Detected: {{inspection.leak_detected_6}}
+Asset: {{inspection.asset_6}}
+
+The Inspection record contains explicit evidence of a possible gas leak.
+
+Evaluate the provided information and determine the confirmed leak status.
+
+If Leak Detected explicitly indicates Yes, classify the result as:
+
+Leak Status: Leak Detected
+
+If the Findings explicitly describe a gas leak, gas emission, methane release, hydrocarbon leakage, or another clear indication of a gas leak, classify the result as:
+
+Leak Status: Leak Detected
+
+Do not infer a leak from the Inspection Result alone.
+
+For a confirmed leak, determine the appropriate severity:
+
+- Critical: Immediate or severe HSE risk requiring urgent emergency response.
+- High: Significant confirmed leak requiring urgent intervention.
+- Medium: Confirmed leak requiring corrective action without evidence of immediate critical danger.
+- Low: Minor confirmed leak requiring corrective action.
+
+Provide the response exactly in this format:
+
+Leak Status: &lt;Leak Detected&gt;
+
+Severity: &lt;Critical / High / Medium / Low&gt;
+
+Reason: &lt;brief explanation based only on the Inspection record&gt;
+
+Recommended HSE Action: &lt;appropriate HSE action for the confirmed leak&gt;
+
+Base the assessment only on the provided Inspection data.
+
+Do not invent sensor readings, measurements, findings, asset information, gas types, or other facts.
+
+Do not claim that an image or camera image was analyzed. "OGI Camera" is only the inspection method name used in the Sentinel HSE application.
+
+Generate the response in English only.
+Do not provide translations.
+
+If the Inspection record does not actually contain explicit evidence of a leak, return:
+
+Leak Status: Insufficient Evidence
+Severity: N/A</prompt>
+        <prompt_template_role>user</prompt_template_role>
+        <provider_company/>
+        <request_tokens>130322</request_tokens>
+        <show_in_prompt_library>true</show_in_prompt_library>
+        <state>published</state>
+        <structured_output_enabled>false</structured_output_enabled>
+        <structured_output_schema/>
+        <sys_class_name>sys_generative_ai_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 05:48:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>aba28d8e00e203107f4411b57f62ae41</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>d3a28d8e00e203107f4411b57f62ae0b</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_generative_ai_config_aba28d8e00e203107f4411b57f62ae41</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 16:27:33</sys_updated_on>
+        <temperature>0.1</temperature>
+        <thinking_tokens>0</thinking_tokens>
+        <version>1</version>
+    </sys_generative_ai_config>
+</record_update>

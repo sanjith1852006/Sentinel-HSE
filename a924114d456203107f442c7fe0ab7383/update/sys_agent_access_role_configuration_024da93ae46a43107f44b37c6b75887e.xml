@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_agent_access_role_configuration">
+    <sys_agent_access_role_configuration action="INSERT_OR_UPDATE">
+        <action>limit_to_roles</action>
+        <agent>94ca6db2e46a43107f44b37c6b758854</agent>
+        <agent_table>sn_aia_agent</agent_table>
+        <allow_all_session_roles>false</allow_all_session_roles>
+        <description/>
+        <name>94ca6db2e46a43107f44b37c6b758854</name>
+        <role_list name="admin">2831a114c611228501d4ea6c309d626d</role_list>
+        <sys_class_name>sys_agent_access_role_configuration</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:50:01</sys_created_on>
+        <sys_id>024da93ae46a43107f44b37c6b75887e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>94ca6db2e46a43107f44b37c6b758854</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_agent_access_role_configuration_024da93ae46a43107f44b37c6b75887e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:50:01</sys_updated_on>
+    </sys_agent_access_role_configuration>
+</record_update>

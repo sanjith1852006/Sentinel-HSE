@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="DELETE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name>Compliance Audit</name>
+        <order>100</order>
+        <roles>x_snc_sentinel_hse.x_sentinel.hse_manager</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 06:25:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2b71403d886603107f4468412c614682</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Compliance Audit</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_app_application_2b71403d886603107f4468412c614682</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 06:25:10</sys_updated_on>
+        <title>Compliance Audit</title>
+        <view_name/>
+    </sys_app_application>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</application>
+        <file_path/>
+        <instance_id>17b1043093560750fb38f8284dba101a</instance_id>
+        <instance_name>dlt-hck-8017-0027</instance_name>
+        <name>sys_app_application_2b71403d886603107f4468412c614682</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application"><sys_app_application action="INSERT_OR_UPDATE"><active>true</active><category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category><description/><device_type>browser</device_type><hint/><name>Compliance Audit</name><order>100</order><roles>x_snc_sentinel_hse.x_sentinel.hse_manager</roles><sys_class_name>sys_app_application</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-07 06:25:10</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>2b71403d886603107f4468412c614682</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Compliance Audit</sys_name><sys_overrides/><sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package><sys_policy/><sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope><sys_update_name>sys_app_application_2b71403d886603107f4468412c614682</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-07 06:25:10</sys_updated_on><title>Compliance Audit</title><view_name/></sys_app_application></record_update>]]></payload>
+        <payload_hash>-58768600</payload_hash>
+        <record_name>Compliance Audit</record_name>
+        <reverted_from/>
+        <source>6124114d456203107f442c7fe0ab7389</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 06:25:10</sys_created_on>
+        <sys_id>6371403d886603107f4468412c614686</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19fdae5a2670000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 06:25:10</sys_updated_on>
+        <type>Application Menu</type>
+        <update_guid>2771403d4d6603101176ae9a0600af85</update_guid>
+        <update_guid_history>2771403d4d6603101176ae9a0600af85:-58768600</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Compliance Audit">edc06502002a03107f4411b57f62aec4</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 07:59:56</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_application">sys_app_application</sys_db_object>
+        <sys_id>21c2ee6157a84f408dd61dfb78190c41</sys_id>
+        <sys_metadata>2b71403d886603107f4468412c614682</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Compliance Audit</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_scope_delete display_value="">00a898291b4446e4800f9c59a3050f44</sys_scope_delete>
+        <sys_update_name>sys_app_application_2b71403d886603107f4468412c614682</sys_update_name>
+        <sys_update_version display_value="sys_app_application_2b71403d886603107f4468412c614682">6371403d886603107f4468412c614686</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 07:59:56</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

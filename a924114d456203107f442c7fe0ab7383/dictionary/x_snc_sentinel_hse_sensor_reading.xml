@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="f4a7badd292603107f441ac0369c7f2d" label="Sensor Reading" max_length="40" name="x_snc_sentinel_hse_sensor_reading" type="collection">
+        <element label="Temperature" mandatory="true" max_length="20" name="temperature" type="decimal"/>
+        <element label="Gas Concentration" mandatory="true" max_length="20" name="gas_concentration" type="decimal"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Tank Level" mandatory="true" max_length="20" name="tank_level" type="decimal"/>
+        <element default="False" label="Simulation Processed" max_length="40" name="simulation_processed" type="boolean"/>
+        <element label="Pressure" mandatory="true" max_length="20" name="pressure" type="decimal"/>
+        <element label="Gas Name" mandatory="true" max_length="100" name="gas_name" type="string"/>
+        <element label="Reading Timestamp" mandatory="true" max_length="40" name="reading_timestamp" type="glide_date_time"/>
+        <element label="Asset" mandatory="true" max_length="32" name="asset" reference="x_snc_sentinel_hse_oilfield_asset_1" type="reference"/>
+        <element label="AI Analysis" max_length="40" name="ai_analysis" type="string"/>
+        <element label="AI Processed" max_length="255" name="ai_processed" type="boolean"/>
+        <element choice="3" default="No Leak" label="Leak Status" mandatory="true" max_length="40" name="leak_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Major Leak" value="major_leak"/>
+                <element inactive_on_update="false" label="Minor Leak" value="minor_leak"/>
+                <element inactive_on_update="false" label="No Leak" value="no_leak"/>
+                <element inactive_on_update="false" label="Critical Leak" value="critical_leak"/>
+            </choice>
+        </element>
+        <element choice="3" default="Real Dataset" label="Data Source" mandatory="true" max_length="40" name="data_source" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Real Dataset" value="real_dataset_1"/>
+                <element inactive_on_update="false" label="Simulated (added per user asset list, Aug 2026)" sequence="0" value="Simulated (added per user asset list, Aug 2026)"/>
+                <element inactive_on_update="false" label="Manual Entry" value="manual_entry_1"/>
+                <element inactive_on_update="false" label="Simulated" value="simulated_1"/>
+            </choice>
+        </element>
+        <element label="Simulation Sequence" max_length="40" name="simulation_sequence" type="integer"/>
+        <element choice="1" label="AI Recommendation" max_length="255" name="ai_recommendation" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Review Required" value="review_required_o"/>
+                <element inactive_on_update="false" label="Safe" value="safe_o"/>
+                <element inactive_on_update="false" label="Stop Work" value="stop_work_o"/>
+            </choice>
+        </element>
+        <element choice="3" default="Normal" label="Sensor Status" mandatory="true" max_length="40" name="sensor_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Warning" value="warning_1"/>
+                <element inactive_on_update="false" label="Normal" value="normal_1"/>
+                <element inactive_on_update="false" label="Critical" value="critical_1"/>
+            </choice>
+        </element>
+        <element choice="1" label="AI Risk Level" max_length="255" name="ai_risk_level" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Medium" value="medium_ai"/>
+                <element inactive_on_update="false" label="High" value="high_ai"/>
+                <element inactive_on_update="false" label="Critical" value="critical_ai"/>
+                <element inactive_on_update="false" label="Low" value="low_ai"/>
+            </choice>
+        </element>
+        <element label="Flow Rate" mandatory="true" max_length="20" name="flow_rate" type="decimal"/>
+        <index name="index">
+            <element name="asset"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_now_assist_deployment_config_attributes">
+    <sys_now_assist_deployment_config_attributes action="DELETE">
+        <deployment_config display_value="Now Assist in Virtual Agent - 1">122e29bae46a43107f44b37c6b758896</deployment_config>
+        <name>persona_description</name>
+        <sys_class_name>sys_now_assist_deployment_config_attributes</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:54:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>a83e2dbae46a43107f44b37c6b7588ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>persona_description</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_now_assist_deployment_config_attributes_a83e2dbae46a43107f44b37c6b7588ee</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:54:01</sys_updated_on>
+        <value/>
+    </sys_now_assist_deployment_config_attributes>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</application>
+        <file_path/>
+        <instance_id>17b1043093560750fb38f8284dba101a</instance_id>
+        <instance_name>dlt-hck-8017-0027</instance_name>
+        <name>sys_now_assist_deployment_config_attributes_a83e2dbae46a43107f44b37c6b7588ee</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_now_assist_deployment_config_attributes"><sys_now_assist_deployment_config_attributes action="INSERT_OR_UPDATE"><deployment_config display_value="Now Assist in Virtual Agent - 1">122e29bae46a43107f44b37c6b758896</deployment_config><name>persona_description</name><sys_class_name>sys_now_assist_deployment_config_attributes</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-10 16:54:01</sys_created_on><sys_domain>global</sys_domain><sys_id>a83e2dbae46a43107f44b37c6b7588ee</sys_id><sys_mod_count>0</sys_mod_count><sys_name>persona_description</sys_name><sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package><sys_policy/><sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope><sys_update_name>sys_now_assist_deployment_config_attributes_a83e2dbae46a43107f44b37c6b7588ee</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-10 16:54:01</sys_updated_on><value/></sys_now_assist_deployment_config_attributes></record_update>]]></payload>
+        <payload_hash>-570413550</payload_hash>
+        <record_name>persona_description</record_name>
+        <reverted_from/>
+        <source>6124114d456203107f442c7fe0ab7389</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:54:01</sys_created_on>
+        <sys_id>2c3e2dbae46a43107f44b37c6b7588f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19fec9871280000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:54:01</sys_updated_on>
+        <type>Now Assist Deployment Config Attributes</type>
+        <update_guid>203e2dbac76a4310e26b68cdca4a64f0</update_guid>
+        <update_guid_history>203e2dbac76a4310e26b68cdca4a64f0:-570413550</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 17:08:22</sys_created_on>
+        <sys_db_object display_value="" name="sys_now_assist_deployment_config_attributes">sys_now_assist_deployment_config_attributes</sys_db_object>
+        <sys_id>175cd6a888a649b39383097319a89109</sys_id>
+        <sys_metadata>a83e2dbae46a43107f44b37c6b7588ee</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>persona_description</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_scope_delete display_value="">00a898291b4446e4800f9c59a3050f44</sys_scope_delete>
+        <sys_update_name>sys_now_assist_deployment_config_attributes_a83e2dbae46a43107f44b37c6b7588ee</sys_update_name>
+        <sys_update_version display_value="sys_now_assist_deployment_config_attributes_a83e2dbae46a43107f44b37c6b7588ee">2c3e2dbae46a43107f44b37c6b7588f0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 17:08:22</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

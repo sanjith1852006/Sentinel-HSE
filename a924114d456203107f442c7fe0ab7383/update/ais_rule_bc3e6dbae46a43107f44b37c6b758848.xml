@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_rule">
+    <ais_rule action="INSERT_OR_UPDATE">
+        <condition_table>v_ais_result_improvement_rule_condition_builder_values</condition_table>
+        <end_date>2099-12-31</end_date>
+        <expand_synonyms>true</expand_synonyms>
+        <genius_only>false</genius_only>
+        <label>Now Assist Search Personalization</label>
+        <locale>en</locale>
+        <marked_for_deletion>true</marked_for_deletion>
+        <no_triggers>false</no_triggers>
+        <profile display_value="">2b2ea9bae46a43107f44b37c6b75885c</profile>
+        <start_date>2025-01-01</start_date>
+        <state>DRAFT</state>
+        <sys_class_name>ais_rule</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:54:02</sys_created_on>
+        <sys_id>bc3e6dbae46a43107f44b37c6b758848</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Now Assist Search Personalization</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>ais_rule_bc3e6dbae46a43107f44b37c6b758848</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 17:08:36</sys_updated_on>
+        <trigger table="v_ais_result_improvement_rule_condition_builder_values">query_match_dictionary!=location_synonym_dictionary^location_cityISNOTEMPTY<item display_value="Location Synonym Dictionary" endquery="false" field="query_match_dictionary" goto="false" newquery="false" operator="!=" or="false" value="location_synonym_dictionary"/>
+            <item endquery="false" field="location_city" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+        </trigger>
+    </ais_rule>
+</record_update>

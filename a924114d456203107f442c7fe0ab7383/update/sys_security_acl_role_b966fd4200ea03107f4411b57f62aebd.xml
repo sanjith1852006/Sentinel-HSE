@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 09:35:04</sys_created_on>
+        <sys_id>b966fd4200ea03107f4411b57f62aebd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_sentinel_hse_ai_recommendation.x_snc_sentinel_hse.x_sentinel.maintenance_engineer</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_security_acl display_value="x_snc_sentinel_hse_ai_recommendation">a3955479882a03107f4468412c6146bd</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_b966fd4200ea03107f4411b57f62aebd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 09:35:04</sys_updated_on>
+        <sys_user_role display_value="x_snc_sentinel_hse.x_sentinel.maintenance_engineer" name="x_snc_sentinel_hse.x_sentinel.maintenance_engineer">3924114d456203107f442c7fe0ab73ca</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

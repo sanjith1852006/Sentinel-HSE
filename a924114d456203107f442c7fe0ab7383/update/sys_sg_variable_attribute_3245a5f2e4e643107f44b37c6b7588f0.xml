@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_variable_attribute">
+    <sys_sg_variable_attribute action="INSERT_OR_UPDATE">
+        <name>Script</name>
+        <sys_class_name>sys_sg_variable_attribute</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:16:10</sys_created_on>
+        <sys_id>3245a5f2e4e643107f44b37c6b7588f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Script</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_sg_variable_attribute_3245a5f2e4e643107f44b37c6b7588f0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:16:10</sys_updated_on>
+        <translated_value/>
+        <value>return gps_coordinates_var;</value>
+        <variable display_value="gps_string_var">b805adf6e42a43107f44b37c6b758836</variable>
+    </sys_sg_variable_attribute>
+</record_update>

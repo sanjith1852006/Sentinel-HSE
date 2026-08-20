@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="Asset Information" section_id="0fdcda15296203107f441ac0369c7fef" sys_domain="global" table="x_snc_sentinel_hse_oilfield_asset" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 09:15:52</sys_created_on>
+            <sys_id>eafe975d29aa03107f441ac0369c7f3a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Information" display_value="Asset Information" name="x_snc_sentinel_hse_oilfield_asset" sys_domain="global" view="Default view">0fdcda15296203107f441ac0369c7fef</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 09:15:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>asset_type</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 09:15:52</sys_created_on>
+            <sys_id>e2fe975d29aa03107f441ac0369c7f3b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Information" display_value="Asset Information" name="x_snc_sentinel_hse_oilfield_asset" sys_domain="global" view="Default view">0fdcda15296203107f441ac0369c7fef</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 09:15:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>short_description</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 09:15:52</sys_created_on>
+            <sys_id>fafe975d29aa03107f441ac0369c7f3b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Information" display_value="Asset Information" name="x_snc_sentinel_hse_oilfield_asset" sys_domain="global" view="Default view">0fdcda15296203107f441ac0369c7fef</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 09:15:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 09:15:52</sys_created_on>
+            <sys_id>f2fe975d29aa03107f441ac0369c7f3c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Information" display_value="Asset Information" name="x_snc_sentinel_hse_oilfield_asset" sys_domain="global" view="Default view">0fdcda15296203107f441ac0369c7fef</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 09:15:52</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>asset_name</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 09:15:52</sys_created_on>
+            <sys_id>fafe975d29aa03107f441ac0369c7f3c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Information" display_value="Asset Information" name="x_snc_sentinel_hse_oilfield_asset" sys_domain="global" view="Default view">0fdcda15296203107f441ac0369c7fef</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 09:15:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>segment</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 09:15:52</sys_created_on>
+            <sys_id>f2fe975d29aa03107f441ac0369c7f3d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Information" display_value="Asset Information" name="x_snc_sentinel_hse_oilfield_asset" sys_domain="global" view="Default view">0fdcda15296203107f441ac0369c7fef</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 09:15:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>Asset Information</caption>
+            <header>true</header>
+            <name>x_snc_sentinel_hse_oilfield_asset</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 04:27:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0fdcda15296203107f441ac0369c7fef</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>x_snc_sentinel_hse_oilfield_asset</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+            <sys_update_name>sys_ui_section_0fdcda15296203107f441ac0369c7fef</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 08:53:25</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</application>
+        <file_path/>
+        <instance_id>17b1043093560750fb38f8284dba101a</instance_id>
+        <instance_name>dlt-hck-8017-0027</instance_name>
+        <name>sys_ui_section_0fdcda15296203107f441ac0369c7fef</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="Asset Information" section_id="0fdcda15296203107f441ac0369c7fef" sys_domain="global" table="x_snc_sentinel_hse_oilfield_asset" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>number</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-06 09:15:52</sys_created_on><sys_id>eafe975d29aa03107f441ac0369c7f3a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Asset Information" display_value="Asset Information" name="x_snc_sentinel_hse_oilfield_asset" sys_domain="global" view="Default view">0fdcda15296203107f441ac0369c7fef</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-06 09:15:52</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>asset_type</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-06 09:15:52</sys_created_on><sys_id>e2fe975d29aa03107f441ac0369c7f3b</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Asset Information" display_value="Asset Information" name="x_snc_sentinel_hse_oilfield_asset" sys_domain="global" view="Default view">0fdcda15296203107f441ac0369c7fef</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-06 09:15:52</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>short_description</element><position>2</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-06 09:15:52</sys_created_on><sys_id>fafe975d29aa03107f441ac0369c7f3b</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Asset Information" display_value="Asset Information" name="x_snc_sentinel_hse_oilfield_asset" sys_domain="global" view="Default view">0fdcda15296203107f441ac0369c7fef</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-06 09:15:52</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>3</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-06 09:15:52</sys_created_on><sys_id>f2fe975d29aa03107f441ac0369c7f3c</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Asset Information" display_value="Asset Information" name="x_snc_sentinel_hse_oilfield_asset" sys_domain="global" view="Default view">0fdcda15296203107f441ac0369c7fef</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-06 09:15:52</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>asset_name</element><position>4</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-06 09:15:52</sys_created_on><sys_id>fafe975d29aa03107f441ac0369c7f3c</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Asset Information" display_value="Asset Information" name="x_snc_sentinel_hse_oilfield_asset" sys_domain="global" view="Default view">0fdcda15296203107f441ac0369c7fef</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-06 09:15:52</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>segment</element><position>5</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-06 09:15:52</sys_created_on><sys_id>f2fe975d29aa03107f441ac0369c7f3d</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Asset Information" display_value="Asset Information" name="x_snc_sentinel_hse_oilfield_asset" sys_domain="global" view="Default view">0fdcda15296203107f441ac0369c7fef</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-06 09:15:52</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>Asset Information</caption><header>true</header><name>x_snc_sentinel_hse_oilfield_asset</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-06 04:27:00</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>0fdcda15296203107f441ac0369c7fef</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_snc_sentinel_hse_oilfield_asset</sys_name><sys_overrides/><sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package><sys_policy/><sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope><sys_update_name>sys_ui_section_0fdcda15296203107f441ac0369c7fef</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-06 08:53:25</sys_updated_on><sys_user/><title>true</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>-617915249</payload_hash>
+        <record_name>Oilfield Asset</record_name>
+        <reverted_from/>
+        <source>6124114d456203107f442c7fe0ab7389</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-06 09:15:52</sys_created_on>
+        <sys_id>7afe975d29aa03107f441ac0369c7f4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19fd65b906f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-06 09:15:52</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>befe975dbfaa0310060c0fc3d36f3f4b</update_guid>
+        <update_guid_history>befe975dbfaa0310060c0fc3d36f3f4b:-617915249,f24e9bd9f7aa0310a5c02efa3f98562b:1492763419,71d99bdde26a0310334dfdc5aeabf987:-617915249,71d99bdd1d6a031055aed7deeab8281b:-712062633</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-06 10:07:55</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>048f4feb7c1742ff803cd9b67cdfdf91</sys_id>
+        <sys_metadata>0fdcda15296203107f441ac0369c7fef</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Asset Information</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_parent display_value="">f2532d8945e203107f442c7fe0ab7374</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_scope_delete display_value="">00a898291b4446e4800f9c59a3050f44</sys_scope_delete>
+        <sys_update_name>sys_ui_section_0fdcda15296203107f441ac0369c7fef</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_0fdcda15296203107f441ac0369c7fef">7afe975d29aa03107f441ac0369c7f4c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-06 10:07:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

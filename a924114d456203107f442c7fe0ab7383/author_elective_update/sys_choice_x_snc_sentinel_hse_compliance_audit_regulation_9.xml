@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="regulation_9" table="x_snc_sentinel_hse_compliance_audit" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>regulation_9</element>
+            <name>x_snc_sentinel_hse_compliance_audit</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 06:30:26</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>regulation_9</sys_name>
+            <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+            <sys_update_name>sys_choice_x_snc_sentinel_hse_compliance_audit_regulation_9</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 06:30:26</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>regulation_9</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>API Standards</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_compliance_audit</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 06:31:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 06:32:15</sys_updated_on>
+            <value>api_standards_9</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>regulation_9</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>ISO 14001</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_compliance_audit</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 06:31:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 06:31:47</sys_updated_on>
+            <value>iso_14001_9</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>regulation_9</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>ISO 45001</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_compliance_audit</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 06:30:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 06:31:00</sys_updated_on>
+            <value>iso_45001_9</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>regulation_9</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Local Government Regulations</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_compliance_audit</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 06:32:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 06:32:45</sys_updated_on>
+            <value>local_government_regulations_9</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>regulation_9</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>OSHA</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_compliance_audit</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 06:30:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 06:30:37</sys_updated_on>
+            <value>osha_9</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

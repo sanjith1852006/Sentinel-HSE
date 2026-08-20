@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_search_profile_ais_search_source_m2m">
+    <ais_search_profile_ais_search_source_m2m action="DELETE">
+        <exclude_attachments_in_now_assist_genius_results>false</exclude_attachments_in_now_assist_genius_results>
+        <exclude_in_now_assist_genius_results>false</exclude_in_now_assist_genius_results>
+        <exclude_in_regular_search>true</exclude_in_regular_search>
+        <profile display_value="Now Assist in Virtual Agent - 1c22e29bae46a43107f44b37c6b75888e">2b2ea9bae46a43107f44b37c6b75885c</profile>
+        <search_source display_value="Now Assist Topics">37cf281a77fcb110569156391e5a994e</search_source>
+        <sys_class_name>ais_search_profile_ais_search_source_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:53:58</sys_created_on>
+        <sys_id>c43ee9bae46a43107f44b37c6b758843</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Now Assist in Virtual Agent - 1c22e29bae46a43107f44b37c6b75888e.Now Assist Topics</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>ais_search_profile_ais_search_source_m2m_c43ee9bae46a43107f44b37c6b758843</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:53:58</sys_updated_on>
+    </ais_search_profile_ais_search_source_m2m>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</application>
+        <file_path/>
+        <instance_id>17b1043093560750fb38f8284dba101a</instance_id>
+        <instance_name>dlt-hck-8017-0027</instance_name>
+        <name>ais_search_profile_ais_search_source_m2m_c43ee9bae46a43107f44b37c6b758843</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_search_profile_ais_search_source_m2m"><ais_search_profile_ais_search_source_m2m action="INSERT_OR_UPDATE"><exclude_attachments_in_now_assist_genius_results>false</exclude_attachments_in_now_assist_genius_results><exclude_in_now_assist_genius_results>false</exclude_in_now_assist_genius_results><exclude_in_regular_search>true</exclude_in_regular_search><profile display_value="Now Assist in Virtual Agent - 1c22e29bae46a43107f44b37c6b75888e">2b2ea9bae46a43107f44b37c6b75885c</profile><search_source display_value="Now Assist Topics">37cf281a77fcb110569156391e5a994e</search_source><sys_class_name>ais_search_profile_ais_search_source_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-10 16:53:58</sys_created_on><sys_id>c43ee9bae46a43107f44b37c6b758843</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Now Assist in Virtual Agent - 1c22e29bae46a43107f44b37c6b75888e.Now Assist Topics</sys_name><sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package><sys_policy/><sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope><sys_update_name>ais_search_profile_ais_search_source_m2m_c43ee9bae46a43107f44b37c6b758843</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-10 16:53:58</sys_updated_on></ais_search_profile_ais_search_source_m2m></record_update>]]></payload>
+        <payload_hash>-1988800642</payload_hash>
+        <record_name>Now Assist in Virtual Agent - 1c22e29bae46a43107f44b37c6b75888e.Now Assist Topics</record_name>
+        <reverted_from/>
+        <source>6124114d456203107f442c7fe0ab7389</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:53:58</sys_created_on>
+        <sys_id>443ee9bae46a43107f44b37c6b75884a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19fec9868530000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:53:58</sys_updated_on>
+        <type>AI Search Search Profile Search Source M</type>
+        <update_guid>483ee9ba6f6a4310220f899dabd63f49</update_guid>
+        <update_guid_history>483ee9ba6f6a4310220f899dabd63f49:-1988800642</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Now Assist in Virtual Agent - 1c22e29bae46a43107f44b37c6b75888e.Now Assist Topic">b58135b2e4aa43107f44b37c6b758866</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 17:08:34</sys_created_on>
+        <sys_db_object display_value="" name="ais_search_profile_ais_search_source_m2m">ais_search_profile_ais_search_source_m2m</sys_db_object>
+        <sys_id>4041c84d366c42679c43fa6efbb80c51</sys_id>
+        <sys_metadata>c43ee9bae46a43107f44b37c6b758843</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Now Assist in Virtual Agent - 1c22e29bae46a43107f44b37c6b75888e.Now Assist Topics</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_scope_delete display_value="">00a898291b4446e4800f9c59a3050f44</sys_scope_delete>
+        <sys_update_name>ais_search_profile_ais_search_source_m2m_c43ee9bae46a43107f44b37c6b758843</sys_update_name>
+        <sys_update_version display_value="ais_search_profile_ais_search_source_m2m_c43ee9bae46a43107f44b37c6b758843">443ee9bae46a43107f44b37c6b75884a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 17:08:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

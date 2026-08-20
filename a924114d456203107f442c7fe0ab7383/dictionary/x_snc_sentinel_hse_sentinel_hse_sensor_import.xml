@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="aab6239f55a643107f448ed3c97cb35b" extends="sys_import_set_row" label="Sentinel HSE Sensor Import" max_length="40" name="x_snc_sentinel_hse_sentinel_hse_sensor_import" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Oilfield Segment" label="Oilfield Segment" max_length="40" name="u_oilfield_segment" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Simulation Processed" label="Simulation Processed" max_length="40" name="u_simulation_processed" type="string"/>
+        <element attributes="import_attribute_name=Current Pressure (psi)" label="Current Pressure (psi)" max_length="15" name="u_current_pressure__psi_" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Leak Status" label="Leak Status" max_length="40" name="u_leak_status" type="string"/>
+        <element attributes="import_attribute_name=Simulation Sequence" label="Simulation Sequence" max_length="40" name="u_simulation_sequence" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Timestamp" label="Timestamp" max_length="40" name="u_timestamp" type="string"/>
+        <element attributes="import_attribute_name=Tank Level (%)" label="Tank Level (%)" max_length="15" name="u_tank_level____" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Sensor Status" label="Sensor Status" max_length="40" name="u_sensor_status" type="string"/>
+        <element attributes="import_attribute_name=Gas Concentration (ppm)" label="Gas Concentration (ppm)" max_length="15" name="u_gas_concentration__ppm_" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Asset" label="Asset" max_length="40" name="u_asset" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Data Source" label="Data Source" max_length="47" name="u_data_source" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Gas Name" label="Gas Name" max_length="51" name="u_gas_name" type="string"/>
+    </element>
+</database>

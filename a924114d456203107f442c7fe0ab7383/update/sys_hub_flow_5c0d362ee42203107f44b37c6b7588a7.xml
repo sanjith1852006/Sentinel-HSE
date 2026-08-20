@@ -1,0 +1,1060 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=269700000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>create_hse_alert_from_inspection</internal_name>
+        <label_cache>[{"name":"Updated_1.current.leak_detected_6","label":"Trigger - Record Updated➛Inspection Record➛Leak Detected","reference":"","reference_display":"Leak Detected","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"leak_detected_6","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"No","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"No","selected":false,"missing":false,"value":"no_i","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"No"}}},{"label":"Yes","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Yes","selected":false,"missing":false,"value":"yes_i","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Yes"}}}],"usedInstances":{"86d8296d-dfd1-4784-bcab-d2195fc1e808":["condition"]}},{"name":"Updated_1.current.inspection_result_6","label":"Trigger - Record Updated➛Inspection Record➛Inspection Result","reference":"","reference_display":"Inspection Result","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"inspection_result_6","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"Fail","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Fail","selected":false,"missing":false,"value":"fail_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Fail"}}},{"label":"Obervation","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Obervation","selected":false,"missing":false,"value":"observation_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Obervation"}}},{"label":"Pass","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Pass","selected":false,"missing":false,"value":"pass_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Pass"}}}],"usedInstances":{"86d8296d-dfd1-4784-bcab-d2195fc1e808":["condition"]}},{"name":"Updated_1.current.ai_recommendation_6","label":"Trigger - Record Updated➛Inspection Record➛AI Recommendation","reference":"","reference_display":"AI Recommendation","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"ai_recommendation_6","usedInstances":{"6561a0af-36c2-4bc9-85a3-17aeeac46e26":["ai_recommendation_5"]}},{"name":"Updated_1.current.ai_inspection_summary_6","label":"Trigger - Record Updated➛Inspection Record➛AI Inspection Summary","reference":"","reference_display":"AI Inspection Summary","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"ai_inspection_summary_6","usedInstances":{"6561a0af-36c2-4bc9-85a3-17aeeac46e26":["ai_incident_summary_5"]}},{"name":"Updated_1.current.recommendations_6","label":"Trigger - Record Updated➛Inspection Record➛Recommendations","reference":"","reference_display":"Recommendations","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"recommendations_6","usedInstances":{"6561a0af-36c2-4bc9-85a3-17aeeac46e26":["corrective_action_5"]}},{"name":"Updated_1.current.findings_6","label":"Trigger - Record Updated➛Inspection Record➛Findings","reference":"","reference_display":"Findings","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"findings_6","usedInstances":{"6561a0af-36c2-4bc9-85a3-17aeeac46e26":["immediate_action_5"]}},{"name":"Updated_1.current.inspection_date_6","label":"Trigger - Record Updated➛Inspection Record➛Inspection Date","reference":"","reference_display":"Inspection Date","type":"glide_date","base_type":"glide_date","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"inspection_date_6","usedInstances":{"6561a0af-36c2-4bc9-85a3-17aeeac46e26":["reported_time_5"]}},{"name":"Updated_1.current.asset_6","label":"Trigger - Record Updated➛Inspection Record➛Asset","reference":"x_snc_sentinel_hse_oilfield_asset_1","reference_display":"Oilfield Asset","type":"reference","base_type":"reference","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"asset_6","usedInstances":{"6561a0af-36c2-4bc9-85a3-17aeeac46e26":["field_name_5"]}},{"name":"Updated_1.current.inspection_type_6","label":"Trigger - Record Updated➛Inspection Record➛Inspection Type","reference":"","reference_display":"Inspection Type","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"inspection_type_6","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"Corrosion Inspection","sequence":0.0,"used":false,"reference":false,"image":"","rawLabel":"Corrosion Inspection","selected":false,"missing":false,"value":"corrosion_inspection_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Corrosion Inspection"}}},{"label":"Emergency Inspection","sequence":1.0,"used":false,"reference":false,"image":"","rawLabel":"Emergency Inspection","selected":false,"missing":false,"value":"emergency_inspection_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Emergency Inspection"}}},{"label":"Pipeline Integrity Assessment","sequence":2.0,"used":false,"reference":false,"image":"","rawLabel":"Pipeline Integrity Assessment","selected":false,"missing":false,"value":"pipeline_integrity_assessment_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Pipeline Integrity Assessment"}}},{"label":"Pressure Vessel Certification","sequence":3.0,"used":false,"reference":false,"image":"","rawLabel":"Pressure Vessel Certification","selected":false,"missing":false,"value":"pressure_vessel_certification_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Pressure Vessel Certification"}}},{"label":"Routine Inspection","sequence":4.0,"used":false,"reference":false,"image":"","rawLabel":"Routine Inspection","selected":false,"missing":false,"value":"routine_inspection_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Routine Inspection"}}},{"label":"Safety Inspection","sequence":5.0,"used":false,"reference":false,"image":"","rawLabel":"Safety Inspection","selected":false,"missing":false,"value":"safety_inspection_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Safety Inspection"}}}],"usedInstances":{"6561a0af-36c2-4bc9-85a3-17aeeac46e26":["incident_type"]}},{"name":"6561a0af-36c2-4bc9-85a3-17aeeac46e26.record","label":"2 - Create Record➛HSE Incident Record","reference":"x_snc_sentinel_hse_incident","reference_display":"HSE Incident","type":"reference","base_type":"reference","usedInstances":{"9a626f9d-1efc-49cc-bb82-983b9d64ef7c":["record"],"fc8a83b7-bd90-4c39-ba47-dee2278501a2":["record"],"4e9a6ad3-9eaf-4d01-8671-6d271db30b72":["record"],"35a0e7ac-b81a-4bc0-8fdf-d67a60c03327":["record"],"8fc09dcd-971d-49e3-b97e-5225627aa36b":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>a8a5cfeee46203107f44b37c6b7588b3</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Create HSE Alert from Inspection</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>8ed1cfeb3ca603107f44ecc116669ffe</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 03:59:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5c0d362ee42203107f44b37c6b7588a7</sys_id>
+        <sys_mod_count>37</sys_mod_count>
+        <sys_name>Create HSE Alert from Inspection</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_hub_flow_5c0d362ee42203107f44b37c6b7588a7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 06:54:56</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>12d1032f3ca603107f44ecc116669f8b</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=5c0d362ee42203107f44b37c6b7588a7"/>
+    <sys_variable_value action="delete_multiple" query="document_key=5c0d362ee42203107f44b37c6b7588a7"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_snc_sentinel_hse_inspection">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 06:54:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8ed1cfeb3ca603107f44ecc116669ffe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 06:54:55</sys_updated_on>
+        <table>x_snc_sentinel_hse_inspection</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>5c0d362ee42203107f44b37c6b7588a7</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 06:54:55</sys_created_on>
+        <sys_id>82d1032f3ca603107f44ecc116669f00</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 06:54:55</sys_updated_on>
+        <trigger display_value="">8ed1cfeb3ca603107f44ecc116669ffe</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=5c0d362ee42203107f44b37c6b7588a7^sys_idNOT IN82d1032f3ca603107f44ecc116669f00"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=5c0d362ee42203107f44b37c6b7588a7"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=5c0d362ee42203107f44b37c6b7588a7^sys_idNOT IN1c0d362ee42203107f44b37c6b7588aa"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>5c0d362ee42203107f44b37c6b7588a7</id>
+        <name>Create HSE Alert from Inspection</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 03:59:51</sys_created_on>
+        <sys_id>1c0d362ee42203107f44b37c6b7588aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 03:59:51</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=1c0d362ee42203107f44b37c6b7588aa"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=5c0d362ee42203107f44b37c6b7588a7^sys_idNOT IN120db22ee42203107f44b37c6b758894,2b0d3a2ee42203107f44b37c6b7588f6,930d3a2ee42203107f44b37c6b758888"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Create HSE Alert from Inspection">5c0d362ee42203107f44b37c6b7588a7</model>
+        <model_id>5c0d362ee42203107f44b37c6b7588a7</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_5c0d362ee42203107f44b37c6b7588a7</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 03:59:59</sys_created_on>
+        <sys_id>120db22ee42203107f44b37c6b758894</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 04:31:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=120db22ee42203107f44b37c6b758894"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Create HSE Alert from Inspection">5c0d362ee42203107f44b37c6b7588a7</model>
+        <model_id>5c0d362ee42203107f44b37c6b7588a7</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_5c0d362ee42203107f44b37c6b7588a7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:00:04</sys_created_on>
+        <sys_id>2b0d3a2ee42203107f44b37c6b7588f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 04:00:04</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2b0d3a2ee42203107f44b37c6b7588f6"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Create HSE Alert from Inspection">5c0d362ee42203107f44b37c6b7588a7</model>
+        <model_id>5c0d362ee42203107f44b37c6b7588a7</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_5c0d362ee42203107f44b37c6b7588a7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:00:03</sys_created_on>
+        <sys_id>930d3a2ee42203107f44b37c6b758888</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 04:31:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=930d3a2ee42203107f44b37c6b758888"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=5c0d362ee42203107f44b37c6b7588a7"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5c0d362ee42203107f44b37c6b7588a7"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=5c0d362ee42203107f44b37c6b7588a7^sys_idNOT IN183dbe2ee42203107f44b37c6b7588f8"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Create HSE Alert from Inspection">5c0d362ee42203107f44b37c6b7588a7</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:00:40</sys_created_on>
+        <sys_id>183dbe2ee42203107f44b37c6b7588f8</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 06:54:51</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=5c0d362ee42203107f44b37c6b7588a7^sys_idNOT INf7ed32eae42203107f44b37c6b758864,ddca9f22e46603107f44b37c6b7588a5"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Create HSE Alert from Inspection">5c0d362ee42203107f44b37c6b7588a7</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>86d8296d-dfd1-4784-bcab-d2195fc1e808</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:03:55</sys_created_on>
+        <sys_id>f7ed32eae42203107f44b37c6b758864</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 06:55:30</sys_updated_on>
+        <ui_id>6561a0af-36c2-4bc9-85a3-17aeeac46e26</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1W30/bMBD+V5CfoyihtIK+TTC0SRtIY+OFgeXal+Y0x8lsp9BV/d93jpNSfjNpL0jkzXffnb/vfPblYsVQsSmb5JCND/KJHOWj0W6W7e7v5bPJaJbvqpEA2GMJM6ICQnox08C7RcIWQrfBeMOdkdyB8WhA89IBRyNRkYFQCl2jxfK8B386+7jz+dYrS9TKgmHTi8uENcJSag+WTVf3XK8lqsUMNEG/B6ZPEPfL5lHbl+3YnZPoqK0KfLKEwY0Ho4CIFEI7SFgljBK+tks29bYlgwWhTo1ebhAlksopYwF74/APbbufBVwBpExC9G2WvC9WNBdHwoszyix9a3uoLGuU4GJNFBSi1f5w2xYBp43H2sSQTmYfXeu2MiexJGyTYDgbsrR0eAqaoDMw72UUZ2V9/W1geYymK0nv1LUUerMS3luctT7wWTHQUFEiXommQTPnja0X2AUTlyqda1qkha6vaVOHc5MKGYinVFaRHpP9qDOfC4tBxVdKQ8HrhLmlO9TCuVstVET+uw1MorJeA49lCCHSYuM/0AYL6Omuk+EGKMgOnmysfHbbSF3Tu63uF8gtkBjSSayJPB//bLNspFarHw1ZQPE8la2l0vn0IXiyXl+Rdbgw3LVVJezyhSRoXANdqTYBIZGsCdEJ5LGQz6W5S8R1CZAMCgn4iviC2oDONAZaaGob/B4reC5qi3lwdcEFglbdRXxWtnPgI8uhWOHSvmqrAIw80f3iIZNzoTFj8JXzwrdu2Lym1uFj2mUBzuM8ntNdSGiu0M/jKwcLsOg3B1bivOTjh+/ee5u8t8ljbfKPA/Dld2oYgMehWu6Rh2uYflBRf1Jp40N2bwL2zp3z3tlPwfx/TcF8knXfG5qFUdybH4Vbfz1PDMXLvzMf0bcYCgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f7ed32eae42203107f44b37c6b758864"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Fire Event">80a30edeff30311077a95dac793bf19b</action_type>
+        <action_type_parent display_value="Fire Event">15e10e5eff30311077a95dac793bf11e</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>80a30edeff30311077a95dac793bf19b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Create HSE Alert from Inspection">5c0d362ee42203107f44b37c6b7588a7</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>86d8296d-dfd1-4784-bcab-d2195fc1e808</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 06:09:53</sys_created_on>
+        <sys_id>ddca9f22e46603107f44b37c6b7588a5</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 06:55:30</sys_updated_on>
+        <ui_id>8fc09dcd-971d-49e3-b97e-5225627aa36b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2W227bOBCGX0XQtWVIJHXyXVE3uwG67aLu9qYoDIocxlzQkitRbrxB3r2jg89rJy7cAIvuRQJoSI5+/jOfR58fXC3dkZsITn2QoBT1aRD4cczTUHIRpzRTQQruwM35HHAnLCG30/Zh4C65qZsgTUIeUEKARRGe92PFWEZjEWVxmCQxxa1SVwvDV5/6E/fTKhfTCnPpHMx0VsEQ/6Y6F1picChK4BYkHhQzbWQJuTv6/GXgLniJr7ZQuqOHg6XnXsTwDAxufdPc5MTF7GrRxEpQgPnFOvS2P/phJ16UslETDFy4t5BLFD1S3FQwcOc8l9wW5cod2bLGAF5Kvs/NarNjplHCyB1DpUuQzmRVWZg7rTLHzrh1qllRG+lk4Khmh9skva/0P6iOksGOwJFbraruDiXc6aqxaGd92vu/vrfzod1UcquLHDeqMbd8giqFrcsmW+t8oQVUnbtoKa+Nfb0b6za8X7Q52iOWZ+aUFlGYep6/69x2NxnXHYGRGjtAwqIxsbGl90hNZsW3jeM3Om/97hdNIbjZ2Qq8FLMbDUYelpRbW+qsto34B7fWH49L3AX/rchgYN7kmvPFQud300VZLHWrA681H94ZfBgqU3xD/ZW+y4dcNKYMsfx8eIPxcRv+xEvdOPQHpmk9qfVfuf5aw20rF3wKMlZezBnzGAszL8sY9YQfpin3CVEBcR8HjbmvDa+qrZV4ienXujGiM7a3cNqVpTkiSr2wr1DUEnq3Hgc9+8I/hwxnW0RKENjtO9w/PERhFHCfK49GgngsE6mHvwXUC2IOwAWLgETD7tzj4/HPwMV8P0Os2dSvV3uovodbFqJui6rlAd7jfsW5HW8BJ9cA/LemUTphTpH9DcI6qizmyDo40FHfEnQG8xNUX5/hH0G2c+ECYk9QuV+bfS73q/MiZKpA8DAg1CM41DyWisRLGOA/5JOwNBFERD9AZuf0U3ienWg83jb4unWWJ2fsZr4ek/j75I1zu129kMqnNa6p/NiLPNDcM9k+7g7ht7vHnHfdQk8kPU9kH9ki2TXnBqzE/w+BdfksPEHWnsP7YO15/CJcpYQxFSWJlxEuPZZEDCeen3hxwHyC/URoSH/CxJPJ2XbNtu2JjT8PdpC6wgR7xsvXrPy5TuUEx5J6YvAbDstzQMtkHexJYReSsj+8XuUrpzWg+yQtoSrMEirHFg53Nu/f4cr/JcnaOLFP1aYWL0JUFPqp7xPlySgBjwWKeDxIE48QmgUyEoxE6c8gip1tarXfvuTKRD398mOiyLGkS4gK/yfqFyFKsYhREccewx7Db78EZ1QMoUdDqWImYxElwRWJ+vIdtt6WpZMRAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ddca9f22e46603107f44b37c6b7588a5"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=5c0d362ee42203107f44b37c6b7588a7"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=5c0d362ee42203107f44b37c6b7588a7^sys_idNOT INea7d3a6ee42203107f44b37c6b7588d9"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">ce340feae46203107f44b37c6b758825</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Create HSE Alert from Inspection">5c0d362ee42203107f44b37c6b7588a7</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:01:55</sys_created_on>
+        <sys_id>ea7d3a6ee42203107f44b37c6b7588d9</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 06:54:51</sys_updated_on>
+        <ui_id>86d8296d-dfd1-4784-bcab-d2195fc1e808</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXW8TMRD8K+ieT6e7XBPRvFWgSkjQClr6Aq21Z+8lVn22sX1JQ5T/zvo+koimAiHEE2/nsXd3ZrKjbBPTBtsGf2suvJcLncy/3KeJ1BGj722iocFknnCjhQzSaNYBabIC1cYL+hTSWwWbuwPCl1IJh0M3C45qArpkvv3pKmwsMgUVKiq8CU7qBZVLQac6h7o45wUvJ7NykueT12dFNSurYiJKQCjp3Vj4ZiT36n2HpC+yjvMI9+Mk40SkVeRpgk8BtUAaXYPymCYNaAHBuM0ecQjiWqsDsJQ69IobePLyO/WeTKfxYY2kkQ927I9ssGp0yUiO1zYS7JEAlRotNKpt9FWvI5qMNbQqHJnceuqHNpKOLAZK9c3SrD+NAy+l7gQOl8pwUPsTBLKhagP6+MOgwoYasQasJXOYdWYlu2Li0mQLRYesVmZNQ+OmZMAj8Yw8guyS8LcdfAdORhUfqA0V9zQr8JKzbquoXXAkYdfZwr61kVAvcJDCejfogedO2nBBc1Y4sN6lz1fyaBu328+WCKFgRcZbRx6ETCE8EueAPOKz3e5rm+el2KBn8uHq46kSqb3FTh5z6Mn2Q1kNUrHZ863/h5P/RrrOYVpPi3x6Ol1ns1PpOpGrlyM1+UWk4hL8ZqLyPP8fqeNISc/6aAzauuF/nKj7GJ9+gu/3RiCXnojcRuzd+F8QLza0AJIfQ2vjHqOEA7b7Ad8wWxdVBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=5c0d362ee42203107f44b37c6b7588a7"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=5c0d362ee42203107f44b37c6b7588a7"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5c0d362ee42203107f44b37c6b7588a7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:00:04</sys_created_on>
+        <sys_id>2f0d3a2ee42203107f44b37c6b7588fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 04:00:04</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5c0d362ee42203107f44b37c6b7588a7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:00:02</sys_created_on>
+        <sys_id>4f0d3a2ee42203107f44b37c6b758882</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 04:00:02</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5c0d362ee42203107f44b37c6b7588a7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:00:03</sys_created_on>
+        <sys_id>530d3a2ee42203107f44b37c6b7588f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 04:00:03</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_5c0d362ee42203107f44b37c6b7588a7"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_5c0d362ee42203107f44b37c6b7588a7"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>create_hse_alert_from_inspection</internal_name>
+        <label_cache>[{"name":"Updated_1.current.leak_detected_6","label":"Trigger - Record Updated➛Inspection Record➛Leak Detected","reference":"","reference_display":"Leak Detected","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"leak_detected_6","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"No","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"No","selected":false,"missing":false,"value":"no_i","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"No"}}},{"label":"Yes","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Yes","selected":false,"missing":false,"value":"yes_i","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Yes"}}}],"usedInstances":{"86d8296d-dfd1-4784-bcab-d2195fc1e808":["condition"]}},{"name":"Updated_1.current.inspection_result_6","label":"Trigger - Record Updated➛Inspection Record➛Inspection Result","reference":"","reference_display":"Inspection Result","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"inspection_result_6","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"Fail","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Fail","selected":false,"missing":false,"value":"fail_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Fail"}}},{"label":"Obervation","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Obervation","selected":false,"missing":false,"value":"observation_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Obervation"}}},{"label":"Pass","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Pass","selected":false,"missing":false,"value":"pass_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Pass"}}}],"usedInstances":{"86d8296d-dfd1-4784-bcab-d2195fc1e808":["condition"]}},{"name":"Updated_1.current.ai_recommendation_6","label":"Trigger - Record Updated➛Inspection Record➛AI Recommendation","reference":"","reference_display":"AI Recommendation","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"ai_recommendation_6","usedInstances":{"6561a0af-36c2-4bc9-85a3-17aeeac46e26":["ai_recommendation_5"]}},{"name":"Updated_1.current.ai_inspection_summary_6","label":"Trigger - Record Updated➛Inspection Record➛AI Inspection Summary","reference":"","reference_display":"AI Inspection Summary","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"ai_inspection_summary_6","usedInstances":{"6561a0af-36c2-4bc9-85a3-17aeeac46e26":["ai_incident_summary_5"]}},{"name":"Updated_1.current.recommendations_6","label":"Trigger - Record Updated➛Inspection Record➛Recommendations","reference":"","reference_display":"Recommendations","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"recommendations_6","usedInstances":{"6561a0af-36c2-4bc9-85a3-17aeeac46e26":["corrective_action_5"]}},{"name":"Updated_1.current.findings_6","label":"Trigger - Record Updated➛Inspection Record➛Findings","reference":"","reference_display":"Findings","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"findings_6","usedInstances":{"6561a0af-36c2-4bc9-85a3-17aeeac46e26":["immediate_action_5"]}},{"name":"Updated_1.current.inspection_date_6","label":"Trigger - Record Updated➛Inspection Record➛Inspection Date","reference":"","reference_display":"Inspection Date","type":"glide_date","base_type":"glide_date","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"inspection_date_6","usedInstances":{"6561a0af-36c2-4bc9-85a3-17aeeac46e26":["reported_time_5"]}},{"name":"Updated_1.current.asset_6","label":"Trigger - Record Updated➛Inspection Record➛Asset","reference":"x_snc_sentinel_hse_oilfield_asset_1","reference_display":"Oilfield Asset","type":"reference","base_type":"reference","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"asset_6","usedInstances":{"6561a0af-36c2-4bc9-85a3-17aeeac46e26":["field_name_5"]}},{"name":"Updated_1.current.inspection_type_6","label":"Trigger - Record Updated➛Inspection Record➛Inspection Type","reference":"","reference_display":"Inspection Type","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"inspection_type_6","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"Corrosion Inspection","sequence":0.0,"used":false,"reference":false,"image":"","rawLabel":"Corrosion Inspection","selected":false,"missing":false,"value":"corrosion_inspection_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Corrosion Inspection"}}},{"label":"Emergency Inspection","sequence":1.0,"used":false,"reference":false,"image":"","rawLabel":"Emergency Inspection","selected":false,"missing":false,"value":"emergency_inspection_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Emergency Inspection"}}},{"label":"Pipeline Integrity Assessment","sequence":2.0,"used":false,"reference":false,"image":"","rawLabel":"Pipeline Integrity Assessment","selected":false,"missing":false,"value":"pipeline_integrity_assessment_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Pipeline Integrity Assessment"}}},{"label":"Pressure Vessel Certification","sequence":3.0,"used":false,"reference":false,"image":"","rawLabel":"Pressure Vessel Certification","selected":false,"missing":false,"value":"pressure_vessel_certification_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Pressure Vessel Certification"}}},{"label":"Routine Inspection","sequence":4.0,"used":false,"reference":false,"image":"","rawLabel":"Routine Inspection","selected":false,"missing":false,"value":"routine_inspection_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Routine Inspection"}}},{"label":"Safety Inspection","sequence":5.0,"used":false,"reference":false,"image":"","rawLabel":"Safety Inspection","selected":false,"missing":false,"value":"safety_inspection_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Safety Inspection"}}}],"usedInstances":{"6561a0af-36c2-4bc9-85a3-17aeeac46e26":["incident_type"]}},{"name":"6561a0af-36c2-4bc9-85a3-17aeeac46e26.record","label":"2 - Create Record➛HSE Incident Record","reference":"x_snc_sentinel_hse_incident","reference_display":"HSE Incident","type":"reference","base_type":"reference","usedInstances":{"9a626f9d-1efc-49cc-bb82-983b9d64ef7c":["record"],"fc8a83b7-bd90-4c39-ba47-dee2278501a2":["record"],"4e9a6ad3-9eaf-4d01-8671-6d271db30b72":["record"],"35a0e7ac-b81a-4bc0-8fdf-d67a60c03327":["record"],"8fc09dcd-971d-49e3-b97e-5225627aa36b":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>Create HSE Alert from Inspection</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Create HSE Alert from Inspection">5c0d362ee42203107f44b37c6b7588a7</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:37:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a8a5cfeee46203107f44b37c6b7588b3</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 06:54:54</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=a8a5cfeee46203107f44b37c6b7588b3"/>
+    <sys_variable_value action="delete_multiple" query="document_key=a8a5cfeee46203107f44b37c6b7588b3"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=a8a5cfeee46203107f44b37c6b7588b3"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=a8a5cfeee46203107f44b37c6b7588b3^sys_idNOT INa0a5cfeee46203107f44b37c6b7588b5"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>a8a5cfeee46203107f44b37c6b7588b3</id>
+        <name>Create HSE Alert from Inspection</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:37:33</sys_created_on>
+        <sys_id>a0a5cfeee46203107f44b37c6b7588b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 04:37:33</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=a0a5cfeee46203107f44b37c6b7588b5"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=a8a5cfeee46203107f44b37c6b7588b3^sys_idNOT IN3ca5cfeee46203107f44b37c6b7588d3,e0a5cfeee46203107f44b37c6b7588c8,e8a5cfeee46203107f44b37c6b7588b6"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Create HSE Alert from Inspection">a8a5cfeee46203107f44b37c6b7588b3</model>
+        <model_id>a8a5cfeee46203107f44b37c6b7588b3</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_a8a5cfeee46203107f44b37c6b7588b3</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:37:33</sys_created_on>
+        <sys_id>3ca5cfeee46203107f44b37c6b7588d3</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 06:54:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3ca5cfeee46203107f44b37c6b7588d3"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Create HSE Alert from Inspection">a8a5cfeee46203107f44b37c6b7588b3</model>
+        <model_id>a8a5cfeee46203107f44b37c6b7588b3</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_a8a5cfeee46203107f44b37c6b7588b3</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:37:33</sys_created_on>
+        <sys_id>e0a5cfeee46203107f44b37c6b7588c8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 05:57:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e0a5cfeee46203107f44b37c6b7588c8"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Create HSE Alert from Inspection">a8a5cfeee46203107f44b37c6b7588b3</model>
+        <model_id>a8a5cfeee46203107f44b37c6b7588b3</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_a8a5cfeee46203107f44b37c6b7588b3</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:37:33</sys_created_on>
+        <sys_id>e8a5cfeee46203107f44b37c6b7588b6</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 06:54:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e8a5cfeee46203107f44b37c6b7588b6"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=a8a5cfeee46203107f44b37c6b7588b3"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a8a5cfeee46203107f44b37c6b7588b3"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=a8a5cfeee46203107f44b37c6b7588b3^sys_idNOT IN74a5cfeee46203107f44b37c6b7588f4"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Create HSE Alert from Inspection">a8a5cfeee46203107f44b37c6b7588b3</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:37:34</sys_created_on>
+        <sys_id>74a5cfeee46203107f44b37c6b7588f4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 06:54:54</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=a8a5cfeee46203107f44b37c6b7588b3^sys_idNOT IN30a5cfeee46203107f44b37c6b7588f3,befa9762e46603107f44b37c6b7588c3"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Create HSE Alert from Inspection">a8a5cfeee46203107f44b37c6b7588b3</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>86d8296d-dfd1-4784-bcab-d2195fc1e808</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:37:34</sys_created_on>
+        <sys_id>30a5cfeee46203107f44b37c6b7588f3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 04:37:34</sys_updated_on>
+        <ui_id>6561a0af-36c2-4bc9-85a3-17aeeac46e26</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1W30/bMBD+V5CfoyihtIK+TTC0SRtIY+OFgeXal+Y0x8lsp9BV/d93jpNSfjNpL0jkzXffnb/vfPblYsVQsSmb5JCND/KJHOWj0W6W7e7v5bPJaJbvqpEA2GMJM6ICQnox08C7RcIWQrfBeMOdkdyB8WhA89IBRyNRkYFQCl2jxfK8B386+7jz+dYrS9TKgmHTi8uENcJSag+WTVf3XK8lqsUMNEG/B6ZPEPfL5lHbl+3YnZPoqK0KfLKEwY0Ho4CIFEI7SFgljBK+tks29bYlgwWhTo1ebhAlksopYwF74/APbbufBVwBpExC9G2WvC9WNBdHwoszyix9a3uoLGuU4GJNFBSi1f5w2xYBp43H2sSQTmYfXeu2MiexJGyTYDgbsrR0eAqaoDMw72UUZ2V9/W1geYymK0nv1LUUerMS3luctT7wWTHQUFEiXommQTPnja0X2AUTlyqda1qkha6vaVOHc5MKGYinVFaRHpP9qDOfC4tBxVdKQ8HrhLmlO9TCuVstVET+uw1MorJeA49lCCHSYuM/0AYL6Omuk+EGKMgOnmysfHbbSF3Tu63uF8gtkBjSSayJPB//bLNspFarHw1ZQPE8la2l0vn0IXiyXl+Rdbgw3LVVJezyhSRoXANdqTYBIZGsCdEJ5LGQz6W5S8R1CZAMCgn4iviC2oDONAZaaGob/B4reC5qi3lwdcEFglbdRXxWtnPgI8uhWOHSvmqrAIw80f3iIZNzoTFj8JXzwrdu2Lym1uFj2mUBzuM8ntNdSGiu0M/jKwcLsOg3B1bivOTjh+/ee5u8t8ljbfKPA/Dld2oYgMehWu6Rh2uYflBRf1Jp40N2bwL2zp3z3tlPwfx/TcF8knXfG5qFUdybH4Vbfz1PDMXLvzMf0bcYCgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=30a5cfeee46203107f44b37c6b7588f3"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Fire Event">80a30edeff30311077a95dac793bf19b</action_type>
+        <action_type_parent display_value="Fire Event">15e10e5eff30311077a95dac793bf11e</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>80a30edeff30311077a95dac793bf19b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Create HSE Alert from Inspection">a8a5cfeee46203107f44b37c6b7588b3</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>86d8296d-dfd1-4784-bcab-d2195fc1e808</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 06:10:49</sys_created_on>
+        <sys_id>befa9762e46603107f44b37c6b7588c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 06:10:49</sys_updated_on>
+        <ui_id>8fc09dcd-971d-49e3-b97e-5225627aa36b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2W227bOBCGX0XQtWVIJHXyXVE3uwG67aLu9qYoDIocxlzQkitRbrxB3r2jg89rJy7cAIvuRQJoSI5+/jOfR58fXC3dkZsITn2QoBT1aRD4cczTUHIRpzRTQQruwM35HHAnLCG30/Zh4C65qZsgTUIeUEKARRGe92PFWEZjEWVxmCQxxa1SVwvDV5/6E/fTKhfTCnPpHMx0VsEQ/6Y6F1picChK4BYkHhQzbWQJuTv6/GXgLniJr7ZQuqOHg6XnXsTwDAxufdPc5MTF7GrRxEpQgPnFOvS2P/phJ16UslETDFy4t5BLFD1S3FQwcOc8l9wW5cod2bLGAF5Kvs/NarNjplHCyB1DpUuQzmRVWZg7rTLHzrh1qllRG+lk4Khmh9skva/0P6iOksGOwJFbraruDiXc6aqxaGd92vu/vrfzod1UcquLHDeqMbd8giqFrcsmW+t8oQVUnbtoKa+Nfb0b6za8X7Q52iOWZ+aUFlGYep6/69x2NxnXHYGRGjtAwqIxsbGl90hNZsW3jeM3Om/97hdNIbjZ2Qq8FLMbDUYelpRbW+qsto34B7fWH49L3AX/rchgYN7kmvPFQud300VZLHWrA681H94ZfBgqU3xD/ZW+y4dcNKYMsfx8eIPxcRv+xEvdOPQHpmk9qfVfuf5aw20rF3wKMlZezBnzGAszL8sY9YQfpin3CVEBcR8HjbmvDa+qrZV4ienXujGiM7a3cNqVpTkiSr2wr1DUEnq3Hgc9+8I/hwxnW0RKENjtO9w/PERhFHCfK49GgngsE6mHvwXUC2IOwAWLgETD7tzj4/HPwMV8P0Os2dSvV3uovodbFqJui6rlAd7jfsW5HW8BJ9cA/LemUTphTpH9DcI6qizmyDo40FHfEnQG8xNUX5/hH0G2c+ECYk9QuV+bfS73q/MiZKpA8DAg1CM41DyWisRLGOA/5JOwNBFERD9AZuf0U3ienWg83jb4unWWJ2fsZr4ek/j75I1zu129kMqnNa6p/NiLPNDcM9k+7g7ht7vHnHfdQk8kPU9kH9ki2TXnBqzE/w+BdfksPEHWnsP7YO15/CJcpYQxFSWJlxEuPZZEDCeen3hxwHyC/URoSH/CxJPJ2XbNtu2JjT8PdpC6wgR7xsvXrPy5TuUEx5J6YvAbDstzQMtkHexJYReSsj+8XuUrpzWg+yQtoSrMEirHFg53Nu/f4cr/JcnaOLFP1aYWL0JUFPqp7xPlySgBjwWKeDxIE48QmgUyEoxE6c8gip1tarXfvuTKRD398mOiyLGkS4gK/yfqFyFKsYhREccewx7Db78EZ1QMoUdDqWImYxElwRWJ+vIdtt6WpZMRAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=befa9762e46603107f44b37c6b7588c3"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=a8a5cfeee46203107f44b37c6b7588b3"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=a8a5cfeee46203107f44b37c6b7588b3^sys_idNOT IN38a5cfeee46203107f44b37c6b7588f1"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">ce340feae46203107f44b37c6b758825</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Create HSE Alert from Inspection">a8a5cfeee46203107f44b37c6b7588b3</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:37:34</sys_created_on>
+        <sys_id>38a5cfeee46203107f44b37c6b7588f1</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 06:54:54</sys_updated_on>
+        <ui_id>86d8296d-dfd1-4784-bcab-d2195fc1e808</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXW/TMBT9K8jPUZSPtWJ9mzpNQhqbYGMvsFk3jrNac2xjO+1C1P/OdZKmFSuCCcQTb/Fx7r3nnNyjdEQ33jTe3eoz58SjIovP9xERKmD43BEFNScLwrQqhRda0R6IyBpkEy7wsRTOSGjv9ghbCVlaPnYzYLHGc0sW3Q9XosSCKoEqPWUpy7N5niVJ9vYkLeZ5kWZlDhxybCih4BJfXe5ovLnskein/HxrAu68FepxPF+OXW52oLZlYJUmEeHPnquSI58KpOMRqUGV4LVtJ8RyKK+V3AMrofwguIZnJ77hwGw2Cy9WHCWy0Y3pSEenBrg6Bw9IpWG+sZNxWjDuBnNKXkEj/fIQG164NkHqUOKhkLtqLZtaXQ2OkKnBwYdpHJLgJigN1Ecd1c1Kbz7uWF4I1bsyXkrNQE4n8Ohd0fjApyNc8hob0RqMQUepsXot+mLkUsePEg9xJfUGh4btioEF4jEaC/EF4uc9fAdWBBXvsQ0WDzQLcILRfhOxHdrEyTYirnVLCc7tRaK79GsTKA6SR3F08CeUMCuMP8PJaz7q2EYvF/tgp7vuk0GKvKRpzBqLrvhYcnhCFZ6zgM+32y9NkuRlyx0VD1cfjpUI5QzvBVPLHX6IfVkFQtL5y+z8w8mvy+gpzKpZmsyOZ/RkfiyjR9L5ymBmvwhm2IrfzGWSJP+D+cfBFI4OcRq19cP/Yi7vQwiHmZPXTDikdhuwd7v/UrhocbkEO4Q22j4FUXts+x1WpTE34QYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=a8a5cfeee46203107f44b37c6b7588b3"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=a8a5cfeee46203107f44b37c6b7588b3"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a8a5cfeee46203107f44b37c6b7588b3</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:37:33</sys_created_on>
+        <sys_id>2ca5cfeee46203107f44b37c6b7588c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 04:37:33</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a8a5cfeee46203107f44b37c6b7588b3</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:37:33</sys_created_on>
+        <sys_id>64a5cfeee46203107f44b37c6b7588cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 04:37:33</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a8a5cfeee46203107f44b37c6b7588b3</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:37:33</sys_created_on>
+        <sys_id>74a5cfeee46203107f44b37c6b7588da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 04:37:33</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_a8a5cfeee46203107f44b37c6b7588b3"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_a8a5cfeee46203107f44b37c6b7588b3"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>5c0d362ee42203107f44b37c6b7588a7</sys_id>
+        <latest_snapshot>a8a5cfeee46203107f44b37c6b7588b3</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch2-04-17-2026_04-29-2026_2044.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=5c0d362ee42203107f44b37c6b7588a7^sys_idNOT IN49a50322e4a203107f44b37c6b75880d"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.Every</binding_strategy>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"49a50322e4a203107f44b37c6b75880d","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id>5c0d362ee42203107f44b37c6b7588a7</plan_id>
+        <snapshot>2af14b2f3ca603107f44ecc116669f66</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:37:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>49a50322e4a203107f44b37c6b75880d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 06:54:55</sys_updated_on>
+        <trigger display_value="">8ed1cfeb3ca603107f44ecc116669ffe</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=5c0d362ee42203107f44b37c6b7588a7"/>
+</record_update>

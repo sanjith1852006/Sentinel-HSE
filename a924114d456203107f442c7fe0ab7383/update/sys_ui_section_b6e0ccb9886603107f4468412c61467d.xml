@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Safety Checklist" section_id="b6e0ccb9886603107f4468412c61467d" sys_domain="global" table="x_snc_sentinel_hse_permit_to_work" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>gas_test_completed_8</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 06:22:40</sys_created_on>
+            <sys_id>8be0ccb9886603107f4468412c6146cb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Safety Checklist" display_value="Safety Checklist" name="x_snc_sentinel_hse_permit_to_work" sys_domain="global" view="Default view">b6e0ccb9886603107f4468412c61467d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 06:22:40</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ppe_verified_8</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 06:22:40</sys_created_on>
+            <sys_id>43e0ccb9886603107f4468412c6146cc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Safety Checklist" display_value="Safety Checklist" name="x_snc_sentinel_hse_permit_to_work" sys_domain="global" view="Default view">b6e0ccb9886603107f4468412c61467d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 06:22:40</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>emergency_contact_8</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 06:22:40</sys_created_on>
+            <sys_id>0be0ccb9886603107f4468412c6146cc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Safety Checklist" display_value="Safety Checklist" name="x_snc_sentinel_hse_permit_to_work" sys_domain="global" view="Default view">b6e0ccb9886603107f4468412c61467d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 06:22:40</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 06:22:40</sys_created_on>
+            <sys_id>cfe0ccb9886603107f4468412c6146cc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Safety Checklist" display_value="Safety Checklist" name="x_snc_sentinel_hse_permit_to_work" sys_domain="global" view="Default view">b6e0ccb9886603107f4468412c61467d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 06:22:40</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>fire_watch_required_8</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 06:22:40</sys_created_on>
+            <sys_id>87e0ccb9886603107f4468412c6146cd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Safety Checklist" display_value="Safety Checklist" name="x_snc_sentinel_hse_permit_to_work" sys_domain="global" view="Default view">b6e0ccb9886603107f4468412c61467d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 06:22:40</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>isolation_completed_8</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 06:22:40</sys_created_on>
+            <sys_id>4fe0ccb9886603107f4468412c6146cd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Safety Checklist" display_value="Safety Checklist" name="x_snc_sentinel_hse_permit_to_work" sys_domain="global" view="Default view">b6e0ccb9886603107f4468412c61467d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 06:22:40</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Safety Checklist</caption>
+            <header>false</header>
+            <name>x_snc_sentinel_hse_permit_to_work</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 06:22:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b6e0ccb9886603107f4468412c61467d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_sentinel_hse_permit_to_work</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+            <sys_update_name>sys_ui_section_b6e0ccb9886603107f4468412c61467d</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 06:22:39</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

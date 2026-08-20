@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="34663b21882603107f4468412c614693" sys_domain="global" table="x_snc_sentinel_hse_inspection" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 05:36:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>45663b21882603107f4468412c614697</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_sentinel_hse_inspection" name="x_snc_sentinel_hse_inspection" sys_domain="global" view="Default view">34663b21882603107f4468412c614693</sys_ui_form>
+            <sys_ui_section caption="Inspection Information" display_value="Inspection Information" name="x_snc_sentinel_hse_inspection" sys_domain="global" view="Default view">7a6333e988e203107f4468412c614610</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 05:36:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 05:36:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>41663b21882603107f4468412c614698</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_sentinel_hse_inspection" name="x_snc_sentinel_hse_inspection" sys_domain="global" view="Default view">34663b21882603107f4468412c614693</sys_ui_form>
+            <sys_ui_section caption="Inspection Findings" display_value="Inspection Findings" name="x_snc_sentinel_hse_inspection" sys_domain="global" view="Default view">30663b21882603107f4468412c61468c</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 05:36:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 05:36:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>85663b21882603107f4468412c6146a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_sentinel_hse_inspection" name="x_snc_sentinel_hse_inspection" sys_domain="global" view="Default view">34663b21882603107f4468412c614693</sys_ui_form>
+            <sys_ui_section caption="Corrosion Assessment" display_value="Corrosion Assessment" name="x_snc_sentinel_hse_inspection" sys_domain="global" view="Default view">38663b21882603107f4468412c61468d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 05:36:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 05:36:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c5663b21882603107f4468412c6146ac</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_sentinel_hse_inspection" name="x_snc_sentinel_hse_inspection" sys_domain="global" view="Default view">34663b21882603107f4468412c614693</sys_ui_form>
+            <sys_ui_section caption="Pressure Vessel Certification" display_value="Pressure Vessel Certification" name="x_snc_sentinel_hse_inspection" sys_domain="global" view="Default view">30663b21882603107f4468412c61468f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 05:36:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 05:36:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0d663b21882603107f4468412c6146b0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_sentinel_hse_inspection" name="x_snc_sentinel_hse_inspection" sys_domain="global" view="Default view">34663b21882603107f4468412c614693</sys_ui_form>
+            <sys_ui_section caption="Pipeline Integrity" display_value="Pipeline Integrity" name="x_snc_sentinel_hse_inspection" sys_domain="global" view="Default view">38663b21882603107f4468412c614690</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 05:36:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 05:36:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>45663b21882603107f4468412c6146b5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_sentinel_hse_inspection" name="x_snc_sentinel_hse_inspection" sys_domain="global" view="Default view">34663b21882603107f4468412c614693</sys_ui_form>
+            <sys_ui_section caption="AI Analysis" display_value="AI Analysis" name="x_snc_sentinel_hse_inspection" sys_domain="global" view="Default view">30663b21882603107f4468412c614692</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 05:36:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_snc_sentinel_hse_inspection</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 05:36:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>34663b21882603107f4468412c614693</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_sentinel_hse_inspection</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+            <sys_update_name>sys_ui_form_sections_34663b21882603107f4468412c614693</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 05:36:39</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
