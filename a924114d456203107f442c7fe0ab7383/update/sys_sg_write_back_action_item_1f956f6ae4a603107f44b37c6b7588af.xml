@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_write_back_action_item">
+    <sys_sg_write_back_action_item action="INSERT_OR_UPDATE">
+        <attach_in_activity_stream/>
+        <description>Update the work order status to In Progress</description>
+        <execution_script/>
+        <name>Start Work Action</name>
+        <parameter_screen/>
+        <query_condition/>
+        <sys_class_name>sys_sg_write_back_action_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 06:57:16</sys_created_on>
+        <sys_id>1f956f6ae4a603107f44b37c6b7588af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Start Work Action</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_sg_write_back_action_item_1f956f6ae4a603107f44b37c6b7588af</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 06:57:16</sys_updated_on>
+        <table>x_snc_sentinel_hse_work_order</table>
+        <template>status_7=in_progress_7^EQ</template>
+        <type>update</type>
+        <use_current_record_as_condition>true</use_current_record_as_condition>
+        <use_fields_for_ref_lookup>false</use_fields_for_ref_lookup>
+    </sys_sg_write_back_action_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=1f956f6ae4a603107f44b37c6b7588af"/>
+</record_update>

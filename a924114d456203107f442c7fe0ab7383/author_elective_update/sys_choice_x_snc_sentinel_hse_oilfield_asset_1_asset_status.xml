@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="asset_status" table="x_snc_sentinel_hse_oilfield_asset_1" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>asset_status</element>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:38:46</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>asset_status</sys_name>
+            <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+            <sys_update_name>sys_choice_x_snc_sentinel_hse_oilfield_asset_1_asset_status</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:38:46</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Emergency Shutdown</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:39:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:52:37</sys_updated_on>
+            <value>emergency_shutdown</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Inspection Due</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:39:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:52:37</sys_updated_on>
+            <value>inspection_due</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Maintenance</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:39:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:52:37</sys_updated_on>
+            <value>maintenance</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Operational</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:38:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:52:37</sys_updated_on>
+            <value>operational</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Shutdown</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:39:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:52:37</sys_updated_on>
+            <value>shutdown</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

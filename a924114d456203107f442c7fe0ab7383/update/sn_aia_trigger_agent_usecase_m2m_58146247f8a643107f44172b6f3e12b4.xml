@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_trigger_agent_usecase_m2m">
+    <sn_aia_trigger_agent_usecase_m2m action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <objective_template><![CDATA[Help me resolvAnalyze the newly created sensor reading and determine the HSE risk level based on the available sensor values.e ${number}]]></objective_template>
+        <related_resource_record>4459928ff82643107f44172b6f3e1235</related_resource_record>
+        <related_resource_table>sn_aia_agent</related_resource_table>
+        <sys_class_name>sn_aia_trigger_agent_usecase_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-11 15:27:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>58146247f8a643107f44172b6f3e12b4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sn_aia_trigger_agent_usecase_m2m_58146247f8a643107f44172b6f3e12b4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-11 15:27:52</sys_updated_on>
+        <trigger_configuration display_value="x_snc_sentinel_hse_incident">1c146247f8a643107f44172b6f3e12ae</trigger_configuration>
+    </sn_aia_trigger_agent_usecase_m2m>
+</record_update>

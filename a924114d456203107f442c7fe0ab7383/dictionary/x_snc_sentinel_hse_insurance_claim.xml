@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="d027003988a603107f4468412c6146fc" label="Insurance Claim" max_length="40" name="x_snc_sentinel_hse_insurance_claim" type="collection">
+        <element label="Settlement Date" max_length="40" name="settlement_date_10" type="glide_date"/>
+        <element label="Policy Number" max_length="50" name="policy_number_10" type="string"/>
+        <element label="Asset" mandatory="true" max_length="32" name="asset_10" reference="x_snc_sentinel_hse_oilfield_asset_1" type="reference"/>
+        <element choice="1" default="Draft" label="Claim Status" max_length="40" name="claim_status_10" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Approved" value="approved_10"/>
+                <element inactive_on_update="false" label="Draft" value="draft_10"/>
+                <element inactive_on_update="false" label="Closed" value="closed_10"/>
+                <element inactive_on_update="false" label="Submitted" value="submitted_10"/>
+                <element inactive_on_update="false" label="Rejected" value="rejected_10"/>
+                <element inactive_on_update="false" label="Under Review" value="under_review_10"/>
+            </choice>
+        </element>
+        <element label="Insurance Company" max_length="50" name="insurance_company_10" type="string"/>
+        <element label="Claim Submitted Date" max_length="40" name="claim_submitted_date_10" type="glide_date"/>
+        <element label="Damage Description" max_length="1000" name="damage_description" type="string"/>
+        <element label="Approved Amount" max_length="20" name="damage_description_10" type="currency"/>
+        <element label="Supporting Documents" max_length="1000" name="supporting_documents_10" type="string"/>
+        <element label="Assigned Adjuster" max_length="32" name="assigned_adjuster_10" reference="sys_user" type="reference"/>
+        <element label="Incident Date" max_length="40" name="incident_date_10" type="glide_date"/>
+        <element label="AI Recommendation" max_length="1000" name="ai_recommendation_10" type="string"/>
+        <element label="HSE Incident" mandatory="true" max_length="32" name="hse_incident_10" reference="x_snc_sentinel_hse_incident" type="reference"/>
+        <element label="Estimated Loss" max_length="20" name="estimated_loss_10" type="currency"/>
+        <element label="Claim Amount" max_length="20" name="claim_amount" type="currency"/>
+        <element label="AI Claim Summary" max_length="1000" name="ai_claim_summary_10" type="string"/>
+        <element choice="1" label="Claim Type" mandatory="true" max_length="40" name="claim_type_10" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Third Party Liability" value="third_party_liability_10"/>
+                <element inactive_on_update="false" label="Worker Injury" value="worker_injury_10"/>
+                <element inactive_on_update="false" label="Equipment Damage" value="equipment_damage_10"/>
+                <element inactive_on_update="false" label="Environmental Damage" value="environmental_damage_10"/>
+                <element inactive_on_update="false" label="Property Damage" value="property_damage_10"/>
+            </choice>
+        </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="asset_10"/>
+        </index>
+        <index name="index2">
+            <element name="assigned_adjuster_10"/>
+        </index>
+        <index name="index3">
+            <element name="hse_incident_10"/>
+        </index>
+    </element>
+</database>

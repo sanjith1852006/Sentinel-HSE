@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_dictionary">
+    <ais_dictionary action="DELETE">
+        <active>true</active>
+        <auto_refresh>24</auto_refresh>
+        <blocked_field/>
+        <case_sensitive>false</case_sensitive>
+        <data_source>sc_cat_item,sys_gen_ai_skill,sys_gen_ai_skill,sys_gen_ai_skill,sys_gen_ai_skill,kb_knowledge</data_source>
+        <derived>true</derived>
+        <field/>
+        <label>Now Assist in Virtual Agent - 1c22e29bae46a43107f44b37c6b75888e Default Spell Check Dictionary</label>
+        <last_derived/>
+        <locale>en</locale>
+        <name>x_snc_sentinel_hse_now_assist_in_virtual_agent_1c22e29bae46a43107f44b37c6b75888e_default_spell_check_dictionary</name>
+        <publish_id/>
+        <punctuation_sensitive>false</punctuation_sensitive>
+        <state>DRAFT</state>
+        <sys_class_name>ais_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:53:58</sys_created_on>
+        <sys_id>7b2ea9bae46a43107f44b37c6b7588f8</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>x_snc_sentinel_hse_now_assist_in_virtual_agent_1c22e29bae46a43107f44b37c6b75888e_default_spell_check_dictionary</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>ais_dictionary_7b2ea9bae46a43107f44b37c6b7588f8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:53:59</sys_updated_on>
+        <type>SPELLCHECK</type>
+    </ais_dictionary>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</application>
+        <file_path/>
+        <instance_id>17b1043093560750fb38f8284dba101a</instance_id>
+        <instance_name>dlt-hck-8017-0027</instance_name>
+        <name>ais_dictionary_7b2ea9bae46a43107f44b37c6b7588f8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_dictionary"><ais_dictionary action="INSERT_OR_UPDATE"><active>true</active><auto_refresh>24</auto_refresh><blocked_field/><case_sensitive>false</case_sensitive><data_source>sc_cat_item,sys_gen_ai_skill,sys_gen_ai_skill,sys_gen_ai_skill,sys_gen_ai_skill,kb_knowledge</data_source><derived>true</derived><field/><label>Now Assist in Virtual Agent - 1c22e29bae46a43107f44b37c6b75888e Default Spell Check Dictionary</label><last_derived/><locale>en</locale><name>x_snc_sentinel_hse_now_assist_in_virtual_agent_1c22e29bae46a43107f44b37c6b75888e_default_spell_check_dictionary</name><publish_id/><punctuation_sensitive>false</punctuation_sensitive><state>DRAFT</state><sys_class_name>ais_dictionary</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-10 16:53:58</sys_created_on><sys_id>7b2ea9bae46a43107f44b37c6b7588f8</sys_id><sys_mod_count>5</sys_mod_count><sys_name>x_snc_sentinel_hse_now_assist_in_virtual_agent_1c22e29bae46a43107f44b37c6b75888e_default_spell_check_dictionary</sys_name><sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package><sys_policy/><sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope><sys_update_name>ais_dictionary_7b2ea9bae46a43107f44b37c6b7588f8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-10 16:53:59</sys_updated_on><type>SPELLCHECK</type></ais_dictionary></record_update>]]></payload>
+        <payload_hash>-1240344664</payload_hash>
+        <record_name>x_snc_sentinel_hse_now_assist_in_virtual_agent_1c22e29bae46a43107f44b37c6b75888e_default_spell_check</record_name>
+        <reverted_from/>
+        <source>6124114d456203107f442c7fe0ab7389</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:53:59</sys_created_on>
+        <sys_id>d43ee9bae46a43107f44b37c6b75887a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19fec9869c20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:53:59</sys_updated_on>
+        <type>AI Search Dictionary</type>
+        <update_guid>d83ee9ba896a43100e953d8eb24d3b79</update_guid>
+        <update_guid_history>d83ee9ba896a43100e953d8eb24d3b79:-1240344664,883ee9baa66a4310bb4d1500378ca860:2009052307,003ee9ba706a4310efce459ae610b654:-288810936,843ee9bab66a43105a43990a1d9a5947:1381015539,843ee9baaf6a43102964d15da2363c37:2019721448,bb2ea9bacd6a4310d71dd97b3a2c50fa:1150819560</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_snc_sentinel_hse_now_assist_in_virtual_agent_1c22e29bae46a43107f44b37c6b75888e">9a8175b2e4aa43107f44b37c6b75883a</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 17:08:36</sys_created_on>
+        <sys_db_object display_value="" name="ais_dictionary">ais_dictionary</sys_db_object>
+        <sys_id>9bd00859d32c4b92a48683d8fa3c1e71</sys_id>
+        <sys_metadata>7b2ea9bae46a43107f44b37c6b7588f8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_sentinel_hse_now_assist_in_virtual_agent_1c22e29bae46a43107f44b37c6b75888e_default_spell_check_dictionary</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_scope_delete display_value="">00a898291b4446e4800f9c59a3050f44</sys_scope_delete>
+        <sys_update_name>ais_dictionary_7b2ea9bae46a43107f44b37c6b7588f8</sys_update_name>
+        <sys_update_version display_value="ais_dictionary_7b2ea9bae46a43107f44b37c6b7588f8">d43ee9bae46a43107f44b37c6b75887a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 17:08:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_context_profile">
+    <sys_cs_context_profile action="DELETE">
+        <active>false</active>
+        <assistant_applicability_type>profile</assistant_applicability_type>
+        <condition table="v_interaction_context">u_liveagent_devicetype=mweb^EQ<item endquery="false" field="u_liveagent_devicetype" goto="false" newquery="false" operator="=" or="false" value="mweb"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <condition_mode>simple</condition_mode>
+        <condition_script><![CDATA[(function executeCondition(/* glide record */ current) {  
+	// customize condition logic here, return true or false  
+	return false;
+})(current);]]></condition_script>
+        <description/>
+        <model_type>llm</model_type>
+        <name>Sentinel HSE Assistant</name>
+        <order>100</order>
+        <sys_class_name>sys_cs_context_profile</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:53:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>162e29bae46a43107f44b37c6b758892</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Sentinel HSE Assistant</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_cs_context_profile_162e29bae46a43107f44b37c6b758892</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:55:07</sys_updated_on>
+    </sys_cs_context_profile>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</application>
+        <file_path/>
+        <instance_id>17b1043093560750fb38f8284dba101a</instance_id>
+        <instance_name>dlt-hck-8017-0027</instance_name>
+        <name>sys_cs_context_profile_162e29bae46a43107f44b37c6b758892</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_cs_context_profile"&gt;&lt;sys_cs_context_profile action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;assistant_applicability_type&gt;profile&lt;/assistant_applicability_type&gt;&lt;condition table="v_interaction_context"&gt;u_liveagent_devicetype=mweb^EQ&lt;item endquery="false" field="u_liveagent_devicetype" goto="false" newquery="false" operator="=" or="false" value="mweb"/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/condition&gt;&lt;condition_mode&gt;simple&lt;/condition_mode&gt;&lt;condition_script&gt;&lt;![CDATA[(function executeCondition(/* glide record */ current) {  
+	// customize condition logic here, return true or false  
+	return false;
+})(current);]]&gt;&lt;/condition_script&gt;&lt;description/&gt;&lt;model_type&gt;llm&lt;/model_type&gt;&lt;name&gt;Sentinel HSE Assistant&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_cs_context_profile&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-08-10 16:53:51&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_id&gt;162e29bae46a43107f44b37c6b758892&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Sentinel HSE Assistant&lt;/sys_name&gt;&lt;sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse"&gt;a924114d456203107f442c7fe0ab7383&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Sentinel HSE"&gt;a924114d456203107f442c7fe0ab7383&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_cs_context_profile_162e29bae46a43107f44b37c6b758892&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-08-10 16:55:07&lt;/sys_updated_on&gt;&lt;/sys_cs_context_profile&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1476466379</payload_hash>
+        <record_name>Sentinel HSE Assistant</record_name>
+        <reverted_from/>
+        <source>6124114d456203107f442c7fe0ab7389</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:55:07</sys_created_on>
+        <sys_id>f07ee5fae46a43107f44b37c6b75883b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19fec9975850000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:55:07</sys_updated_on>
+        <type>Custom Greetings and Setup</type>
+        <update_guid>f47ee5faf36a43104d9340d662a7923a</update_guid>
+        <update_guid_history>f47ee5faf36a43104d9340d662a7923a:1476466379,5a2e29ba0d6a431081361f5748437294:-1941649129</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 17:08:33</sys_created_on>
+        <sys_db_object display_value="" name="sys_cs_context_profile">sys_cs_context_profile</sys_db_object>
+        <sys_id>60c8baa871eb43a98b49c632a61e5639</sys_id>
+        <sys_metadata>162e29bae46a43107f44b37c6b758892</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Sentinel HSE Assistant</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_scope_delete display_value="">00a898291b4446e4800f9c59a3050f44</sys_scope_delete>
+        <sys_update_name>sys_cs_context_profile_162e29bae46a43107f44b37c6b758892</sys_update_name>
+        <sys_update_version display_value="sys_cs_context_profile_162e29bae46a43107f44b37c6b758892">f07ee5fae46a43107f44b37c6b75883b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 17:08:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

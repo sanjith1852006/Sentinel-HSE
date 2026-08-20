@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="3d8b3fe9882603107f4468412c614651" label="Permit to Work" max_length="40" name="x_snc_sentinel_hse_permit_to_work" type="collection">
+        <element label="Fire Watch Required" max_length="40" name="fire_watch_required_8" type="boolean"/>
+        <element label="Remarks" max_length="1000" name="remarks_8" type="string"/>
+        <element label="AI Safety Recommendation" max_length="1000" name="ai_safety_recommendation_8" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element choice="1" label="Permit Type" mandatory="true" max_length="40" name="permit_type_8" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Lifting Operation" value="lifting_operation_8"/>
+                <element inactive_on_update="false" label="Cold Work" value="cold_work_8"/>
+                <element inactive_on_update="false" label="Hot Work" value="hot_work_8"/>
+                <element inactive_on_update="false" label="Excavation" value="excavation_8"/>
+                <element inactive_on_update="false" label="Radiography" value="radiography_8"/>
+                <element inactive_on_update="false" label="Pressure Testing" value="pressure_testing_8"/>
+                <element inactive_on_update="false" label="Electrical Work" value="electrical_work_8"/>
+                <element inactive_on_update="false" label="Confined Space Entry" value="confined_space_entry_8"/>
+                <element inactive_on_update="false" label="Line Breaking" value="line_breaking_8"/>
+                <element inactive_on_update="false" label="Working at Height" value="working_at_8eight_8"/>
+            </choice>
+        </element>
+        <element label="Asset" mandatory="true" max_length="32" name="asset_8" reference="x_snc_sentinel_hse_oilfield_asset_1" type="reference"/>
+        <element label="Gas Test Completed" max_length="40" name="gas_test_completed_8" type="boolean"/>
+        <element label="End Date" mandatory="true" max_length="40" name="end_date_8" type="glide_date_time"/>
+        <element choice="1" label="Risk Level" max_length="40" name="risk_level_8" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Low" value="low_j"/>
+                <element inactive_on_update="false" label="Critical" value="critical_j"/>
+                <element inactive_on_update="false" label="Mediium" value="medium_j"/>
+                <element inactive_on_update="false" label="High" value="high_j"/>
+            </choice>
+        </element>
+        <element label="Emergency Contact" max_length="50" name="emergency_contact_8" type="string"/>
+        <element label="Work Location" max_length="100" name="work_location_8" type="string"/>
+        <element choice="1" default="Draft" label="Status" max_length="40" name="status_8" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Rejected" value="rejected_8"/>
+                <element inactive_on_update="false" label="Cancelled" value="cancelled_8"/>
+                <element inactive_on_update="false" label="Work Stopped" value="work_stopped_8"/>
+                <element inactive_on_update="false" label="Completed" value="completed_8"/>
+                <element inactive_on_update="false" label="Draft" value="draft_8"/>
+                <element inactive_on_update="false" label="Pending Approval" value="pending_approval_8"/>
+                <element inactive_on_update="false" label="Approved" value="approved_8"/>
+                <element inactive_on_update="false" label="Active" value="active_8"/>
+            </choice>
+        </element>
+        <element label="Work Order" max_length="32" name="work_order_8" reference="x_snc_sentinel_hse_work_order" type="reference"/>
+        <element label="Requested By" mandatory="true" max_length="32" name="requested_by_8" reference="sys_user" type="reference"/>
+        <element label="Risk Assessment" max_length="32" name="risk_assessment" reference="x_snc_sentinel_hse_risk_assessment" type="reference"/>
+        <element label="Approved By" max_length="32" name="approved_by_8" reference="sys_user" type="reference"/>
+        <element label="Isolation Completed" max_length="40" name="isolation_completed_8" type="boolean"/>
+        <element choice="1" label="Priority" max_length="40" name="priority_8" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Medium" value="medium_8"/>
+                <element inactive_on_update="false" label="Low" value="low_8"/>
+                <element inactive_on_update="false" label="Critical" value="critical_8"/>
+                <element inactive_on_update="false" label="High" value="high_8"/>
+            </choice>
+        </element>
+        <element label="Conflict Detected" max_length="40" name="conflict_detected_8" type="boolean"/>
+        <element label="Start Date" mandatory="true" max_length="40" name="start_date_8" type="glide_date_time"/>
+        <element label="PPE Verified" max_length="40" name="ppe_verified_8" type="boolean"/>
+        <index name="index">
+            <element name="approved_by_8"/>
+        </index>
+        <index name="index2">
+            <element name="asset_8"/>
+        </index>
+        <index name="index3">
+            <element name="work_order_8"/>
+        </index>
+        <index name="index4">
+            <element name="requested_by_8"/>
+        </index>
+        <index name="index5">
+            <element name="risk_assessment"/>
+        </index>
+    </element>
+</database>

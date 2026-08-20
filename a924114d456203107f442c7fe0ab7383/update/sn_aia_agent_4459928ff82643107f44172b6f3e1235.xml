@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent">
+    <sn_aia_agent action="INSERT_OR_UPDATE">
+        <advanced_mode>false</advanced_mode>
+        <agent_type>internal</agent_type>
+        <applicability_script><![CDATA[/** 
+ * Function to process inputs related to ServiceNow change request operations 
+ * 
+ * @param {Object} inputs - The input parameters object 
+ * @param {string} inputs.objective - The purpose or goal of the operation 
+ * @param {string} inputs.execution_plan_id - Unique identifier for the execution plan 
+ * @param {Object} inputs.context - Context information about the ServiceNow change request 
+ * @param {string} inputs.context.url - The URL of the change request in Service Operations Workspace 
+ * @param {string} inputs.context.table - The ServiceNow table name (e.g., 'change_request') 
+ * @param {string} inputs.context.record_sys_id - The sys ID of the record 
+ * @param {string} inputs.context.route - The route type (e.g., 'record') 
+ * @param {string} inputs.context.additional_context - Additional contextual information in JSON format 
+ * @param {string} inputs.context.experience - The UI experience name (e.g., 'Service Operations Workspace') 
+ * @param {string} inputs.context.number - The request number 
+ * @param {string} inputs.context.portal - The portal ID 
+ * @param {string} inputs.context.device_type - The device type from which the experience is accessed, e.g.'mweb' 
+ * @param {string} inputs.context.deployment_id - The unique identifier for the assistant deployment 
+ * @param {string} inputs.context.assistant_type - The type of assistant, e.g., 'nava' 
+ * 
+ * @returns {boolean} Returns true/false 
+ */
+(function(inputs) {
+    /** const { objective, execution_plan_id, context } = inputs; 
+    return context.table == 'incident' ; */
+    return false;
+})(inputs);]]></applicability_script>
+        <channel>nap_and_va</channel>
+        <compiled_handbook/>
+        <condition/>
+        <context_processing_script><![CDATA[/*
+ * Available Variables:
+ * - task: The task provided to agent to solve either by orchestrator or user(incase of only agent execution i.e agent is invoked as seperate entity instead from a workflow).
+ * - user_utterance: The user utterance provided. and task = user_utterance in case of individual agent execution.
+ * - agent_id: The agent id.
+ * - context: An object that carries additional contextual information for the agent.
+ *          It always includes a "pageContext" and may include a "triggerContext",
+ *          depending on how and from where the agent is invoked.
+ *
+ *          Behavior by invocation type:
+ *          ---------------------------------
+ *          - When invoked via the startAiAgentConversation API:
+ *                If a "contextMemory" parameter is provided in the API request,
+ *                it will be available here as the "triggerContext".
+ *                The "pageContext" is always present in this call, regardless
+ *                of whether the agent is executed individually or as part of a use case.
+ *                Example:
+ *                    {
+ *                        pageContext: { ... },
+ *                        triggerContext: { ... } // Derived from contextMemory (if passed)
+ *                    }
+ *
+ *          - When invoked as part of a use case or workflow:
+ *                The "pageContext" and "triggerContext" objects available here
+ *                may have been *modified* by the use case’s context processing script.
+ *                This means the use case may alter, extend, or overwrite values
+ *                from the original "pageContext" or "triggerContext"
+ *                before the context reaches the agent.
+ *                If the use case was originally triggered via the API,
+ *                the initial "triggerContext" is still derived from the
+ *                "contextMemory" parameter, but its contents may have been updated
+ *                by the use case logic.
+ *
+ *          - When executed directly (standalone agent execution):
+ *                The "pageContext" will always be present (default or empty),
+ *                and the "triggerContext" will only be populated if explicitly
+ *                passed through the API call.
+ * Return an modified context like: { pageContext : {},triggerContext:{} }
+ */
+(function(task, user_utterance, agent_id, context) {
+    return {
+        pageContext : context?.pageContext,
+		triggerContext : context?.triggerContext
+    };
+})(task,user_utterance, agent_id, context);]]></context_processing_script>
+        <description>Analyze incoming sensor readings such as pressure, temperature, and flow rate, identify the risk level, and recommend/trigger the appropriate HSE response.</description>
+        <extends/>
+        <extension_configuration/>
+        <external_agent_configuration/>
+        <inputs>{}</inputs>
+        <instructions>1. Fetch the relevant sensor reading details.
+2. Analyze pressure, temperature, flow rate, gas concentration, leak status, and sensor status.
+3. Compare the readings with the available safety thresholds and identify abnormal conditions.
+4. Classify the overall risk as Safe, Warning, or Critical.
+5. Provide a concise explanation of the detected risk.
+6. Recommend the appropriate HSE action, such as monitoring, inspection, incident creation, or corrective work order.</instructions>
+        <internal_name>global.x_snc_sentinel_hse.Sentinel HSE Sensor Risk Analyst</internal_name>
+        <name>Sentinel HSE Sensor Risk Analyst</name>
+        <outputs>""</outputs>
+        <parent/>
+        <post_processing_message/>
+        <processing_message/>
+        <proficiency>- Expertly analyzes sensor readings (pressure, temperature, flow rate, gas concentration, leak status, sensor status) to identify abnormal or hazardous conditions, classify risk as Safe, Warning, or Critical, provide concise explanations for detected risks, and recommend appropriate HSE actions such as monitoring, inspection, incident creation, or corrective work order. This capability ensures comprehensive risk assessment and response in HSE environments.
+- Efficiently retrieves and accesses sensor readings from the Sensor Reading table, including all relevant parameters (pressure, temperature, flow rate, gas concentration, leak status, sensor status, reading timestamp, gas name, asset) to ensure comprehensive data collection for risk analysis. This capability supports the agent's ability to analyze real-time and historical sensor data for HSE risk assessment.
+- Follows a structured, step-by-step action plan to fetch sensor details, analyze readings, compare values against safety thresholds, classify risk levels, provide concise explanations, and recommend appropriate HSE actions. This capability ensures methodical and repeatable risk analysis processes, enhancing reliability and compliance with HSE standards.
+- Autonomously performs targeted lookups and retrieves specific sensor reading records using predefined CRUD Input Variables, ensuring efficient and accurate data acquisition for risk analysis. This capability minimizes manual intervention and streamlines the risk assessment workflow.
+- Integrates sensor data analysis with risk classification and actionable HSE recommendations, enabling end-to-end risk management from data acquisition to response. This capability ensures that abnormal conditions are not only detected but also addressed with appropriate actions, such as monitoring, inspection, incident creation, or corrective work order.</proficiency>
+        <record_type>custom</record_type>
+        <required_translations>[]</required_translations>
+        <research>false</research>
+        <role>You are an HSE sensor risk analysis expert. Analyze sensor readings such as pressure, temperature, flow rate, gas concentration, and sensor status. Identify abnormal or dangerous conditions, classify the risk as Safe, Warning, or Critical, explain the reason, and recommend the appropriate HSE response.</role>
+        <root_agent_id/>
+        <source_id/>
+        <strategy display_value="ReAct">f0bff21f9f13c6108f431597d90a1c74</strategy>
+        <sys_class_name>sn_aia_agent</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-11 14:46:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>4459928ff82643107f44172b6f3e1235</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Sentinel HSE Sensor Risk Analyst</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sn_aia_agent_4459928ff82643107f44172b6f3e1235</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-11 14:56:39</sys_updated_on>
+    </sn_aia_agent>
+</record_update>

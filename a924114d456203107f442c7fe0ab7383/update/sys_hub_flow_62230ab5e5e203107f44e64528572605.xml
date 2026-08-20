@@ -1,0 +1,1280 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=410925000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>inspection_amp_ai_root_cause_analysis</internal_name>
+        <label_cache>[{"name":"Created_1.current.asset_6.asset_name","label":"Trigger - Record Created➛Inspection Record➛Asset➛Asset Name","reference":"","reference_display":"Asset Name","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_oilfield_asset_1","column_name":"asset_name","usedInstances":{"63226307-e06b-435f-92fa-a72d52999f25":["asset_name"]}},{"name":"98b9f42b-ecfc-4faf-bd7c-cf5418667922.record.asset_6","label":"4➛Inspection Record➛Asset","reference":"x_snc_sentinel_hse_oilfield_asset_1","reference_display":"Oilfield Asset","type":"reference","base_type":"reference","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"asset_6","usedInstances":{"ee06f748-3d93-4faa-b57d-4daa96bcaedd":["record"]}},{"name":"81626c17-ef19-4483-b17f-e8f6c84a2b4d.output.response","label":"2➛output➛response","type":"string","base_type":"string","usedInstances":{"642504ea-938f-449b-a6eb-bdf6283023ea":["condition"],"98b9f42b-ecfc-4faf-bd7c-cf5418667922":["findings_6"],"42faeb7b-ea31-4bb5-becb-d8cde5e9a095":["problem_description_7"],"f67cd2e7-7917-46e2-8b83-90a0c163a66f":[null],"bac6175a-c315-4dce-8fb3-e1d671b35233":["findings_6"]}},{"name":"Created_1.current.inspection_method_5","label":"Trigger - Record Created➛Inspection Record➛Inspection Method","reference":"","reference_display":"Inspection Method","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"inspection_method_5","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"sequence":100.0,"used":false,"label":"Visual Inspection","reference":false,"image":"","rawLabel":"Visual Inspection","selected":false,"missing":false,"value":"visual_inspection","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Visual Inspection"}}},{"sequence":200.0,"used":false,"label":"OGI Camera","reference":false,"image":"","rawLabel":"OGI Camera","selected":false,"missing":false,"value":"ogi_camera","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"OGI Camera"}}},{"sequence":300.0,"used":false,"label":"Drone Inspection","reference":false,"image":"","rawLabel":"Drone Inspection","selected":false,"missing":false,"value":"drone_inspection","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Drone Inspection"}}},{"sequence":400.0,"used":false,"label":"Ultrasonic Testing (UT)","reference":false,"image":"","rawLabel":"Ultrasonic Testing (UT)","selected":false,"missing":false,"value":"ultrasonic_testing_ut","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Ultrasonic Testing (UT)"}}},{"sequence":500.0,"used":false,"label":"Thermal Imaging","reference":false,"image":"","rawLabel":"Thermal Imaging","selected":false,"missing":false,"value":"thermal_imaging","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Thermal Imaging"}}},{"sequence":600.0,"used":false,"label":"Manual Inspection","reference":false,"image":"","rawLabel":"Manual Inspection","selected":false,"missing":false,"value":"manual_inspection","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Manual Inspection"}}}],"usedInstances":{"10c8934c-4578-4f64-a0fb-17fb64c43c7c":["condition"]}},{"name":"Created_1.run_start_date_time","label":"Trigger - Record Created➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"c881b655-d6b6-4486-b0c4-a2edadf2d79d":["scheduled_date_7"]},"attributes":{"test_input_hidden":"true"}},{"name":"Created_1.current","label":"Trigger - Record Created➛Inspection Record","reference":"x_snc_sentinel_hse_inspection","reference_display":"Inspection","type":"reference","base_type":"reference","usedInstances":{"70f4c89f-707f-4daf-9e8c-3a9b9f21ef9e":["record"],"c881b655-d6b6-4486-b0c4-a2edadf2d79d":["inspection_7"],"81626c17-ef19-4483-b17f-e8f6c84a2b4d":["inspection"],"98b9f42b-ecfc-4faf-bd7c-cf5418667922":["record"],"42faeb7b-ea31-4bb5-becb-d8cde5e9a095":["asset_7"],"bac6175a-c315-4dce-8fb3-e1d671b35233":["record"]},"attributes":{}},{"name":"Created_1.current.inspection_result_6","label":"Trigger - Record Created➛Inspection Record➛Inspection Result","reference":"","reference_display":"Inspection Result","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"inspection_result_6","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"sequence":-1.0,"used":false,"label":"Fail","reference":false,"image":"","rawLabel":"Fail","selected":false,"missing":false,"value":"fail_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Fail"}}},{"sequence":-1.0,"used":false,"label":"Obervation","reference":false,"image":"","rawLabel":"Obervation","selected":false,"missing":false,"value":"observation_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Obervation"}}},{"sequence":-1.0,"used":false,"label":"Pass","reference":false,"image":"","rawLabel":"Pass","selected":false,"missing":false,"value":"pass_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Pass"}}}],"usedInstances":{}},{"name":"Created_1.current.asset_6","label":"Trigger - Record Created➛Inspection Record➛Asset","reference":"x_snc_sentinel_hse_oilfield_asset_1","reference_display":"Oilfield Asset","type":"reference","base_type":"reference","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"asset_6","usedInstances":{"c881b655-d6b6-4486-b0c4-a2edadf2d79d":["asset_7"],"a08e451c-1435-44d5-9fbc-4f76064f7e6c":["record"],"fa80a933-4ea7-4be0-b70e-2882303c9348":[null],"63226307-e06b-435f-92fa-a72d52999f25":["record","asset_name"]}},{"name":"Created_1.current.leak_detected_6","label":"Trigger - Record Created➛Inspection Record➛Leak Detected","reference":"","reference_display":"Leak Detected","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"leak_detected_6","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"sequence":-1.0,"used":false,"label":"No","reference":false,"image":"","rawLabel":"No","selected":false,"missing":false,"value":"no_i","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"No"}}},{"sequence":-1.0,"used":false,"label":"Yes","reference":false,"image":"","rawLabel":"Yes","selected":false,"missing":false,"value":"yes_i","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Yes"}}}],"usedInstances":{}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Inspection Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"number","usedInstances":{"c881b655-d6b6-4486-b0c4-a2edadf2d79d":["inspection_7"],"fa80a933-4ea7-4be0-b70e-2882303c9348":[null],"f67cd2e7-7917-46e2-8b83-90a0c163a66f":[null]}}]</label_cache>
+        <master_snapshot>83464a3de5e203107f44e64528572634</master_snapshot>
+        <master_snapshot_digest/>
+        <name>OGI Inspection &amp; Maintenance Automation</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>fcc2e21f556e03107f448ed3c97cb311</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 15:51:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>62230ab5e5e203107f44e64528572605</sys_id>
+        <sys_mod_count>92</sys_mod_count>
+        <sys_name>OGI Inspection &amp; Maintenance Automation</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_hub_flow_62230ab5e5e203107f44e64528572605</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 10:00:39</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>f2c2661f556e03107f448ed3c97cb3ad</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=62230ab5e5e203107f44e64528572605"/>
+    <sys_variable_value action="delete_multiple" query="document_key=62230ab5e5e203107f44e64528572605"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_snc_sentinel_hse_inspection">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 10:00:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fcc2e21f556e03107f448ed3c97cb311</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 10:00:38</sys_updated_on>
+        <table>x_snc_sentinel_hse_inspection</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>62230ab5e5e203107f44e64528572605</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 10:00:38</sys_created_on>
+        <sys_id>7cc2e21f556e03107f448ed3c97cb312</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 10:00:38</sys_updated_on>
+        <trigger display_value="">fcc2e21f556e03107f448ed3c97cb311</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=62230ab5e5e203107f44e64528572605^sys_idNOT IN7cc2e21f556e03107f448ed3c97cb312"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=62230ab5e5e203107f44e64528572605"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=62230ab5e5e203107f44e64528572605^sys_idNOT IN22230ab5e5e203107f44e64528572606"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>62230ab5e5e203107f44e64528572605</id>
+        <name>Inspection &amp; AI Root Cause Analysis</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 15:51:42</sys_created_on>
+        <sys_id>22230ab5e5e203107f44e64528572606</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 15:51:42</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=22230ab5e5e203107f44e64528572606"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=62230ab5e5e203107f44e64528572605^sys_idNOT IN7c33cab5e5e203107f44e6452857264d,a833cab5e5e203107f44e64528572613"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="OGI Inspection &amp; Maintenance Automation">62230ab5e5e203107f44e64528572605</model>
+        <model_id>62230ab5e5e203107f44e64528572605</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_62230ab5e5e203107f44e64528572605</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 15:51:51</sys_created_on>
+        <sys_id>7c33cab5e5e203107f44e6452857264d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 16:05:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7c33cab5e5e203107f44e6452857264d"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="OGI Inspection &amp; Maintenance Automation">62230ab5e5e203107f44e64528572605</model>
+        <model_id>62230ab5e5e203107f44e64528572605</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_62230ab5e5e203107f44e64528572605</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 15:51:50</sys_created_on>
+        <sys_id>a833cab5e5e203107f44e64528572613</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 16:05:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a833cab5e5e203107f44e64528572613"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=62230ab5e5e203107f44e64528572605"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=62230ab5e5e203107f44e64528572605"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=62230ab5e5e203107f44e64528572605^sys_idNOT IN358df94a002e03107f4411b57f62ae07"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="OGI Inspection &amp; Maintenance Automation">62230ab5e5e203107f44e64528572605</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:05:33</sys_created_on>
+        <sys_id>358df94a002e03107f4411b57f62ae07</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 15:53:24</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeAFdLHjOG/bJIsG2G5Qx9s+BKlAiaRNlKa8IqXEXeTfO9TFlnVx7EjZdV4CiKTJM4dnzgxz/93kyCfcvDBnyOfEHJhMKBIJxGfrFYFhpYc9gZZ6bokERiqM1uaFimIyMGkULmdkueJIwWKKuITBMMIkMi/sgZkgHpO7tbzBsBP8Pt0m39PMp+H7yZMi8CQRignCvYUkHhNyRQLFQgHrMJNwwvqvfPlNeS5YMI4jIsyL+4eBuUIRHKH08d8rU0xjCGiAJg6xAtd2HceynPOh7Z+5vu1gFxHLgg2rfFQwqwZatgGTJ0UEJnjDRY2xiCB8K/h6s2IBhGfsLNGTZP/B7ueWXkcJYA9INrf59HIysuFgEbKA3K5SMtKRDGc2GfJ4Kb5k+DWNhKKYq4JGGImBaUxWGrIGkSOid4vwcVoc+ImJNLp8kocB4psvpFTE/FgRqQmnjAP1XsaNDOMoRT+9vrydXnl/f5xd/n499abXd7PpzeXs+sp8TuPyvsV6xwxhjsXLwnne3P0nRri+QBEvfUAzMGUQsZX6CDJICuU9D7ZqvgwFZrlEKooOiim5q+gi+n2StqxWUQelEwth/3P9Z12+2eBxuj07QwgT1KJbn5Z0W468AZpqIKEc3T4F5yOHSHhoWT9JxLkxvVbDyxATfrXdzoTJ+RxUzcQqVpqtRySU9FToIYy9Eo96KWB6SdRZbM8vKjiKBfzA29xHXccpbRv+PjMJcO8hC+/Itzgj/QNYEi2oSk+A5fRzfsI0FkYI9wh/jCCOgCllFDZHb5ZonhMMG3Lw25Im6FdZ/vqDScnEvBREG4aUoRqEzekgNaMIOIMiO2J56DPF61eSVLitpPrReW7blPqEOtZYZ7ltuT61rbE1QhS7lhU4pTyvg2lFqSqCeZN8Py7bZSpVfoASqxTn4K1yrhwko2RXgwUJWiK5qVz2A83uCZqjoVXM0T3KHTeyzIavdtW5L7SeOwOEEwS/wIea5IH+SHn4CMbc3Rt9FPw7j8JY4Ko76SMMJoztCuOXnM5f384naRiR/Xh2V5ySQ24vpZA1EusevNGltj8hQ2KBJbrghv5oMvED5FA6PhsTx6544xZGI7Z34YkviC9pUm+bPzYKJ2nS2xHO2AFgzSWPBtjdH3NhNrpjNvc+fPBxQYQHUCOPa6er2eGcM0yKuX6zvXZ0ss3vrhlPzyfByB6PgzG8eCDj6ZD4yB46IzQZn7nno0rG16Dsg6kamPkh7yC5limQFjf4mk2d1sP+LWUriVK6HHWu4QKa3nQLlJ1ZKpz6lozUY8LI+BKKDzfbdcYdgXqYvo3fqJgfAkpfu/FDUfmhWtSaC0DyG4zvINEtawtnJ/c6qygq2Y218+uMDM9HE+o2+xGdNPnRFkw7zJPvRQ7Mn6Q1E5uakkP1nzSmUWsX8QoJV2RSbi/29D99kWL3TorzdqS4nXuuIhdbn6SvAfuO6l3ahPRY9DQE4oW07OVXoQETBpxpMGrk/8Ek2PDXhloQYJhDrw3nGxpMVxPfU2PqyDb6/qm4st6+Vvpg2Mhbs9OrahXd9Pu2JniMRiO3pdOeVN/WTYBewHvyNe7onEmaUnBvoTtu3+qejaWuJNldRRxYxHqNurmSdYu6sZa9FHX3KrXvPwMNKE60/jz8D4TEaMLgHwAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=62230ab5e5e203107f44e64528572605^sys_idNOT IN8fe1e7ca2ce203107f44dd952df7b627,a68d9b822ce203107f44dd952df7b62c,7892ab0e2ce203107f44dd952df7b6cc,98cf9b862ce203107f44dd952df7b685,1001eb4a2ce203107f44dd952df7b600,bac4af022c2603107f44dd952df7b699"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="OGI Inspection &amp; Maintenance Automation">62230ab5e5e203107f44e64528572605</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>642504ea-938f-449b-a6eb-bdf6283023ea</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 17:24:11</sys_created_on>
+        <sys_id>8fe1e7ca2ce203107f44dd952df7b627</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 16:36:23</sys_updated_on>
+        <ui_id>63226307-e06b-435f-92fa-a72d52999f25</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXUsjMRT9K5LnMsy0WrRvYhEWXAVdfHE13CZ32rCZzGySqXZL//veTDK1qPgBsiDbt9yP3HNPz5ncrJmSbML2UebFUTEWo2I0Gub58HC/mI1Hs2IoR4BYsAEzUCFVWhS1lXRegm5DYL0+sQgeJS8y0VqLxmfgHHo+3myoTirXaFhdp3KKiIXSkurY5OZ2wBqwdLNHyybrJ6n3QtMwQ02llz22p1j9qglnWYu2Inxc9cGz1DlNmb1vU8pQU4BT5AOGDx6NRAJSgnY4YBUYCb62KzbxtqUALS8vjF5tKxbK+LhoBQ9O/aHJ+3moK5E2E4mE7ZEngmK4nIKHK7pZ+NZu+aqVQBc5kVhCq/3JbiwWXDRe1Sa2eJjpvrvWbWXOIyNse8HO/9E6AoFN2DMgj2uVV4v6/rIHeapMR0laUdcC9PYE3ls1a32As2aoseO4gqZRZs4bWy9V10xQqmyu6ZCVur6nmU7NTQYi4M6IVchOKT7twtdgVVjiO11DzZsBcyt3oklZj6sQh/x3G5DExdIKvGOho4B3SgjNwqrGH9OoJSbgm0ES/+zgNYWJo0dB7dz5aIAH7ozgjgYrg5oviM1a6VKhljwaoXhug+OQ+LAX3oG098KPTgEvI092eBY72+3dO4+JZIaDTzPD4VcyQ1rjy7vhLQ/kw1e/sjtK6mTvdvQfNR6yP9s8H8lXH4S7FOFWuV9c4xJ17Fqo+eIuljkPvnUxXAEJCA0EqTwz0T+c/DGfvoPN3qen4TvhXqC3NylWtLJHHul+YtSU3LtOye3L9WluLcZ59/tCnv1vHrDbv7gJgNu/CQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8fe1e7ca2ce203107f44dd952df7b627"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Execute Skill">30468d977f921210f465c3b76d8665c1</action_type>
+        <action_type_parent display_value="Execute Skill">d88205df7f521210f465c3b76d866563</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>30468d977f921210f465c3b76d8665c1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="OGI Inspection &amp; Maintenance Automation">62230ab5e5e203107f44e64528572605</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>10c8934c-4578-4f64-a0fb-17fb64c43c7c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 17:05:03</sys_created_on>
+        <sys_id>a68d9b822ce203107f44dd952df7b62c</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 16:36:23</sys_updated_on>
+        <ui_id>81626c17-ef19-4483-b17f-e8f6c84a2b4d</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a68d9b822ce203107f44dd952df7b62c"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="OGI Inspection &amp; Maintenance Automation">62230ab5e5e203107f44e64528572605</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>642504ea-938f-449b-a6eb-bdf6283023ea</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 17:27:03</sys_created_on>
+        <sys_id>7892ab0e2ce203107f44dd952df7b6cc</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 16:36:23</sys_updated_on>
+        <ui_id>f67cd2e7-7917-46e2-8b83-90a0c163a66f</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7892ab0e2ce203107f44dd952df7b6cc"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="OGI Inspection &amp; Maintenance Automation">62230ab5e5e203107f44e64528572605</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>642504ea-938f-449b-a6eb-bdf6283023ea</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 17:14:43</sys_created_on>
+        <sys_id>98cf9b862ce203107f44dd952df7b685</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 16:36:23</sys_updated_on>
+        <ui_id>98b9f42b-ecfc-4faf-bd7c-cf5418667922</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1W3U/bMBD/V6w8hyhpoWK8TTAYEh8STLwwGl3jC7XmOMF2ClnF/76zk7QZRQwkHoa2PtX3+bvz73y5XgaCB3vBNvI4+ZRMsnEyHo/ieLS7ncwm41ky4mNATIIwUFAgWWrMSs3pvABZO8Fyua8RLPI0ibJaa1T28ZH0XJhKQnPVmZEkmwvJSR/sXd+EQQWaIlrUwd7yieq1kCTMUJLpRY/pKUbbVO7My6wuCFcqeuFJ53nQadjxAWnIycFJ4jDAB4uKIwHJQRoMgwIUB1vqJtizuiYBFc3PlWxWFnOhbFtoAQ9G/KTM27Gzy5Eqy7omrI5p16BWnB+AhUuKnNlar/pVigxN2xOOOdTS7g9lrcF5ZUWpWhcLM9l7l7Iu1FnbkWAVYHAftSEQWLk6HfK2rPxyXt5f9CAPhfIt6UqUZQZydQJrtZjV1sFZBijR97iAqhLqNq10uRDemaAU0a2kQ5TL8p5yGnGrIsgc7oi6CtEhyQ+8+Aq0cEWcUhhyfgwD05h9CcasS6Eepne1Q9IW1pWQ+i74FqSeCc4506KynynVAjvgj2FH+tnOSwzLPq0JNYi5Jv5DalSWGkosFMp0Tt0UylToy9ocgOOh7m2j8Aqg/Sh88wR4Hng3DRuyk6EvO2sV3SzsvNss7H6kWejK+PDD8KcRiEcvPrIDJnnWmwH9JcIPQm+J0/T2T77XcTzmDZpUTHNqFFVteukRGObMWW/OSsXsHBkVgpbNwLSi86Njth6haLr+n2o0dGF9wByETCfTAohmqMAxSONdLTTy1sDRcgpiMJCpqYsCdNOHOEUu6mLL4AK1sA273cC4guWQ/g6N9RVGLolbNwVdN12eS9QlODalpLXIaFaYxgqE9oFcjpBlpeJEbwYsLyVd91ZdMQckF5kPMsgV+giqtCJvfARN5FoA7ayvl1+8riRueC/DLEJhos3H5/9l/c2X9bZt8IqZ7bfBoUDJzTND3K8CLCpXd9oO9ZN10CnZVadcfR69205IJrH/faDN8M98Jd38AiQlI0QcDAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=98cf9b862ce203107f44dd952df7b685"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="OGI Inspection &amp; Maintenance Automation">62230ab5e5e203107f44e64528572605</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>642504ea-938f-449b-a6eb-bdf6283023ea</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 17:20:11</sys_created_on>
+        <sys_id>1001eb4a2ce203107f44dd952df7b600</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 16:36:23</sys_updated_on>
+        <ui_id>42faeb7b-ea31-4bb5-becb-d8cde5e9a095</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTW/bMAz9K4HOjmHZrpPmNrQrdlhbYB26Q9MKskUnwmTZk+S2WZD/PsofadC1WDfsMmC5iXyk3nuimZstkYIsSEYhOjqmWZHQJImjKJ6nNM+SnMYi4QApCYjmFSDS8VwB6w4Bueeq9cFHZnXBLGgnNSi2tsAeavOV1UaAQZyQtlF8cz3Av2BucjnkirVUwoAmi5vbgDTcYGuHmcX2WeqtRBXPQSH0s2f6CnG3aV6MfTysnVz0iV7FIgoIPDrQApBIyZWFgFRcC+5qsyELZ1oMGODiUqvNHrGW2mFD4rGPVn7Ha+eRx5WAygroc/sjG6zqw+Upd/wKOxeuNQO0WNeyANt7IqDkrXInh7EecNk4Weu+pJM5VNeqrfRFbwnZNxhfBiMtPp6Axuv0zAcZ5dW6fvg0sjyTurNkSKq64Gp/4s4ZmbfO89kSUFBhI1bxppF6xRpT38uuGLlU4UrhISxV/YCXWrnSIS888RBt5eEZxk+78DU30qs4xzZYvAuI3dgTxa190oImsm+tZ9IrGzSw3gZfUhjZuHd4wT0MdHfB+AUIiI5fHSyaPw1SN/T2YPqRBDg2W7ZRlIjt9gRnwIFgNCxag3a53e4OVSP5ymvsOKDCp4I5zeKsoLMplPR4mqbzZJrTWTmFeZkV85THeSrCunVN60IDtqk18vY9ZW2k24yN1nK1ZrM7ZIN+4f2u3l+xHL/AJVksyYer95NzrvkKzJIEy15Hl0myWZnM0yyKII4SGs3KNKU0P5qVWcwhyjp4N00dHJ+A4bj0XfxBije22f28FP67+Ecu/ub6/PWUj+vzTIIS9oWxH3cnVOiFA9Z/Bs/255CcXA/JYYfSv7VDKdrif//QJu3F/fOL9OA/85WVevsDrsk9clYIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1001eb4a2ce203107f44dd952df7b600"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="OGI Inspection &amp; Maintenance Automation">62230ab5e5e203107f44e64528572605</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>7e5d0d09-4e0c-4058-9c19-a354c5a9f8a0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 17:36:44</sys_created_on>
+        <sys_id>bac4af022c2603107f44dd952df7b699</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 16:36:23</sys_updated_on>
+        <ui_id>bac6175a-c315-4dce-8fb3-e1d671b35233</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K8jPbRQ3IZS+TVRISAwkmHjZUOTYN9SS42T+ALqo/303iVMiQAwkXtD65vvlc07uqX+2RAqyIimImB7TjCc0SRZxvFimtMiSgi5EwgAomRHNKsBKA7w2As/3TPku0LYnBpgDkdOIe2NAu90O80LaRrHtTSjDCN9IJTBPVj9vZ6RhBic6MGTVPku9F5JiBSgsvRoxPcfotk13FjX3FeLK5Rg8D53rkDk4W2MGmzo4NJ4ReHSgBSCQkikLM1IxLZirzZasnPEYQNLiUqvtvmIjtRuIVuzRyj94cxp3dSUgMx5E2B/zINAQLtfMsWuczJ03e71qycEOmggomVfuZBobCi4bJ2s9tDhWqLG7Vr7SF4MiZD9g8j28RRDQdDw75AOt8npTP1yNIE+l7iUJFFXNmdqfmHNGFt51cFoCCnqNK9Y0Ut/ljanvZd+MUKroTuEhKlX9gHdaeacjxjvcEarKolOMr/vwDTOyI/Edx2Dzbkbs1p4oZu0TFdQw/+07JAOxQCHvVeglyPtN6Jq5kY37hlfdQwC+m4WlLw7f2jB+/LRQk5lPi/+YW81zixdLDSrfoJpS2wZ6Wi8NcDbNfcwK7wA6WuFHvwCvAw9ueBE7n/YeXAyJ4IXDT/PC8it5IdD48mb4lwXixZt/spNN6rfeTta/RDWQms2zXz6OE9G2S5otMk6P5lDS43maLpN5QY/KOSzLjC9TtihSEdXeNd5FBmxTa0TyylPxiZM/5rN3qDH67FSCEvYVeUaTQYWUHOSDXM+MFpIHNyG5f3g+zW00i/vfF/Lcf/P+3P4FJd4OjnYJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=bac4af022c2603107f44dd952df7b699"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=62230ab5e5e203107f44e64528572605"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=62230ab5e5e203107f44e64528572605^sys_idNOT IN4a0f53862ce203107f44dd952df7b605,82b4a7022c2603107f44dd952df7b604,849346f5e5e203107f44e6452857268d"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">8554afce2ce203107f44dd952df7b672</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="OGI Inspection &amp; Maintenance Automation">62230ab5e5e203107f44e64528572605</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id>10c8934c-4578-4f64-a0fb-17fb64c43c7c</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 17:11:34</sys_created_on>
+        <sys_id>4a0f53862ce203107f44dd952df7b605</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 10:00:27</sys_updated_on>
+        <ui_id>642504ea-938f-449b-a6eb-bdf6283023ea</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Uy27bMBD8FUNnW9DLiuNb0DRAULcBmiCXIBBW1MomQpEqSdlxDf97l3rYRuOgRdHeehOH2t3Z0Yx2nmps3VjzoK6M4UvpzZ+exx6XDqPnnSehQm/uMSULbrmSWQuMvTWIxl3QY8FNLWD7eETYiotCY9+tBk01FrU33/10Zbc1ZgJyFFR4bzWXSyrnBZ3KAMrwkoUsjtI4CoJoloR5GudhVMSAENN7Q+GHgdxo0SLjd1m7eYSbYZLShaMVBmMPXy3KAml0CcLg2KtAFmCV3h4QjVDcSXEEVlzabuMKXg3/Tr2j6dS9WCLtyHo5Dsesl2pQSXGGd7Uj2CEWcjFIqERTyS/dHk5kLKER9kTkxlA/rB1px6KnVN6v1ObrMPCGy3bB/lIoBuJwAksy5I1F4z4MCqyoUVZBXZM4Wa3VmrfFxKXyl4IOfinUhoY6p/jAHHGfNAL/hvDrFn4Ezd0Wn6kNFXc0czCcZa2rqJ3VtMK+lSX71jhC3YL9KlmnBr1gmOa1vaI5a+xZ78dvLXnixt1uFqZRysKLCZJ7Jkkyiyd5eFFOcFambJZAlCeF35ne12hqJanpfnH76eMC4WV0b8E2Zj5qD9dkWmbJEm88/s/m/I3kXMK0nIbB9HxykvRccs5k5v24RL+Ii/vAv5mWIAj+x+U0Ltxkne373drhf5yWZxeNboLpfFMg44aIPDjsdvjPu4stGYCzU2ij9Itb4YjtfwDdY1HiMQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">e145a7822c2603107f44dd952df7b643</block>
+        <comment/>
+        <connected_to>642504ea-938f-449b-a6eb-bdf6283023ea</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="OGI Inspection &amp; Maintenance Automation">62230ab5e5e203107f44e64528572605</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id>10c8934c-4578-4f64-a0fb-17fb64c43c7c</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 17:36:24</sys_created_on>
+        <sys_id>82b4a7022c2603107f44dd952df7b604</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 10:00:27</sys_updated_on>
+        <ui_id>7e5d0d09-4e0c-4058-9c19-a354c5a9f8a0</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f6464a3de5e203107f44e64528572601</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="OGI Inspection &amp; Maintenance Automation">62230ab5e5e203107f44e64528572605</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 15:53:26</sys_created_on>
+        <sys_id>849346f5e5e203107f44e6452857268d</sys_id>
+        <sys_mod_count>39</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 10:00:27</sys_updated_on>
+        <ui_id>10c8934c-4578-4f64-a0fb-17fb64c43c7c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Uy27bMBD8lUJnQdAjMhrfghQBCrQN0AS5tAGxIlc2UYpUScqOK/jfu9TDNhIHLdoeexNnubszw4H6yHS+7by7N1fOyZWOll8e40jqgNF3H2loMFpG3GghvTSaDUAcbUB1oUCfQrpWwe7hiPC1VMLiNK0FSz0ebbTsn5X8rkWmoEJFjXfeSr2idinoVKdQZ5c840W+KPI0zd9eZNWiqLJcFIBQ0L258Xom9+bDgMSvsg77CHfzJmNFoJWlcYRPHrVAWl2DchhHDWgB3tjdAbEI4larI7CW2o+KG3hy8gfNzssyXKyRNPLJjsORTVbNLhnJ8bYNBEfEQ6VmC43qGv1p1BFMxho65U9M7hzNwzaQDiwmSvXd2mw/zwtvpB4ETkVlOKjDCTzZUHUeXXgYVNjQINZA25I5rLVmI4dm4tIkK0WHpFZmS0tDUhLggXhCHkFyQ/i7AX4AK4OKjzSGmkeaFTjJ2ZAqGuctSdgPtrDvXSA0CpyksNENuuC4la2/oj0bnFjv45eRPElj31/TI3kULEt4Z8kDn0jtWhy4Mkrh2ghW7vdfuzQthFlJxmmahZcx/ptR/yL/l1DWZZaW5/N/sTiX/zPJfz30+S9CH57pNzOfpun/0J+GXjo2hnfSNiz/48w/hoCPG9yYG4FcOiJyH7D38986FHYUAMlPoa2x34KEI7b/CcvzjYH3BQAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=62230ab5e5e203107f44e64528572605^sys_idNOT INc683308e006203107f4411b57f62ae38,0283308e006203107f4411b57f62ae39,9cf2634e2ce203107f44dd952df7b629,98f2634e2ce203107f44dd952df7b62a"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>62230ab5e5e203107f44e64528572605</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.asset_6}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 04:42:15</sys_created_on>
+        <sys_id>c683308e006203107f4411b57f62ae38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 04:42:15</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>5da13196-85ca-4394-895e-3abf99a4f3cd</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>62230ab5e5e203107f44e64528572605</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 04:42:15</sys_created_on>
+        <sys_id>0283308e006203107f4411b57f62ae39</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 04:42:15</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>f6e318b3-be39-4c80-9fbb-9effff61d0b7</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>62230ab5e5e203107f44e64528572605</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 17:28:38</sys_created_on>
+        <sys_id>9cf2634e2ce203107f44dd952df7b629</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 17:28:38</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>830899f9-2a58-43b7-9b21-03bce24542a3</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>62230ab5e5e203107f44e64528572605</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{81626c17-ef19-4483-b17f-e8f6c84a2b4d.output.response}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 17:28:38</sys_created_on>
+        <sys_id>98f2634e2ce203107f44dd952df7b62a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 17:28:38</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>4d971b80-5754-4c27-a74f-1e87f3db612b</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=62230ab5e5e203107f44e64528572605"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_62230ab5e5e203107f44e64528572605</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 15:51:51</sys_created_on>
+        <sys_id>3033cab5e5e203107f44e64528572654</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 15:51:51</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_62230ab5e5e203107f44e64528572605</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 15:51:51</sys_created_on>
+        <sys_id>f433cab5e5e203107f44e64528572649</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 15:51:51</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_62230ab5e5e203107f44e64528572605"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_62230ab5e5e203107f44e64528572605"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>inspection_amp_ai_root_cause_analysis</internal_name>
+        <label_cache>[{"name":"Created_1.current.asset_6.asset_name","label":"Trigger - Record Created➛Inspection Record➛Asset➛Asset Name","reference":"","reference_display":"Asset Name","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_oilfield_asset_1","column_name":"asset_name","usedInstances":{"63226307-e06b-435f-92fa-a72d52999f25":["asset_name"]}},{"name":"98b9f42b-ecfc-4faf-bd7c-cf5418667922.record.asset_6","label":"4➛Inspection Record➛Asset","reference":"x_snc_sentinel_hse_oilfield_asset_1","reference_display":"Oilfield Asset","type":"reference","base_type":"reference","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"asset_6","usedInstances":{"ee06f748-3d93-4faa-b57d-4daa96bcaedd":["record"]}},{"name":"81626c17-ef19-4483-b17f-e8f6c84a2b4d.output.response","label":"2➛output➛response","type":"string","base_type":"string","usedInstances":{"642504ea-938f-449b-a6eb-bdf6283023ea":["condition"],"98b9f42b-ecfc-4faf-bd7c-cf5418667922":["findings_6"],"42faeb7b-ea31-4bb5-becb-d8cde5e9a095":["problem_description_7"],"f67cd2e7-7917-46e2-8b83-90a0c163a66f":[null],"bac6175a-c315-4dce-8fb3-e1d671b35233":["findings_6"]}},{"name":"Created_1.current.inspection_method_5","label":"Trigger - Record Created➛Inspection Record➛Inspection Method","reference":"","reference_display":"Inspection Method","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"inspection_method_5","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"sequence":100.0,"used":false,"label":"Visual Inspection","reference":false,"image":"","rawLabel":"Visual Inspection","selected":false,"missing":false,"value":"visual_inspection","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Visual Inspection"}}},{"sequence":200.0,"used":false,"label":"OGI Camera","reference":false,"image":"","rawLabel":"OGI Camera","selected":false,"missing":false,"value":"ogi_camera","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"OGI Camera"}}},{"sequence":300.0,"used":false,"label":"Drone Inspection","reference":false,"image":"","rawLabel":"Drone Inspection","selected":false,"missing":false,"value":"drone_inspection","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Drone Inspection"}}},{"sequence":400.0,"used":false,"label":"Ultrasonic Testing (UT)","reference":false,"image":"","rawLabel":"Ultrasonic Testing (UT)","selected":false,"missing":false,"value":"ultrasonic_testing_ut","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Ultrasonic Testing (UT)"}}},{"sequence":500.0,"used":false,"label":"Thermal Imaging","reference":false,"image":"","rawLabel":"Thermal Imaging","selected":false,"missing":false,"value":"thermal_imaging","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Thermal Imaging"}}},{"sequence":600.0,"used":false,"label":"Manual Inspection","reference":false,"image":"","rawLabel":"Manual Inspection","selected":false,"missing":false,"value":"manual_inspection","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Manual Inspection"}}}],"usedInstances":{"10c8934c-4578-4f64-a0fb-17fb64c43c7c":["condition"]}},{"name":"Created_1.run_start_date_time","label":"Trigger - Record Created➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"c881b655-d6b6-4486-b0c4-a2edadf2d79d":["scheduled_date_7"]},"attributes":{"test_input_hidden":"true"}},{"name":"Created_1.current","label":"Trigger - Record Created➛Inspection Record","reference":"x_snc_sentinel_hse_inspection","reference_display":"Inspection","type":"reference","base_type":"reference","usedInstances":{"70f4c89f-707f-4daf-9e8c-3a9b9f21ef9e":["record"],"c881b655-d6b6-4486-b0c4-a2edadf2d79d":["inspection_7"],"81626c17-ef19-4483-b17f-e8f6c84a2b4d":["inspection"],"98b9f42b-ecfc-4faf-bd7c-cf5418667922":["record"],"42faeb7b-ea31-4bb5-becb-d8cde5e9a095":["asset_7"],"bac6175a-c315-4dce-8fb3-e1d671b35233":["record"]},"attributes":{}},{"name":"Created_1.current.inspection_result_6","label":"Trigger - Record Created➛Inspection Record➛Inspection Result","reference":"","reference_display":"Inspection Result","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"inspection_result_6","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"sequence":-1.0,"used":false,"label":"Fail","reference":false,"image":"","rawLabel":"Fail","selected":false,"missing":false,"value":"fail_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Fail"}}},{"sequence":-1.0,"used":false,"label":"Obervation","reference":false,"image":"","rawLabel":"Obervation","selected":false,"missing":false,"value":"observation_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Obervation"}}},{"sequence":-1.0,"used":false,"label":"Pass","reference":false,"image":"","rawLabel":"Pass","selected":false,"missing":false,"value":"pass_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Pass"}}}],"usedInstances":{}},{"name":"Created_1.current.asset_6","label":"Trigger - Record Created➛Inspection Record➛Asset","reference":"x_snc_sentinel_hse_oilfield_asset_1","reference_display":"Oilfield Asset","type":"reference","base_type":"reference","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"asset_6","usedInstances":{"c881b655-d6b6-4486-b0c4-a2edadf2d79d":["asset_7"],"a08e451c-1435-44d5-9fbc-4f76064f7e6c":["record"],"fa80a933-4ea7-4be0-b70e-2882303c9348":[null],"63226307-e06b-435f-92fa-a72d52999f25":["record","asset_name"]}},{"name":"Created_1.current.leak_detected_6","label":"Trigger - Record Created➛Inspection Record➛Leak Detected","reference":"","reference_display":"Leak Detected","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"leak_detected_6","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"sequence":-1.0,"used":false,"label":"No","reference":false,"image":"","rawLabel":"No","selected":false,"missing":false,"value":"no_i","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"No"}}},{"sequence":-1.0,"used":false,"label":"Yes","reference":false,"image":"","rawLabel":"Yes","selected":false,"missing":false,"value":"yes_i","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Yes"}}}],"usedInstances":{}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Inspection Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"number","usedInstances":{"c881b655-d6b6-4486-b0c4-a2edadf2d79d":["inspection_7"],"fa80a933-4ea7-4be0-b70e-2882303c9348":[null],"f67cd2e7-7917-46e2-8b83-90a0c163a66f":[null]}}]</label_cache>
+        <master>true</master>
+        <name>OGI Inspection &amp; Maintenance Automation</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="OGI Inspection &amp; Maintenance Automation">62230ab5e5e203107f44e64528572605</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 16:05:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>83464a3de5e203107f44e64528572634</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 10:00:36</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=83464a3de5e203107f44e64528572634"/>
+    <sys_variable_value action="delete_multiple" query="document_key=83464a3de5e203107f44e64528572634"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=83464a3de5e203107f44e64528572634"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=83464a3de5e203107f44e64528572634^sys_idNOT IN03464a3de5e203107f44e64528572635"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>83464a3de5e203107f44e64528572634</id>
+        <name>Inspection &amp; AI Root Cause Analysis</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 16:05:23</sys_created_on>
+        <sys_id>03464a3de5e203107f44e64528572635</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 16:05:23</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=03464a3de5e203107f44e64528572635"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=83464a3de5e203107f44e64528572634^sys_idNOT IN43464a3de5e203107f44e64528572636,d7464a3de5e203107f44e64528572656"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="OGI Inspection &amp; Maintenance Automation">83464a3de5e203107f44e64528572634</model>
+        <model_id>83464a3de5e203107f44e64528572634</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_83464a3de5e203107f44e64528572634</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 16:05:23</sys_created_on>
+        <sys_id>43464a3de5e203107f44e64528572636</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 10:00:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=43464a3de5e203107f44e64528572636"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="OGI Inspection &amp; Maintenance Automation">83464a3de5e203107f44e64528572634</model>
+        <model_id>83464a3de5e203107f44e64528572634</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_83464a3de5e203107f44e64528572634</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 16:05:24</sys_created_on>
+        <sys_id>d7464a3de5e203107f44e64528572656</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 10:00:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d7464a3de5e203107f44e64528572656"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=83464a3de5e203107f44e64528572634"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=83464a3de5e203107f44e64528572634"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=83464a3de5e203107f44e64528572634^sys_idNOT IN53464a3de5e203107f44e6452857266c"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="OGI Inspection &amp; Maintenance Automation">83464a3de5e203107f44e64528572634</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 16:05:24</sys_created_on>
+        <sys_id>53464a3de5e203107f44e6452857266c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 16:11:29</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeAFdLHjOG/bJIsG2G5Qx9s+BKlAiaRNlKa8IqXEXeTfO9TFlnVx7EjZdV4CiKTJM4dnzgxz/93kyCfcvDBnyOfEHJhMKBIJxGfrFYFhpYc9gZZ6bokERiqM1uaFimIyMGkULmdkueJIwWKKuITBMMIkMi/sgZkgHpO7tbzBsBP8Pt0m39PMp+H7yZMi8CQRignCvYUkHhNyRQLFQgHrMJNwwvqvfPlNeS5YMI4jIsyL+4eBuUIRHKH08d8rU0xjCGiAJg6xAtd2HceynPOh7Z+5vu1gFxHLgg2rfFQwqwZatgGTJ0UEJnjDRY2xiCB8K/h6s2IBhGfsLNGTZP/B7ueWXkcJYA9INrf59HIysuFgEbKA3K5SMtKRDGc2GfJ4Kb5k+DWNhKKYq4JGGImBaUxWGrIGkSOid4vwcVoc+ImJNLp8kocB4psvpFTE/FgRqQmnjAP1XsaNDOMoRT+9vrydXnl/f5xd/n499abXd7PpzeXs+sp8TuPyvsV6xwxhjsXLwnne3P0nRri+QBEvfUAzMGUQsZX6CDJICuU9D7ZqvgwFZrlEKooOiim5q+gi+n2StqxWUQelEwth/3P9Z12+2eBxuj07QwgT1KJbn5Z0W468AZpqIKEc3T4F5yOHSHhoWT9JxLkxvVbDyxATfrXdzoTJ+RxUzcQqVpqtRySU9FToIYy9Eo96KWB6SdRZbM8vKjiKBfzA29xHXccpbRv+PjMJcO8hC+/Itzgj/QNYEi2oSk+A5fRzfsI0FkYI9wh/jCCOgCllFDZHb5ZonhMMG3Lw25Im6FdZ/vqDScnEvBREG4aUoRqEzekgNaMIOIMiO2J56DPF61eSVLitpPrReW7blPqEOtZYZ7ltuT61rbE1QhS7lhU4pTyvg2lFqSqCeZN8Py7bZSpVfoASqxTn4K1yrhwko2RXgwUJWiK5qVz2A83uCZqjoVXM0T3KHTeyzIavdtW5L7SeOwOEEwS/wIea5IH+SHn4CMbc3Rt9FPw7j8JY4Ko76SMMJoztCuOXnM5f384naRiR/Xh2V5ySQ24vpZA1EusevNGltj8hQ2KBJbrghv5oMvED5FA6PhsTx6544xZGI7Z34YkviC9pUm+bPzYKJ2nS2xHO2AFgzSWPBtjdH3NhNrpjNvc+fPBxQYQHUCOPa6er2eGcM0yKuX6zvXZ0ss3vrhlPzyfByB6PgzG8eCDj6ZD4yB46IzQZn7nno0rG16Dsg6kamPkh7yC5limQFjf4mk2d1sP+LWUriVK6HHWu4QKa3nQLlJ1ZKpz6lozUY8LI+BKKDzfbdcYdgXqYvo3fqJgfAkpfu/FDUfmhWtSaC0DyG4zvINEtawtnJ/c6qygq2Y218+uMDM9HE+o2+xGdNPnRFkw7zJPvRQ7Mn6Q1E5uakkP1nzSmUWsX8QoJV2RSbi/29D99kWL3TorzdqS4nXuuIhdbn6SvAfuO6l3ahPRY9DQE4oW07OVXoQETBpxpMGrk/8Ek2PDXhloQYJhDrw3nGxpMVxPfU2PqyDb6/qm4st6+Vvpg2Mhbs9OrahXd9Pu2JniMRiO3pdOeVN/WTYBewHvyNe7onEmaUnBvoTtu3+qejaWuJNldRRxYxHqNurmSdYu6sZa9FHX3KrXvPwMNKE60/jz8D4TEaMLgHwAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=83464a3de5e203107f44e64528572634^sys_idNOT IN7154efce2ce203107f44dd952df7b608,7d54efce2ce203107f44dd952df7b608,7954efce2ce203107f44dd952df7b609,3154efce2ce203107f44dd952df7b60a,b954efce2ce203107f44dd952df7b60b,da45e7822c2603107f44dd952df7b666"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Execute Skill">30468d977f921210f465c3b76d8665c1</action_type>
+        <action_type_parent display_value="Execute Skill">d88205df7f521210f465c3b76d866563</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>30468d977f921210f465c3b76d8665c1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="OGI Inspection &amp; Maintenance Automation">83464a3de5e203107f44e64528572634</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>10c8934c-4578-4f64-a0fb-17fb64c43c7c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 17:34:45</sys_created_on>
+        <sys_id>7154efce2ce203107f44dd952df7b608</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 17:34:45</sys_updated_on>
+        <ui_id>81626c17-ef19-4483-b17f-e8f6c84a2b4d</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7154efce2ce203107f44dd952df7b608"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="OGI Inspection &amp; Maintenance Automation">83464a3de5e203107f44e64528572634</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>642504ea-938f-449b-a6eb-bdf6283023ea</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 17:34:45</sys_created_on>
+        <sys_id>7d54efce2ce203107f44dd952df7b608</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 10:00:35</sys_updated_on>
+        <ui_id>98b9f42b-ecfc-4faf-bd7c-cf5418667922</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1W3U/bMBD/V6w8hyhpoWK8TTAYEh8STLwwGl3jC7XmOMF2ClnF/76zk7QZRQwkHoa2PtX3+bvz73y5XgaCB3vBNvI4+ZRMsnEyHo/ieLS7ncwm41ky4mNATIIwUFAgWWrMSs3pvABZO8Fyua8RLPI0ibJaa1T28ZH0XJhKQnPVmZEkmwvJSR/sXd+EQQWaIlrUwd7yieq1kCTMUJLpRY/pKUbbVO7My6wuCFcqeuFJ53nQadjxAWnIycFJ4jDAB4uKIwHJQRoMgwIUB1vqJtizuiYBFc3PlWxWFnOhbFtoAQ9G/KTM27Gzy5Eqy7omrI5p16BWnB+AhUuKnNlar/pVigxN2xOOOdTS7g9lrcF5ZUWpWhcLM9l7l7Iu1FnbkWAVYHAftSEQWLk6HfK2rPxyXt5f9CAPhfIt6UqUZQZydQJrtZjV1sFZBijR97iAqhLqNq10uRDemaAU0a2kQ5TL8p5yGnGrIsgc7oi6CtEhyQ+8+Aq0cEWcUhhyfgwD05h9CcasS6Eepne1Q9IW1pWQ+i74FqSeCc4506KynynVAjvgj2FH+tnOSwzLPq0JNYi5Jv5DalSWGkosFMp0Tt0UylToy9ocgOOh7m2j8Aqg/Sh88wR4Hng3DRuyk6EvO2sV3SzsvNss7H6kWejK+PDD8KcRiEcvPrIDJnnWmwH9JcIPQm+J0/T2T77XcTzmDZpUTHNqFFVteukRGObMWW/OSsXsHBkVgpbNwLSi86Njth6haLr+n2o0dGF9wByETCfTAohmqMAxSONdLTTy1sDRcgpiMJCpqYsCdNOHOEUu6mLL4AK1sA273cC4guWQ/g6N9RVGLolbNwVdN12eS9QlODalpLXIaFaYxgqE9oFcjpBlpeJEbwYsLyVd91ZdMQckF5kPMsgV+giqtCJvfARN5FoA7ayvl1+8riRueC/DLEJhos3H5/9l/c2X9bZt8IqZ7bfBoUDJzTND3K8CLCpXd9oO9ZN10CnZVadcfR69205IJrH/faDN8M98Jd38AiQlI0QcDAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7d54efce2ce203107f44dd952df7b608"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="OGI Inspection &amp; Maintenance Automation">83464a3de5e203107f44e64528572634</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>642504ea-938f-449b-a6eb-bdf6283023ea</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 17:34:45</sys_created_on>
+        <sys_id>7954efce2ce203107f44dd952df7b609</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 17:34:45</sys_updated_on>
+        <ui_id>42faeb7b-ea31-4bb5-becb-d8cde5e9a095</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTW/bMAz9K4HOjmHZrpPmNrQrdlhbYB26Q9MKskUnwmTZk+S2WZD/PsofadC1WDfsMmC5iXyk3nuimZstkYIsSEYhOjqmWZHQJImjKJ6nNM+SnMYi4QApCYjmFSDS8VwB6w4Bueeq9cFHZnXBLGgnNSi2tsAeavOV1UaAQZyQtlF8cz3Av2BucjnkirVUwoAmi5vbgDTcYGuHmcX2WeqtRBXPQSH0s2f6CnG3aV6MfTysnVz0iV7FIgoIPDrQApBIyZWFgFRcC+5qsyELZ1oMGODiUqvNHrGW2mFD4rGPVn7Ha+eRx5WAygroc/sjG6zqw+Upd/wKOxeuNQO0WNeyANt7IqDkrXInh7EecNk4Weu+pJM5VNeqrfRFbwnZNxhfBiMtPp6Axuv0zAcZ5dW6fvg0sjyTurNkSKq64Gp/4s4ZmbfO89kSUFBhI1bxppF6xRpT38uuGLlU4UrhISxV/YCXWrnSIS888RBt5eEZxk+78DU30qs4xzZYvAuI3dgTxa190oImsm+tZ9IrGzSw3gZfUhjZuHd4wT0MdHfB+AUIiI5fHSyaPw1SN/T2YPqRBDg2W7ZRlIjt9gRnwIFgNCxag3a53e4OVSP5ymvsOKDCp4I5zeKsoLMplPR4mqbzZJrTWTmFeZkV85THeSrCunVN60IDtqk18vY9ZW2k24yN1nK1ZrM7ZIN+4f2u3l+xHL/AJVksyYer95NzrvkKzJIEy15Hl0myWZnM0yyKII4SGs3KNKU0P5qVWcwhyjp4N00dHJ+A4bj0XfxBije22f28FP67+Ecu/ub6/PWUj+vzTIIS9oWxH3cnVOiFA9Z/Bs/255CcXA/JYYfSv7VDKdrif//QJu3F/fOL9OA/85WVevsDrsk9clYIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7954efce2ce203107f44dd952df7b609"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="OGI Inspection &amp; Maintenance Automation">83464a3de5e203107f44e64528572634</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>642504ea-938f-449b-a6eb-bdf6283023ea</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 17:34:45</sys_created_on>
+        <sys_id>3154efce2ce203107f44dd952df7b60a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 17:34:45</sys_updated_on>
+        <ui_id>63226307-e06b-435f-92fa-a72d52999f25</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXUsjMRT9K5LnMsy0WrRvYhEWXAVdfHE13CZ32rCZzGySqXZL//veTDK1qPgBsiDbt9yP3HNPz5ncrJmSbML2UebFUTEWo2I0Gub58HC/mI1Hs2IoR4BYsAEzUCFVWhS1lXRegm5DYL0+sQgeJS8y0VqLxmfgHHo+3myoTirXaFhdp3KKiIXSkurY5OZ2wBqwdLNHyybrJ6n3QtMwQ02llz22p1j9qglnWYu2Inxc9cGz1DlNmb1vU8pQU4BT5AOGDx6NRAJSgnY4YBUYCb62KzbxtqUALS8vjF5tKxbK+LhoBQ9O/aHJ+3moK5E2E4mE7ZEngmK4nIKHK7pZ+NZu+aqVQBc5kVhCq/3JbiwWXDRe1Sa2eJjpvrvWbWXOIyNse8HO/9E6AoFN2DMgj2uVV4v6/rIHeapMR0laUdcC9PYE3ls1a32As2aoseO4gqZRZs4bWy9V10xQqmyu6ZCVur6nmU7NTQYi4M6IVchOKT7twtdgVVjiO11DzZsBcyt3oklZj6sQh/x3G5DExdIKvGOho4B3SgjNwqrGH9OoJSbgm0ES/+zgNYWJo0dB7dz5aIAH7ozgjgYrg5oviM1a6VKhljwaoXhug+OQ+LAX3oG098KPTgEvI092eBY72+3dO4+JZIaDTzPD4VcyQ1rjy7vhLQ/kw1e/sjtK6mTvdvQfNR6yP9s8H8lXH4S7FOFWuV9c4xJ17Fqo+eIuljkPvnUxXAEJCA0EqTwz0T+c/DGfvoPN3qen4TvhXqC3NylWtLJHHul+YtSU3LtOye3L9WluLcZ59/tCnv1vHrDbv7gJgNu/CQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3154efce2ce203107f44dd952df7b60a"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="OGI Inspection &amp; Maintenance Automation">83464a3de5e203107f44e64528572634</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>642504ea-938f-449b-a6eb-bdf6283023ea</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 17:34:45</sys_created_on>
+        <sys_id>b954efce2ce203107f44dd952df7b60b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 17:34:45</sys_updated_on>
+        <ui_id>f67cd2e7-7917-46e2-8b83-90a0c163a66f</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b954efce2ce203107f44dd952df7b60b"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="OGI Inspection &amp; Maintenance Automation">83464a3de5e203107f44e64528572634</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>7e5d0d09-4e0c-4058-9c19-a354c5a9f8a0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 17:38:53</sys_created_on>
+        <sys_id>da45e7822c2603107f44dd952df7b666</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 17:38:53</sys_updated_on>
+        <ui_id>bac6175a-c315-4dce-8fb3-e1d671b35233</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K8jPbRQ3IZS+TVRISAwkmHjZUOTYN9SS42T+ALqo/303iVMiQAwkXtD65vvlc07uqX+2RAqyIimImB7TjCc0SRZxvFimtMiSgi5EwgAomRHNKsBKA7w2As/3TPku0LYnBpgDkdOIe2NAu90O80LaRrHtTSjDCN9IJTBPVj9vZ6RhBic6MGTVPku9F5JiBSgsvRoxPcfotk13FjX3FeLK5Rg8D53rkDk4W2MGmzo4NJ4ReHSgBSCQkikLM1IxLZirzZasnPEYQNLiUqvtvmIjtRuIVuzRyj94cxp3dSUgMx5E2B/zINAQLtfMsWuczJ03e71qycEOmggomVfuZBobCi4bJ2s9tDhWqLG7Vr7SF4MiZD9g8j28RRDQdDw75AOt8npTP1yNIE+l7iUJFFXNmdqfmHNGFt51cFoCCnqNK9Y0Ut/ljanvZd+MUKroTuEhKlX9gHdaeacjxjvcEarKolOMr/vwDTOyI/Edx2Dzbkbs1p4oZu0TFdQw/+07JAOxQCHvVeglyPtN6Jq5kY37hlfdQwC+m4WlLw7f2jB+/LRQk5lPi/+YW81zixdLDSrfoJpS2wZ6Wi8NcDbNfcwK7wA6WuFHvwCvAw9ueBE7n/YeXAyJ4IXDT/PC8it5IdD48mb4lwXixZt/spNN6rfeTta/RDWQms2zXz6OE9G2S5otMk6P5lDS43maLpN5QY/KOSzLjC9TtihSEdXeNd5FBmxTa0TyylPxiZM/5rN3qDH67FSCEvYVeUaTQYWUHOSDXM+MFpIHNyG5f3g+zW00i/vfF/Lcf/P+3P4FJd4OjnYJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=da45e7822c2603107f44dd952df7b666"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=83464a3de5e203107f44e64528572634"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=83464a3de5e203107f44e64528572634^sys_idNOT INdf464a3de5e203107f44e64528572666,3954efce2ce203107f44dd952df7b60e,d645e7822c2603107f44dd952df7b677"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f6464a3de5e203107f44e64528572601</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="OGI Inspection &amp; Maintenance Automation">83464a3de5e203107f44e64528572634</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 16:05:24</sys_created_on>
+        <sys_id>df464a3de5e203107f44e64528572666</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 10:00:35</sys_updated_on>
+        <ui_id>10c8934c-4578-4f64-a0fb-17fb64c43c7c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0PPxthOHda8lZTCoFthLX3ZiriW5ERMljx9JM1M/vuubMcJa8ZWuse9WUe6V+cc3YM7YoJvg3cP5so5udJk8eUpIVJHDL87oqERZEGY0Vx6aTTtgYRsQIW4gZ9culbB7vGIsLVU3IqxWwsWa7ywZNH9siU5FtQZ1Pkly9msmM+KLCveX+TVfFblBZ+BgBk2VFAJhUeXBxrvbnsk+S0/v2sj7ryVejWub8cu9wfQWB5Z5VlCxLMXmgvkU4NyIiENaA7e2N2EWAH8TqsjsJbaD4IbeHbyB15YlGU8WAuUyEY3piUdnRrg+ho8IJXAfLCTcUYy4QZzuKghKL88xYYDd22UOpR4qNSh2qjQ6E+DI2RqcPIwwSEJ0Ualkfqoo75fm+3nA8sbqXtXxk1lGKhpBR69q4KPfDoilGiwEW2gbdFR2lqzkX0xcmnSlcJFWiuzxUvjdKXAIvEUjYX0BvHrHn4EK6OKj9gGiweaFTjJaD+J2A5tEmSfELdzSwXOHUWiu/R7iBQHyaM4OvgTS5iVrb/Cmzdi1LFPXg72yUx33RLf2gtO85QFi674VGrXip49xVleG07L/f5ryLIZNytJGXaz8DIMb2n1uhRdQlmXeVaeT9HF/FyKzuTnldEp/hCd+G5/mZwsy/5H583RkY4OAz9q6y//h8l5ijEZ7py8ZtIhtYeIfTj8OeLGDodLslNoa+y3KOqI7X8CubRAkoMGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">8554afce2ce203107f44dd952df7b672</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="OGI Inspection &amp; Maintenance Automation">83464a3de5e203107f44e64528572634</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id>10c8934c-4578-4f64-a0fb-17fb64c43c7c</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 17:34:45</sys_created_on>
+        <sys_id>3954efce2ce203107f44dd952df7b60e</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 10:00:35</sys_updated_on>
+        <ui_id>642504ea-938f-449b-a6eb-bdf6283023ea</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXW/aMBT9K8jPIcoHpJS3ClapGlulUfWlqqIbxwGrjp3ZDpQh/vuukxDQyrRV2972Fh/n3nvOyT3KnqjaVrU1D+rGGL6SZPr07BEuHYbPeyKhZGRKqJI5t1zJtAE8sgFRuwt8zLmpBOweTwhdc5Fr1nWrQGONZZpM9z9c8RwLigCK8JqGNI6SOAqCaDIKsyTOwiiPgUGMDQVkTOCrsyONwaJBvJ/ys7vK4cZqLlfdedF1WR5BpXPHKgw8wl4tkzlDPgUIwzxSgszBKr3rEc0gv5fiBKy5tK3gEl4N/4YDo/HYvVgwlEg7N/pj2jnVwsUcLCCVmtpa98YpTplpzclZAbWws3OsfeG+clLbEguZOFYrUZfyc+sI6RucfZjaIAlWOaWOeqejWK7V9suR5S2XjSvdpVAURH8Ci95ltXV89oQJVmKjtISqQkfTSqsNb4qRS+mvBB78QqgtDnXb5QN1xH00FvxbxOcN/AiaOxWfsA0WtzQzMJymzSZiO7SJkYNHzM7MBBhzEonupl9rR7GV3IlLW39cCdW8sjc4ecM6HQfv7WKf7fR+PwmTKKHh1ZDhZg5Ho0k8zMKrYsgmRUInI4iyUe630fE1M5WS2PSwuPv4YcHgZbC0YGszHTSHOa4+tbhZb5Lyz+a8L3/XMC7GYTC+nL9Rcil/F5L3ztBFvwid++K/mbkgCP6H7o9Dx03aRqXT1gz/i5l7dgFrZ/ZeU26Q2oPD7o7/HHexw+Xi9BzaKv3iRJ2ww3cSzGRrvQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">e145a7822c2603107f44dd952df7b643</block>
+        <comment/>
+        <connected_to>642504ea-938f-449b-a6eb-bdf6283023ea</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="OGI Inspection &amp; Maintenance Automation">83464a3de5e203107f44e64528572634</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id>10c8934c-4578-4f64-a0fb-17fb64c43c7c</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 17:38:53</sys_created_on>
+        <sys_id>d645e7822c2603107f44dd952df7b677</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 10:00:36</sys_updated_on>
+        <ui_id>7e5d0d09-4e0c-4058-9c19-a354c5a9f8a0</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=83464a3de5e203107f44e64528572634^sys_idNOT IN5b83f08e006203107f4411b57f62ae7a,9f83f08e006203107f4411b57f62ae7a,3954efce2ce203107f44dd952df7b652,7d54efce2ce203107f44dd952df7b652"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>83464a3de5e203107f44e64528572634</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.asset_6}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 04:42:21</sys_created_on>
+        <sys_id>5b83f08e006203107f4411b57f62ae7a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 04:42:21</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>5da13196-85ca-4394-895e-3abf99a4f3cd</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>83464a3de5e203107f44e64528572634</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 04:42:21</sys_created_on>
+        <sys_id>9f83f08e006203107f4411b57f62ae7a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 04:42:21</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>f6e318b3-be39-4c80-9fbb-9effff61d0b7</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>83464a3de5e203107f44e64528572634</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 17:34:46</sys_created_on>
+        <sys_id>3954efce2ce203107f44dd952df7b652</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 17:34:46</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>830899f9-2a58-43b7-9b21-03bce24542a3</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>83464a3de5e203107f44e64528572634</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{81626c17-ef19-4483-b17f-e8f6c84a2b4d.output.response}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 17:34:46</sys_created_on>
+        <sys_id>7d54efce2ce203107f44dd952df7b652</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 17:34:46</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>4d971b80-5754-4c27-a74f-1e87f3db612b</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=83464a3de5e203107f44e64528572634"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_83464a3de5e203107f44e64528572634</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 16:05:24</sys_created_on>
+        <sys_id>13464a3de5e203107f44e64528572652</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 16:05:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_83464a3de5e203107f44e64528572634</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 16:05:24</sys_created_on>
+        <sys_id>db464a3de5e203107f44e6452857265c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 16:05:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_83464a3de5e203107f44e64528572634"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_83464a3de5e203107f44e64528572634"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>62230ab5e5e203107f44e64528572605</sys_id>
+        <latest_snapshot>83464a3de5e203107f44e64528572634</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch2-04-17-2026_04-29-2026_2044.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=62230ab5e5e203107f44e64528572605^sys_idNOT IN13464a3de5e203107f44e64528572680"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"13464a3de5e203107f44e64528572680","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id>62230ab5e5e203107f44e64528572605</plan_id>
+        <snapshot>fd5d335355aa43107f448ed3c97cb348</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 16:05:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>13464a3de5e203107f44e64528572680</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 10:00:38</sys_updated_on>
+        <trigger display_value="">fcc2e21f556e03107f448ed3c97cb311</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=62230ab5e5e203107f44e64528572605"/>
+</record_update>

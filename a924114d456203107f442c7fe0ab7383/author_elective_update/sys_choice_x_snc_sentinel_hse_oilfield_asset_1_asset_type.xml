@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="asset_type" table="x_snc_sentinel_hse_oilfield_asset_1" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>asset_type</element>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:22:28</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>asset_type</sys_name>
+            <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+            <sys_update_name>sys_choice_x_snc_sentinel_hse_oilfield_asset_1_asset_type</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:22:28</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Wellhead (Christmas Tree)</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>100</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:22:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:23:24</sys_updated_on>
+            <value>wellhead_christmas_tree</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Downhole Casing/Tubing</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>200</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:22:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:23:27</sys_updated_on>
+            <value>downhole_casing_tubing</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Separator Vessel (2-phase/3-phase)</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>300</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:23:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:23:31</sys_updated_on>
+            <value>separator_vessel</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Gas/Oil Manifold</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>400</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:23:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:24:31</sys_updated_on>
+            <value>gas_oil_manifold</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Wellhead Compressor (Upstream)</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>500</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:23:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:24:37</sys_updated_on>
+            <value>wellhead_compressor</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>EOR CO₂ Injection Line</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>600</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:24:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:24:41</sys_updated_on>
+            <value>eor_co2_injection_line</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cross-Country Transmission Pipeline</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>700</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:24:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:27:35</sys_updated_on>
+            <value>cross_country_transmission_pipeline</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Crude Oil Trunk Pipeline</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>800</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:25:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:27:39</sys_updated_on>
+            <value>crude_oil_trunk_pipeline</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>NGL Pipeline (Propane/Butane)</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>900</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:25:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:27:42</sys_updated_on>
+            <value>ngl_pipeline</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Atmospheric Storage Tank (Crude)</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>1000</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:25:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:27:47</sys_updated_on>
+            <value>atmospheric_storage_tank</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pressurized Storage Tank / Sphere (LPG)</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>1100</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:26:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:27:51</sys_updated_on>
+            <value>pressurized_storage_tank</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Compressor Station (Midstream)</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>1200</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:26:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:27:55</sys_updated_on>
+            <value>compressor_station</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pig Launcher/Receiver</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>1300</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:26:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:28:00</sys_updated_on>
+            <value>pig_launcher_receiver</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Metering Station</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>1400</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:27:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:28:04</sys_updated_on>
+            <value>metering_station</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Gas Dehydration Unit (Glycol)</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>1500</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:27:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:28:08</sys_updated_on>
+            <value>gas_dehydration_unit</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Rail/Truck Loading Terminal</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>1600</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:28:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:30:15</sys_updated_on>
+            <value>rail_truck_loading_terminal</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pressure Vessel (General, Midstream)</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>1700</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:28:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:30:20</sys_updated_on>
+            <value>pressure_vessel</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Atmospheric Distillation Column</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>1800</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:28:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:30:24</sys_updated_on>
+            <value>atmospheric_distillation_column</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Vacuum Distillation Column</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>1900</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:29:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:30:27</sys_updated_on>
+            <value>vacuum_distillation_column</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Fluid Catalytic Cracker (FCC) Reactor</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>2000</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:29:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:30:31</sys_updated_on>
+            <value>fluid_catalytic_cracker</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Hydrocracker Reactor</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>2100</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:29:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:30:38</sys_updated_on>
+            <value>hydrocracker_reactor</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Hydrotreater Unit</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>2200</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:30:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:30:41</sys_updated_on>
+            <value>hydrotreater_unit</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Sulfur Recovery Unit (Claus)</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>2300</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:30:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:31:03</sys_updated_on>
+            <value>sulfur_recovery_unit</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Alkylation Unit</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>2400</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:31:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:31:22</sys_updated_on>
+            <value>alkylation_unit</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Reformer (Catalytic)</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>2500</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:31:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:31:47</sys_updated_on>
+            <value>reformer_catalytic</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Boiler / Steam System</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>2600</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:31:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:32:08</sys_updated_on>
+            <value>boiler_steam_system</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>LPG Bottling Plant Vessel</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>2700</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:32:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:32:28</sys_updated_on>
+            <value>lpg_bottling_plant_vessel</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Flare Stack System</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>2800</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:32:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:32:47</sys_updated_on>
+            <value>flare_stack_system</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pressure Relief Valve (PRV) Header</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+            <sequence>2900</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 15:32:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 15:33:07</sys_updated_on>
+            <value>pressure_relief_valve_header</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

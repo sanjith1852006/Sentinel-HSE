@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_button_instance">
+    <sys_sg_button_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <button display_value="Start Work">97956f6ae4a603107f44b37c6b7588b4</button>
+        <color_theme/>
+        <description>Start the corrective work order</description>
+        <disable_offline>false</disable_offline>
+        <field_name/>
+        <icon display_value="Start Work Icon">47956f6ae4a603107f44b37c6b758861</icon>
+        <label>Start Work</label>
+        <location>top_icon</location>
+        <name>Start Work Instance</name>
+        <order>99</order>
+        <parent>c53d53a6e46603107f44b37c6b758828</parent>
+        <parent_table>sys_sg_form_screen</parent_table>
+        <sys_class_name>sys_sg_button_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 06:57:16</sys_created_on>
+        <sys_id>9f956f6ae4a603107f44b37c6b7588ba</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Start Work Instance</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_sg_button_instance_9f956f6ae4a603107f44b37c6b7588ba</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:40:01</sys_updated_on>
+        <table/>
+    </sys_sg_button_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=9f956f6ae4a603107f44b37c6b7588ba"/>
+</record_update>

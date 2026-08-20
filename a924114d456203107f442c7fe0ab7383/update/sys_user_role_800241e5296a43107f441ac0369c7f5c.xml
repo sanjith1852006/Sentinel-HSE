@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description/>
+        <elevated_privilege>false</elevated_privilege>
+        <federated_id>MHd1ehaiGB8X0/1NgR8p5rp/gd8celVs8DD5Ydabtaw=</federated_id>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_snc_sentinel_hse.gas_master_user</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>gas_master_user</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-06 16:28:30</sys_created_on>
+        <sys_id>800241e5296a43107f441ac0369c7f5c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_sentinel_hse.gas_master_user</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_user_role_800241e5296a43107f441ac0369c7f5c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-06 16:28:30</sys_updated_on>
+    </sys_user_role>
+</record_update>

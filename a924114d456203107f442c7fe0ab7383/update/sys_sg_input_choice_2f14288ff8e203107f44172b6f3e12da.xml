@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_input_choice">
+    <sys_sg_input_choice action="INSERT_OR_UPDATE">
+        <image_url/>
+        <input display_value="Severity">6714288ff8e203107f44172b6f3e12d7</input>
+        <label>Low</label>
+        <order>10</order>
+        <selected_image_url/>
+        <sys_class_name>sys_sg_input_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-11 06:08:51</sys_created_on>
+        <sys_id>2f14288ff8e203107f44172b6f3e12da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Low</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_sg_input_choice_2f14288ff8e203107f44172b6f3e12da</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-11 06:08:51</sys_updated_on>
+        <value>low</value>
+    </sys_sg_input_choice>
+</record_update>

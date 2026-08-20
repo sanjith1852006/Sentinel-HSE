@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m">
+    <sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <agent display_value="Sentinel HSE Sensor Risk Analyst">4459928ff82643107f44172b6f3e1235</agent>
+        <description>Retrieve sensor readings from the Sensor Reading table for analysis of pressure, temperature, flow rate, gas concentration, leak status, and sensor status.</description>
+        <display_mode>inline</display_mode>
+        <display_output>true</display_output>
+        <document_status/>
+        <entity>sn_aia_agent</entity>
+        <entity_id>4459928ff82643107f44172b6f3e1235</entity_id>
+        <execution_mode>copilot</execution_mode>
+        <inputs>[{"name":"sensor_reading","value":"","description":"Sensor reading record to analyze","mandatory":false},{"name":"crudInputs","value":{"operation":"lookup","table":{"value":"x_snc_sentinel_hse_sensor_reading","displayValue":"Sensor Reading"},"query":"sys_idISNOTEMPTY","returnFields":[{"name":"pressure","label":"Pressure","type":"decimal","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"pressure","sublabel":"pressure"},{"name":"temperature","label":"Temperature","type":"decimal","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"temperature","sublabel":"temperature"},{"name":"flow_rate","label":"Flow Rate","type":"decimal","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"flow_rate","sublabel":"flow_rate"},{"name":"gas_concentration","label":"Gas Concentration","type":"decimal","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"gas_concentration","sublabel":"gas_concentration"},{"name":"leak_status","label":"Leak Status","type":"choice","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"leak_status","sublabel":"leak_status"},{"name":"sensor_status","label":"Sensor Status","type":"choice","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"sensor_status","sublabel":"sensor_status"},{"name":"asset","label":"Asset","type":"reference","referenceTable":"x_snc_sentinel_hse_oilfield_asset_1","referenceTableDefaultField":"asset_name","referenceKey":null,"id":"asset","sublabel":"asset"},{"name":"reading_timestamp","label":"Reading Timestamp","type":"glide_date_time","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"reading_timestamp","sublabel":"reading_timestamp"},{"name":"gas_name","label":"Gas Name","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"gas_name","sublabel":"gas_name"},{"name":"tank_level","label":"Tank Level","type":"decimal","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"tank_level","sublabel":"tank_level"}],"limit":"1","orderBy":"sys_created_on","sortType":"z_to_a"},"description":"CRUD Input Variables. These are already pre-defined. Under no circumstances should you prompt the user for this information or attempt to change these values."}]</inputs>
+        <max_auto_executions>10</max_auto_executions>
+        <name>Get Sensor Reading</name>
+        <output_transformation_strategy>none</output_transformation_strategy>
+        <post_message>Sensor reading analysis completed.</post_message>
+        <post_processing_script/>
+        <pre_message>Analyzing sensor readings for HSE risk...</pre_message>
+        <pre_run>false</pre_run>
+        <requires_text_refined_message>false</requires_text_refined_message>
+        <requires_widget_transformation>true</requires_widget_transformation>
+        <should_display_refined_message>false</should_display_refined_message>
+        <sys_class_name>sn_aia_agent_tool_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-11 14:56:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>e6dc9647f86643107f44172b6f3e129b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Get Sensor Reading</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sn_aia_agent_tool_m2m_e6dc9647f86643107f44172b6f3e129b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-11 15:16:40</sys_updated_on>
+        <timeout/>
+        <tool display_value="Get Sensor Reading">eadc5647f86643107f44172b6f3e129c</tool>
+        <tool_attributes>{}</tool_attributes>
+        <transformation_instructions/>
+        <widgets>db0e858eff62b210f465ffffffffff2c</widgets>
+    </sn_aia_agent_tool_m2m>
+</record_update>

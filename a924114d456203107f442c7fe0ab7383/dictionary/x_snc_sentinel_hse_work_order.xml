@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="8e967361882603107f4468412c61461f" label="Work Order" max_length="40" name="x_snc_sentinel_hse_work_order" type="collection">
+        <element label="Maintenance Action" max_length="1000" name="maintenance_action_7" type="string"/>
+        <element label="Assigned To" max_length="32" name="assigned_to_7" reference="sys_user" type="reference"/>
+        <element choice="1" label="Work Order Type" mandatory="true" max_length="40" name="work_order_type_7" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Inspection Follow-up" value="inspection_follow-up_7"/>
+                <element inactive_on_update="false" label="Emergency Repair" value="emergency_repair_7"/>
+                <element inactive_on_update="false" label="Corrective Maintenance" value="corrective_maintenance_7"/>
+                <element inactive_on_update="false" label="Equipment Replacement" value="equipment_replacement_7"/>
+                <element inactive_on_update="false" label="Preventive Maintenance" value="preventive_maintenance_7"/>
+            </choice>
+        </element>
+        <element label="Scheduled Date" max_length="40" name="scheduled_date_7" type="glide_date_time"/>
+        <element label="Problem Description" max_length="1000" name="problem_description_7" type="string"/>
+        <element label="Completion Date" max_length="40" name="completion_date_7" type="glide_date_time"/>
+        <element label="GPS Coordinates" max_length="100" name="gps_coordinates" type="string"/>
+        <element label="Estimated Cost" max_length="20" name="estimated_cost_7" type="currency"/>
+        <element label="Inspection" max_length="32" name="inspection_7" reference="x_snc_sentinel_hse_inspection" type="reference"/>
+        <element default="No" label="PPE Verified" max_length="40" name="ppe_verified" type="boolean"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Safety Checklist Status" max_length="100" name="safety_checklist_status" type="string"/>
+        <element label="Asset" mandatory="true" max_length="32" name="asset_7" reference="x_snc_sentinel_hse_oilfield_asset_1" type="reference"/>
+        <element default="No" label="Hazards Identified" max_length="40" name="hazards_identified" type="boolean"/>
+        <element label="AI Maintenance Recommendation" max_length="1000" name="ai_maintenance_recommendation_7" type="string"/>
+        <element label="Completion Notes" max_length="4000" name="completion_notes" type="string"/>
+        <element choice="1" label="Status" max_length="40" name="status_7" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Assigned" value="assigned_7"/>
+                <element inactive_on_update="false" label="On Hold" value="on_hold_7"/>
+                <element inactive_on_update="false" label="Open" value="open_7"/>
+                <element inactive_on_update="false" label="In Progress" value="in_progress_7"/>
+                <element inactive_on_update="false" label="Completed" value="completed_7"/>
+            </choice>
+        </element>
+        <element label="HSE Incident " max_length="32" name="hse_incident" reference="x_snc_sentinel_hse_incident" type="reference"/>
+        <element label="Downtime (Hours)" max_length="40" name="downtime_hours_7" type="integer"/>
+        <element default="No" label="Safety Checklist Completed" max_length="40" name="safety_checklist_completed" type="boolean"/>
+        <element default="No" label="Work Area Safe" max_length="40" name="work_area_safe" type="boolean"/>
+        <element label="Asset Name" max_length="255" name="asset_name_work" type="string"/>
+        <element label="Actual Cost" max_length="20" name="actual_cost_7" type="currency"/>
+        <element choice="1" label="Priority" mandatory="true" max_length="40" name="priority_7" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Low" value="low_7"/>
+                <element inactive_on_update="false" label="Medium" value="medium_7"/>
+                <element inactive_on_update="false" label="High" value="high_7"/>
+                <element inactive_on_update="false" label="Critical" value="critical_7"/>
+            </choice>
+        </element>
+        <element label="AI Work Summary" max_length="1000" name="ai_work_summary_7" type="string"/>
+        <element default="No" label="Equipment Isolated" max_length="40" name="equipment_isolated" type="boolean"/>
+        <index name="index">
+            <element name="inspection_7"/>
+        </index>
+        <index name="index2">
+            <element name="assigned_to_7"/>
+        </index>
+        <index name="index3">
+            <element name="hse_incident"/>
+        </index>
+        <index name="index4">
+            <element name="asset_7"/>
+        </index>
+    </element>
+</database>

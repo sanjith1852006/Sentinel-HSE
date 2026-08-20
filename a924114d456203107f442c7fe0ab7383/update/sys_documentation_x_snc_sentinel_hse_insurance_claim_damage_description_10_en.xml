@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="damage_description_10" label="Approved Amount" language="en" table="x_snc_sentinel_hse_insurance_claim">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>damage_description_10</element>
+            <help/>
+            <hint/>
+            <label>Approved Amount</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_insurance_claim</name>
+            <plural>Approved Amounts</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 07:00:06</sys_created_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Approved Amount</sys_name>
+            <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_sentinel_hse_insurance_claim_damage_description_10_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 07:01:30</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

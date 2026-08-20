@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_version">
+    <sn_aia_version action="INSERT_OR_UPDATE">
+        <condition/>
+        <instructions>1. Fetch the details of the current HSE work order.
+
+2. Read the work description and completion notes provided by the technician or inspector.
+
+3. Review the available safety checklist information, including PPE verification, hazards identified, equipment isolation, and work area safety.
+
+4. Review available evidence such as uploaded photos, GPS/location information, and other completion details.
+
+5. Generate a concise and professional work completion summary using only the information available in the work order.
+
+6. Include the work performed, safety checks completed, important observations, and available evidence or findings.
+
+7. If any safety concern or incomplete safety information is present, clearly mention it in the summary.
+
+8. Do not invent, assume, or add information that is not available in the work order.
+
+9. Return the final summary as the AI Work Summary for the HSE work order.</instructions>
+        <state>published</state>
+        <sys_class_name>sn_aia_version</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:42:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>179b2176e46a43107f44b37c6b758838</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>V1</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sn_aia_version_179b2176e46a43107f44b37c6b758838</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:42:43</sys_updated_on>
+        <target_id>94ca6db2e46a43107f44b37c6b758854</target_id>
+        <target_table>sn_aia_agent</target_table>
+        <version_name>V1</version_name>
+        <version_number>1</version_number>
+    </sn_aia_version>
+</record_update>

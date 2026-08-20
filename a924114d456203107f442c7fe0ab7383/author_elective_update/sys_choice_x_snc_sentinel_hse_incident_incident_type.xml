@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="incident_type" table="x_snc_sentinel_hse_incident" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>incident_type</element>
+            <name>x_snc_sentinel_hse_incident</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:26:43</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>incident_type</sys_name>
+            <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+            <sys_update_name>sys_choice_x_snc_sentinel_hse_incident_incident_type</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:26:43</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>incident_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Corrosion Failure</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:30:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:30:24</sys_updated_on>
+            <value>corrosion_failure_5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>incident_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Environmental Spill</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:30:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:30:51</sys_updated_on>
+            <value>environmental_spill_5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>incident_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Equipment Failure</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:29:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:29:32</sys_updated_on>
+            <value>equipment_failure_5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>incident_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Explosion</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:27:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:27:49</sys_updated_on>
+            <value>explosion_5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>incident_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Fire</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:27:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:27:27</sys_updated_on>
+            <value>fire_5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>incident_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Gas Leak</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:26:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:27:07</sys_updated_on>
+            <value>gas_leak_5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>incident_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Near Miss</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:31:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:31:15</sys_updated_on>
+            <value>near_miss_5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>incident_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pipeline Leak</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:29:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:29:59</sys_updated_on>
+            <value>pipeline_leak_5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>incident_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pressure Failure</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:28:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:28:22</sys_updated_on>
+            <value>pressure_failure_5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>incident_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Toxic Gas Exposure</label>
+            <language>en</language>
+            <name>x_snc_sentinel_hse_incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:28:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:29:02</sys_updated_on>
+            <value>toxic_gas_exposure_5</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

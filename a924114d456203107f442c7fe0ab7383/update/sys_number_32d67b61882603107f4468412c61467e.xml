@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_snc_sentinel_hse_work_order">x_snc_sentinel_hse_work_order</category>
+        <maximum_digits>6</maximum_digits>
+        <number>1</number>
+        <prefix>WOR</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 05:38:42</sys_created_on>
+        <sys_id>32d67b61882603107f4468412c61467e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WOR</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_number_32d67b61882603107f4468412c61467e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 05:38:42</sys_updated_on>
+    </sys_number>
+</record_update>

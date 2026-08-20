@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sys_suggestion_reader_sys_suggestion_reader_group">
+    <m2m_sys_suggestion_reader_sys_suggestion_reader_group action="DELETE">
+        <order>200</order>
+        <reader_requested_fields/>
+        <reader_searchable_fields/>
+        <sys_class_name>m2m_sys_suggestion_reader_sys_suggestion_reader_group</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:53:57</sys_created_on>
+        <sys_id>3f2ea9bae46a43107f44b37c6b7588c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_suggestion_reader_group_id display_value="User History Reader Group for Now Assist in Virtual Agent - 1">bb2ea9bae46a43107f44b37c6b7588c3</sys_suggestion_reader_group_id>
+        <sys_suggestion_reader_id display_value="User History and Click Reader">f8495b9077210110be280d892c5a9986</sys_suggestion_reader_id>
+        <sys_update_name>m2m_sys_suggestion_reader_sys_suggestion_reader_group_3f2ea9bae46a43107f44b37c6b7588c8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:53:57</sys_updated_on>
+    </m2m_sys_suggestion_reader_sys_suggestion_reader_group>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</application>
+        <file_path/>
+        <instance_id>17b1043093560750fb38f8284dba101a</instance_id>
+        <instance_name>dlt-hck-8017-0027</instance_name>
+        <name>m2m_sys_suggestion_reader_sys_suggestion_reader_group_3f2ea9bae46a43107f44b37c6b7588c8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sys_suggestion_reader_sys_suggestion_reader_group"><m2m_sys_suggestion_reader_sys_suggestion_reader_group action="INSERT_OR_UPDATE"><order>200</order><reader_requested_fields/><reader_searchable_fields/><sys_class_name>m2m_sys_suggestion_reader_sys_suggestion_reader_group</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-10 16:53:57</sys_created_on><sys_id>3f2ea9bae46a43107f44b37c6b7588c8</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package><sys_policy/><sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope><sys_suggestion_reader_group_id display_value="User History Reader Group for Now Assist in Virtual Agent - 1">bb2ea9bae46a43107f44b37c6b7588c3</sys_suggestion_reader_group_id><sys_suggestion_reader_id display_value="User History and Click Reader">f8495b9077210110be280d892c5a9986</sys_suggestion_reader_id><sys_update_name>m2m_sys_suggestion_reader_sys_suggestion_reader_group_3f2ea9bae46a43107f44b37c6b7588c8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-10 16:53:57</sys_updated_on></m2m_sys_suggestion_reader_sys_suggestion_reader_group></record_update>]]></payload>
+        <payload_hash>1531474510</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>6124114d456203107f442c7fe0ab7389</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:53:57</sys_created_on>
+        <sys_id>7f2ea9bae46a43107f44b37c6b7588e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19fec9862b00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:53:57</sys_updated_on>
+        <type>Suggestion Reader and Suggestion Reader </type>
+        <update_guid>732ea9baaa6a4310ce108dd01a31cee3</update_guid>
+        <update_guid_history>732ea9baaa6a4310ce108dd01a31cee3:1531474510</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">df81b5b2e4aa43107f44b37c6b7588a1</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 17:08:40</sys_created_on>
+        <sys_db_object display_value="" name="m2m_sys_suggestion_reader_sys_suggestion_reader_group">m2m_sys_suggestion_reader_sys_suggestion_reader_group</sys_db_object>
+        <sys_id>5e16480406ae40bbaef51d9addf4cda1</sys_id>
+        <sys_metadata>3f2ea9bae46a43107f44b37c6b7588c8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_scope_delete display_value="">00a898291b4446e4800f9c59a3050f44</sys_scope_delete>
+        <sys_update_name>m2m_sys_suggestion_reader_sys_suggestion_reader_group_3f2ea9bae46a43107f44b37c6b7588c8</sys_update_name>
+        <sys_update_version display_value="m2m_sys_suggestion_reader_sys_suggestion_reader_group_3f2ea9bae46a43107f44b37c6b7588c8">7f2ea9bae46a43107f44b37c6b7588e3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 17:08:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

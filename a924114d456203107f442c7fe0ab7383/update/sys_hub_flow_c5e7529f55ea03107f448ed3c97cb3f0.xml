@@ -1,0 +1,1196 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=822000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>insurance_claim_automation</internal_name>
+        <label_cache>[{"name":"Created or Updated_1.current.severity_5","label":"Trigger - Record Created or Updated➛HSE Incident Record➛Severity","reference":"","reference_display":"Severity","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_incident","column_name":"severity_5","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"sequence":-1.0,"used":false,"label":"Critical","reference":false,"image":"","rawLabel":"Critical","selected":false,"missing":false,"value":"critical_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Critical"}}},{"sequence":-1.0,"used":false,"label":"High","reference":false,"image":"","rawLabel":"High","selected":false,"missing":false,"value":"high_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"High"}}},{"sequence":-1.0,"used":false,"label":"Low","reference":false,"image":"","rawLabel":"Low","selected":false,"missing":false,"value":"low_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Low"}}},{"sequence":-1.0,"used":false,"label":"Medium","reference":false,"image":"","rawLabel":"Medium","selected":false,"missing":false,"value":"medium_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Medium"}}}],"usedInstances":{"22113864-0bd5-4d1d-b79a-74cd0783b17e":["condition"],"87780be4-e5ad-4550-8ec8-79b2777f5682":[null]}},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛HSE Incident Record","reference":"x_snc_sentinel_hse_incident","reference_display":"HSE Incident","type":"reference","base_type":"reference","usedInstances":{"8dcee331-e2ee-4f81-b0b7-fdcc737721e4":["hse_incident_10"]},"attributes":{}},{"name":"Created or Updated_1.current.field_name_5","label":"Trigger - Record Created or Updated➛HSE Incident Record➛Asset","reference":"x_snc_sentinel_hse_oilfield_asset_1","reference_display":"Oilfield Asset","type":"reference","base_type":"reference","parent_table_name":"x_snc_sentinel_hse_incident","column_name":"field_name_5","usedInstances":{"8dcee331-e2ee-4f81-b0b7-fdcc737721e4":["asset_10"],"87780be4-e5ad-4550-8ec8-79b2777f5682":[null]}},{"name":"Created or Updated_1.current.asset_name_asset","label":"Trigger - Record Created or Updated➛HSE Incident Record➛Asset Name","reference":"","reference_display":"Asset Name","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_incident","column_name":"asset_name_asset","usedInstances":{"de20722c-6435-436d-8163-68a23130f522":["ah_subject"]}},{"name":"Created or Updated_1.current.immediate_action_5","label":"Trigger - Record Created or Updated➛HSE Incident Record➛Immediate Action","reference":"","reference_display":"Immediate Action","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_incident","column_name":"immediate_action_5","usedInstances":{"8dcee331-e2ee-4f81-b0b7-fdcc737721e4":["damage_description"]}},{"name":"Created or Updated_1.current.number","label":"Trigger - Record Created or Updated➛HSE Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_incident","column_name":"number","usedInstances":{"87780be4-e5ad-4550-8ec8-79b2777f5682":["ah_subject",null]}},{"name":"Created or Updated_1.current.incident_type","label":"Trigger - Record Created or Updated➛HSE Incident Record➛Incident Type","reference":"","reference_display":"Incident Type","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_incident","column_name":"incident_type","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"sequence":-1.0,"used":false,"label":"Corrosion Failure","reference":false,"image":"","rawLabel":"Corrosion Failure","selected":false,"missing":false,"value":"corrosion_failure_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Corrosion Failure"}}},{"sequence":-1.0,"used":false,"label":"Environmental Spill","reference":false,"image":"","rawLabel":"Environmental Spill","selected":false,"missing":false,"value":"environmental_spill_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Environmental Spill"}}},{"sequence":-1.0,"used":false,"label":"Equipment Failure","reference":false,"image":"","rawLabel":"Equipment Failure","selected":false,"missing":false,"value":"equipment_failure_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Equipment Failure"}}},{"sequence":-1.0,"used":false,"label":"Explosion","reference":false,"image":"","rawLabel":"Explosion","selected":false,"missing":false,"value":"explosion_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Explosion"}}},{"sequence":-1.0,"used":false,"label":"Fire","reference":false,"image":"","rawLabel":"Fire","selected":false,"missing":false,"value":"fire_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Fire"}}},{"sequence":-1.0,"used":false,"label":"Gas Leak","reference":false,"image":"","rawLabel":"Gas Leak","selected":false,"missing":false,"value":"gas_leak_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Gas Leak"}}},{"sequence":-1.0,"used":false,"label":"Near Miss","reference":false,"image":"","rawLabel":"Near Miss","selected":false,"missing":false,"value":"near_miss_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Near Miss"}}},{"sequence":-1.0,"used":false,"label":"Pipeline Leak","reference":false,"image":"","rawLabel":"Pipeline Leak","selected":false,"missing":false,"value":"pipeline_leak_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Pipeline Leak"}}},{"sequence":-1.0,"used":false,"label":"Pressure Failure","reference":false,"image":"","rawLabel":"Pressure Failure","selected":false,"missing":false,"value":"pressure_failure_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Pressure Failure"}}},{"sequence":-1.0,"used":false,"label":"Toxic Gas Exposure","reference":false,"image":"","rawLabel":"Toxic Gas Exposure","selected":false,"missing":false,"value":"toxic_gas_exposure_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Toxic Gas Exposure"}}}],"usedInstances":{"87780be4-e5ad-4550-8ec8-79b2777f5682":[null]}}]</label_cache>
+        <master_snapshot>390bded3552e03107f448ed3c97cb34f</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Insurance Claim Automation</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>4e0bded3552e03107f448ed3c97cb3c3</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:13:08</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c5e7529f55ea03107f448ed3c97cb3f0</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>Insurance Claim Automation</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_hub_flow_c5e7529f55ea03107f448ed3c97cb3f0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:52</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>560b1217552e03107f448ed3c97cb319</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=c5e7529f55ea03107f448ed3c97cb3f0"/>
+    <sys_variable_value action="delete_multiple" query="document_key=c5e7529f55ea03107f448ed3c97cb3f0"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_snc_sentinel_hse_incident">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4e0bded3552e03107f448ed3c97cb3c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:52</sys_updated_on>
+        <table>x_snc_sentinel_hse_incident</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>c5e7529f55ea03107f448ed3c97cb3f0</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:52</sys_created_on>
+        <sys_id>4e0bded3552e03107f448ed3c97cb3c4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:52</sys_updated_on>
+        <trigger display_value="">4e0bded3552e03107f448ed3c97cb3c3</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=c5e7529f55ea03107f448ed3c97cb3f0^sys_idNOT IN4e0bded3552e03107f448ed3c97cb3c4"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=c5e7529f55ea03107f448ed3c97cb3f0"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=c5e7529f55ea03107f448ed3c97cb3f0^sys_idNOT IN85e7d29f55ea03107f448ed3c97cb30f"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>c5e7529f55ea03107f448ed3c97cb3f0</id>
+        <name>Insurance Claim Automation</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:13:08</sys_created_on>
+        <sys_id>85e7d29f55ea03107f448ed3c97cb30f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:13:08</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=85e7d29f55ea03107f448ed3c97cb30f"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=c5e7529f55ea03107f448ed3c97cb3f0^sys_idNOT IN64f7169f55ea03107f448ed3c97cb3dc,a0f7569f55ea03107f448ed3c97cb31d,fcf7569f55ea03107f448ed3c97cb327"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Insurance Claim Automation">c5e7529f55ea03107f448ed3c97cb3f0</model>
+        <model_id>c5e7529f55ea03107f448ed3c97cb3f0</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_c5e7529f55ea03107f448ed3c97cb3f0</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:13:22</sys_created_on>
+        <sys_id>64f7169f55ea03107f448ed3c97cb3dc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=64f7169f55ea03107f448ed3c97cb3dc"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Insurance Claim Automation">c5e7529f55ea03107f448ed3c97cb3f0</model>
+        <model_id>c5e7529f55ea03107f448ed3c97cb3f0</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_c5e7529f55ea03107f448ed3c97cb3f0</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:13:23</sys_created_on>
+        <sys_id>a0f7569f55ea03107f448ed3c97cb31d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a0f7569f55ea03107f448ed3c97cb31d"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Insurance Claim Automation">c5e7529f55ea03107f448ed3c97cb3f0</model>
+        <model_id>c5e7529f55ea03107f448ed3c97cb3f0</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_c5e7529f55ea03107f448ed3c97cb3f0</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:13:23</sys_created_on>
+        <sys_id>fcf7569f55ea03107f448ed3c97cb327</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:13:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=fcf7569f55ea03107f448ed3c97cb327"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=c5e7529f55ea03107f448ed3c97cb3f0"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c5e7529f55ea03107f448ed3c97cb3f0"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=c5e7529f55ea03107f448ed3c97cb3f0^sys_idNOT IN04f7d29f55ea03107f448ed3c97cb353"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Insurance Claim Automation">c5e7529f55ea03107f448ed3c97cb3f0</flow>
+        <generation_source/>
+        <name>Created or Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:13:21</sys_created_on>
+        <sys_id>04f7d29f55ea03107f448ed3c97cb353</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:50</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=c5e7529f55ea03107f448ed3c97cb3f0^sys_idNOT INb42856d355ea03107f448ed3c97cb39a,c60a9293552e03107f448ed3c97cb374"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Insurance Claim Automation">c5e7529f55ea03107f448ed3c97cb3f0</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>22113864-0bd5-4d1d-b79a-74cd0783b17e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:14:12</sys_created_on>
+        <sys_id>b42856d355ea03107f448ed3c97cb39a</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:38:07</sys_updated_on>
+        <ui_id>8dcee331-e2ee-4f81-b0b7-fdcc737721e4</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/91VTW/bMAz9K4HOhmEnbdDmNqQoMGBrgXXLpWsFWqITAbLs6aNtFuS/j7KcNOgarAN26XKKyEfyPYqibzdMSTZj0xKL0/NyKiblZDIuivHZSVlNJ1U5lhNAPGEZM9AgIT1UGnl/yNgD6BCNT9wZwR0arwxqvnLIlXHBghHIhQbVEFgq12lYL4aYjzvAaD4AxEppadGw2e1dxjqwVMSjZbPNC9dbKWuoUBP0a+R8RIJfd6/aPh3Gjq6So7Uy8ikyhk8ejUQiUoN2mLEGjATf2jWbeRvIYBHktdHrPWKljKeELGKfnPpJZc+KiKuRlAlMvv2RD/1K5voCPNxQZuGDHaBi1SqBLvVEYg1B+/mhLQGuO69ak0J6mUN0q0NjrlJL2D7B7nrIEugaJXZRZ2Q+yKhvVu3jlx3LS2X6lgxO3QrQ+xN4b1UVfOSzYaixoUS8ga5TZsk72z6oPpi4NPlS0yGvdftIRZ1amhxEJJ5TWyG/JPtFb16AVVHFZ0pDwduMubWjEXLuWQs1kf8IkUlSNmjgqQ0xRFjV+Q9U4AEHutts9xYkFudHB6usngepH3938A7S4AvVFyuL76EoJnKzmdMseJSj1o6+dTL+5WUugqUO+u32nqjjW+F5rVDLflD5KcX2j4s7Dz64fQoXqkb5Pq64l9DAMl5k0kwdfVMd1TQoFRl5uoZY7fdH/P8L/sul9OfZ2S2ly6jLvTJMu42EDXWa6KTherGVBudoMTiHzVT+q81UTov+9472UxL37tfTwZfoyKK6+wUVxDsztgcAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b42856d355ea03107f448ed3c97cb39a"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Insurance Claim Automation">c5e7529f55ea03107f448ed3c97cb3f0</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>22113864-0bd5-4d1d-b79a-74cd0783b17e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:22:29</sys_created_on>
+        <sys_id>c60a9293552e03107f448ed3c97cb374</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:38:07</sys_updated_on>
+        <ui_id>87780be4-e5ad-4550-8ec8-79b2777f5682</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c60a9293552e03107f448ed3c97cb374"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=c5e7529f55ea03107f448ed3c97cb3f0"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=c5e7529f55ea03107f448ed3c97cb3f0^sys_idNOT IN7e08d69f55ea03107f448ed3c97cb314"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">6d0bded3552e03107f448ed3c97cb311</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Insurance Claim Automation">c5e7529f55ea03107f448ed3c97cb3f0</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:13:48</sys_created_on>
+        <sys_id>7e08d69f55ea03107f448ed3c97cb314</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:50</sys_updated_on>
+        <ui_id>22113864-0bd5-4d1d-b79a-74cd0783b17e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXW/TMBT9K5WfoygfS8X6Ng1NQoJNsLEXGNaN7bQWjh1sp12p+t+5zkdbsU50ExIvvMXHvr7nHN+jbIhpfdN6d2cunJNzTWZfHiIidcDwe0MkJzNSJVCl5yxleTbNsyTJ3pyl5TQv04znICAnEdFQCzzJjObSS6NpB0RkCaoNG/jJpWsUrO/3CFtIxa0YujZgscYLS2ab37b8uhFUQSkUFt56K/Ucy0/lNhZejuQm7zvkedahH+Ju7GQsD7TSJCLi0QvNBbauQDkRkRo0B2/seodYAfxGqz2wkNr3imt4dPIn3p0VRThYCdTIBjt2SzpYNbpkJBM3TSDYIx5KNVpoVFvr615HMFlU0Cp/YHLr8D7RBNKBxUCpul2Y1aex4ZXUncBhUxkGarcCjzaUrRcuPIxQosaLaA1Ng+bQxpql7IqRSx3PFS7iSpkVNg0TFQMLxGP0COIrxN928D1YGVR8wGuwuKdZgpOMdtOH13mLEradLfRHGwj1AgcptHcDDzhmZeMvsM9SDKy30TC651BURZoUx8fjbHpkCA6mdrO5xMf0gk+MnXxuePikacxai7b52ImlsNKvabHdfm2TJOfIxEs0jxbfrj++uHoh5wtaPI3Kv6LxN/J5wgM8yefxR3kmlNkfQhnG6MRMJknyP5SHoZSO9uEatHXNX53JhxCsvoPr54YLJh0SuQvYu/GvEzbWOACSHUIrY78HCXts+wuxrCNPvwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=c5e7529f55ea03107f448ed3c97cb3f0^sys_idNOT IN9afad6d3552e03107f448ed3c97cb3bb,d2fad6d3552e03107f448ed3c97cb3bc,1afad6d3552e03107f448ed3c97cb3bc,5efad6d3552e03107f448ed3c97cb3bc"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>c5e7529f55ea03107f448ed3c97cb3f0</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.field_name_5}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:36</sys_created_on>
+        <sys_id>9afad6d3552e03107f448ed3c97cb3bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:36</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>ca4f97e3-cb88-4430-84be-103cdbc114ac</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>c5e7529f55ea03107f448ed3c97cb3f0</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:36</sys_created_on>
+        <sys_id>d2fad6d3552e03107f448ed3c97cb3bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:36</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>7029c712-8038-4ccc-b79c-0722d26a0014</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>c5e7529f55ea03107f448ed3c97cb3f0</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.severity_5}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:36</sys_created_on>
+        <sys_id>1afad6d3552e03107f448ed3c97cb3bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:36</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>74afe41b-3204-4a6a-8220-4ce987b3b5a6</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>c5e7529f55ea03107f448ed3c97cb3f0</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.incident_type}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:36</sys_created_on>
+        <sys_id>5efad6d3552e03107f448ed3c97cb3bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:36</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>38b32cd2-f1d7-4313-9fee-d64805d40255</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=c5e7529f55ea03107f448ed3c97cb3f0"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c5e7529f55ea03107f448ed3c97cb3f0</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:13:23</sys_created_on>
+        <sys_id>28f7569f55ea03107f448ed3c97cb317</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:13:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c5e7529f55ea03107f448ed3c97cb3f0</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:13:23</sys_created_on>
+        <sys_id>3cf7569f55ea03107f448ed3c97cb32e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:13:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c5e7529f55ea03107f448ed3c97cb3f0</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:13:23</sys_created_on>
+        <sys_id>78f7569f55ea03107f448ed3c97cb323</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:13:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_c5e7529f55ea03107f448ed3c97cb3f0"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_c5e7529f55ea03107f448ed3c97cb3f0"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>insurance_claim_automation</internal_name>
+        <label_cache>[{"name":"Created or Updated_1.current.severity_5","label":"Trigger - Record Created or Updated➛HSE Incident Record➛Severity","reference":"","reference_display":"Severity","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_incident","column_name":"severity_5","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"sequence":-1.0,"used":false,"label":"Critical","reference":false,"image":"","rawLabel":"Critical","selected":false,"missing":false,"value":"critical_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Critical"}}},{"sequence":-1.0,"used":false,"label":"High","reference":false,"image":"","rawLabel":"High","selected":false,"missing":false,"value":"high_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"High"}}},{"sequence":-1.0,"used":false,"label":"Low","reference":false,"image":"","rawLabel":"Low","selected":false,"missing":false,"value":"low_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Low"}}},{"sequence":-1.0,"used":false,"label":"Medium","reference":false,"image":"","rawLabel":"Medium","selected":false,"missing":false,"value":"medium_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Medium"}}}],"usedInstances":{"22113864-0bd5-4d1d-b79a-74cd0783b17e":["condition"],"87780be4-e5ad-4550-8ec8-79b2777f5682":[null]}},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛HSE Incident Record","reference":"x_snc_sentinel_hse_incident","reference_display":"HSE Incident","type":"reference","base_type":"reference","usedInstances":{"8dcee331-e2ee-4f81-b0b7-fdcc737721e4":["hse_incident_10"]},"attributes":{}},{"name":"Created or Updated_1.current.field_name_5","label":"Trigger - Record Created or Updated➛HSE Incident Record➛Asset","reference":"x_snc_sentinel_hse_oilfield_asset_1","reference_display":"Oilfield Asset","type":"reference","base_type":"reference","parent_table_name":"x_snc_sentinel_hse_incident","column_name":"field_name_5","usedInstances":{"8dcee331-e2ee-4f81-b0b7-fdcc737721e4":["asset_10"],"87780be4-e5ad-4550-8ec8-79b2777f5682":[null]}},{"name":"Created or Updated_1.current.asset_name_asset","label":"Trigger - Record Created or Updated➛HSE Incident Record➛Asset Name","reference":"","reference_display":"Asset Name","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_incident","column_name":"asset_name_asset","usedInstances":{"de20722c-6435-436d-8163-68a23130f522":["ah_subject"]}},{"name":"Created or Updated_1.current.immediate_action_5","label":"Trigger - Record Created or Updated➛HSE Incident Record➛Immediate Action","reference":"","reference_display":"Immediate Action","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_incident","column_name":"immediate_action_5","usedInstances":{"8dcee331-e2ee-4f81-b0b7-fdcc737721e4":["damage_description"]}},{"name":"Created or Updated_1.current.number","label":"Trigger - Record Created or Updated➛HSE Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_incident","column_name":"number","usedInstances":{"87780be4-e5ad-4550-8ec8-79b2777f5682":["ah_subject",null]}},{"name":"Created or Updated_1.current.incident_type","label":"Trigger - Record Created or Updated➛HSE Incident Record➛Incident Type","reference":"","reference_display":"Incident Type","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_incident","column_name":"incident_type","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"sequence":-1.0,"used":false,"label":"Corrosion Failure","reference":false,"image":"","rawLabel":"Corrosion Failure","selected":false,"missing":false,"value":"corrosion_failure_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Corrosion Failure"}}},{"sequence":-1.0,"used":false,"label":"Environmental Spill","reference":false,"image":"","rawLabel":"Environmental Spill","selected":false,"missing":false,"value":"environmental_spill_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Environmental Spill"}}},{"sequence":-1.0,"used":false,"label":"Equipment Failure","reference":false,"image":"","rawLabel":"Equipment Failure","selected":false,"missing":false,"value":"equipment_failure_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Equipment Failure"}}},{"sequence":-1.0,"used":false,"label":"Explosion","reference":false,"image":"","rawLabel":"Explosion","selected":false,"missing":false,"value":"explosion_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Explosion"}}},{"sequence":-1.0,"used":false,"label":"Fire","reference":false,"image":"","rawLabel":"Fire","selected":false,"missing":false,"value":"fire_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Fire"}}},{"sequence":-1.0,"used":false,"label":"Gas Leak","reference":false,"image":"","rawLabel":"Gas Leak","selected":false,"missing":false,"value":"gas_leak_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Gas Leak"}}},{"sequence":-1.0,"used":false,"label":"Near Miss","reference":false,"image":"","rawLabel":"Near Miss","selected":false,"missing":false,"value":"near_miss_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Near Miss"}}},{"sequence":-1.0,"used":false,"label":"Pipeline Leak","reference":false,"image":"","rawLabel":"Pipeline Leak","selected":false,"missing":false,"value":"pipeline_leak_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Pipeline Leak"}}},{"sequence":-1.0,"used":false,"label":"Pressure Failure","reference":false,"image":"","rawLabel":"Pressure Failure","selected":false,"missing":false,"value":"pressure_failure_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Pressure Failure"}}},{"sequence":-1.0,"used":false,"label":"Toxic Gas Exposure","reference":false,"image":"","rawLabel":"Toxic Gas Exposure","selected":false,"missing":false,"value":"toxic_gas_exposure_5","parameters":{"name":"x_snc_sentinel_hse_incident","dependent_values":[""],"dependent_values_map":{"":"Toxic Gas Exposure"}}}],"usedInstances":{"87780be4-e5ad-4550-8ec8-79b2777f5682":[null]}}]</label_cache>
+        <master>true</master>
+        <name>Insurance Claim Automation</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Insurance Claim Automation">c5e7529f55ea03107f448ed3c97cb3f0</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>390bded3552e03107f448ed3c97cb34f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:51</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=390bded3552e03107f448ed3c97cb34f"/>
+    <sys_variable_value action="delete_multiple" query="document_key=390bded3552e03107f448ed3c97cb34f"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=390bded3552e03107f448ed3c97cb34f"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=390bded3552e03107f448ed3c97cb34f^sys_idNOT IN790bded3552e03107f448ed3c97cb350"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>390bded3552e03107f448ed3c97cb34f</id>
+        <name>Insurance Claim Automation</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:51</sys_created_on>
+        <sys_id>790bded3552e03107f448ed3c97cb350</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:51</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=790bded3552e03107f448ed3c97cb350"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=390bded3552e03107f448ed3c97cb34f^sys_idNOT IN310bded3552e03107f448ed3c97cb36f,b10bded3552e03107f448ed3c97cb364,f90bded3552e03107f448ed3c97cb351"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Insurance Claim Automation">390bded3552e03107f448ed3c97cb34f</model>
+        <model_id>390bded3552e03107f448ed3c97cb34f</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_390bded3552e03107f448ed3c97cb34f</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:51</sys_created_on>
+        <sys_id>310bded3552e03107f448ed3c97cb36f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=310bded3552e03107f448ed3c97cb36f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Insurance Claim Automation">390bded3552e03107f448ed3c97cb34f</model>
+        <model_id>390bded3552e03107f448ed3c97cb34f</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_390bded3552e03107f448ed3c97cb34f</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:51</sys_created_on>
+        <sys_id>b10bded3552e03107f448ed3c97cb364</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b10bded3552e03107f448ed3c97cb364"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Insurance Claim Automation">390bded3552e03107f448ed3c97cb34f</model>
+        <model_id>390bded3552e03107f448ed3c97cb34f</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_390bded3552e03107f448ed3c97cb34f</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:51</sys_created_on>
+        <sys_id>f90bded3552e03107f448ed3c97cb351</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f90bded3552e03107f448ed3c97cb351"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=390bded3552e03107f448ed3c97cb34f"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=390bded3552e03107f448ed3c97cb34f"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=390bded3552e03107f448ed3c97cb34f^sys_idNOT IN820bded3552e03107f448ed3c97cb385"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Insurance Claim Automation">390bded3552e03107f448ed3c97cb34f</flow>
+        <generation_source/>
+        <name>Created or Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:51</sys_created_on>
+        <sys_id>820bded3552e03107f448ed3c97cb385</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:51</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=390bded3552e03107f448ed3c97cb34f^sys_idNOT IN820bded3552e03107f448ed3c97cb381,8e0bded3552e03107f448ed3c97cb383"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Insurance Claim Automation">390bded3552e03107f448ed3c97cb34f</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>22113864-0bd5-4d1d-b79a-74cd0783b17e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:51</sys_created_on>
+        <sys_id>820bded3552e03107f448ed3c97cb381</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:51</sys_updated_on>
+        <ui_id>8dcee331-e2ee-4f81-b0b7-fdcc737721e4</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/91VTW/bMAz9K4HOhmEnbdDmNqQoMGBrgXXLpWsFWqITAbLs6aNtFuS/j7KcNOgarAN26XKKyEfyPYqibzdMSTZj0xKL0/NyKiblZDIuivHZSVlNJ1U5lhNAPGEZM9AgIT1UGnl/yNgD6BCNT9wZwR0arwxqvnLIlXHBghHIhQbVEFgq12lYL4aYjzvAaD4AxEppadGw2e1dxjqwVMSjZbPNC9dbKWuoUBP0a+R8RIJfd6/aPh3Gjq6So7Uy8ikyhk8ejUQiUoN2mLEGjATf2jWbeRvIYBHktdHrPWKljKeELGKfnPpJZc+KiKuRlAlMvv2RD/1K5voCPNxQZuGDHaBi1SqBLvVEYg1B+/mhLQGuO69ak0J6mUN0q0NjrlJL2D7B7nrIEugaJXZRZ2Q+yKhvVu3jlx3LS2X6lgxO3QrQ+xN4b1UVfOSzYaixoUS8ga5TZsk72z6oPpi4NPlS0yGvdftIRZ1amhxEJJ5TWyG/JPtFb16AVVHFZ0pDwduMubWjEXLuWQs1kf8IkUlSNmjgqQ0xRFjV+Q9U4AEHutts9xYkFudHB6usngepH3938A7S4AvVFyuL76EoJnKzmdMseJSj1o6+dTL+5WUugqUO+u32nqjjW+F5rVDLflD5KcX2j4s7Dz64fQoXqkb5Pq64l9DAMl5k0kwdfVMd1TQoFRl5uoZY7fdH/P8L/sul9OfZ2S2ly6jLvTJMu42EDXWa6KTherGVBudoMTiHzVT+q81UTov+9472UxL37tfTwZfoyKK6+wUVxDsztgcAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=820bded3552e03107f448ed3c97cb381"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Insurance Claim Automation">390bded3552e03107f448ed3c97cb34f</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>22113864-0bd5-4d1d-b79a-74cd0783b17e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:51</sys_created_on>
+        <sys_id>8e0bded3552e03107f448ed3c97cb383</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:51</sys_updated_on>
+        <ui_id>87780be4-e5ad-4550-8ec8-79b2777f5682</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8e0bded3552e03107f448ed3c97cb383"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=390bded3552e03107f448ed3c97cb34f"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=390bded3552e03107f448ed3c97cb34f^sys_idNOT IN0a0bded3552e03107f448ed3c97cb37f"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">6d0bded3552e03107f448ed3c97cb311</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Insurance Claim Automation">390bded3552e03107f448ed3c97cb34f</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:51</sys_created_on>
+        <sys_id>0a0bded3552e03107f448ed3c97cb37f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:51</sys_updated_on>
+        <ui_id>22113864-0bd5-4d1d-b79a-74cd0783b17e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1V0W7TMBT9lcrPUZQ0S8X6NnWahDQ2wcZeYFg3ttNaOHGwnXYh6r9znaRpxYpoBRIvvNnHvr7nnNyjtETXrqqdfdRX1splSeafngMiS4/huiWSkznJI8jjSxazZDpLplE0fXMRZ7Mki6c8AQEJCUgJhcCbTJdcOqlL2gEBWYOq/QEuubSVguZpj7CVVNyIoWsFBmucMGTe/nR0KgsFmVB4dbGjMbntkF/zc03lceuMLJfD/nZ45WEHasM9qzgKiHhxouQC+eSgrAhIASUHp00zIkYAvy/VHljJ0vWCC3ix8js2nKapv5gLlMgGN8YtHZzq4fwaHCCVmrnajMZpyYTtzeEih1q5xSHWX7ivvNS+xEGmdtVa1UV51ztCxgcOPkxtkYSovFJPfdCRP6z05sOO5Y0sO1eGQ6UZqHEHDr3Lauf5tEQoUeBDtICqQkdpZfRadsXIpQiXCjdhrvQGm/opDIF54iEaC+EN4tcd/ARGehXv8Bks7mlmYCWj3cTic2iTINuA2MYuFFi7F4nu0m+1p9hLHsTR3h9fwoys3BV2XotBxzYYAnAJaZ7GUXp89C5mRwbsYPbbdoEz4QSfaDP5WHG/pHHIaoNGutCKtTDSNTTdbj/XUZRwZOIk2knTL3fvz65eyeWKpq8D969onJfyE6x+lfLj9p8T7elvou3n6sRkR1H0P9p/HG1paR/IQVvX/C8m+9nHs+85es2kRWqPHnu7+wP6gwaHS7JDaKPNVy9qj21/AFg60q9LBwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=390bded3552e03107f448ed3c97cb34f^sys_idNOT IN460bded3552e03107f448ed3c97cb385,0a0bded3552e03107f448ed3c97cb385,ca0bded3552e03107f448ed3c97cb385,8e0bded3552e03107f448ed3c97cb385"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>390bded3552e03107f448ed3c97cb34f</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.field_name_5}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:51</sys_created_on>
+        <sys_id>460bded3552e03107f448ed3c97cb385</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:51</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>ca4f97e3-cb88-4430-84be-103cdbc114ac</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>390bded3552e03107f448ed3c97cb34f</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:51</sys_created_on>
+        <sys_id>0a0bded3552e03107f448ed3c97cb385</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:51</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>7029c712-8038-4ccc-b79c-0722d26a0014</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>390bded3552e03107f448ed3c97cb34f</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.severity_5}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:51</sys_created_on>
+        <sys_id>ca0bded3552e03107f448ed3c97cb385</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:51</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>74afe41b-3204-4a6a-8220-4ce987b3b5a6</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>390bded3552e03107f448ed3c97cb34f</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.incident_type}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:51</sys_created_on>
+        <sys_id>8e0bded3552e03107f448ed3c97cb385</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:51</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>38b32cd2-f1d7-4313-9fee-d64805d40255</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=390bded3552e03107f448ed3c97cb34f"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_390bded3552e03107f448ed3c97cb34f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:51</sys_created_on>
+        <sys_id>350bded3552e03107f448ed3c97cb375</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:51</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_390bded3552e03107f448ed3c97cb34f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:51</sys_created_on>
+        <sys_id>3d0bded3552e03107f448ed3c97cb35f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:51</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_390bded3552e03107f448ed3c97cb34f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:51</sys_created_on>
+        <sys_id>b90bded3552e03107f448ed3c97cb36a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:51</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_390bded3552e03107f448ed3c97cb34f"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_390bded3552e03107f448ed3c97cb34f"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>c5e7529f55ea03107f448ed3c97cb3f0</sys_id>
+        <latest_snapshot>390bded3552e03107f448ed3c97cb34f</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch2-04-17-2026_04-29-2026_2044.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=c5e7529f55ea03107f448ed3c97cb3f0^sys_idNOT INce0bded3552e03107f448ed3c97cb3c6"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"ce0bded3552e03107f448ed3c97cb3c6","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id>c5e7529f55ea03107f448ed3c97cb3f0</plan_id>
+        <snapshot>cf9dde1b552e03107f448ed3c97cb3a6</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:26:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ce0bded3552e03107f448ed3c97cb3c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:26:52</sys_updated_on>
+        <trigger display_value="">4e0bded3552e03107f448ed3c97cb3c3</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=c5e7529f55ea03107f448ed3c97cb3f0"/>
+</record_update>

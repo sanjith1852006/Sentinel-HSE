@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="34c1d96d29ea43107f441ac0369c7fc8" sys_domain="global" table="x_snc_sentinel_hse_incident" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 17:37:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3cc1d96d29ea43107f441ac0369c7ff0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_sentinel_hse_incident" name="x_snc_sentinel_hse_incident" sys_domain="global" view="Default view">34c1d96d29ea43107f441ac0369c7fc8</sys_ui_form>
+            <sys_ui_section caption="Incident Information" display_value="Incident Information" name="x_snc_sentinel_hse_incident" sys_domain="global" view="Default view">e331d92d29ea43107f441ac0369c7f52</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 17:37:22</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:59:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8aed2ba988a203107f4468412c614626</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_sentinel_hse_incident" name="x_snc_sentinel_hse_incident" sys_domain="global" view="Default view">34c1d96d29ea43107f441ac0369c7fc8</sys_ui_form>
+            <sys_ui_section caption="Root Cause Analysis" display_value="Root Cause Analysis" name="x_snc_sentinel_hse_incident" sys_domain="global" view="Default view">bdede7a988a203107f4468412c6146fd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:59:35</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:59:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8aed2ba988a203107f4468412c61462a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_sentinel_hse_incident" name="x_snc_sentinel_hse_incident" sys_domain="global" view="Default view">34c1d96d29ea43107f441ac0369c7fc8</sys_ui_form>
+            <sys_ui_section caption="Impact Assessment" display_value="Impact Assessment" name="x_snc_sentinel_hse_incident" sys_domain="global" view="Default view">7ded2ba988a203107f4468412c614600</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:59:35</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-07 04:59:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4eed2ba988a203107f4468412c61462e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_sentinel_hse_incident" name="x_snc_sentinel_hse_incident" sys_domain="global" view="Default view">34c1d96d29ea43107f441ac0369c7fc8</sys_ui_form>
+            <sys_ui_section caption="AI Analysis" display_value="AI Analysis" name="x_snc_sentinel_hse_incident" sys_domain="global" view="Default view">75ed2ba988a203107f4468412c614602</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-07 04:59:35</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_snc_sentinel_hse_incident</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-06 17:37:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>34c1d96d29ea43107f441ac0369c7fc8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_sentinel_hse_incident</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+            <sys_update_name>sys_ui_form_sections_34c1d96d29ea43107f441ac0369c7fc8</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-06 17:37:22</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

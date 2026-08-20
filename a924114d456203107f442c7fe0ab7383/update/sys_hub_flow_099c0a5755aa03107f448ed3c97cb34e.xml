@@ -1,0 +1,1162 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=81904000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>inspection_compliance_audit_automation</internal_name>
+        <label_cache>[{"name":"78ba86da-a563-4985-8a43-701204884ab9.record","label":"1 - Create Record➛Compliance Audit Record","reference":"x_snc_sentinel_hse_compliance_audit","reference_display":"Compliance Audit","type":"reference","base_type":"reference","usedInstances":{"255703f0-a53a-4fd3-8297-741508dfd798":["record"],"f00b821c-3c6c-4e5c-87b3-ed6205942724":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current.inspection_result_6","label":"Trigger - Record Updated➛Inspection Record➛Inspection Result","reference":"","reference_display":"Inspection Result","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"inspection_result_6","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"Fail","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Fail","selected":false,"missing":false,"value":"fail_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Fail"}}},{"label":"Obervation","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Obervation","selected":false,"missing":false,"value":"observation_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Obervation"}}},{"label":"Pass","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Pass","selected":false,"missing":false,"value":"pass_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Pass"}}}],"usedInstances":{"28dcdd34-3397-4ce6-8739-afc0099b0d5a":["condition"]}},{"name":"78ba86da-a563-4985-8a43-701204884ab9.record.compliance_status_9","label":"1 - Create Record➛Compliance Audit Record➛Compliance Status","reference":"","reference_display":"Compliance Status","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_compliance_audit","column_name":"compliance_status_9","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"Compliant","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Compliant","selected":false,"missing":false,"value":"compliant_9","parameters":{"name":"x_snc_sentinel_hse_compliance_audit","dependent_values":[""],"dependent_values_map":{"":"Compliant"}}},{"label":"Non-Compliant","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Non-Compliant","selected":false,"missing":false,"value":"non_compliant_9","parameters":{"name":"x_snc_sentinel_hse_compliance_audit","dependent_values":[""],"dependent_values_map":{"":"Non-Compliant"}}},{"label":"Partially Compliant","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Partially Compliant","selected":false,"missing":false,"value":"partially_compliant_9","parameters":{"name":"x_snc_sentinel_hse_compliance_audit","dependent_values":[""],"dependent_values_map":{"":"Partially Compliant"}}},{"label":"Under Review","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Under Review","selected":false,"missing":false,"value":"under_review_9","parameters":{"name":"x_snc_sentinel_hse_compliance_audit","dependent_values":[""],"dependent_values_map":{"":"Under Review"}}}],"usedInstances":{"628e6c14-9d20-4272-92dc-81ca363b85ad":["condition"]}},{"name":"78ba86da-a563-4985-8a43-701204884ab9.record.corrective_action_9","label":"1 - Create Record➛Compliance Audit Record➛Corrective Action","reference":"","reference_display":"Corrective Action","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_compliance_audit","column_name":"corrective_action_9","usedInstances":{}},{"name":"Updated_1.current.recommendations_6","label":"Trigger - Record Updated➛Inspection Record➛Recommendations","reference":"","reference_display":"Recommendations","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"recommendations_6","usedInstances":{"78ba86da-a563-4985-8a43-701204884ab9":["corrective_action_9"]}},{"name":"Updated_1.current.status_6","label":"Trigger - Record Updated➛Inspection Record➛Status","reference":"","reference_display":"Status","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"status_6","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"Cancelled","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Cancelled","selected":false,"missing":false,"value":"cancelled_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Cancelled"}}},{"label":"Completed","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Completed","selected":false,"missing":false,"value":"completed_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Completed"}}},{"label":"Failed","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Failed","selected":false,"missing":false,"value":"failed_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Failed"}}},{"label":"In Progress","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"In Progress","selected":false,"missing":false,"value":"in_progress_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"In Progress"}}},{"label":"Scheduled","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Scheduled","selected":false,"missing":false,"value":"scheduled_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Scheduled"}}},{"label":"Work Stopped","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Work Stopped","selected":false,"missing":false,"value":"work_stopped_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Work Stopped"}}}],"usedInstances":{"78ba86da-a563-4985-8a43-701204884ab9":["risk_level_9"]}},{"name":"Updated_1.current.findings_6","label":"Trigger - Record Updated➛Inspection Record➛Findings","reference":"","reference_display":"Findings","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"findings_6","usedInstances":{"78ba86da-a563-4985-8a43-701204884ab9":["findings_9"]}},{"name":"Updated_1.current.inspection_date_6","label":"Trigger - Record Updated➛Inspection Record➛Inspection Date","reference":"","reference_display":"Inspection Date","type":"glide_date","base_type":"glide_date","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"inspection_date_6","usedInstances":{"78ba86da-a563-4985-8a43-701204884ab9":["audit_date_9"]}},{"name":"Updated_1.current.asset_6","label":"Trigger - Record Updated➛Inspection Record➛Asset","reference":"x_snc_sentinel_hse_oilfield_asset_1","reference_display":"Oilfield Asset","type":"reference","base_type":"reference","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"asset_6","usedInstances":{"78ba86da-a563-4985-8a43-701204884ab9":["asset_9"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Inspection Record","reference":"x_snc_sentinel_hse_inspection","reference_display":"Inspection","type":"reference","base_type":"reference","usedInstances":{"78ba86da-a563-4985-8a43-701204884ab9":["inspection_9"]},"attributes":{}}]</label_cache>
+        <master_snapshot>38b0d65f55aa03107f448ed3c97cb32c</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Inspection Compliance Audit Automation</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>de23699f55e203107f448ed3c97cb3ee</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:23:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>099c0a5755aa03107f448ed3c97cb34e</sys_id>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_name>Inspection Compliance Audit Automation</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_hub_flow_099c0a5755aa03107f448ed3c97cb34e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 07:08:53</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>12054fa73ce603107f44ecc116669f2d</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=099c0a5755aa03107f448ed3c97cb34e"/>
+    <sys_variable_value action="delete_multiple" query="document_key=099c0a5755aa03107f448ed3c97cb34e"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_snc_sentinel_hse_inspection">status_6=completed_6<item display_value="Completed" endquery="false" field="status_6" goto="false" newquery="false" operator="=" or="false" value="completed_6"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 05:22:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>de23699f55e203107f448ed3c97cb3ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 05:22:45</sys_updated_on>
+        <table>x_snc_sentinel_hse_inspection</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>099c0a5755aa03107f448ed3c97cb34e</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 07:08:50</sys_created_on>
+        <sys_id>42050fa73ce603107f44ecc116669fc3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 07:08:50</sys_updated_on>
+        <trigger display_value="">de23699f55e203107f448ed3c97cb3ee</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=099c0a5755aa03107f448ed3c97cb34e^sys_idNOT IN42050fa73ce603107f44ecc116669fc3"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=099c0a5755aa03107f448ed3c97cb34e"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=099c0a5755aa03107f448ed3c97cb34e^sys_idNOT IN859c0a5755aa03107f448ed3c97cb34f"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>099c0a5755aa03107f448ed3c97cb34e</id>
+        <name>Inspection Compliance Audit Automation</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:23:43</sys_created_on>
+        <sys_id>859c0a5755aa03107f448ed3c97cb34f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 08:23:43</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=859c0a5755aa03107f448ed3c97cb34f"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=099c0a5755aa03107f448ed3c97cb34e^sys_idNOT IN4cccce5755aa03107f448ed3c97cb380,80cc029755aa03107f448ed3c97cb305,8ccc029755aa03107f448ed3c97cb30f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Inspection Compliance Audit Automation">099c0a5755aa03107f448ed3c97cb34e</model>
+        <model_id>099c0a5755aa03107f448ed3c97cb34e</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_099c0a5755aa03107f448ed3c97cb34e</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:24:27</sys_created_on>
+        <sys_id>4cccce5755aa03107f448ed3c97cb380</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 08:41:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4cccce5755aa03107f448ed3c97cb380"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Inspection Compliance Audit Automation">099c0a5755aa03107f448ed3c97cb34e</model>
+        <model_id>099c0a5755aa03107f448ed3c97cb34e</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_099c0a5755aa03107f448ed3c97cb34e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:24:28</sys_created_on>
+        <sys_id>80cc029755aa03107f448ed3c97cb305</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 08:41:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=80cc029755aa03107f448ed3c97cb305"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Inspection Compliance Audit Automation">099c0a5755aa03107f448ed3c97cb34e</model>
+        <model_id>099c0a5755aa03107f448ed3c97cb34e</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_099c0a5755aa03107f448ed3c97cb34e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:24:28</sys_created_on>
+        <sys_id>8ccc029755aa03107f448ed3c97cb30f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 08:24:28</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8ccc029755aa03107f448ed3c97cb30f"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=099c0a5755aa03107f448ed3c97cb34e"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=099c0a5755aa03107f448ed3c97cb34e"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=099c0a5755aa03107f448ed3c97cb34e^sys_idNOT INffbcce5755aa03107f448ed3c97cb378"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Inspection Compliance Audit Automation">099c0a5755aa03107f448ed3c97cb34e</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:24:27</sys_created_on>
+        <sys_id>ffbcce5755aa03107f448ed3c97cb378</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 07:08:47</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=099c0a5755aa03107f448ed3c97cb34e^sys_idNOT IN45ec069755aa03107f448ed3c97cb34b,75ef8edb55aa03107f448ed3c97cb3e3,2f609e1f55aa03107f448ed3c97cb3d8"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Inspection Compliance Audit Automation">099c0a5755aa03107f448ed3c97cb34e</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:25:05</sys_created_on>
+        <sys_id>45ec069755aa03107f448ed3c97cb34b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 08:41:42</sys_updated_on>
+        <ui_id>78ba86da-a563-4985-8a43-701204884ab9</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VyW7bMBD9FYNnQZCs1Ih9C1r41gTokkuaEBQ5sglQpCpSjl3D/97hYtdNa9coChQFqhsf38y8WTh62BIpyIxMSiheTcsJr8qqGhfF+PqqrCdVXY5FxQCuSEY0awGZjtUKaDhkZMXU4ME1tZpTC9pJDYouLVBu2k5JpjlQNgjpkC2k7RTb3Cej1wfG6CYx+FIq0YMms4fHjHSsxzAOejLbvrhymw6oYjUodPTBSxrdRkmXpvOd8Yn0fJSXmOmFF1RkBNYOtACM1zBlISMt04I502/IzPUDAj0wcafV5sBYSu3QIfHctZVf0Pt14XkNYGoc4t3hSFPFIsyXRnK465w0OiJBWLo0amj1bUzC1xoaNii3rzUiAzZFQOclexFJUfN+aZ7f7QPOpQ7ZpUtlOFOHE3Oul/XgwPp+gIIWHdGWdZ3UC9r1ZiWDMWpp84XCQ94o84xBrVzonHEvPMcKsXyO+JsA37Ne+izeohs03oXs6efBx415JMU0Jo0Ey3vZuRt0t4Ikbpft51hAMT3Z+LL+1ugwuvZohqW2HQSNdPppKIpKbLcfO5QLgpY5H3qskNvtnpi14M5Q8kiYeKofa+rvz/GPAgeqt2ywEVhVe87uwPEG3CAYSkLZr5LIkWla7B7iyLRHWsO7SpaWNeA28fXS6VMEf3zG/+t2Yd1+c7kBbknUMYr1zi6e872DuQQl7E8Gf7/dUgC6SgHShiv/1IYrJ0X4/s6eizr/sTV39Mc5sfAevwLIB7mEugcAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=45ec069755aa03107f448ed3c97cb34b"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Inspection Compliance Audit Automation">099c0a5755aa03107f448ed3c97cb34e</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>28dcdd34-3397-4ce6-8739-afc0099b0d5a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:38:14</sys_created_on>
+        <sys_id>75ef8edb55aa03107f448ed3c97cb3e3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 08:41:42</sys_updated_on>
+        <ui_id>255703f0-a53a-4fd3-8297-741508dfd798</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UwWrbQBD9FaOzLSRLdmTfQo2hhyaQllzSsIy0Y3thtVK1Kyeu8b93VlopTtKmbjCUQnWb0cy892Yee7f3BPfmXow8CGfhNIvCKBoHwTiJw3QapeGYR4AYekNPQY5UWWFWVJziLcjaJvb7iySFZMphBJNpNIpnyWSUQByNLoJwHMRJEkM689u+w4E6udClhN2tG0CZbCMkr1B587v7oVdCRVgGK2++f/HL7EpkElKU1LgosjpHZQYfFzTjVB1d900n5KUwi0Exd9OZsEn6ZfmEwdDDR4OKI8GtQGocejkoDqaodt7cVDUlKgR+reSur9gIZVqlOTxq8Z3mx4GtWyFJy9wW+pC5DXXLKUSG16URhWozBlLZba6Qda6uWgl2t7iCWpqj3daa5mFpKVsSLcPV503xcNPhLYVq1Dm2sshA9hEYU4m0NqjtOVBis5QcylKoNSurYiuaZqKS+2tJgb+SxQNharFWPmSWt08LAn9J+UWTvoVKWBGfaAw1Hxrx7FttcVsZjjBrNDeCWXMoKtVZJUpzSYO36Ggehs7I6eQtA2Szp3sfzXwy8yPTKmOagIVCyTa0O5JVSgH2LFBzYV4b+ENfMbh0Fe8z9BdLaXDVUjpVzrPmX8hzln6Wc46enM3RyV9ytGP0j1n6d0YOxm++ZEeXbryrj0x85FhtwNSazb7WQRBxVajezobNXjv5Dzrf6XCkGWBw0CIOT9baDVgKlFz/RHxncQfAtg6gf7jP5vNwGjTf//f7jO/3/Q+R6FTfiggAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=75ef8edb55aa03107f448ed3c97cb3e3"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Inspection Compliance Audit Automation">099c0a5755aa03107f448ed3c97cb34e</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>83bc16f8-2cca-4e16-bdf9-a12cef13aadd</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:40:32</sys_created_on>
+        <sys_id>2f609e1f55aa03107f448ed3c97cb3d8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 08:41:42</sys_updated_on>
+        <ui_id>f00b821c-3c6c-4e5c-87b3-ed6205942724</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UTWvbQBD9K0ZnWUiW7Mi+hRpDD00gLbmkYRlpx/bCaqVqV05c4//eWWnlOB9NTTCUQnWb0cy892Yee7fzBPdmXoI8jKbRJI+jOB6F4ShNomwSZ9GIx4AYeb6noECqrDEva07xBmRjE7vdRZpBOuEwhPEkHibTdDxMIYmHF2E0CpM0TSCbBl3ffk+dXOhKwvbWDaBMvhaS16i82d2971VQE5bB2pvtXvwy2wqZhAwlNc7LvClQmcHnOc04VUfffdMLeSnMYlDM3XQmbJJ+WT5R6Hv4aFBxJLglSI2+V4DiYMp6681M3VCiRuDXSm4PFWuhTKe0gEctftL8JLR1SyRpudvCIWRuQ/1ySpHjdWVEqbqMgUz2mytlU6irToLdLS6hkeZot42meVhZypZEx3D5dV0+3PR4C6FadY6tLHOQhwiMqUXWGNT2HCixXUoBVSXUilV1uRFtM1EpgpWkIFjK8oEwtVipAHLLO6AFQbCg/LxN30ItrIgvNIaa96149qOxuJ0MR5i1mlvBrD0Uleq8FpW5pMEbdDT3vjNyNn7PAPn06d5HM5/M/Mi0ypkmYKFQsjXtjmRVUoA9CzRcmNcG/nSoGFy6io8Z+pulNLjqKJ0q51nzb+Q5Sz/LOUePz+bo9C852jH6xyz9JyOHo3dfsqNLt97VRyY+cqw2YBrNpt+bMIx5/8Ow6WsXn9j1QWcjzQCDgw7NP1ljP2AhUHL9huje2g6AbRzA4cE+m7+jSdh+/9/tM77b978AdsTXYYIIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2f609e1f55aa03107f448ed3c97cb3d8"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=099c0a5755aa03107f448ed3c97cb34e"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=099c0a5755aa03107f448ed3c97cb34e^sys_idNOT IN2bbf4adb55aa03107f448ed3c97cb336,e810921f55aa03107f448ed3c97cb350"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">e4b0965f55aa03107f448ed3c97cb3fd</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Inspection Compliance Audit Automation">099c0a5755aa03107f448ed3c97cb34e</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:37:32</sys_created_on>
+        <sys_id>2bbf4adb55aa03107f448ed3c97cb336</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 07:08:47</sys_updated_on>
+        <ui_id>28dcdd34-3397-4ce6-8739-afc0099b0d5a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UTWsbMRD9K2XPy7IfsWl8CymBQttAk+bSBjErzdqiWkmVtHZc4//e0X7YpnFoCT32tnqjmXnv6bG7xHTBdsHfmyvv5VIni6+PaSJ1xOh7l2hoMVkk3GghgzSa9UCarEF1sUCfQnqrYPtwRPhKKuFwnGbBUU9Alyx2v5XC1iJTUKOixrvgpF5SuxR0anJoikte8KqcV2Wel28vinpe1UUpKkCo6N7UeD2Re/OhR9IXWcd9hPtpk3Ei0iryNMGngFogrW5AeUyTFrSAYNz2gDgEcavVEVhJHQbFLTx5+ZNml7NZvNggaeSjHYcjG62aXDKS462NBAckQK0mC43qWv1p0BFNxgY6FU5M7jzNQxtJRxYjpeZuZTafp4U3UvcCx6IyHNThBIFsqLuAPj4MKmxpEGvBWjKHWWfWsm8mLm22VHTIGmU2tDQmJQMeiWfkEWQ3hL/r4QdwMqr4SGOoeaBZg5ec9amiccGRhH1vC/vRRUKDwFEKG9ygC547acMV7VnjyHqfPo/kSRp3uy+WCKFgRcY7Rx6ETGpvsefKHHrykM33+29dnleiAanY/HmEXzvmX+T+EmbNrMhn53N/MT+X+zOJfzns5R/CHp/nL7Oe5/n/sJ+GXXo2hHbU1i9/ddYfY7CHDX7IjUAuPRG5j9j76S8dC1sKgOSn0Ma471HCEdv/AoTr2eDvBQAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">24b0d65f55aa03107f448ed3c97cb300</block>
+        <comment/>
+        <connected_to>28dcdd34-3397-4ce6-8739-afc0099b0d5a</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Inspection Compliance Audit Automation">099c0a5755aa03107f448ed3c97cb34e</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:38:58</sys_created_on>
+        <sys_id>e810921f55aa03107f448ed3c97cb350</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 07:08:47</sys_updated_on>
+        <ui_id>83bc16f8-2cca-4e16-bdf9-a12cef13aadd</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=099c0a5755aa03107f448ed3c97cb34e"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=099c0a5755aa03107f448ed3c97cb34e"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_099c0a5755aa03107f448ed3c97cb34e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:24:28</sys_created_on>
+        <sys_id>08cc029755aa03107f448ed3c97cb30b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 08:24:28</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_099c0a5755aa03107f448ed3c97cb34e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:24:28</sys_created_on>
+        <sys_id>08cc029755aa03107f448ed3c97cb323</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 08:24:28</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_099c0a5755aa03107f448ed3c97cb34e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:24:28</sys_created_on>
+        <sys_id>40cc029755aa03107f448ed3c97cb300</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 08:24:28</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_099c0a5755aa03107f448ed3c97cb34e"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_099c0a5755aa03107f448ed3c97cb34e"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>inspection_compliance_audit_automation</internal_name>
+        <label_cache>[{"name":"78ba86da-a563-4985-8a43-701204884ab9.record","label":"1 - Create Record➛Compliance Audit Record","reference":"x_snc_sentinel_hse_compliance_audit","reference_display":"Compliance Audit","type":"reference","base_type":"reference","usedInstances":{"255703f0-a53a-4fd3-8297-741508dfd798":["record"],"f00b821c-3c6c-4e5c-87b3-ed6205942724":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current.inspection_result_6","label":"Trigger - Record Updated➛Inspection Record➛Inspection Result","reference":"","reference_display":"Inspection Result","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"inspection_result_6","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"Fail","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Fail","selected":false,"missing":false,"value":"fail_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Fail"}}},{"label":"Obervation","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Obervation","selected":false,"missing":false,"value":"observation_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Obervation"}}},{"label":"Pass","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Pass","selected":false,"missing":false,"value":"pass_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Pass"}}}],"usedInstances":{"28dcdd34-3397-4ce6-8739-afc0099b0d5a":["condition"]}},{"name":"78ba86da-a563-4985-8a43-701204884ab9.record.compliance_status_9","label":"1 - Create Record➛Compliance Audit Record➛Compliance Status","reference":"","reference_display":"Compliance Status","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_compliance_audit","column_name":"compliance_status_9","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"Compliant","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Compliant","selected":false,"missing":false,"value":"compliant_9","parameters":{"name":"x_snc_sentinel_hse_compliance_audit","dependent_values":[""],"dependent_values_map":{"":"Compliant"}}},{"label":"Non-Compliant","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Non-Compliant","selected":false,"missing":false,"value":"non_compliant_9","parameters":{"name":"x_snc_sentinel_hse_compliance_audit","dependent_values":[""],"dependent_values_map":{"":"Non-Compliant"}}},{"label":"Partially Compliant","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Partially Compliant","selected":false,"missing":false,"value":"partially_compliant_9","parameters":{"name":"x_snc_sentinel_hse_compliance_audit","dependent_values":[""],"dependent_values_map":{"":"Partially Compliant"}}},{"label":"Under Review","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Under Review","selected":false,"missing":false,"value":"under_review_9","parameters":{"name":"x_snc_sentinel_hse_compliance_audit","dependent_values":[""],"dependent_values_map":{"":"Under Review"}}}],"usedInstances":{"628e6c14-9d20-4272-92dc-81ca363b85ad":["condition"]}},{"name":"78ba86da-a563-4985-8a43-701204884ab9.record.corrective_action_9","label":"1 - Create Record➛Compliance Audit Record➛Corrective Action","reference":"","reference_display":"Corrective Action","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_compliance_audit","column_name":"corrective_action_9","usedInstances":{}},{"name":"Updated_1.current.recommendations_6","label":"Trigger - Record Updated➛Inspection Record➛Recommendations","reference":"","reference_display":"Recommendations","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"recommendations_6","usedInstances":{"78ba86da-a563-4985-8a43-701204884ab9":["corrective_action_9"]}},{"name":"Updated_1.current.status_6","label":"Trigger - Record Updated➛Inspection Record➛Status","reference":"","reference_display":"Status","type":"choice","base_type":"choice","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"status_6","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"Cancelled","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Cancelled","selected":false,"missing":false,"value":"cancelled_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Cancelled"}}},{"label":"Completed","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Completed","selected":false,"missing":false,"value":"completed_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Completed"}}},{"label":"Failed","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Failed","selected":false,"missing":false,"value":"failed_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Failed"}}},{"label":"In Progress","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"In Progress","selected":false,"missing":false,"value":"in_progress_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"In Progress"}}},{"label":"Scheduled","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Scheduled","selected":false,"missing":false,"value":"scheduled_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Scheduled"}}},{"label":"Work Stopped","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"Work Stopped","selected":false,"missing":false,"value":"work_stopped_6","parameters":{"name":"x_snc_sentinel_hse_inspection","dependent_values":[""],"dependent_values_map":{"":"Work Stopped"}}}],"usedInstances":{"78ba86da-a563-4985-8a43-701204884ab9":["risk_level_9"]}},{"name":"Updated_1.current.findings_6","label":"Trigger - Record Updated➛Inspection Record➛Findings","reference":"","reference_display":"Findings","type":"string","base_type":"string","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"findings_6","usedInstances":{"78ba86da-a563-4985-8a43-701204884ab9":["findings_9"]}},{"name":"Updated_1.current.inspection_date_6","label":"Trigger - Record Updated➛Inspection Record➛Inspection Date","reference":"","reference_display":"Inspection Date","type":"glide_date","base_type":"glide_date","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"inspection_date_6","usedInstances":{"78ba86da-a563-4985-8a43-701204884ab9":["audit_date_9"]}},{"name":"Updated_1.current.asset_6","label":"Trigger - Record Updated➛Inspection Record➛Asset","reference":"x_snc_sentinel_hse_oilfield_asset_1","reference_display":"Oilfield Asset","type":"reference","base_type":"reference","parent_table_name":"x_snc_sentinel_hse_inspection","column_name":"asset_6","usedInstances":{"78ba86da-a563-4985-8a43-701204884ab9":["asset_9"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Inspection Record","reference":"x_snc_sentinel_hse_inspection","reference_display":"Inspection","type":"reference","base_type":"reference","usedInstances":{"78ba86da-a563-4985-8a43-701204884ab9":["inspection_9"]},"attributes":{}}]</label_cache>
+        <master>true</master>
+        <name>Inspection Compliance Audit Automation</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Inspection Compliance Audit Automation">099c0a5755aa03107f448ed3c97cb34e</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:41:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>38b0d65f55aa03107f448ed3c97cb32c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 07:08:49</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=38b0d65f55aa03107f448ed3c97cb32c"/>
+    <sys_variable_value action="delete_multiple" query="document_key=38b0d65f55aa03107f448ed3c97cb32c"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=38b0d65f55aa03107f448ed3c97cb32c"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=38b0d65f55aa03107f448ed3c97cb32c^sys_idNOT IN78b0d65f55aa03107f448ed3c97cb32d"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>38b0d65f55aa03107f448ed3c97cb32c</id>
+        <name>Inspection Compliance Audit Automation</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:41:43</sys_created_on>
+        <sys_id>78b0d65f55aa03107f448ed3c97cb32d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 08:41:43</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=78b0d65f55aa03107f448ed3c97cb32d"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=38b0d65f55aa03107f448ed3c97cb32c^sys_idNOT INb4b0d65f55aa03107f448ed3c97cb341,f0b0d65f55aa03107f448ed3c97cb34c,f8b0d65f55aa03107f448ed3c97cb32e"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Inspection Compliance Audit Automation">38b0d65f55aa03107f448ed3c97cb32c</model>
+        <model_id>38b0d65f55aa03107f448ed3c97cb32c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_38b0d65f55aa03107f448ed3c97cb32c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:41:43</sys_created_on>
+        <sys_id>b4b0d65f55aa03107f448ed3c97cb341</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 07:08:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b4b0d65f55aa03107f448ed3c97cb341"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Inspection Compliance Audit Automation">38b0d65f55aa03107f448ed3c97cb32c</model>
+        <model_id>38b0d65f55aa03107f448ed3c97cb32c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_38b0d65f55aa03107f448ed3c97cb32c</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:41:43</sys_created_on>
+        <sys_id>f0b0d65f55aa03107f448ed3c97cb34c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 07:08:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f0b0d65f55aa03107f448ed3c97cb34c"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Inspection Compliance Audit Automation">38b0d65f55aa03107f448ed3c97cb32c</model>
+        <model_id>38b0d65f55aa03107f448ed3c97cb32c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_38b0d65f55aa03107f448ed3c97cb32c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:41:43</sys_created_on>
+        <sys_id>f8b0d65f55aa03107f448ed3c97cb32e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 07:08:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f8b0d65f55aa03107f448ed3c97cb32e"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=38b0d65f55aa03107f448ed3c97cb32c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=38b0d65f55aa03107f448ed3c97cb32c"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=38b0d65f55aa03107f448ed3c97cb32c^sys_idNOT INbcb0d65f55aa03107f448ed3c97cb361"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Inspection Compliance Audit Automation">38b0d65f55aa03107f448ed3c97cb32c</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:41:43</sys_created_on>
+        <sys_id>bcb0d65f55aa03107f448ed3c97cb361</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 07:08:48</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=38b0d65f55aa03107f448ed3c97cb32c^sys_idNOT INf0b0d65f55aa03107f448ed3c97cb35f,70b0d65f55aa03107f448ed3c97cb360,38b0d65f55aa03107f448ed3c97cb360"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Inspection Compliance Audit Automation">38b0d65f55aa03107f448ed3c97cb32c</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:41:43</sys_created_on>
+        <sys_id>f0b0d65f55aa03107f448ed3c97cb35f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 08:41:43</sys_updated_on>
+        <ui_id>78ba86da-a563-4985-8a43-701204884ab9</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VwW4aMRD9FeTzarULKQrcIiJObSI1LZc0sQZ7Fix5vVvbS6CIf+94vRCUBpJKvUQqN8+8sd97az/ut0xJNmbDHLNPo3woBvlg0M+y/uVFPh8O5nlfDgDxgiXMQImE9DDXyNtFwlagm1Bcc2cEd2i8Mqj50iEXVVlrBUYgh0YqT2ipXK1hM+uGJgdE76pDiKXS0qJh4/uHhNVg6RiPlo23L1rvJa1hjpqg3wLrEyL8pn619vl4tncTG5WVgU+WMFx7NBKJSAHaYcJKMBJ8ZTds7G1DBYsgb43eHBBLZTxtyAJ27dQvOvYyC7gCSZnA2DsseWdYLBfX4OGOdha+sR1ULCsl0EVPJBbQaD85rkXAbe1VZeJIK7ObrnRTmptoCTtssP8+VGnoQ0qsg87AvJNR3C2rp697llNlWku6pq4E6MMKvLdq3vjAZ8tQY0kb8RLqWpkFr221Uu0wcSnThaZFWujqiQ51amFSEIF4SrZCOqX6dVuegVVBxRfahoZ3CXMbN9Hg3LMWMpH/bAKTqKzTwKMNYURYVfsrOmCFHd1dsn8NErPRyYuVz58vUvsA3NFLUMbV2LLmox9Nlg3kdvu9JgEoeZ6KxpJnfrd7JLLoz0DSCBgGaHgcPPTP4Y8ObqFhsqBPQz67c3MHTBgQFRVbSzi8JSIlZFXS96Q6Id0R1/B69pMOCvSbmAF89BiLf4bBf9/e6dtfRuTbN3kfkVOFWrpXrvY+H5HiOjgUr/qLjOyavVnX7HIy/1c5mQ+z9veB0jKK+/BhefS/eCI2H34D7qBM1EYIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f0b0d65f55aa03107f448ed3c97cb35f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Inspection Compliance Audit Automation">38b0d65f55aa03107f448ed3c97cb32c</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>28dcdd34-3397-4ce6-8739-afc0099b0d5a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:41:43</sys_created_on>
+        <sys_id>70b0d65f55aa03107f448ed3c97cb360</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 08:41:43</sys_updated_on>
+        <ui_id>255703f0-a53a-4fd3-8297-741508dfd798</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVTW+jMBD9K5HPSQSBpCS3qlGllbqt1K5y6VZowJPGkjGsbdJko/z3HcBQ1FZtKvVSLTfPh+e9xzy4PzDB2YKFyD1/7s/SwA+CiedNotBPZkHiT3gAiD4bMgUZUqXGNNeczluQZRU4HM6iBKIZhxFMZ8EonEfTUQRhMDrz/IkXRlEIyXzc9B2P1MmFKSTsV+4CiqQbIblGxRb3D0NWgKZZFjVbHF6kTgUrIUFJpbct2pfo7b6ozjxPywyVjUUbvHKdS5cZ/FhShpoqOL43ZLizqDgSkDVIg0OWgeJgc71nC6tLCmgEfqPkvqvYCGUbohnsjPhLk0OvqlsjMUudCN0xdgI14fUSLNzRzaktdadXLlI0jSYc11BKe9GPNQU3hRW5alosJLLtzmWZqetGEdZd0HsfpSEQWFQ8K+QNrfXdJn+6bUFeClVL4ijKPAXZncBaLZLSVnAODCXWGmdQFEI9xoXOt6JuJijZ+FHSYbyW+RPNNOJRjSGtcI9JVRhfUnxZh1egRUXiJ11DzcchM3tzIcGYZyqkYfynrJA0xByFuFahliCuN6FqTrUo7DmN2qIDfhw6OyTT9zYsnT8vVO/OZ0vsYqPS2NBgoVDGG1KTiBZSQPV2oeTCvrbBRVcxOHcVn7PFCaBbW/yql+FtEs4Zr2JX/d7BdZNwvph+mS+i7+QLR+PbG+MjO3iTdz+4vU2qHWB6VujtvbFgSxPPf5eeF3CVq84UNp6/9sMnOj/nkxPYtD65FCi5eYNeaxIkGGAxbui+MIpLDlYu2f1Evswt/syrn2/kmf/mX/LwD9NFugJcCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=70b0d65f55aa03107f448ed3c97cb360"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Inspection Compliance Audit Automation">38b0d65f55aa03107f448ed3c97cb32c</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>83bc16f8-2cca-4e16-bdf9-a12cef13aadd</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:41:43</sys_created_on>
+        <sys_id>38b0d65f55aa03107f448ed3c97cb360</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 08:41:43</sys_updated_on>
+        <ui_id>f00b821c-3c6c-4e5c-87b3-ed6205942724</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVTW+jMBD9K5HPSQSBpCS3KlGllbqt1K566VZowJPGkjGsbdpmo/z3HcAQ1FZtKvUSLTfPh+e9xzy43zHB2YKFyD1/7s/SwA+CiedNotBPZkHiT3gAiD4bMgUZUqXGNNeczk8gyyqw251FCUQzDiOYzoJROI+mowjCYHTm+RMvjKIQkvm46dvvqZMLU0jY3rkLKJJuhOQaFVvcPwxZAZpmWdRssXuVOhashAQlld60aF+jt9uiOvM8LTNUNhZt8NJ1rlxm8GNFGWqq4PjekOGLRcWRgKxBGhyyDBQHm+stW1hdUkAj8Gslt13FRijbEM3gxYi/NDn0qro1ErPUidAdYydQE16vwMIt3ZzaUnd65SJF02jCcQ2ltMt+rCm4LqzIVdNiIZFtdy7LTF01irDugt77KA2BwKLiWSFvaK1vN/nzTQvyQqhaEkdR5inI7gTWapGUtoKzYyix1jiDohDqMS50/iTqZoKSjR8lHcZrmT/TTCMe1RjSCveYVIXxBcVXdfgOtKhI/KRrqHk/ZGZrlhKMOVAhDeM/ZYWkIeYoxLUKtQRxvQlVc6pFYc9p1BM64Puhs0My/WjD0vlhoXp3HizxEhuVxoYGC4Uy3pCaRLSQAqq3CyUX9q0Nll3F4NxVfM0WR4BubfGrXob3SThnvIld9nsHV03C+WL6bb6ITskXjsbJG+MzO3iTDz+4vU2qHWB6VujtvbFgSxPPf5eeF/A2YeP5Wy8c2fU1fxzBovXHhUDJzTu0WnMgwQCLcUPzlUFccnDnkt3P49tc4s+8+jkhr/w3/5CHf6Xv80VUCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=38b0d65f55aa03107f448ed3c97cb360"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=38b0d65f55aa03107f448ed3c97cb32c"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=38b0d65f55aa03107f448ed3c97cb32c^sys_idNOT INb0b0d65f55aa03107f448ed3c97cb35e,78b0d65f55aa03107f448ed3c97cb35c"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">24b0d65f55aa03107f448ed3c97cb300</block>
+        <comment/>
+        <connected_to>28dcdd34-3397-4ce6-8739-afc0099b0d5a</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Inspection Compliance Audit Automation">38b0d65f55aa03107f448ed3c97cb32c</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:41:43</sys_created_on>
+        <sys_id>b0b0d65f55aa03107f448ed3c97cb35e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 07:08:49</sys_updated_on>
+        <ui_id>83bc16f8-2cca-4e16-bdf9-a12cef13aadd</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">e4b0965f55aa03107f448ed3c97cb3fd</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Inspection Compliance Audit Automation">38b0d65f55aa03107f448ed3c97cb32c</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:41:43</sys_created_on>
+        <sys_id>78b0d65f55aa03107f448ed3c97cb35c</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 07:08:49</sys_updated_on>
+        <ui_id>28dcdd34-3397-4ce6-8739-afc0099b0d5a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXW/TMBT9K8jPUZSPtWJ9mzpNQhpMYmMvMFk3trNaOHbwR7sS9b9znaRptRXBgEfe4mPf63OO71E6YoJvg3d35sI5+ajJ4vNDQqSOGH53REMjyIIwo7n00mjaAwlZgwpxAz+5dK2C7f0BYSupuBVjtxYs1nhhyaJ7tiU5FtQZ1Pk5y1lZzMsiy4q3Z3k1L6u84CUIKLGhgkooPLrc03hz3SPJT/n5bRtx563Uj+P6euxyuweN5ZFVniVEPHmhuUA+NSgnEtKA5uCN3U6IFcBvtDoAK6n9ILiBJye/44XFbBYP1gIlstGNaUlHpwa4vgQPSCUwH+xknJFMuMEcLmoIyi+PseHATRulDiUeKrWvNio0+sPgCJkaHD1McEhCtFFppD7qqG9XZvNxz/JK6t6VcVMZBmpagUfvquAjn44IJRpsRBtoW3SUttasZV+MXJr0UeEirZXZ4KVxulJgkXiKxkJ6hfhlD9+DlVHFe2yDxQPNCpxktJ9EbIc2CbJLiNu6pQLnDiLRXfotRIqD5FEcHfyJJczK1l/gzWsx6tglLwf7aKa77lOLFAWnecqCRVd8KrVrRc+eWuHQVTrf7b6ELCt5DVLR+csg/Gmb16XnHGb1LM9mp9NzNj+VnhO5eWVkil9EJr7XbyYmy7L/kfnryEhHh0EftfWX/8PEPMR4DHdOXjPpkNpdxN7t/xhxY4vDJdkxtDH2axR1wHY/AHndjiR7BgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=38b0d65f55aa03107f448ed3c97cb32c"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=38b0d65f55aa03107f448ed3c97cb32c"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_38b0d65f55aa03107f448ed3c97cb32c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:41:43</sys_created_on>
+        <sys_id>30b0d65f55aa03107f448ed3c97cb33d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 08:41:43</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_38b0d65f55aa03107f448ed3c97cb32c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:41:43</sys_created_on>
+        <sys_id>7cb0d65f55aa03107f448ed3c97cb347</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 08:41:43</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_38b0d65f55aa03107f448ed3c97cb32c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:41:43</sys_created_on>
+        <sys_id>b4b0d65f55aa03107f448ed3c97cb352</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 08:41:43</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_38b0d65f55aa03107f448ed3c97cb32c"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_38b0d65f55aa03107f448ed3c97cb32c"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>099c0a5755aa03107f448ed3c97cb34e</sys_id>
+        <latest_snapshot>38b0d65f55aa03107f448ed3c97cb32c</latest_snapshot>
+        <compiler_build/>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=099c0a5755aa03107f448ed3c97cb34e^sys_idNOT IN81b0d65f55aa03107f448ed3c97cb372"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.Every</binding_strategy>
+        <plan/>
+        <plan_id>099c0a5755aa03107f448ed3c97cb34e</plan_id>
+        <snapshot>38b0d65f55aa03107f448ed3c97cb32c</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:41:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>81b0d65f55aa03107f448ed3c97cb372</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 07:08:50</sys_updated_on>
+        <trigger display_value="">de23699f55e203107f448ed3c97cb3ee</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=099c0a5755aa03107f448ed3c97cb34e"/>
+</record_update>

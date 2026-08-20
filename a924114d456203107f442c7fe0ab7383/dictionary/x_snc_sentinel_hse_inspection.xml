@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="cd7e672d88a203107f4468412c614627" label="Inspection" max_length="40" name="x_snc_sentinel_hse_inspection" type="collection">
+        <element label="AI Recommendation" max_length="2000" name="ai_recommendation_6" type="string"/>
+        <element label="Certificate Expiry Date" max_length="40" name="certificate_expiry_date_6" type="glide_date"/>
+        <element label="Certificate Number" max_length="100" name="certificate_number_6" type="string"/>
+        <element label="Asset" mandatory="true" max_length="32" name="asset_6" reference="x_snc_sentinel_hse_oilfield_asset_1" type="reference"/>
+        <element label="Test Pressure (Bar)" max_length="20" name="test_pressure_bar_6" type="decimal"/>
+        <element choice="1" default="Scheduled" label="Status" max_length="40" name="status_6" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Scheduled" value="scheduled_6"/>
+                <element inactive_on_update="false" label="Completed" value="completed_6"/>
+                <element inactive_on_update="false" label="Failed" value="failed_6"/>
+                <element inactive_on_update="false" label="In Progress" value="in_progress_6"/>
+                <element inactive_on_update="false" label="Work Stopped" value="work_stopped_6"/>
+                <element inactive_on_update="false" label="Cancelled" value="cancelled_6"/>
+            </choice>
+        </element>
+        <element label="Inspector" mandatory="true" max_length="32" name="inspector_6" reference="sys_user" type="reference"/>
+        <element label="AI Inspection Summary" max_length="2000" name="ai_inspection_summary_6" type="string"/>
+        <element label="Remaining Life (Years)" max_length="40" name="remaining_life_years_6" type="integer"/>
+        <element label="Asset Name" max_length="255" name="asset_name_inspection" type="string"/>
+        <element label="Findings" max_length="2000" name="findings_6" type="string"/>
+        <element choice="1" label="Corrosion Level" max_length="40" name="corrosion_level_6" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Severe" value="severe_i"/>
+                <element inactive_on_update="false" label="High" value="high_i"/>
+                <element inactive_on_update="false" label="Low" value="low_i"/>
+                <element inactive_on_update="false" label="None" value="none_i"/>
+                <element inactive_on_update="false" label="Moderate" value="moderate_i"/>
+            </choice>
+        </element>
+        <element label="Wall Thickness (mm)" max_length="20" name="wall_thickness_mm_6" type="decimal"/>
+        <element label="Corrosion Rate (mm/year)" max_length="20" name="corrosion_rate_mm_year_6" type="decimal"/>
+        <element choice="1" label="Inspection Method" max_length="40" name="inspection_method_5" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="OGI Camera" sequence="200" value="ogi_camera"/>
+                <element inactive_on_update="false" label="Drone Inspection" sequence="300" value="drone_inspection"/>
+                <element inactive_on_update="false" label="Manual Inspection" sequence="600" value="manual_inspection"/>
+                <element inactive_on_update="false" label="Ultrasonic Testing (UT)" sequence="400" value="ultrasonic_testing_ut"/>
+                <element inactive_on_update="false" label="Thermal Imaging" sequence="500" value="thermal_imaging"/>
+                <element inactive_on_update="false" label="Visual Inspection" sequence="100" value="visual_inspection"/>
+            </choice>
+        </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Integrity Score" max_length="40" name="integrity_score_6" type="integer"/>
+        <element label="Inspection Date" mandatory="true" max_length="40" name="inspection_date_6" type="glide_date"/>
+        <element label="Next Inspection Date" max_length="40" name="next_inspection_date_6" type="glide_date"/>
+        <element label="HSE Incident" max_length="32" name="hse_incident_6" reference="x_snc_sentinel_hse_incident" type="reference"/>
+        <element choice="1" label="Leak Detected" max_length="40" name="leak_detected_6" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" value="no_i"/>
+                <element inactive_on_update="false" label="Yes" value="yes_i"/>
+            </choice>
+        </element>
+        <element choice="1" label="Inspection Result" max_length="40" name="inspection_result_6" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pass" value="pass_6"/>
+                <element inactive_on_update="false" label="Fail" value="fail_6"/>
+                <element inactive_on_update="false" label="Obervation" value="observation_6"/>
+            </choice>
+        </element>
+        <element label="Recommendations" max_length="2000" name="recommendations_6" type="string"/>
+        <element choice="1" label="Inspection Type" mandatory="true" max_length="40" name="inspection_type_6" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Safety Inspection" sequence="5" value="safety_inspection_6"/>
+                <element inactive_on_update="false" label="Routine Inspection" sequence="4" value="routine_inspection_6"/>
+                <element inactive_on_update="false" label="Pipeline Integrity Assessment" sequence="2" value="pipeline_integrity_assessment_6"/>
+                <element inactive_on_update="false" label="Pressure Vessel Certification" sequence="3" value="pressure_vessel_certification_6"/>
+                <element inactive_on_update="false" label="Corrosion Inspection" sequence="0" value="corrosion_inspection_6"/>
+                <element inactive_on_update="false" label="Emergency Inspection" sequence="1" value="emergency_inspection_6"/>
+            </choice>
+        </element>
+        <element default="No" label="Maintenance Required" max_length="40" name="maintenance_required" type="boolean"/>
+        <index name="index">
+            <element name="inspector_6"/>
+        </index>
+        <index name="index2">
+            <element name="asset_6"/>
+        </index>
+        <index name="index3">
+            <element name="hse_incident_6"/>
+        </index>
+    </element>
+</database>

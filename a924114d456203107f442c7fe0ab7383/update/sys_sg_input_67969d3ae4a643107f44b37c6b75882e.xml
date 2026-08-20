@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_input">
+    <sys_sg_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <autofill_variable/>
+        <category/>
+        <description>Confirm that the work area is safe before starting work.</description>
+        <label>Work Area Safe</label>
+        <mandatory>false</mandatory>
+        <name>work_area_safe</name>
+        <order>0</order>
+        <page/>
+        <parameter_screen display_value="HSE Safety Checklist Form">4d46ddb6e4a643107f44b37c6b75886d</parameter_screen>
+        <parameter_section/>
+        <placeholder/>
+        <readonly>false</readonly>
+        <sys_class_name>sys_sg_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 15:10:59</sys_created_on>
+        <sys_id>67969d3ae4a643107f44b37c6b75882e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Work Area Safe</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_sg_input_67969d3ae4a643107f44b37c6b75882e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:10:59</sys_updated_on>
+        <type display_value="Boolean">79dbec1517021010f2b43b9fadb9599a</type>
+    </sys_sg_input>
+</record_update>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_write_back_action_item">
+    <sys_sg_write_back_action_item action="INSERT_OR_UPDATE">
+        <attach_in_activity_stream/>
+        <description>Mark the HSE work order as completed</description>
+        <execution_script/>
+        <name>Complete Work Action</name>
+        <parameter_screen display_value="Work Completion Form">7687457ae42643107f44b37c6b75881a</parameter_screen>
+        <query_condition/>
+        <sys_class_name>sys_sg_write_back_action_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 08:44:48</sys_created_on>
+        <sys_id>d23ef762e4aa03107f44b37c6b7588e2</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Complete Work Action</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_sg_write_back_action_item_d23ef762e4aa03107f44b37c6b7588e2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-11 04:35:28</sys_updated_on>
+        <table>x_snc_sentinel_hse_work_order</table>
+        <template>status_7=completed_7^completion_notes={{Variable: completion_notes_var}}^gps_coordinates={{Variable: gps_coordinates_var}}^EQ</template>
+        <type>update</type>
+        <use_current_record_as_condition>true</use_current_record_as_condition>
+        <use_fields_for_ref_lookup>false</use_fields_for_ref_lookup>
+    </sys_sg_write_back_action_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=d23ef762e4aa03107f44b37c6b7588e2"/>
+</record_update>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>Allow read for records in x_snc_sentinel_hse_oilfield_asset_1, for users with roles (x_snc_sentinel_hse.admin, x_snc_sentinel_hse.x_sentinel.executive, x_snc_sentinel_hse.x_sentinel.hse_manager, x_snc_sentinel_hse.oilfield_asset_user, x_snc_sentinel_hse.x_sentinel.inspector, x_snc_sentinel_hse.x_sentinel.field_engineer, x_snc_sentinel_hse.gas_master_user, x_snc_sentinel_hse.sensor_reading_user, x_snc_sentinel_hse.x_sentinel.maintenance_engineer, x_snc_sentinel_hse.user, x_snc_sentinel_hse.x_sentinel.hse_admin).</description>
+        <local_or_existing>Existing</local_or_existing>
+        <name>x_snc_sentinel_hse_oilfield_asset_1</name>
+        <operation display_value="read">read</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-06 15:16:08</sys_created_on>
+        <sys_id>bf61b86129e643107f441ac0369c7f48</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>x_snc_sentinel_hse_oilfield_asset_1</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_security_acl_bf61b86129e643107f441ac0369c7f48</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 08:09:48</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>

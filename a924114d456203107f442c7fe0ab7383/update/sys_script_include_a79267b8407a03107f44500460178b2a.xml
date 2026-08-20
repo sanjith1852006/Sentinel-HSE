@@ -1,0 +1,2180 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_sentinel_hse.SentinelHSEDashboardAjax</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>SentinelHSEDashboardAjax</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var SentinelHSEDashboardAjax = Class.create();
+
+SentinelHSEDashboardAjax.prototype = Object.extendsObject(
+    global.AbstractAjaxProcessor,
+    {
+
+        /* =====================================================
+           TABLE NAMES
+           ===================================================== */
+
+        ASSET_TABLE:
+            "x_snc_sentinel_hse_oilfield_asset_1",
+
+        INCIDENT_TABLE:
+            "x_snc_sentinel_hse_incident",
+
+        WORK_ORDER_TABLE:
+            "x_snc_sentinel_hse_work_order",
+
+        PERMIT_TABLE:
+            "x_snc_sentinel_hse_permit_to_work",
+
+        INSPECTION_TABLE:
+            "x_snc_sentinel_hse_inspection",
+
+        SENSOR_TABLE:
+            "x_snc_sentinel_hse_sensor_reading",
+
+
+        /* =====================================================
+           COMMON HELPERS
+           ===================================================== */
+
+        clean: function(value) {
+
+            if (
+                value === null ||
+                value === undefined
+            ) {
+                return "";
+            }
+
+            return String(value).trim();
+
+        },
+
+
+        lower: function(value) {
+
+            return this.clean(value).toLowerCase();
+
+        },
+
+
+        getDisplay: function(gr, field) {
+
+            if (
+                !gr ||
+                !field ||
+                !gr.isValidField(field)
+            ) {
+                return "";
+            }
+
+            return this.clean(
+                gr.getDisplayValue(field)
+            );
+
+        },
+
+
+        firstField: function(gr, fields) {
+
+            if (!gr || !fields) {
+                return "";
+            }
+
+            for (
+                var i = 0;
+                i < fields.length;
+                i++
+            ) {
+
+                if (
+                    gr.isValidField(fields[i])
+                ) {
+
+                    return fields[i];
+
+                }
+
+            }
+
+            return "";
+
+        },
+
+
+        isClosedIncident: function(status) {
+
+            status =
+                this.lower(status);
+
+            return (
+                status === "closed" ||
+                status === "resolved" ||
+                status === "cancelled" ||
+                status === "canceled"
+            );
+
+        },
+
+
+        isInactivePermit: function(status) {
+
+            status =
+                this.lower(status);
+
+            return (
+                status === "closed" ||
+                status === "expired" ||
+                status === "cancelled" ||
+                status === "canceled" ||
+                status === "rejected" ||
+                status === "terminated" ||
+                status === "completed"
+            );
+
+        },
+
+
+        /* =====================================================
+           DASHBOARD KPIs
+           ===================================================== */
+
+        getDashboardKPIs: function() {
+
+            var result = {
+
+                success: true,
+
+                totalAssets: 0,
+
+                criticalRisks: 0,
+
+                openIncidents: 0,
+
+                activePermits: 0,
+
+                maintenanceDue: 0,
+
+                averageRiskScore: 0,
+
+                averageRiskLabel: "Low",
+
+                riskDistribution: {
+
+                    Critical: 0,
+
+                    High: 0,
+
+                    Medium: 0,
+
+                    Low: 0
+
+                }
+
+            };
+
+
+            /* ================= ASSETS ================= */
+
+            var asset =
+                new GlideRecord(
+                    this.ASSET_TABLE
+                );
+
+            asset.query();
+
+
+            var totalScore = 0;
+
+            var scoreCount = 0;
+
+
+            while (
+                asset.next()
+            ) {
+
+                result.totalAssets++;
+
+
+                var risk =
+                    this.lower(
+                        this.getDisplay(
+                            asset,
+                            "current_risk_level"
+                        )
+                    );
+
+
+                if (
+                    risk === "critical"
+                ) {
+
+                    result.criticalRisks++;
+
+                    result.riskDistribution.Critical++;
+
+                    totalScore += 90;
+
+                    scoreCount++;
+
+                }
+                else if (
+                    risk === "high"
+                ) {
+
+                    result.riskDistribution.High++;
+
+                    totalScore += 70;
+
+                    scoreCount++;
+
+                }
+                else if (
+                    risk === "medium"
+                ) {
+
+                    result.riskDistribution.Medium++;
+
+                    totalScore += 50;
+
+                    scoreCount++;
+
+                }
+                else {
+
+                    result.riskDistribution.Low++;
+
+                    totalScore += 20;
+
+                    scoreCount++;
+
+                }
+
+            }
+
+
+            if (
+                scoreCount > 0
+            ) {
+
+                result.averageRiskScore =
+                    Math.round(
+                        totalScore /
+                        scoreCount
+                    );
+
+            }
+
+
+            if (
+                result.averageRiskScore >= 80
+            ) {
+
+                result.averageRiskLabel =
+                    "Critical";
+
+            }
+            else if (
+                result.averageRiskScore >= 60
+            ) {
+
+                result.averageRiskLabel =
+                    "High";
+
+            }
+            else if (
+                result.averageRiskScore >= 40
+            ) {
+
+                result.averageRiskLabel =
+                    "Moderate";
+
+            }
+            else {
+
+                result.averageRiskLabel =
+                    "Low";
+
+            }
+
+
+            /* ================= INCIDENTS ================= */
+
+            var incident =
+                new GlideRecord(
+                    this.INCIDENT_TABLE
+                );
+
+            incident.query();
+
+
+            while (
+                incident.next()
+            ) {
+
+                var incidentStatus =
+                    this.getDisplay(
+                        incident,
+                        "status_5"
+                    );
+
+
+                if (
+                    !this.isClosedIncident(
+                        incidentStatus
+                    )
+                ) {
+
+                    result.openIncidents++;
+
+                }
+
+            }
+
+
+            /* ================= PERMITS ================= */
+
+            var permit =
+                new GlideRecord(
+                    this.PERMIT_TABLE
+                );
+
+            permit.query();
+
+
+            while (
+                permit.next()
+            ) {
+
+                var permitStatus =
+                    this.getDisplay(
+                        permit,
+                        "status_8"
+                    );
+
+
+                if (
+                    !this.isInactivePermit(
+                        permitStatus
+                    )
+                ) {
+
+                    result.activePermits++;
+
+                }
+
+            }
+
+
+            /* ================= WORK ORDERS ================= */
+
+            var work =
+                new GlideRecord(
+                    this.WORK_ORDER_TABLE
+                );
+
+            work.query();
+
+
+            var workTypeField =
+                this.firstField(
+                    work,
+                    [
+                        "work_type",
+                        "work_type_7",
+                        "work_order_type",
+                        "work_order_type_7",
+                        "type"
+                    ]
+                );
+
+
+            var workStatusField =
+                this.firstField(
+                    work,
+                    [
+                        "status",
+                        "status_7",
+                        "state"
+                    ]
+                );
+
+
+            while (
+                work.next()
+            ) {
+
+                var workType =
+                    workTypeField
+                        ? this.getDisplay(
+                            work,
+                            workTypeField
+                        )
+                        : "";
+
+
+                var workStatus =
+                    workStatusField
+                        ? this.getDisplay(
+                            work,
+                            workStatusField
+                        )
+                        : "";
+
+
+                var isMaintenance =
+                    this.lower(
+                        workType
+                    ).indexOf(
+                        "maintenance"
+                    ) >= 0;
+
+
+                var statusLower =
+                    this.lower(
+                        workStatus
+                    );
+
+
+                var isActive =
+                    (
+                        statusLower === "new" ||
+
+                        statusLower === "open" ||
+
+                        statusLower === "scheduled" ||
+
+                        statusLower === "assigned" ||
+
+                        statusLower === "in progress"
+                    );
+
+
+                if (
+                    isMaintenance &&
+                    isActive
+                ) {
+
+                    result.maintenanceDue++;
+
+                }
+
+            }
+
+
+            return JSON.stringify(
+                result
+            );
+
+        },
+
+
+        /* =====================================================
+           RECENT INCIDENTS
+           ===================================================== */
+
+        getRecentIncidents: function() {
+
+            var result = {
+
+                success: true,
+
+                records: []
+
+            };
+
+
+            var gr =
+                new GlideRecord(
+                    this.INCIDENT_TABLE
+                );
+
+
+            gr.orderByDesc(
+                "sys_created_on"
+            );
+
+            gr.setLimit(5);
+
+            gr.query();
+
+
+            while (
+                gr.next()
+            ) {
+
+                result.records.push({
+
+                    sys_id:
+                        gr.getUniqueValue(),
+
+                    number:
+                        this.getDisplay(
+                            gr,
+                            "number"
+                        ),
+
+                    asset:
+                        this.getDisplay(
+                            gr,
+                            "asset_name_asset"
+                        ),
+
+                    severity:
+                        this.getDisplay(
+                            gr,
+                            "severity_5"
+                        ),
+
+                    status:
+                        this.getDisplay(
+                            gr,
+                            "status_5"
+                        ),
+
+                    created:
+                        this.getDisplay(
+                            gr,
+                            "sys_created_on"
+                        )
+
+                });
+
+            }
+
+
+            return JSON.stringify(
+                result
+            );
+
+        },
+
+
+        /* =====================================================
+           RECENT RECORDS
+           ===================================================== */
+
+        getRecentRecords: function() {
+
+            var type =
+                this.clean(
+                    this.getParameter(
+                        "sysparm_record_type"
+                    )
+                ).toLowerCase();
+
+
+            var result = {
+
+                success: true,
+
+                table: "",
+
+                columns: [],
+
+                records: []
+
+            };
+
+
+            /* ================= INCIDENTS ================= */
+
+            if (
+                type === "incident"
+            ) {
+
+                result.table =
+                    this.INCIDENT_TABLE;
+
+
+                result.columns = [
+
+                    {
+                        name: "number",
+                        label: "Incident",
+                        badge: false
+                    },
+
+                    {
+                        name: "asset",
+                        label: "Asset",
+                        badge: false
+                    },
+
+                    {
+                        name: "severity",
+                        label: "Severity",
+                        badge: true
+                    },
+
+                    {
+                        name: "status",
+                        label: "Status",
+                        badge: true
+                    },
+
+                    {
+                        name: "created",
+                        label: "Created",
+                        badge: false
+                    }
+
+                ];
+
+
+                var inc =
+                    new GlideRecord(
+                        this.INCIDENT_TABLE
+                    );
+
+
+                inc.orderByDesc(
+                    "sys_created_on"
+                );
+
+                inc.setLimit(5);
+
+                inc.query();
+
+
+                while (
+                    inc.next()
+                ) {
+
+                    result.records.push({
+
+                        sys_id:
+                            inc.getUniqueValue(),
+
+                        number:
+                            this.getDisplay(
+                                inc,
+                                "number"
+                            ),
+
+                        asset:
+                            this.getDisplay(
+                                inc,
+                                "asset_name_asset"
+                            ),
+
+                        severity:
+                            this.getDisplay(
+                                inc,
+                                "severity_5"
+                            ),
+
+                        status:
+                            this.getDisplay(
+                                inc,
+                                "status_5"
+                            ),
+
+                        created:
+                            this.getDisplay(
+                                inc,
+                                "sys_created_on"
+                            )
+
+                    });
+
+                }
+
+
+                return JSON.stringify(
+                    result
+                );
+
+            }
+
+
+            /* ================= WORK ORDERS ================= */
+
+            if (
+                type === "work_order"
+            ) {
+
+                result.table =
+                    this.WORK_ORDER_TABLE;
+
+
+                result.columns = [
+
+                    {
+                        name: "number",
+                        label: "Work Order",
+                        badge: false
+                    },
+
+                    {
+                        name: "asset",
+                        label: "Asset",
+                        badge: false
+                    },
+
+                    {
+                        name: "work_type",
+                        label: "Work Type",
+                        badge: false
+                    },
+
+                    {
+                        name: "priority",
+                        label: "Priority",
+                        badge: true
+                    },
+
+                    {
+                        name: "status",
+                        label: "Status",
+                        badge: true
+                    },
+
+                    {
+                        name: "assigned_to",
+                        label: "Assigned To",
+                        badge: false
+                    }
+
+                ];
+
+
+                var wo =
+                    new GlideRecord(
+                        this.WORK_ORDER_TABLE
+                    );
+
+
+                wo.orderByDesc(
+                    "sys_created_on"
+                );
+
+                wo.setLimit(5);
+
+                wo.query();
+
+
+                var woAssetField =
+                    this.firstField(
+                        wo,
+                        [
+                            "asset",
+                            "asset_7",
+                            "asset_name",
+                            "asset_name_work",
+                            "asset_8"
+                        ]
+                    );
+
+
+                var woTypeField =
+                    this.firstField(
+                        wo,
+                        [
+                            "work_type",
+                            "work_type_7",
+                            "work_order_type",
+                            "work_order_type_7",
+                            "type"
+                        ]
+                    );
+
+
+                var woPriorityField =
+                    this.firstField(
+                        wo,
+                        [
+                            "priority",
+                            "priority_7",
+                            "priority_8"
+                        ]
+                    );
+
+
+                var woStatusField =
+                    this.firstField(
+                        wo,
+                        [
+                            "status",
+                            "status_7",
+                            "state"
+                        ]
+                    );
+
+
+                var woAssignedField =
+                    this.firstField(
+                        wo,
+                        [
+                            "assigned_to",
+                            "assigned_to_7",
+                            "assigned_to_8",
+                            "assigned"
+                        ]
+                    );
+
+
+                while (
+                    wo.next()
+                ) {
+
+                    result.records.push({
+
+                        sys_id:
+                            wo.getUniqueValue(),
+
+                        number:
+                            this.getDisplay(
+                                wo,
+                                "number"
+                            ),
+
+                        asset:
+                            this.getDisplay(
+                                wo,
+                                woAssetField
+                            ),
+
+                        work_type:
+                            this.getDisplay(
+                                wo,
+                                woTypeField
+                            ),
+
+                        priority:
+                            this.getDisplay(
+                                wo,
+                                woPriorityField
+                            ),
+
+                        status:
+                            this.getDisplay(
+                                wo,
+                                woStatusField
+                            ),
+
+                        assigned_to:
+                            this.getDisplay(
+                                wo,
+                                woAssignedField
+                            )
+
+                    });
+
+                }
+
+
+                return JSON.stringify(
+                    result
+                );
+
+            }
+
+
+            /* ================= PERMITS ================= */
+
+            if (
+                type === "permit"
+            ) {
+
+                result.table =
+                    this.PERMIT_TABLE;
+
+
+                result.columns = [
+
+                    {
+                        name: "number",
+                        label: "Permit",
+                        badge: false
+                    },
+
+                    {
+                        name: "asset",
+                        label: "Asset",
+                        badge: false
+                    },
+
+                    {
+                        name: "permit_type",
+                        label: "Permit Type",
+                        badge: false
+                    },
+
+                    {
+                        name: "status",
+                        label: "Status",
+                        badge: true
+                    },
+
+                    {
+                        name: "priority",
+                        label: "Priority",
+                        badge: true
+                    }
+
+                ];
+
+
+                var ptw =
+                    new GlideRecord(
+                        this.PERMIT_TABLE
+                    );
+
+
+                ptw.orderByDesc(
+                    "sys_created_on"
+                );
+
+                ptw.setLimit(5);
+
+                ptw.query();
+
+
+                while (
+                    ptw.next()
+                ) {
+
+                    result.records.push({
+
+                        sys_id:
+                            ptw.getUniqueValue(),
+
+                        number:
+                            this.getDisplay(
+                                ptw,
+                                "number"
+                            ),
+
+                        asset:
+                            this.getDisplay(
+                                ptw,
+                                "asset_8"
+                            ),
+
+                        permit_type:
+                            this.getDisplay(
+                                ptw,
+                                "permit_type_8"
+                            ),
+
+                        status:
+                            this.getDisplay(
+                                ptw,
+                                "status_8"
+                            ),
+
+                        priority:
+                            this.getDisplay(
+                                ptw,
+                                "priority_8"
+                            )
+
+                    });
+
+                }
+
+
+                return JSON.stringify(
+                    result
+                );
+
+            }
+
+
+            /* ================= INSPECTIONS ================= */
+
+            if (
+                type === "inspection"
+            ) {
+
+                result.table =
+                    this.INSPECTION_TABLE;
+
+
+                result.columns = [
+
+                    {
+                        name: "number",
+                        label: "Inspection",
+                        badge: false
+                    },
+
+                    {
+                        name: "asset",
+                        label: "Asset",
+                        badge: false
+                    },
+
+                    {
+                        name: "inspection_type",
+                        label: "Inspection Type",
+                        badge: false
+                    },
+
+                    {
+                        name: "status",
+                        label: "Status",
+                        badge: true
+                    },
+
+                    {
+                        name: "inspection_date",
+                        label: "Inspection Date",
+                        badge: false
+                    }
+
+                ];
+
+
+                var inspection =
+                    new GlideRecord(
+                        this.INSPECTION_TABLE
+                    );
+
+
+                inspection.orderByDesc(
+                    "inspection_date_6"
+                );
+
+                inspection.setLimit(5);
+
+                inspection.query();
+
+
+                while (
+                    inspection.next()
+                ) {
+
+                    result.records.push({
+
+                        sys_id:
+                            inspection.getUniqueValue(),
+
+                        number:
+                            this.getDisplay(
+                                inspection,
+                                "number"
+                            ),
+
+                        asset:
+                            this.getDisplay(
+                                inspection,
+                                "asset_name_inspection"
+                            ),
+
+                        inspection_type:
+                            this.getDisplay(
+                                inspection,
+                                "inspection_type_6"
+                            ),
+
+                        status:
+                            this.getDisplay(
+                                inspection,
+                                "status_6"
+                            ),
+
+                        inspection_date:
+                            this.getDisplay(
+                                inspection,
+                                "inspection_date_6"
+                            )
+
+                    });
+
+                }
+
+
+                return JSON.stringify(
+                    result
+                );
+
+            }
+
+
+            result.success =
+                false;
+
+            result.error =
+                "Unknown record type: " +
+                type;
+
+
+            return JSON.stringify(
+                result
+            );
+
+        },
+
+
+        /* =====================================================
+           LATEST SCADA READING
+           ===================================================== */
+
+        getLatestSCADA: function() {
+
+            var result = {
+
+                success: false,
+
+                reading: null,
+
+                error: ""
+
+            };
+
+
+            var sensor =
+                new GlideRecord(
+                    this.SENSOR_TABLE
+                );
+
+
+            sensor.orderByDesc(
+                "sys_created_on"
+            );
+
+            sensor.setLimit(1);
+
+            sensor.query();
+
+
+            if (
+                sensor.next()
+            ) {
+
+                result.success =
+                    true;
+
+
+                result.reading = {
+
+                    sys_id:
+                        sensor.getUniqueValue(),
+
+                    pressure:
+                        this.getDisplay(
+                            sensor,
+                            "pressure"
+                        ),
+
+                    temperature:
+                        this.getDisplay(
+                            sensor,
+                            "temperature"
+                        ),
+
+                    flow_rate:
+                        this.getDisplay(
+                            sensor,
+                            "flow_rate"
+                        ),
+
+                    sensor_status:
+                        this.getDisplay(
+                            sensor,
+                            "sensor_status"
+                        ),
+
+                    updated:
+                        this.getDisplay(
+                            sensor,
+                            "sys_created_on"
+                        )
+
+                };
+
+            }
+            else {
+
+                result.error =
+                    "No SCADA sensor reading found.";
+
+            }
+
+
+            return JSON.stringify(
+                result
+            );
+
+        },
+
+
+        /* =====================================================
+           AI ADVISOR
+           ===================================================== */
+
+        askHSEAdvisor: function() {
+
+            var question =
+                this.clean(
+                    this.getParameter(
+                        "sysparm_question"
+                    )
+                ).toLowerCase();
+
+
+            var result = {
+
+                success: true,
+
+                html: ""
+
+            };
+
+
+            if (
+                question === ""
+            ) {
+
+                result.html =
+                    "Please enter an HSE question.";
+
+                return JSON.stringify(
+                    result
+                );
+
+            }
+
+
+            /* ================= CRITICAL ASSETS ================= */
+
+            if (
+                question.indexOf(
+                    "critical"
+                ) >= 0 &&
+                question.indexOf(
+                    "asset"
+                ) >= 0
+            ) {
+
+                result.html =
+                    this.buildAssetResponse(
+                        "critical"
+                    );
+
+                return JSON.stringify(
+                    result
+                );
+
+            }
+
+
+            /* ================= HIGH RISK ================= */
+
+            if (
+                (
+                    question.indexOf(
+                        "high risk"
+                    ) >= 0 ||
+                    question.indexOf(
+                        "high-risk"
+                    ) >= 0
+                ) &&
+                question.indexOf(
+                    "asset"
+                ) >= 0
+            ) {
+
+                result.html =
+                    this.buildAssetResponse(
+                        "high"
+                    );
+
+                return JSON.stringify(
+                    result
+                );
+
+            }
+
+
+            /* ================= SAFE ASSETS ================= */
+
+            if (
+                (
+                    question.indexOf(
+                        "safe"
+                    ) >= 0 ||
+                    question.indexOf(
+                        "low risk"
+                    ) >= 0
+                ) &&
+                question.indexOf(
+                    "asset"
+                ) >= 0
+            ) {
+
+                result.html =
+                    this.buildAssetResponse(
+                        "low"
+                    );
+
+                return JSON.stringify(
+                    result
+                );
+
+            }
+
+
+            /* ================= INCIDENTS ================= */
+
+            if (
+                question.indexOf(
+                    "incident"
+                ) >= 0
+            ) {
+
+                result.html =
+                    this.buildIncidentResponse();
+
+                return JSON.stringify(
+                    result
+                );
+
+            }
+
+
+            /* ================= PERMITS ================= */
+
+            if (
+                question.indexOf(
+                    "permit"
+                ) >= 0
+            ) {
+
+                result.html =
+                    this.buildPermitResponse();
+
+                return JSON.stringify(
+                    result
+                );
+
+            }
+
+
+            /* ================= MAINTENANCE ================= */
+
+            if (
+                question.indexOf(
+                    "maintenance"
+                ) >= 0 ||
+                question.indexOf(
+                    "work order"
+                ) >= 0
+            ) {
+
+                result.html =
+                    this.buildWorkOrderResponse();
+
+                return JSON.stringify(
+                    result
+                );
+
+            }
+
+
+            /* ================= INSPECTIONS ================= */
+
+            if (
+                question.indexOf(
+                    "inspection"
+                ) >= 0
+            ) {
+
+                result.html =
+                    this.buildInspectionResponse();
+
+                return JSON.stringify(
+                    result
+                );
+
+            }
+
+
+            /* ================= SCADA ================= */
+
+            if (
+                question.indexOf(
+                    "pressure"
+                ) >= 0 ||
+                question.indexOf(
+                    "temperature"
+                ) >= 0 ||
+                question.indexOf(
+                    "flow"
+                ) >= 0 ||
+                question.indexOf(
+                    "sensor"
+                ) >= 0 ||
+                question.indexOf(
+                    "scada"
+                ) >= 0
+            ) {
+
+                result.html =
+                    this.buildSCADAResponse();
+
+                return JSON.stringify(
+                    result
+                );
+
+            }
+
+
+            result.html =
+                "<strong>Sentinel HSE Advisor</strong>" +
+                "<br /><br />" +
+                "I can search your HSE records." +
+                "<br /><br />" +
+                "Try asking:" +
+                "<br />" +
+                "• Show critical assets" +
+                "<br />" +
+                "• Show high risk assets" +
+                "<br />" +
+                "• Show safe assets" +
+                "<br />" +
+                "• Show open incidents" +
+                "<br />" +
+                "• Show active permits" +
+                "<br />" +
+                "• Show maintenance work" +
+                "<br />" +
+                "• Show inspections" +
+                "<br />" +
+                "• Show SCADA readings";
+
+
+            return JSON.stringify(
+                result
+            );
+
+        },
+
+
+        /* =====================================================
+           AI - ASSET RESPONSE
+           ===================================================== */
+
+        buildAssetResponse: function(
+            riskLevel
+        ) {
+
+            var html =
+                "<strong>Assets - " +
+                riskLevel +
+                "</strong>" +
+                "<br /><br />";
+
+
+            var gr =
+                new GlideRecord(
+                    this.ASSET_TABLE
+                );
+
+
+            gr.addQuery(
+                "current_risk_level",
+                riskLevel
+            );
+
+            gr.setLimit(10);
+
+            gr.query();
+
+
+            var count = 0;
+
+
+            while (
+                gr.next()
+            ) {
+
+                count++;
+
+
+                html +=
+                    "<div style='margin-bottom:8px;padding:9px;border:1px solid #e2e8f0;border-radius:8px;background:#ffffff;'>";
+
+
+                html +=
+                    "<strong>" +
+                    this.getDisplay(
+                        gr,
+                        "asset_name"
+                    ) +
+                    "</strong>";
+
+
+                html +=
+                    "<br />Risk Level: " +
+                    this.getDisplay(
+                        gr,
+                        "current_risk_level"
+                    );
+
+
+                html +=
+                    "<br />Asset Status: " +
+                    this.getDisplay(
+                        gr,
+                        "asset_status"
+                    );
+
+
+                html +=
+                    "<br />Open Incidents: " +
+                    this.getDisplay(
+                        gr,
+                        "open_incident_count"
+                    );
+
+
+                html +=
+                    "</div>";
+
+            }
+
+
+            if (
+                count === 0
+            ) {
+
+                html +=
+                    "No matching assets were found.";
+
+            }
+
+
+            return html;
+
+        },
+
+
+        /* =====================================================
+           AI - INCIDENT RESPONSE
+           ===================================================== */
+
+        buildIncidentResponse: function() {
+
+            var html =
+                "<strong>Recent Open Incidents</strong>" +
+                "<br /><br />";
+
+
+            var gr =
+                new GlideRecord(
+                    this.INCIDENT_TABLE
+                );
+
+
+            gr.orderByDesc(
+                "sys_created_on"
+            );
+
+            gr.setLimit(10);
+
+            gr.query();
+
+
+            var count = 0;
+
+
+            while (
+                gr.next()
+            ) {
+
+                var status =
+                    this.getDisplay(
+                        gr,
+                        "status_5"
+                    );
+
+
+                if (
+                    this.isClosedIncident(
+                        status
+                    )
+                ) {
+
+                    continue;
+
+                }
+
+
+                count++;
+
+
+                html +=
+                    "<div style='margin-bottom:8px;padding:9px;border:1px solid #e2e8f0;border-radius:8px;background:#ffffff;'>";
+
+
+                html +=
+                    "<strong>" +
+                    this.getDisplay(
+                        gr,
+                        "number"
+                    ) +
+                    "</strong>";
+
+
+                html +=
+                    "<br />Asset: " +
+                    this.getDisplay(
+                        gr,
+                        "asset_name_asset"
+                    );
+
+
+                html +=
+                    "<br />Severity: " +
+                    this.getDisplay(
+                        gr,
+                        "severity_5"
+                    );
+
+
+                html +=
+                    "<br />Status: " +
+                    status;
+
+
+                html +=
+                    "<br />Created: " +
+                    this.getDisplay(
+                        gr,
+                        "sys_created_on"
+                    );
+
+
+                html +=
+                    "</div>";
+
+            }
+
+
+            if (
+                count === 0
+            ) {
+
+                html +=
+                    "No open incidents were found.";
+
+            }
+
+
+            return html;
+
+        },
+
+
+        /* =====================================================
+           AI - PERMIT RESPONSE
+           ===================================================== */
+
+        buildPermitResponse: function() {
+
+            var html =
+                "<strong>Active Permits</strong>" +
+                "<br /><br />";
+
+
+            var gr =
+                new GlideRecord(
+                    this.PERMIT_TABLE
+                );
+
+
+            gr.orderByDesc(
+                "sys_created_on"
+            );
+
+            gr.setLimit(10);
+
+            gr.query();
+
+
+            var count = 0;
+
+
+            while (
+                gr.next()
+            ) {
+
+                var status =
+                    this.getDisplay(
+                        gr,
+                        "status_8"
+                    );
+
+
+                if (
+                    this.isInactivePermit(
+                        status
+                    )
+                ) {
+
+                    continue;
+
+                }
+
+
+                count++;
+
+
+                html +=
+                    "<div style='margin-bottom:8px;padding:9px;border:1px solid #e2e8f0;border-radius:8px;background:#ffffff;'>";
+
+
+                html +=
+                    "<strong>" +
+                    this.getDisplay(
+                        gr,
+                        "number"
+                    ) +
+                    "</strong>";
+
+
+                html +=
+                    "<br />Asset: " +
+                    this.getDisplay(
+                        gr,
+                        "asset_8"
+                    );
+
+
+                html +=
+                    "<br />Permit Type: " +
+                    this.getDisplay(
+                        gr,
+                        "permit_type_8"
+                    );
+
+
+                html +=
+                    "<br />Status: " +
+                    status;
+
+
+                html +=
+                    "<br />Priority: " +
+                    this.getDisplay(
+                        gr,
+                        "priority_8"
+                    );
+
+
+                html +=
+                    "<br />Start: " +
+                    this.getDisplay(
+                        gr,
+                        "start_date_8"
+                    );
+
+
+                html +=
+                    "<br />End: " +
+                    this.getDisplay(
+                        gr,
+                        "end_date_8"
+                    );
+
+
+                html +=
+                    "</div>";
+
+            }
+
+
+            if (
+                count === 0
+            ) {
+
+                html +=
+                    "No active permits were found.";
+
+            }
+
+
+            return html;
+
+        },
+
+
+        /* =====================================================
+           AI - WORK ORDER RESPONSE
+           ===================================================== */
+
+        buildWorkOrderResponse: function() {
+
+            var html =
+                "<strong>Maintenance Work Orders</strong>" +
+                "<br /><br />";
+
+
+            var gr =
+                new GlideRecord(
+                    this.WORK_ORDER_TABLE
+                );
+
+
+            gr.orderByDesc(
+                "sys_created_on"
+            );
+
+            gr.setLimit(10);
+
+            gr.query();
+
+
+            var typeField =
+                this.firstField(
+                    gr,
+                    [
+                        "work_type",
+                        "work_type_7",
+                        "work_order_type",
+                        "work_order_type_7",
+                        "type"
+                    ]
+                );
+
+
+            var statusField =
+                this.firstField(
+                    gr,
+                    [
+                        "status",
+                        "status_7",
+                        "state"
+                    ]
+                );
+
+
+            var assetField =
+                this.firstField(
+                    gr,
+                    [
+                        "asset",
+                        "asset_7",
+                        "asset_name",
+                        "asset_name_work",
+                        "asset_8"
+                    ]
+                );
+
+
+            var count = 0;
+
+
+            while (
+                gr.next()
+            ) {
+
+                count++;
+
+
+                html +=
+                    "<div style='margin-bottom:8px;padding:9px;border:1px solid #e2e8f0;border-radius:8px;background:#ffffff;'>";
+
+
+                html +=
+                    "<strong>" +
+                    this.getDisplay(
+                        gr,
+                        "number"
+                    ) +
+                    "</strong>";
+
+
+                html +=
+                    "<br />Asset: " +
+                    this.getDisplay(
+                        gr,
+                        assetField
+                    );
+
+
+                html +=
+                    "<br />Work Type: " +
+                    this.getDisplay(
+                        gr,
+                        typeField
+                    );
+
+
+                html +=
+                    "<br />Status: " +
+                    this.getDisplay(
+                        gr,
+                        statusField
+                    );
+
+
+                html +=
+                    "<br />Created: " +
+                    this.getDisplay(
+                        gr,
+                        "sys_created_on"
+                    );
+
+
+                html +=
+                    "</div>";
+
+            }
+
+
+            if (
+                count === 0
+            ) {
+
+                html +=
+                    "No work orders were found.";
+
+            }
+
+
+            return html;
+
+        },
+
+
+        /* =====================================================
+           AI - INSPECTION RESPONSE
+           ===================================================== */
+
+        buildInspectionResponse: function() {
+
+            var html =
+                "<strong>Recent Inspections</strong>" +
+                "<br /><br />";
+
+
+            var gr =
+                new GlideRecord(
+                    this.INSPECTION_TABLE
+                );
+
+
+            gr.orderByDesc(
+                "inspection_date_6"
+            );
+
+            gr.setLimit(10);
+
+            gr.query();
+
+
+            var count = 0;
+
+
+            while (
+                gr.next()
+            ) {
+
+                count++;
+
+
+                html +=
+                    "<div style='margin-bottom:8px;padding:9px;border:1px solid #e2e8f0;border-radius:8px;background:#ffffff;'>";
+
+
+                html +=
+                    "<strong>" +
+                    this.getDisplay(
+                        gr,
+                        "number"
+                    ) +
+                    "</strong>";
+
+
+                html +=
+                    "<br />Asset: " +
+                    this.getDisplay(
+                        gr,
+                        "asset_name_inspection"
+                    );
+
+
+                html +=
+                    "<br />Inspection Type: " +
+                    this.getDisplay(
+                        gr,
+                        "inspection_type_6"
+                    );
+
+
+                html +=
+                    "<br />Status: " +
+                    this.getDisplay(
+                        gr,
+                        "status_6"
+                    );
+
+
+                html +=
+                    "<br />Inspector: " +
+                    this.getDisplay(
+                        gr,
+                        "inspector_6"
+                    );
+
+
+                html +=
+                    "<br />Findings: " +
+                    this.getDisplay(
+                        gr,
+                        "findings_6"
+                    );
+
+
+                html +=
+                    "<br />Inspection Date: " +
+                    this.getDisplay(
+                        gr,
+                        "inspection_date_6"
+                    );
+
+
+                html +=
+                    "</div>";
+
+            }
+
+
+            if (
+                count === 0
+            ) {
+
+                html +=
+                    "No inspections were found.";
+
+            }
+
+
+            return html;
+
+        },
+
+
+        /* =====================================================
+           AI - SCADA RESPONSE
+           ===================================================== */
+
+        buildSCADAResponse: function() {
+
+            var html =
+                "<strong>Latest SCADA Reading</strong>" +
+                "<br /><br />";
+
+
+            var gr =
+                new GlideRecord(
+                    this.SENSOR_TABLE
+                );
+
+
+            gr.orderByDesc(
+                "sys_created_on"
+            );
+
+            gr.setLimit(1);
+
+            gr.query();
+
+
+            if (
+                !gr.next()
+            ) {
+
+                return (
+                    html +
+                    "No SCADA sensor reading was found."
+                );
+
+            }
+
+
+            html +=
+                "<div style='padding:10px;border:1px solid #e2e8f0;border-radius:8px;background:#ffffff;'>";
+
+
+            html +=
+                "<strong>Pressure:</strong> " +
+                this.getDisplay(
+                    gr,
+                    "pressure"
+                );
+
+
+            html +=
+                "<br /><strong>Temperature:</strong> " +
+                this.getDisplay(
+                    gr,
+                    "temperature"
+                );
+
+
+            html +=
+                "<br /><strong>Flow Rate:</strong> " +
+                this.getDisplay(
+                    gr,
+                    "flow_rate"
+                );
+
+
+            html +=
+                "<br /><strong>Sensor Status:</strong> " +
+                this.getDisplay(
+                    gr,
+                    "sensor_status"
+                );
+
+
+            html +=
+                "<br /><strong>Updated:</strong> " +
+                this.getDisplay(
+                    gr,
+                    "sys_created_on"
+                );
+
+
+            html +=
+                "</div>";
+
+
+            return html;
+
+        },
+
+
+        /* =====================================================
+           TYPE
+           ===================================================== */
+
+        type:
+            "SentinelHSEDashboardAjax"
+
+    }
+);]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-17 06:39:06</sys_created_on>
+        <sys_id>a79267b8407a03107f44500460178b2a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>SentinelHSEDashboardAjax</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_script_include_a79267b8407a03107f44500460178b2a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-17 06:45:04</sys_updated_on>
+    </sys_script_include>
+</record_update>

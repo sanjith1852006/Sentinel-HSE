@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_search_source">
+    <ais_search_source action="DELETE">
+        <active>true</active>
+        <condition table="sc_cat_item">active=true^no_search!=true^sys_class_name!=sc_cat_item_wizard^hide_sp=false^ORhide_spISEMPTY^availability=on_both^ORavailability=on_desktop^visible_standalone=true^sc_catalogsNOT LIKE0b22fd2ad7021100b9a5c7400e610319<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="false" field="no_search" goto="false" newquery="false" operator="!=" or="false" value="true"/>
+            <item display_value="Wizard Launcher" endquery="false" field="sys_class_name" goto="false" newquery="false" operator="!=" or="false" value="sc_cat_item_wizard"/>
+            <item endquery="false" field="hide_sp" goto="false" newquery="false" operator="=" or="false" value="false"/>
+            <item endquery="false" field="hide_sp" goto="false" newquery="false" operator="ISEMPTY" or="true" value=""/>
+            <item display_value="Desktop and Classic Mobile" endquery="false" field="availability" goto="false" newquery="false" operator="=" or="false" value="on_both"/>
+            <item display_value="Desktop Only" endquery="false" field="availability" goto="false" newquery="false" operator="=" or="true" value="on_desktop"/>
+            <item endquery="false" field="visible_standalone" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="false" field="sc_catalogs" goto="false" newquery="false" operator="NOT LIKE" or="false" value="0b22fd2ad7021100b9a5c7400e610319"/>
+        </condition>
+        <datasource display_value="">sc_cat_item</datasource>
+        <has_dynamic_filters>false</has_dynamic_filters>
+        <name>Now Assist Multi-Turn Catalog Ordering</name>
+        <sys_class_name>ais_search_source</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:53:58</sys_created_on>
+        <sys_id>c43ee9bae46a43107f44b37c6b758805</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Now Assist Multi-Turn Catalog Ordering</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>ais_search_source_c43ee9bae46a43107f44b37c6b758805</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:53:58</sys_updated_on>
+    </ais_search_source>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</application>
+        <file_path/>
+        <instance_id>17b1043093560750fb38f8284dba101a</instance_id>
+        <instance_name>dlt-hck-8017-0027</instance_name>
+        <name>ais_search_source_c43ee9bae46a43107f44b37c6b758805</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_search_source"><ais_search_source action="INSERT_OR_UPDATE"><active>true</active><condition table="sc_cat_item">active=true^no_search!=true^sys_class_name!=sc_cat_item_wizard^hide_sp=false^ORhide_spISEMPTY^availability=on_both^ORavailability=on_desktop^visible_standalone=true^sc_catalogsNOT LIKE0b22fd2ad7021100b9a5c7400e610319<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/><item endquery="false" field="no_search" goto="false" newquery="false" operator="!=" or="false" value="true"/><item display_value="Wizard Launcher" endquery="false" field="sys_class_name" goto="false" newquery="false" operator="!=" or="false" value="sc_cat_item_wizard"/><item endquery="false" field="hide_sp" goto="false" newquery="false" operator="=" or="false" value="false"/><item endquery="false" field="hide_sp" goto="false" newquery="false" operator="ISEMPTY" or="true" value=""/><item display_value="Desktop and Classic Mobile" endquery="false" field="availability" goto="false" newquery="false" operator="=" or="false" value="on_both"/><item display_value="Desktop Only" endquery="false" field="availability" goto="false" newquery="false" operator="=" or="true" value="on_desktop"/><item endquery="false" field="visible_standalone" goto="false" newquery="false" operator="=" or="false" value="true"/><item endquery="false" field="sc_catalogs" goto="false" newquery="false" operator="NOT LIKE" or="false" value="0b22fd2ad7021100b9a5c7400e610319"/></condition><datasource display_value="">sc_cat_item</datasource><has_dynamic_filters>false</has_dynamic_filters><name>Now Assist Multi-Turn Catalog Ordering</name><sys_class_name>ais_search_source</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-10 16:53:58</sys_created_on><sys_id>c43ee9bae46a43107f44b37c6b758805</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Now Assist Multi-Turn Catalog Ordering</sys_name><sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package><sys_policy/><sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope><sys_update_name>ais_search_source_c43ee9bae46a43107f44b37c6b758805</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-10 16:53:58</sys_updated_on></ais_search_source></record_update>]]></payload>
+        <payload_hash>-1658823010</payload_hash>
+        <record_name>Now Assist Multi-Turn Catalog Ordering</record_name>
+        <reverted_from/>
+        <source>6124114d456203107f442c7fe0ab7389</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:53:58</sys_created_on>
+        <sys_id>003ee9bae46a43107f44b37c6b758808</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19fec9866de0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:53:58</sys_updated_on>
+        <type>AI Search Search Source</type>
+        <update_guid>043ee9bae16a4310a10f2a7506522c07</update_guid>
+        <update_guid_history>043ee9bae16a4310a10f2a7506522c07:-1658823010</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Now Assist Multi-Turn Catalog Ordering">b28175b2e4aa43107f44b37c6b7588a6</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 17:08:39</sys_created_on>
+        <sys_db_object display_value="" name="ais_search_source">ais_search_source</sys_db_object>
+        <sys_id>aa639770937249aa9bea88fc72029619</sys_id>
+        <sys_metadata>c43ee9bae46a43107f44b37c6b758805</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Now Assist Multi-Turn Catalog Ordering</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_scope_delete display_value="">00a898291b4446e4800f9c59a3050f44</sys_scope_delete>
+        <sys_update_name>ais_search_source_c43ee9bae46a43107f44b37c6b758805</sys_update_name>
+        <sys_update_version display_value="ais_search_source_c43ee9bae46a43107f44b37c6b758805">003ee9bae46a43107f44b37c6b758808</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 17:08:39</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

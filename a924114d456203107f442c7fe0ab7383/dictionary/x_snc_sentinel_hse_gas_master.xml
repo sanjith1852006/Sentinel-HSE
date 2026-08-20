@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="c5a1c9a5296a43107f441ac0369c7fe2" label="Gas Master" max_length="40" name="x_snc_sentinel_hse_gas_master" type="collection">
+        <element label="Safe Threshold" mandatory="true" max_length="20" name="safe_threshold" type="decimal"/>
+        <element choice="1" label="Unit" mandatory="true" max_length="40" name="unit" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="mg/m³" sequence="1" value="mg"/>
+                <element inactive_on_update="false" label="ppm" sequence="2" value="ppm"/>
+                <element inactive_on_update="false" label="%" sequence="0" value="percentage"/>
+                <element inactive_on_update="false" label="ppmv" sequence="3" value="ppmv"/>
+            </choice>
+        </element>
+        <element default="True" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Chemical Formula" mandatory="true" max_length="30" name="chemical_formula" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Critical Threshold" mandatory="true" max_length="20" name="critical_threshold" type="decimal"/>
+        <element label="Warning Threshold" mandatory="true" max_length="20" name="warning_threshold" type="decimal"/>
+        <element label="Gas Name" mandatory="true" max_length="100" name="gas_name" type="string"/>
+        <element label="Description" max_length="1000" name="description_3" type="string"/>
+        <element choice="1" label="Gas Category" mandatory="true" max_length="40" name="gas_category" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Asphyxiant" value="asphyxiant"/>
+                <element inactive_on_update="false" label="Inert" value="inert"/>
+                <element inactive_on_update="false" label="Corrosive" value="corrosive"/>
+                <element inactive_on_update="false" label="Toxic" value="toxic"/>
+                <element inactive_on_update="false" label="Flammable" value="flammable"/>
+            </choice>
+        </element>
+    </element>
+</database>

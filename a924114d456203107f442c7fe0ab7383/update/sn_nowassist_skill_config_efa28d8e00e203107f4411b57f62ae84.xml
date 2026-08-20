@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_nowassist_skill_config">
+    <sn_nowassist_skill_config action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <description><![CDATA[Analyzes OGI inspection findings and available gas sensor readings for an oilfield asset to identify possible gas leakage, determine severity, and recommend an appropriate HSE action.]]></description>
+        <edited_in_nask>false</edited_in_nask>
+        <in_product_active>false</in_product_active>
+        <in_product_roles/>
+        <internal_name>ogi_leak_detection.efa28d8e00e203107f4411b57f62ae84</internal_name>
+        <is_template>false</is_template>
+        <name>OGI Leak Detection</name>
+        <nap_skill_applicability/>
+        <order>100</order>
+        <parent/>
+        <skill_family display_value="Other">a5efaf1c93764210aa5730f16489186d</skill_family>
+        <skill_id>47a24d8e00e203107f4411b57f62aeb3</skill_id>
+        <skill_table>sys_one_extend_capability</skill_table>
+        <state>1</state>
+        <success_message/>
+        <sys_class_name>sn_nowassist_skill_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 05:48:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>efa28d8e00e203107f4411b57f62ae84</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>OGI Leak Detection</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sn_nowassist_skill_config_efa28d8e00e203107f4411b57f62ae84</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 16:27:33</sys_updated_on>
+    </sn_nowassist_skill_config>
+    <sys_translated_text action="delete_multiple" query="documentkey=efa28d8e00e203107f4411b57f62ae84"/>
+</record_update>

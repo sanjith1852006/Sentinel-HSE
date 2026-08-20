@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="aa31c4f9886603107f4468412c6146f5" label="Compliance Audit" max_length="40" name="x_snc_sentinel_hse_compliance_audit" type="collection">
+        <element label="Findings" max_length="1000" name="findings_9" type="string"/>
+        <element label="Due Date" max_length="40" name="due_date_9" type="glide_date"/>
+        <element choice="1" label="Compliance Status" max_length="40" name="compliance_status_9" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Partially Compliant" value="partially_compliant_9"/>
+                <element inactive_on_update="false" label="Under Review" value="under_review_9"/>
+                <element inactive_on_update="false" label="Non-Compliant" value="non_compliant_9"/>
+                <element inactive_on_update="false" label="Compliant" value="compliant_9"/>
+            </choice>
+        </element>
+        <element label="Audit Date" mandatory="true" max_length="40" name="audit_date_9" type="glide_date"/>
+        <element label="Audit Score" max_length="40" name="audit_score_9" type="integer"/>
+        <element label="AI Recommendation" max_length="1000" name="ai_recommendation_9" type="string"/>
+        <element choice="1" label="Risk Level" max_length="40" name="risk_level_9" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Low" value="low_k"/>
+                <element inactive_on_update="false" label="Medium" value="medium_k"/>
+                <element inactive_on_update="false" label="High" value="high_k"/>
+                <element inactive_on_update="false" label="Critical" value="critical_k"/>
+            </choice>
+        </element>
+        <element choice="1" label="Audit Type" mandatory="true" max_length="40" name="audit_type_9" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Safety Audit" value="safety_audit_9"/>
+                <element inactive_on_update="false" label="Environmental Audit" value="environmental_audit_9"/>
+                <element inactive_on_update="false" label="Internal Audit" value="internal_audit_9"/>
+                <element inactive_on_update="false" label="Quality Audit" value="quality_audit_9"/>
+                <element inactive_on_update="false" label="Regulatory Audit" value="regulatory_audit_9"/>
+            </choice>
+        </element>
+        <element label="Closure Date" max_length="40" name="closure_date_9" type="glide_date"/>
+        <element label="Auditor" mandatory="true" max_length="32" name="auditor_9" reference="sys_user" type="reference"/>
+        <element label="Inspection" max_length="32" name="inspection_9" reference="x_snc_sentinel_hse_inspection" type="reference"/>
+        <element choice="1" label="Regulation" max_length="40" name="regulation_9" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="ISO 14001" value="iso_14001_9"/>
+                <element inactive_on_update="false" label="ISO 45001" value="iso_45001_9"/>
+                <element inactive_on_update="false" label="Local Government Regulations" value="local_government_regulations_9"/>
+                <element inactive_on_update="false" label="API Standards" value="api_standards_9"/>
+                <element inactive_on_update="false" label="OSHA" value="osha_9"/>
+            </choice>
+        </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Non Compliance Details" max_length="1000" name="non_compliance_details_9" type="string"/>
+        <element label="Asset" mandatory="true" max_length="32" name="asset_9" reference="x_snc_sentinel_hse_oilfield_asset_1" type="reference"/>
+        <element label="AI Compliance Summary" max_length="1000" name="ai_compliance_summary_9" type="string"/>
+        <element label="Corrective Action" max_length="1000" name="corrective_action_9" type="string"/>
+        <element choice="1" default="Open" label="Status" max_length="40" name="status_9" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Open" value="open_k"/>
+                <element inactive_on_update="false" label="In Progress" value="in_progress_k"/>
+                <element inactive_on_update="false" label="Closed" value="closed_k"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="asset_9"/>
+        </index>
+        <index name="index2">
+            <element name="auditor_9"/>
+        </index>
+        <index name="index3">
+            <element name="inspection_9"/>
+        </index>
+    </element>
+</database>

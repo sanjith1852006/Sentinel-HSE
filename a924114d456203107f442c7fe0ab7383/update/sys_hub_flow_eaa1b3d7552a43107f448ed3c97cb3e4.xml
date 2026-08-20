@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=2995000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>sensor_reading_simulation</internal_name>
+        <label_cache>[{"name":"0377cf54-a721-478f-986f-c363f059d98a.Records","label":"1 - Look Up Records➛Sensor Reading Records","reference":"x_snc_sentinel_hse_sensor_reading","reference_display":"Sensor Reading","type":"records","base_type":"records","usedInstances":{"ce82e039-4f05-4060-8222-cd86a85f1b8b":["items"],"dac463a2-0456-4fa5-9919-82946ae2f3d5":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dac463a2-0456-4fa5-9919-82946ae2f3d5.item","label":"2 - For Each➛Sensor Reading Record","reference":"x_snc_sentinel_hse_sensor_reading","reference_display":"Sensor Reading","type":"reference","base_type":"reference","usedInstances":{"c6fac654-d8d0-4483-95a3-8c00035e4482":["record"]},"attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}}]</label_cache>
+        <master_snapshot>491af71b556a43107f448ed3c97cb38c</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Sensor Reading Simulation</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>d11af71b556a43107f448ed3c97cb3ac</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 15:45:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>eaa1b3d7552a43107f448ed3c97cb3e4</sys_id>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_name>Sensor Reading Simulation</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_hub_flow_eaa1b3d7552a43107f448ed3c97cb3e4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 16:35:20</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>b61d731355aa43107f448ed3c97cb302</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=eaa1b3d7552a43107f448ed3c97cb3e4"/>
+    <sys_variable_value action="delete_multiple" query="document_key=eaa1b3d7552a43107f448ed3c97cb3e4"/>
+    <sys_flow_timer_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <day_of_month>1</day_of_month>
+        <day_of_week/>
+        <name/>
+        <published_version/>
+        <run_period>1970-01-01 00:02:01</run_period>
+        <run_start/>
+        <sys_class_name>sys_flow_timer_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 16:22:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d11af71b556a43107f448ed3c97cb3ac</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 16:35:20</sys_updated_on>
+        <time/>
+        <timer_type>1</timer_type>
+        <trigger_definition display_value="Repeat">f63f0d94c32222002841b63b12d3aeed</trigger_definition>
+    </sys_flow_timer_trigger>
+    <sys_flow_trigger_auto_script action="delete_multiple" query="name=Trigger:d11af71b556a43107f448ed3c97cb3ac^sys_idNOT IN9d1af71b556a43107f448ed3c97cb3ac"/>
+    <sys_flow_trigger_auto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_run_end/>
+        <entered_run_start/>
+        <entered_time/>
+        <max_drift/>
+        <name>Trigger:d11af71b556a43107f448ed3c97cb3ac</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <repeat_every/>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek/>
+        <run_daysofweek/>
+        <run_end/>
+        <run_month/>
+        <run_period>1970-01-01 00:02:01</run_period>
+        <run_start>2026-08-12 16:37:21</run_start>
+        <run_time/>
+        <run_type>periodically</run_type>
+        <run_weekinmonth/>
+        <script><![CDATA[sn_flow_trigger.FlowTriggerAPI.fireTimerTrigger('d11af71b556a43107f448ed3c97cb3ac');]]></script>
+        <sys_class_name>sys_flow_trigger_auto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 16:22:09</sys_created_on>
+        <sys_id>9d1af71b556a43107f448ed3c97cb3ac</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 16:35:20</sys_updated_on>
+        <time_zone/>
+        <trigger display_value="">d11af71b556a43107f448ed3c97cb3ac</trigger>
+        <upgrade_safe>true</upgrade_safe>
+    </sys_flow_trigger_auto_script>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=eaa1b3d7552a43107f448ed3c97cb3e4"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=eaa1b3d7552a43107f448ed3c97cb3e4"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=eaa1b3d7552a43107f448ed3c97cb3e4^sys_idNOT INeea1b3d7552a43107f448ed3c97cb3e5"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>eaa1b3d7552a43107f448ed3c97cb3e4</id>
+        <name>Sensor Reading Simulation</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 15:45:22</sys_created_on>
+        <sys_id>eea1b3d7552a43107f448ed3c97cb3e5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 15:45:22</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=eea1b3d7552a43107f448ed3c97cb3e5"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=eaa1b3d7552a43107f448ed3c97cb3e4"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=eaa1b3d7552a43107f448ed3c97cb3e4"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=eaa1b3d7552a43107f448ed3c97cb3e4"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=eaa1b3d7552a43107f448ed3c97cb3e4^sys_idNOT INd9c1f7d7552a43107f448ed3c97cb397"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Sensor Reading Simulation">eaa1b3d7552a43107f448ed3c97cb3e4</flow>
+        <generation_source/>
+        <name>Repeat</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 15:45:49</sys_created_on>
+        <sys_id>d9c1f7d7552a43107f448ed3c97cb397</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 16:22:07</sys_updated_on>
+        <trigger_definition display_value="Repeat">f63f0d94c32222002841b63b12d3aeed</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/3VSy07DMBD8FeRziZy2vHJDQpU4AFJBXBCKNvamtbR+4DgtAfHvbB6tEIgoF894Z2dGfvkUBBWSKMQaA0ISM2FcwuiAnrqAjG/IaCx1GyEZ75i34DQkHztRpNjiTNTR2ye0gSDxQA3UMOijxiiKXMqZ2AG1+Ng1t5r1WMGB7ZXjYePAM5BfXchTmfN/ImUh54XMmVVbQzqiE8XL60wEiDydeu3PX5Tp5XN1Vi/11VIt5vxJOb9c5tX5osrnegFYLVjwT+LfftI/yX9mwveETqM+Bv5TS0TQD466440tNzsWYOG9MR84SUWskUMoHMnjsdSm4VK7EVZbbxQ+hMHLgCSoaJpRnlrr7sccfNZYQ0vpeSqWkbZhPQ7InnsXk6X6cev368PClXFDwIkkr4COJ0gpmqpN2PTNI6FlodJCCMZtyhD9zgzD7MVmQ3VZTX7PSxuzcRmo3njGFUG2YvxmgJ8hmj7FHcvw8NeQvnxr+71jjslxOYbmC1MpK4M0PadGRRPSNS/YHd7f1+s3uqSGcdoCAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>repeat</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=eaa1b3d7552a43107f448ed3c97cb3e4^sys_idNOT INea02b393552a43107f448ed3c97cb3d7,b3ec37df556a43107f448ed3c97cb3c2"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Sensor Reading Simulation">eaa1b3d7552a43107f448ed3c97cb3e4</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 15:47:00</sys_created_on>
+        <sys_id>ea02b393552a43107f448ed3c97cb3d7</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 16:37:23</sys_updated_on>
+        <ui_id>0377cf54-a721-478f-986f-c363f059d98a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VX2WrjMBT9laBnE+w6TTt9G1oKA12gKX3pDEK25ESMIruWnKUh/z5XluyYxEkTcKFlHnUX3XOXo+V1hThFV+gyGfg+Cc4vL3w/DH1/OAxjEkRROIwjPxpEyEOSTBlYahIJBssZEYVZL7CSMVZMai6ZwBPFzEKlOc4ZoVyOwZZylQmyfHEuo1Lfe6r18YQLmjOJrl7/eCgjOYTSLEdXqy3VsVgFiZgA02cHdgu7Xmb1Epc6K7truvUerCLNqYHie4gtNJOUAYaECMU8NCWSEp3my1picn6UYiOYcKlhR2SMF4q/Q9xL39glDLKKmdXVS+xKZcXJDdFkpPMi1kXuTONJymOmbD0oS0gh9HVTZg0eM81TaV1s2tY7FcVUPthyoHqDqjMgKaCBlGUmUYPcpZGMJun8qUJ5y2VZE6cUaUxEvSJa5zwqtMGzQkywKWyEpyTLoNk4y9MZL50By7Q/FrDoJyKdQ1DFx7JPYgO8D3Ul/VuQ35TiF5Jzk8U9bAPOAIgLmBBsW6jSIi9LOcOxKFSpyIlUdi+09pBaqmtBlNpkDiXHb4XBbevgMsa2aMYlznmmf8IWM+aSW3tH0eXc34xcnErKDQrV4Izi00IQIzX1gM4pRn8XsBUtw+wy5mOHLilU4q8odN1MoC0pR6Yd2V3bBo5MQWdkgjy+E50g+Ndj0+n8sCX4gCTxxcEhO9/ME9wGGttatrNEsbeibO8hZjSMTmPDEUArNjya+e1Fy33YHRkSzgRtu1lujWLrZjn7P2+WL0kFAESx7R6XAl40ZtgB6GdxxD98EP/YmrNyvBoMMTKi4l1akJ5Oe+8nM+EIOBUTRhC792zxtECsboVyZLZvhEroCBB2RoDwrBsCrOo060K21Lx6GZpuVvbvxp5s28MINhyCdRvBTooZnBrzbL1L4PAkBjeHzWpu9sxcx0/IPYz0PvMImICri4ctf/Gc0zHTm+iVFU31nIi/bXo3cbhqlH2sdf8cHRyk7TDYUBSYAv8yBc1rvkeD3QMkOPnsOAJEVYd7soDfX4WiFZo7P4DibFw2pXmA/KqlbroHHb4nv+wVGsBTdy/5As9qv8X3rTsG/PkHzFk0B8EQAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ea02b393552a43107f448ed3c97cb3d7"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Sensor Reading Simulation">eaa1b3d7552a43107f448ed3c97cb3e4</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>dac463a2-0456-4fa5-9919-82946ae2f3d5</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 16:34:36</sys_created_on>
+        <sys_id>b3ec37df556a43107f448ed3c97cb3c2</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 16:37:23</sys_updated_on>
+        <ui_id>c6fac654-d8d0-4483-95a3-8c00035e4482</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVy07jMBT9lcrrtsqrFe0OUSGNxIAEIzYMim7tG2rJcTK2A3Sq/vtcJ06oAPGQ2KDJ7r7sc07uSW52TAq2ZBmKKF7Ec57GaZpEUXKUxet5uo4TkQJizMZMQ4nUaZBXRlB8D6rxid1OAM/mKSSTKJvNJ1kBs8liES8mR8kimwMmRSpmU+mw3O9pTkhbK9heh3HK8I1UwqBmy5vbMavB0E0ODVvunpU+ClXBGhW1XvZYn2N329rHouJNidrlsk+ehclVqIx+rKhCQx5OHI0ZPjrUAglIAcrimJWgBbjKbNnSmYYSBkFcaLUdOjZSu45oCY9W/qWbs8j3FUjMeBBhCPMgUJcuVuDgik7mrjGDXpXkaDtNBBbQKHdymOsaLmonK92NOFirfrpSTanPO0XYcMDB+2gsgcDa8/TIO1rF1aZ6uOxBnkrdShIoqoqDGiJwzsh14zycHUOFrcYl1LXUd3ltqnvZDhOUcnqnKJgWqnqgO62801PgHveUVIXpKeVXbfoajPQkftIxNLwfM7u1JwqsfaJCGuZ/Go+kIxYo5K0KrQR5uwl+mBtZu2O66h4D8P04mGE9e2vD+OJpoQ7OfDLEY241zy1dLDWqfENqUmArk/vVIAlemuCqrY8uh/rnLPEBwL0lfrWL8DqB4IoXubPD2dF5VwiemH2ZJ46+kycCjW9vivesECVvfmwPNqndfntgAyvLRoFH7dnRe7AofjdRlAq/Ey898G7/5zzxAeS9J04lKmFfodIbAksC6jDvqD0zRSiOrkNx+Fl8mTPiedQ+38gf/80/4/YfxQWDxUIJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b3ec37df556a43107f448ed3c97cb3c2"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=eaa1b3d7552a43107f448ed3c97cb3e4"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=eaa1b3d7552a43107f448ed3c97cb3e4^sys_idNOT IN2ddcbb9f556a43107f448ed3c97cb33b"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">791dffdf556a43107f448ed3c97cb39c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Sensor Reading Simulation">eaa1b3d7552a43107f448ed3c97cb3e4</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 16:34:10</sys_created_on>
+        <sys_id>2ddcbb9f556a43107f448ed3c97cb33b</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 16:35:17</sys_updated_on>
+        <ui_id>dac463a2-0456-4fa5-9919-82946ae2f3d5</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51TTW/bMAz9Lzonhj9SJ86twFCgh61AV/QyFAYtUYkwWfIkOaln+L+Pip106GnYyeIj+fieKI/M9qHrg3+x996rg2H7H28rpkzE6DwyJdieZZWQVZZWvMjLIk/TfLfJmrJoslwUgKJkK2agRapUAVtP4Ql0H+NxTIvtlsu7zRq2ebbebHdyXe1KueZFWcj0rhLVDpJn5NYJP03UKpTvNAyv/8/Aj0oLh4uZDhxpC+jYfvyUCkOHtYYGNQ1aGKj/Xz1fOx8X05/uILJT6G689Ikq8nTF8D2gEUiDJGiPK9aCERCsG9g+uJ4AhyCejB5uFUdlAtGxWPvu1W/iztI0FkokRxzn5C2sl4ucYX60iuNTF5Q1MxKg0UsPt7pvzbdZflwBSuh1uK6AkN4TH3ZRc1SxSJLfj/b8fB34oMzF35LUloO+RRCCU00f0Mc1oMaWiOoWuk6ZQ905e1KXZtLSJgdNQSK1PdPQ+CwT4FF4QlcEyQPhXy7wKzgVXXwlGmqeLu7rX32cO/tYFNezaSrw3Kku3BPdCRdx01t8rzOTnx+GQK48DXyJ2OP1b4iJgZas+N/Q2bqfUeoHNv0BOXjG9FcDAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=eaa1b3d7552a43107f448ed3c97cb3e4"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=eaa1b3d7552a43107f448ed3c97cb3e4"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_eaa1b3d7552a43107f448ed3c97cb3e4"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_eaa1b3d7552a43107f448ed3c97cb3e4"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>sensor_reading_simulation</internal_name>
+        <label_cache>[{"name":"0377cf54-a721-478f-986f-c363f059d98a.Records","label":"1 - Look Up Records➛Sensor Reading Records","reference":"x_snc_sentinel_hse_sensor_reading","reference_display":"Sensor Reading","type":"records","base_type":"records","usedInstances":{"ce82e039-4f05-4060-8222-cd86a85f1b8b":["items"],"dac463a2-0456-4fa5-9919-82946ae2f3d5":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dac463a2-0456-4fa5-9919-82946ae2f3d5.item","label":"2 - For Each➛Sensor Reading Record","reference":"x_snc_sentinel_hse_sensor_reading","reference_display":"Sensor Reading","type":"reference","base_type":"reference","usedInstances":{"c6fac654-d8d0-4483-95a3-8c00035e4482":["record"]},"attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}}]</label_cache>
+        <master>true</master>
+        <name>Sensor Reading Simulation</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Sensor Reading Simulation">eaa1b3d7552a43107f448ed3c97cb3e4</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 16:22:08</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>491af71b556a43107f448ed3c97cb38c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 16:35:19</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=491af71b556a43107f448ed3c97cb38c"/>
+    <sys_variable_value action="delete_multiple" query="document_key=491af71b556a43107f448ed3c97cb38c"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=491af71b556a43107f448ed3c97cb38c"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=491af71b556a43107f448ed3c97cb38c^sys_idNOT INcd1af71b556a43107f448ed3c97cb38d"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>491af71b556a43107f448ed3c97cb38c</id>
+        <name>Sensor Reading Simulation</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 16:22:08</sys_created_on>
+        <sys_id>cd1af71b556a43107f448ed3c97cb38d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 16:22:08</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=cd1af71b556a43107f448ed3c97cb38d"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=491af71b556a43107f448ed3c97cb38c"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=491af71b556a43107f448ed3c97cb38c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=491af71b556a43107f448ed3c97cb38c"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=491af71b556a43107f448ed3c97cb38c^sys_idNOT IN9d1af71b556a43107f448ed3c97cb39a"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Sensor Reading Simulation">491af71b556a43107f448ed3c97cb38c</flow>
+        <generation_source/>
+        <name>Repeat</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 16:22:08</sys_created_on>
+        <sys_id>9d1af71b556a43107f448ed3c97cb39a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 16:22:08</sys_updated_on>
+        <trigger_definition display_value="Repeat">f63f0d94c32222002841b63b12d3aeed</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/3VSy07DMBD8FeRziZy2vHJDQpU4AFJBXBCKNvamtbR+4DgtAfHvbB6tEIgoF894Z2dGfvkUBBWSKMQaA0ISM2FcwuiAnrqAjG/IaCx1GyEZ75i34DQkHztRpNjiTNTR2ye0gSDxQA3UMOijxiiKXMqZ2AG1+Ng1t5r1WMGB7ZXjYePAM5BfXchTmfN/ImUh54XMmVVbQzqiE8XL60wEiDydeu3PX5Tp5XN1Vi/11VIt5vxJOb9c5tX5osrnegFYLVjwT+LfftI/yX9mwveETqM+Bv5TS0TQD466440tNzsWYOG9MR84SUWskUMoHMnjsdSm4VK7EVZbbxQ+hMHLgCSoaJpRnlrr7sccfNZYQ0vpeSqWkbZhPQ7InnsXk6X6cev368PClXFDwIkkr4COJ0gpmqpN2PTNI6FlodJCCMZtyhD9zgzD7MVmQ3VZTX7PSxuzcRmo3njGFUG2YvxmgJ8hmj7FHcvw8NeQvnxr+71jjslxOYbmC1MpK4M0PadGRRPSNS/YHd7f1+s3uqSGcdoCAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>repeat</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=491af71b556a43107f448ed3c97cb38c^sys_idNOT IN5e1d331355aa43107f448ed3c97cb332,511af71b556a43107f448ed3c97cb399"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Sensor Reading Simulation">491af71b556a43107f448ed3c97cb38c</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>dac463a2-0456-4fa5-9919-82946ae2f3d5</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 16:35:19</sys_created_on>
+        <sys_id>5e1d331355aa43107f448ed3c97cb332</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 16:35:19</sys_updated_on>
+        <ui_id>c6fac654-d8d0-4483-95a3-8c00035e4482</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVy07jMBT9lcrrtsqrFe0OUSGNxIAEIzYMim7tG2rJcTK2A3Sq/vtcJ06oAPGQ2KDJ7r7sc07uSW52TAq2ZBmKKF7Ec57GaZpEUXKUxet5uo4TkQJizMZMQ4nUaZBXRlB8D6rxid1OAM/mKSSTKJvNJ1kBs8liES8mR8kimwMmRSpmU+mw3O9pTkhbK9heh3HK8I1UwqBmy5vbMavB0E0ODVvunpU+ClXBGhW1XvZYn2N329rHouJNidrlsk+ehclVqIx+rKhCQx5OHI0ZPjrUAglIAcrimJWgBbjKbNnSmYYSBkFcaLUdOjZSu45oCY9W/qWbs8j3FUjMeBBhCPMgUJcuVuDgik7mrjGDXpXkaDtNBBbQKHdymOsaLmonK92NOFirfrpSTanPO0XYcMDB+2gsgcDa8/TIO1rF1aZ6uOxBnkrdShIoqoqDGiJwzsh14zycHUOFrcYl1LXUd3ltqnvZDhOUcnqnKJgWqnqgO62801PgHveUVIXpKeVXbfoajPQkftIxNLwfM7u1JwqsfaJCGuZ/Go+kIxYo5K0KrQR5uwl+mBtZu2O66h4D8P04mGE9e2vD+OJpoQ7OfDLEY241zy1dLDWqfENqUmArk/vVIAlemuCqrY8uh/rnLPEBwL0lfrWL8DqB4IoXubPD2dF5VwiemH2ZJ46+kycCjW9vivesECVvfmwPNqndfntgAyvLRoFH7dnRe7AofjdRlAq/Ey898G7/5zzxAeS9J04lKmFfodIbAksC6jDvqD0zRSiOrkNx+Fl8mTPiedQ+38gf/80/4/YfxQWDxUIJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5e1d331355aa43107f448ed3c97cb332"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Sensor Reading Simulation">491af71b556a43107f448ed3c97cb38c</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 16:22:08</sys_created_on>
+        <sys_id>511af71b556a43107f448ed3c97cb399</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 16:22:08</sys_updated_on>
+        <ui_id>0377cf54-a721-478f-986f-c363f059d98a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VX2WrjMBT9laBnE+w6TTt9G1oKA12gKX3pDEK25ESMIruWnKUh/z5XluyYxEkTcKFlHnUX3XOXo+V1hThFV+gyGfg+Cc4vL3w/DH1/OAxjEkRROIwjPxpEyEOSTBlYahIJBssZEYVZL7CSMVZMai6ZwBPFzEKlOc4ZoVyOwZZylQmyfHEuo1Lfe6r18YQLmjOJrl7/eCgjOYTSLEdXqy3VsVgFiZgA02cHdgu7Xmb1Epc6K7truvUerCLNqYHie4gtNJOUAYaECMU8NCWSEp3my1picn6UYiOYcKlhR2SMF4q/Q9xL39glDLKKmdXVS+xKZcXJDdFkpPMi1kXuTONJymOmbD0oS0gh9HVTZg0eM81TaV1s2tY7FcVUPthyoHqDqjMgKaCBlGUmUYPcpZGMJun8qUJ5y2VZE6cUaUxEvSJa5zwqtMGzQkywKWyEpyTLoNk4y9MZL50By7Q/FrDoJyKdQ1DFx7JPYgO8D3Ul/VuQ35TiF5Jzk8U9bAPOAIgLmBBsW6jSIi9LOcOxKFSpyIlUdi+09pBaqmtBlNpkDiXHb4XBbevgMsa2aMYlznmmf8IWM+aSW3tH0eXc34xcnErKDQrV4Izi00IQIzX1gM4pRn8XsBUtw+wy5mOHLilU4q8odN1MoC0pR6Yd2V3bBo5MQWdkgjy+E50g+Ndj0+n8sCX4gCTxxcEhO9/ME9wGGttatrNEsbeibO8hZjSMTmPDEUArNjya+e1Fy33YHRkSzgRtu1lujWLrZjn7P2+WL0kFAESx7R6XAl40ZtgB6GdxxD98EP/YmrNyvBoMMTKi4l1akJ5Oe+8nM+EIOBUTRhC792zxtECsboVyZLZvhEroCBB2RoDwrBsCrOo060K21Lx6GZpuVvbvxp5s28MINhyCdRvBTooZnBrzbL1L4PAkBjeHzWpu9sxcx0/IPYz0PvMImICri4ctf/Gc0zHTm+iVFU31nIi/bXo3cbhqlH2sdf8cHRyk7TDYUBSYAv8yBc1rvkeD3QMkOPnsOAJEVYd7soDfX4WiFZo7P4DibFw2pXmA/KqlbroHHb4nv+wVGsBTdy/5As9qv8X3rTsG/PkHzFk0B8EQAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=511af71b556a43107f448ed3c97cb399"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=491af71b556a43107f448ed3c97cb38c"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=491af71b556a43107f448ed3c97cb38c^sys_idNOT IN5a1d331355aa43107f448ed3c97cb34c"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">791dffdf556a43107f448ed3c97cb39c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Sensor Reading Simulation">491af71b556a43107f448ed3c97cb38c</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 16:35:19</sys_created_on>
+        <sys_id>5a1d331355aa43107f448ed3c97cb34c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 16:35:19</sys_updated_on>
+        <ui_id>dac463a2-0456-4fa5-9919-82946ae2f3d5</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51Ty26bQBT9l1ljxMPBxrsoUaRIbSM5UTZVhC7zsEcdZujMYIci/r13DCZRVlVXcM99nXO4DMR0vu28ezG3zsmDJrufbxGROmD4PhDJyI6kJRNlmpQ0z4o8S5Jsu07rIq/TjOXAWUEioqHhWCk9bxyGJ1BdiIchyTcbKm7WK9hk6Wq92YpVuS3EiuZFLpKbkpVbiPecGsvcOGIrk65V0L/+/wR6lIpZPotpwSI3zy3ZDV9S/ypOQc0Vlj7O6r6I9X0bQjtRmIFvc89+QfERSGRJRPi755pxXC9AOR6RBjQDb2xPdt52CFgO7Emrfqk4Su1xHAm1707+wY1pkoRCwVEQ5VNyCavZxwkW9+DhGUdT39m5lB6NpNxNVjAuoFP+7jM2FTy1Xho9tXio1bXbqK7RPyYnyDLg+tkQ6RyS4G0QGqjPOsTz0Zz3V5YPUl9MmZPKUFBLBN5bWXc+8BkIV7zBQVUDbSv1oWqtOclLM3Jp4oPCIBbKnHFpOOUYaCAeo68QPyB+f4Ffwcqg4juOweYxIq53dwqc+9CCJla/u8BkUjZrqCYbQgu1svW3uODEZ7rjW7j6afbiKZUOKbwE7PH6T4VEjxck6WfobOyvQP4DG/8C4HKFhZ0DAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=491af71b556a43107f448ed3c97cb38c"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=491af71b556a43107f448ed3c97cb38c"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_491af71b556a43107f448ed3c97cb38c"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_491af71b556a43107f448ed3c97cb38c"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>eaa1b3d7552a43107f448ed3c97cb3e4</sys_id>
+        <latest_snapshot>491af71b556a43107f448ed3c97cb38c</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch2-04-17-2026_04-29-2026_2044.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=eaa1b3d7552a43107f448ed3c97cb3e4^sys_idNOT IN991af71b556a43107f448ed3c97cb3af"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"991af71b556a43107f448ed3c97cb3af","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id>eaa1b3d7552a43107f448ed3c97cb3e4</plan_id>
+        <snapshot>a89dbf5355aa43107f448ed3c97cb396</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 16:22:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>991af71b556a43107f448ed3c97cb3af</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 16:35:20</sys_updated_on>
+        <trigger display_value="">d11af71b556a43107f448ed3c97cb3ac</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=eaa1b3d7552a43107f448ed3c97cb3e4"/>
+</record_update>

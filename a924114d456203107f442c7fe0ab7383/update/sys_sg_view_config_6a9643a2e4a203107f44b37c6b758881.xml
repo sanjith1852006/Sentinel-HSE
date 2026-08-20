@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_view_config">
+    <sys_sg_view_config action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <creation_method/>
+        <description>View HSE incidents and take corrective action</description>
+        <name>HSE Incidents card</name>
+        <scratchpad_script/>
+        <sys_class_name>sys_sg_view_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 04:41:47</sys_created_on>
+        <sys_id>6a9643a2e4a203107f44b37c6b758881</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HSE Incidents card</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_sg_view_config_6a9643a2e4a203107f44b37c6b758881</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 04:41:47</sys_updated_on>
+        <table>x_snc_sentinel_hse_incident</table>
+        <template display_value="Template 01">6bb0be5c41a71010f877183fc9b8be0c</template>
+    </sys_sg_view_config>
+    <sys_translated_text action="delete_multiple" query="documentkey=6a9643a2e4a203107f44b37c6b758881"/>
+</record_update>

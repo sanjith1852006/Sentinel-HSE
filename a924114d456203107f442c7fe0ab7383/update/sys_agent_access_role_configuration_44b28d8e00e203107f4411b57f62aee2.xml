@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_agent_access_role_configuration">
+    <sys_agent_access_role_configuration action="INSERT_OR_UPDATE">
+        <action>limit_to_roles</action>
+        <agent>efa28d8e00e203107f4411b57f62ae84</agent>
+        <agent_table>sn_nowassist_skill_config</agent_table>
+        <allow_all_session_roles>false</allow_all_session_roles>
+        <description/>
+        <name>OGI Leak Detection</name>
+        <role_list name="x_snc_sentinel_hse.x_sentinel.hse_admin">4e24514d456203107f442c7fe0ab7308,c624114d456203107f442c7fe0ab73e9,8a24114d456203107f442c7fe0ab73ef</role_list>
+        <sys_class_name>sys_agent_access_role_configuration</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 05:48:29</sys_created_on>
+        <sys_id>44b28d8e00e203107f4411b57f62aee2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>OGI Leak Detection</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>sys_agent_access_role_configuration_44b28d8e00e203107f4411b57f62aee2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 10:29:00</sys_updated_on>
+    </sys_agent_access_role_configuration>
+</record_update>

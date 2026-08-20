@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_search_profile_ais_genius_result_configuration_m2m">
+    <ais_search_profile_ais_genius_result_configuration_m2m action="DELETE">
+        <genius_result_configuration display_value="Now Assist Multi-Content Response">088c73a5430302104eaff03a5ab8f22f</genius_result_configuration>
+        <order>0</order>
+        <profile display_value="Now Assist in Virtual Agent - 1c22e29bae46a43107f44b37c6b75888e">2b2ea9bae46a43107f44b37c6b75885c</profile>
+        <sys_class_name>ais_search_profile_ais_genius_result_configuration_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:54:02</sys_created_on>
+        <sys_id>743e6dbae46a43107f44b37c6b758812</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Now Assist Multi-Content Response.Now Assist in Virtual Agent - 1c22e29bae46a43107f44b37c6b75888e</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_update_name>ais_search_profile_ais_genius_result_configuration_m2m_743e6dbae46a43107f44b37c6b758812</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:54:02</sys_updated_on>
+    </ais_search_profile_ais_genius_result_configuration_m2m>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</application>
+        <file_path/>
+        <instance_id>17b1043093560750fb38f8284dba101a</instance_id>
+        <instance_name>dlt-hck-8017-0027</instance_name>
+        <name>ais_search_profile_ais_genius_result_configuration_m2m_743e6dbae46a43107f44b37c6b758812</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_search_profile_ais_genius_result_configuration_m2m"><ais_search_profile_ais_genius_result_configuration_m2m action="INSERT_OR_UPDATE"><genius_result_configuration display_value="Now Assist Multi-Content Response">088c73a5430302104eaff03a5ab8f22f</genius_result_configuration><order>0</order><profile display_value="Now Assist in Virtual Agent - 1c22e29bae46a43107f44b37c6b75888e">2b2ea9bae46a43107f44b37c6b75885c</profile><sys_class_name>ais_search_profile_ais_genius_result_configuration_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-10 16:54:02</sys_created_on><sys_id>743e6dbae46a43107f44b37c6b758812</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Now Assist Multi-Content Response.Now Assist in Virtual Agent - 1c22e29bae46a43107f44b37c6b75888e</sys_name><sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package><sys_policy/><sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope><sys_update_name>ais_search_profile_ais_genius_result_configuration_m2m_743e6dbae46a43107f44b37c6b758812</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-10 16:54:02</sys_updated_on></ais_search_profile_ais_genius_result_configuration_m2m></record_update>]]></payload>
+        <payload_hash>-117027523</payload_hash>
+        <record_name>Now Assist Multi-Content Response.Now Assist in Virtual Agent - 1c22e29bae46a43107f44b37c6b75888e</record_name>
+        <reverted_from/>
+        <source>6124114d456203107f442c7fe0ab7389</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 16:54:02</sys_created_on>
+        <sys_id>f83e6dbae46a43107f44b37c6b758847</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19fec9874f30000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 16:54:02</sys_updated_on>
+        <type>AI Search Search Profile Genius Result C</type>
+        <update_guid>fc3e6dbaa96a43106aa6f6c6724b6846</update_guid>
+        <update_guid_history>fc3e6dbaa96a43106aa6f6c6724b6846:-117027523</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Now Assist Multi-Content Response.Now Assist in Virtual Agent - 1c22e29bae46a431">168175b2e4aa43107f44b37c6b758807</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 17:08:36</sys_created_on>
+        <sys_db_object display_value="" name="ais_search_profile_ais_genius_result_configuration_m2m">ais_search_profile_ais_genius_result_configuration_m2m</sys_db_object>
+        <sys_id>024d370c17ac4ac2834d94fe408bbda1</sys_id>
+        <sys_metadata>743e6dbae46a43107f44b37c6b758812</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Now Assist Multi-Content Response.Now Assist in Virtual Agent - 1c22e29bae46a43107f44b37c6b75888e</sys_name>
+        <sys_package display_value="Sentinel HSE" source="x_snc_sentinel_hse">a924114d456203107f442c7fe0ab7383</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Sentinel HSE">a924114d456203107f442c7fe0ab7383</sys_scope>
+        <sys_scope_delete display_value="">00a898291b4446e4800f9c59a3050f44</sys_scope_delete>
+        <sys_update_name>ais_search_profile_ais_genius_result_configuration_m2m_743e6dbae46a43107f44b37c6b758812</sys_update_name>
+        <sys_update_version display_value="ais_search_profile_ais_genius_result_configuration_m2m_743e6dbae46a43107f44b37c6b758812">f83e6dbae46a43107f44b37c6b758847</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 17:08:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
